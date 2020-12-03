@@ -109,7 +109,7 @@ function openNav() {
    let nav=document.getElementById("mySidenav");
    nav.classList.toggle("activeSidenav");
    let cards, i ;
-   cards=document.querySelectorAll(".card");
+   cards=document.querySelectorAll(".list-wrapper");
    for(i=0; i< cards.length; i++){
        
        cards[i].classList.toggle("activeCards");
@@ -206,3 +206,23 @@ for(m=0; m< language.length; m++){
        }
    });
 }
+
+
+var items= $(".list-wrapper .list-item");
+var numItems= items.length;
+var perPage=1;
+
+items.slice(perPage).hide();
+$("#pagination-container").pagination({
+  items: numItems,
+  itemsOnPage: perPage,
+  prevText:"<",
+  nextText:">",
+  displayedPages: 3,
+  edges: 0,
+  onPageClick : function (pageNumber) {
+    var showFrom = perPage * (pageNumber -1);
+    var showTo = showFrom +perPage;
+    items.hide().slice(showFrom, showTo).show();
+  }
+})

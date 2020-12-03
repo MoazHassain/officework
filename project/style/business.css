@@ -841,7 +841,11 @@ margin-left: 50px;
 
 } */
 
-.two .content-2 .active {
+.two .content-2 .rating-btn.active,
+.two .content-2 .catagory-btn.active,
+.two .content-2 .duration-btn.active,
+.two .content-2 .language-btn.active,
+.two .content-2 .topic-btn.active {
     background-color: #ebf3ff;
 /* color: white; */
 /* transition: display 0.3s; */
@@ -989,3 +993,68 @@ margin-left: 50px;
 .two .content-2 .activeCards{
     margin-left: 320px;
 }
+
+
+.two .content-2 .list-wrapper{
+    transition: margin-left .5s;
+
+}
+
+.two .content-2 .simple-pagination ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 10px;
+
+  }
+  .two .content-2  .simple-pagination li{
+    display: inline-block;
+    margin: 2px;
+
+  }
+  .two .content-2 .simple-pagination li a, 
+  .two .content-2 .simple-pagination li span{
+    display:  block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    /* background-color: silver; */
+    text-align: center;
+    font-weight:600;
+
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    margin: 5px;
+    box-shadow: insert 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.1) ;
+    transition: all .3s ease;
+  }
+  .two .content-2 .simple-pagination li a:hover{
+    background: #6954ab;
+    color: white;
+  }
+  .two .content-2 .simple-pagination .current{
+    /* color: silver; */
+    color: white;
+    background-color: #342561;
+    /* border-color: rgb(255, 255, 255); */
+    /* border: 1px solid; */
+    cursor: pointer;
+  }
+
+  .two .content-2 .simple-pagination .prev,
+  .two .content-2 .simple-pagination .next{
+    background-color: #342561;
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+
+  }
+  .two .content-2 .simple-pagination .prev.current,
+  .two .content-2 .simple-pagination .next.current{
+    /* background: silver; */
+    /* background-color: white; */
+    color: #342561;
+    border: none;
+    
+  }
