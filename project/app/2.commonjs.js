@@ -207,8 +207,8 @@ for(m=0; m< language.length; m++){
    });
 }
 
+
 var items= $(".list-wrapper .list-item");
-// var rightIcon= $(".fa-caret-right").value();
 var numItems= items.length;
 var perPage=1;
 
