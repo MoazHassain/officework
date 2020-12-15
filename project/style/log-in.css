@@ -67,12 +67,13 @@
 .header-container a{
     /* color: #61b0fa; */
     color: white;
+    transition: 0.3s ease;
 }
 /* .signUp a{
     color: white;
 } */
 .header-container a:hover{
-    color: #61b0fa;
+    color: #00FFF5;
 }
 .signUp{
     border: transparent;
@@ -456,7 +457,9 @@ footer{
 }
 .one .item-2 input[type=text]:focus{
     outline-style: auto;
-    outline-color: #342561;
+    /* outline: none; */
+    outline-color: #00adb5;
+    
     box-shadow: 0px 5px 20px black;
 }
 
