@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://kit.fontawesome.com/0a73f39d88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/log-in.css">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            /* background-color: #342561; */
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr;
+            grid-template-rows: auto 2fr auto auto auto;
+            grid-template-areas: 
+            "header header header"
+            "sect1 sect1 sect1"
+            "sect2 sect2 sect2"
+            "sect3 sect3 sect3"
+            "footer footer footer";
+            
+        }
+        header{
+            /* background-color: burlywood; */
+            
+            grid-area: header;
+        }
+        
+        .one{
+            /* background-color: cadetblue; */
+            grid-area: sect1;
+        }
+        .two{
+            grid-area: sect2;
+            /* background-color: cornflowerblue; */
+        }
+        .three{
+            grid-area: sect3;
+            
+        }
+        footer{
+            grid-area: footer;
+        }
+.header-container a:link{
+    text-decoration: none;
+    
+}
+
+
+.header-container a{
+    /* color: #61b0fa; */
+    color: white;
+    transition: 0.3s ease;
+}
+/* .signUp a{
+    color: white;
+} */
+.header-container a:hover{
+    color: #00FFF5;
+}
+.signUp{
+    border: transparent;
+    /* padding: 10px; */
+    
+    margin: 0px 30px;
+    /* color : white; */
+    /* background-color: royalblue; */
+}
+.logIn{
+    margin-right: 1em;
+    /* float: right; */
+}
+.enterprise{
+    border-right: 1px solid gray;
+    padding: .2em .5em;
+    
+}
+/* .header{
+    
+} */
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "one two three four";
+    background-color: #342561;
+    z-index: 1;
+}
+
+.sticky {
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+.header-container .part-one{
+    grid-area: one;
+    justify-self: center;
+    align-self: center;
+}
+.header-container .part-two{
+    grid-area: two;
+    display: flex;
+    /* justify-self: center; */
+    align-items: center;
+    
+}
+#menu, #menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu:before,
+#menu:after{
+    content: "";
+    display: table;
+}
+#menu::after{
+    clear: both;
+}
+#menu li{
+    float: left;
+    /* box-shadow: 1px 0 0 #444; */
+    position: relative;
+}
+#menu a{
+    text-decoration: none;
+    float: left;
+    /* padding: 0px 15px; */
+
+}
+
+#menu li div i{
+    float: right;
+    padding-top: 2px;
+    
+}
+
+
+
+
+
+.header-container #menu li div a button{
+    border: none;
+    outline: none;
+    /* margin-top: 1em;
+    margin-left: 1em; */
+    padding: .8em 1em .8em 1em;
+    /* background-color: #f5f5f5; */
+    background-color: #342561;
+    /* color: #61b0fa; */
+    color: white;
+    width: 14em;
+    font-size: 17px;
+    transition: .3s;
+}
+.header-container #menu li div a button:hover{
+    background-color: #dbdbdb;
+    color: #342561;
+}
+.header-container #menu li div a button span{
+    float: left;
+    font-weight: 550;
+}
+
+
+#menu li > div{
+  color: #342561;
+  /* display: inline-flex; */
+  
+}
+#menu li > div:hover{
+    color: #61b0fa;
+}
+#menu li ul{
+  /* background-color: #f5f5f5; */
+    background-color: #342561;
+}
+#menu li div > a{
+  color: #342561;
+  
+}
+#menu li div > a:hover{
+    color: #61b0fa;
+}
+
+
+#menu ul{
+    margin: 20px 0 0 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 3.7em;
+    left: 18%;
+    z-index: 1;
+    background: white;
+    border-radius: 4px;
+    transition: all  .3s ease-in-out;
+    min-width: 220px;
+    /* min-height: 500px; */
+}
+#menu li:hover >ul{
+    opacity: 1;
+    visibility: visible;
+    margin: 0px;
+
+}
+
+#menu ul ul {
+    top: 0px;
+    left: 237px;
+    margin: 0 0 0 20px;
+
+}
+#menu ul li{
+    float: none;
+    display: block;
+    border: 0;
+    box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+#menu ul li ul li{
+    box-shadow: none;
+}
+#menu li li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    margin: 0px;
+
+}
+#menu ul ul ul {
+    display: flex;
+    flex-flow: column;
+    top: 0px;
+    left: 237px;
+    margin: 0 0 0 20px;
+
+}
+#menu ul li ul li{
+    float: none;
+    display: block;
+    border: 0px;
+    box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+#menu ul li ul li{
+    box-shadow: none;
+}
+
+.header-container .catalogbtn,
+.header-container .enrollbtn{
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    color: white;
+    padding: 11px 16px;
+    margin: 1em;
+    font-size: 15px;
+    border-radius: 3px;
+    transition: .5s ease;
+}
+
+.header-container .catalogbtn:hover,
+.header-container .enrollbtn:hover{
+    background-color: #15416b;
+    color: #00fff5;
+    box-shadow: 0px 3px 12px black;
+    
+}
+.searchBar {
+    justify-self: center;
+    align-self: center;
+    padding: .5em;
+    
+}
+.searchBar input[type=text]{
+    background-color: none;
+    background-image: url('../img/searchicon2.png');
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    
+    padding: 12px 20px 12px 50px;
+    background-size: contain;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 3em;
+    width: 180px;
+    font-size: 17px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    opacity: .9;
+}
+.searchBar input[type=text]:focus{
+    outline: none;
+    width: 380px;
+}
+.part-three{
+    grid-area: three;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.part-four{
+    grid-area: four;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+footer{  
+    background-color: #342561;
+    min-height: 39.5em;
+}
+.footer{
+    /* display: flex;
+    justify-content: space-around;
+    align-content: stretch; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "box1 box2 box3 box4";
+}
+.footer .box-item.item-1{
+    grid-area: box1;
+}
+.footer .box-item.item-2{
+    grid-area: box2;
+}
+.footer .box-item.item-3{
+    grid-area: box3;
+}
+.footer .box-item.item-4{
+    grid-area: box4;
+    margin-left: 2em;
+    margin-right: 0%;
+}
+.footer .box-item{
+    /* background-color: seashell; */
+    flex-flow: column;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 4em;
+    margin-bottom: 3em;
+    display: flex;
+
+}
+.footer .box-item h3{
+    color: white;
+    padding: 5px 0;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+}
+.footer input{
+    font-size: 17px;
+    padding: 8px;
+}
+.footer .item-4 button{
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    color: white;
+    padding: 13px 16px;
+    margin: 1em;
+    border-radius: 3px;
+    transition: .5s ease;
+}
+
+.footer .item-4 button:hover{
+    background-color: #15416b;
+    color: #00fff5;
+    box-shadow: 0px 3px 12px black;
+}
+    </style>
+    <style>
+        .one{
+            margin-top: 4.3em;
+            background-color: blanchedalmond;
+        }
+        .two{
+            margin-top: 5em;
+            background-color: burlywood;
+            width: 40em;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "text text"
+            "first second";
+        }
+        .two p{
+            grid-area: text;
+        }
+        .two .first{
+            grid-area: first;
+        }
+        .two .second{
+            grid-area: second;
+            margin-right: 10px;
+        }
+           
+        .two li{
+            font-size: 16px;
+            list-style: square;
+        }
+    </style>
+    <style>
+        .three{
+            /* height: 40em; */
+            width: 50em;
+            background-color: cornsilk;
+        }
+        .three .sidenav {
+        min-height: 100%;
+        
+        /* position: absolute; */
+        
+        /* top: 0; */
+        left: 0;
+        /* background-color: #111; */
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 25px;
+        margin-left: 6em;
+    }
+
+    /* .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    } */
+
+    /* .three .sidenav a, */
+    .three .catagory-btn,
+    .three .rating-btn,
+    .three .topic-btn, 
+    .three .duration-btn,
+    .three .language-btn {
+        padding: 1em;
+        text-decoration: none;
+        font-size: 20px;
+        color: royalblue;
+        display: block;
+        border: 1px solid;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+        transition: 0.3s;
+        /* border-top: 1px solid; */
+        border-color: #adcdff;
+    }
+    .three .language-btn{
+        border-bottom: 1px solid;
+        border-color: #adcdff;
+    }
+
+    .three .sidenav a:hover,
+    .three .catagory-btn:hover,
+    .three .rating-btn:hover,
+    .three .topic-btn:hover,
+    .three .duration-btn:hover,
+    .three .language-btn:hover {
+        color: #342561;
+        border-color: #adcdff;
+    }
+
+    /* .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        
+    } */
+
+    .three .active {
+        background-color: #ebf3ff;
+        
+        /* color: white; */
+        /* transition: display 0.3s; */
+    }
+
+    .three .catagory-container,
+    .three .rating-container,
+    .three .topic-container,
+    .three .duration-container,
+    .three .language-container {
+        transition: 0.2s;
+        display: none;
+        background-color: #ebf3ff;
+        padding-left: 8px;
+        border: 1px solid #adcdff;
+    }
+
+    .three .fa-caret-down {
+        float: left;
+        padding-right: 8px;
+    }
+    [data-toggle="collapse"] i{
+        transform: rotate(0deg);
+        transition: 0.2s;
+    }
+    [data-toggle="collapse"].collapsed i{
+        transform: rotate(180deg);
+        margin-left: -8px;
+        margin-right: 8px;
+        transition: 0.2s;
+    }
+    
+    .three .sidenav div label,
+    .three .sidenav div input{
+        padding: 5px;
+        color: royalblue;
+        margin: 8px 0px;
+    }
+    .three .sidenav div input{
+        margin-left: 1em;
+        width: 1.2em;
+        height: 1.2em;
+        
+    }
+    .three .sidenav div label:active{
+        color: #342561;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <!-- <h1>header</h1> -->
+            <div  class="header-container " id="header">
+                <div class="part-one">
+                    <a href="./index.html" >
+                        <h2 >Master </h2>
+                    </a>
+                </div>
+                <div class="part-two">
+                    
+                <ul id="menu">
+                    <li><a href="#" style="padding: 0 30px;"><p>Programs</p> </a>
+                    <ul >
+                        <li>
+                        <div >
+                            <a href="./development.html"> 
+                                <button>
+                                    <span>Development</span>
+                                    <i class='fas fa-angle-right'></i>
+                                </button>  
+                            </a>
+                            
+                        </div>
+                        <ul>
+                            <li>
+                            <div >
+                                <a href="#"> 
+                                    <button>
+                                        <span>Web Development</span> 
+                                        <i class='fas fa-angle-right'></i>
+                                    </button>
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"> <button> <span>HTML</span></button></a></div></li>
+                                    <li><div><a href="#"><button><span>PHP</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Javascipt</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>CSS</span></button> </a></div></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Data Science</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button> 
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Python</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Machine Learning</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Data Analysis</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Tensor Flow</span></button>  </a></div></li>
+                                    <li><div><a href="#"><button><span>Neural Network</span></button></a></div></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>App Development</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button>  
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Swift</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>React Native</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>IOS Development</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Kotlin</span></button> </a></div></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <div >
+                                <a href="#" style="float: left;">
+                                    <button>
+                                        <span>Software Development</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button>   
+                                </a>
+                                
+                            
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Python</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Data Service</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Data Structure</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Microservice</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Kubemeter</span></button> </a></div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </li>
+                        <li>
+                        <div>
+                            <a href="./business.html">
+                                <button>
+                                    <span>Business</span>
+                                    <i class='fas fa-angle-right'></i>
+                                </button> 
+                            </a>
+                            
+                        </div>
+                        <ul>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Marketing</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button> 
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Digital Marketing</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Advertising</span></button>  </a></div></li>
+                                    <li><div><a href="#"><button><span>Advertising</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Management</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button> 
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Leadership</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Product Management</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Agile</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Enterpreneurship</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button> 
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Business Strategy</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Start Up</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Blogging</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Business Plan</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>E-commerce</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button>  
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Amazon</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Shopify</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>DropShipping</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                        </li>
+                        <li>
+                        <div>
+                            <a href="./it-software.html">
+                                <button>
+                                    <span>IT & Software</span>
+                                    <i class='fas fa-angle-right'></i>
+                                </button> 
+                            </a>
+                            
+                        </div>
+                        <ul>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Operating System</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button> 
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Windows Server</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Linux</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>PowerShell</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Hardware</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button>  
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Arduino</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>PLC</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Microcontroller</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>RaspBerry PI</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Network & Security</span>
+                                        <i class='fas fa-angle-right'></i>
+                                    </button> 
+                                </a>
+                                
+                            </div>
+                                <ul>
+                                    <li><div><a href="#"><button><span>Ethical Hacking</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Cyber Security</span></button> </a></div></li>
+                                    <li><div><a href="#"><button><span>Network Security</span></button> </a></div></li>
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                    <!-- <li><div><a href="#"><button></button></a></div></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                        </li>
+                        <li>
+                        <div>
+                            <a href="#">
+                                <button>
+                                    <span>Design</span>
+                                    <i class='fas fa-angle-right'></i>
+                                </button>
+                            </a>
+                            
+                        </div>
+                        <ul>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Graphics Design</span>
+                                        <!-- <i class='fas fa-angle-right'></i> -->
+                                    </button>
+                                </a>
+                                
+                            </div>
+                                <!-- <ul>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Arts</span>
+                                        <!-- <i class='fas fa-angle-right'></i> -->
+                                    </button>
+                                </a>
+                                
+                            </div>
+                                <!-- <ul>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    
+                                </ul> -->
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Poster Design</span>
+                                        <!-- <i class='fas fa-angle-right'></i> -->
+                                    </button>
+                                </a>
+                                
+                            </div>
+                                <!-- <ul>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    <li><div><a href="#"><button></button></a></div></li>
+                                    
+                                </ul> -->
+                            </li>
+                            <li>
+                            <div>
+                                <a href="#">
+                                    <button>
+                                        <span>Banner Design</span>
+                                        <!-- <i class='fas fa-angle-right'></i> -->
+                                    </button>
+                                </a>
+                                
+                            </div>
+                                <!-- <ul>
+                                <li><div><a href="#"><button></button></a></div></li>
+                                <li><div><a href="#"><button></button></a></div></li>
+                                <li><div><a href="#"><button></button></a></div></li>
+                                <li><div><a href="#"><button></button></a></div></li>
+                                <li><div><a href="#"><button/a></div></li>
+                                <li><div><a href="#"><button></button></a></div></li>
+                                    
+                                </ul> -->
+                            </li>
+                        </ul>
+                        </li>
+                        
+                        <center>
+                        <a href="#"><button class="catalogbtn">Full Catalog</button></a>
+                        </center>
+                    </ul>
+                    </li>
+                    
+                </ul>
+                    <div class="searchBar">
+                        <input type="text" placeholder="Search Here" name="search"  >
+                        
+                    </div>
+
+                </div>
+                <div class="part-three">
+                    <div class="enterprise" >
+                        <a href="#">For Enterprise</a> 
+                    </div>
+                    <div class="student" style="padding: .2em .5em;">
+                        <a href="#">For Students</a> 
+                    </div>
+                    <div class="" style="padding: .2em .8em;">
+                        <a href="#">Teach on Master</a>
+                    </div>
+                
+                    
+                </div>
+                <div class="part-four">
+                    <div class="logIn">
+                        <a href="./log-in.html" >LogIn</a>
+                        
+                    </div>
+                    <div class="signUp">
+
+                        
+                        <a href="./sign-up.html" ><button class="enrollbtn">Enroll Today</button> </a>
+                    </div>
+                </div>
+            </div>
+        
+        </header>
+        
+        <section class="one" >
+            <p>Development <i class="fas fa-angle-right"></i> Data Science 
+                <i class="fas fa-angle-right"></i> Machine Learning 
+            </p>
+            <h1>Python for Data Science and Machine Learning Bootcamp</h1>
+            <p>Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly ,
+                Scikit-Learn , Machine Learning, Tensorflow , and more!
+            </p>
+            <p>
+                Rating: <span>4.6</span>
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star-half-alt"></i>
+            </p>
+            <p>Instructed By <a href="#">Jose Portila</a></p>
+            <p>
+                <i class="fas fa-globe"></i> English 
+                <i class="fas fab far fa-closed-captioning"> </i> English,French,Spanish,Russian
+            </p>
+            <button><a href="#">Wishlist <i class="far fa-heart"></i></a></button>
+            <button><a href="#">Share <i class="fas fa-share"></i></a></button>
+            <button><a href="#">Gift This Course <i class="fas fa-gift"></i></a></button>
+
+        </section>
+
+        <section class="two">
+            <p>What you'll Learn</p>
+            <ul class="first">
+                <li class="side-one">Use Python for Data Science and Machine Learning</li>
+                <li class="side-one">Implement Machine Learning Algorithms</li>
+                <li class="side-one">Learn to use Pandas for Data Analysis</li>
+                <li class="side-one">Learn to use Seaborn for statistical plots</li>
+                <li class="side-one">Use SciKit-Learn for Machine Learning Tasks</li>
+                <li class="side-one">Logistic Regression</li>
+                <li class="side-one">Neural Networks</li>
+            </ul>
+            <ul class="second">
+                <li class="side-two">Use Spark for Big Data Analysis</li>
+                <li class="side-two">Learn to use NumPy for Numerical Data</li>
+                <li class="side-two">Learn to use Matplotlib for Python Plotting</li>
+                <li class="side-two">Use Plotly for interactive dynamic visualizations</li>
+                <li class="side-two">K-Means Clustering</li>
+                <li class="side-two">Linear Regression</li>
+                <li class="side-two">Natural Language Processing and Spam Filters</li>
+                <li class="side-two">Support Vector Machines</li>
+            </ul>
+
+        </section>
+
+        <section class="three">
+            <div id="mySidenav" class="sidenav">
+                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+                
+                <button data-toggle="collapse" data-target=".rating-container" class=" rating-btn " >
+                    <i class="fas fa-caret-down "></i>
+                    <span >Course Introduction</span> <Span>7 min</Span> 
+                </button>
+                <div class="rating-container show mb-4 mt-4">
+                    <i class="fas fa-play-circle"></i><a href="#">Introduction to the Course</a><span>03:33</span><br>
+                    <i class="fas fa-play-circle"></i><a href="#">Course FAQ</a><span>03:25</span>
+                    </div>
+                <button data-toggle="collapse" data-target=".topic-container" class="topic-btn">
+                    <i class="fas fa-caret-down"></i>
+                    <span>Topic</span> 
+                
+                </button>
+                <div class="topic-container show mb-4 mt-4">
+                    <input type="checkbox" name="topic-name" id="python">
+                    <label for="python">Python</label> <br>
+                    <input type="checkbox" name="topic-name" id="java">
+                    <label for="java">Java</label> <br>
+                    <input type="checkbox" name="topic-name" id="C++">
+                    <label for="C++">C++</label> <br>
+                    <input type="checkbox" name="topic-name" id="PHP">
+                    <label for="PHP">PHP</label> <br>
+                    <input type="checkbox" name="topic-name" id="machine-learning">
+                    <label for="machine-learning">Machine Learning </label> <br>
+                    <input type="checkbox" name="topic-name" id="SQL">
+                    <label for="SQL">SQL</label> <br>
+                </div>
+                <button data-toggle="collapse" data-target=".duration-container" class="duration-btn">
+                    <i class="fas fa-caret-down"></i>
+                    <span> Video Duration</span>
+                
+                </button>
+                <div class="duration-container show mb-4 mt-4">
+                    <input type="checkbox" name="duration-name" id="1-hour">
+                    <label for="1-hour">0-1 Hour</label> <br>
+                    <input type="checkbox" name="duration-name" id="2-hour">
+                    <label for="2-hour">1-2 Hour</label> <br>
+                    <input type="checkbox" name="duration-name" id="5-hour">
+                    <label for="5-hour">3-5 Hour</label> <br>
+                    <input type="checkbox" name="duration-name" id="8-hour">
+                    <label for="8-hour">6-8 Hour</label> <br>
+                </div>
+                <button data-toggle="collapse" data-target=".catagory-container" class="catagory-btn">
+                <i class="fas fa-caret-down"></i>
+                <span>Catagory</span>
+                </button>
+                <div class="catagory-container show mb-4 mt-4">
+                    <input type="checkbox" name="catagory-name" id="web-dev">
+                    <label for="web-dev">Web Development</label> <br>
+                    <input type="checkbox" name="catagory-name" id="program-lan">
+                    <label for="program-lan">Programmong Language</label> <br>
+                    <input type="checkbox" name="catagory-name" id="android-dev">
+                    <label for="android-dev">Android Development</label> <br>
+                    <input type="checkbox" name="catagory-name" id="game-dev">
+                    <label for="game-dev">Game Development</label> <br>
+                    <input type="checkbox" name="catagory-name" id="data-science">
+                    <label for="data-science">Data Science</label> <br> 
+                    <input type="checkbox" name="catagory-name" id="web-design">
+                    <label for="web-design">Web Design</label> <br>
+                </div>
+                <button data-toggle="collapse" data-target=".language-container" class="language-btn"> 
+                <i class="fas fa-caret-down"></i>
+                <span>Language</span>
+                </button>
+                <div class="language-container show mb-4 mt-4">
+                    <input type="radio" name="language" id="eng">
+                    <label for="eng">English</label> <br>
+                    <input type="radio" name="language" id="italiano">
+                    <label for="italiano">Italiano</label> <br>
+                    <input type="radio" name="language" id="portu">
+                    <label for="portu">Portugues</label> <br>
+                    <input type="radio" name="language" id="esp">
+                    <label for="esp">Espanol</label> <br>
+                </div>
+            </div>
+        </section>
+
+        
+
+
+        <footer>
+            <div class="footer">
+                <div class="box-item item-1">
+                    <h3>Master</h3>
+                    <a href="#">About</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Catalog</a>
+                    <a href="#">Certificate</a>
+                    <a href="#">Degrees</a>
+                    <a href="#">For Enterprise</a>
+                    <a href="#">For Government</a>
+                </div>
+                <div class="box-item item-2">
+                    <h3>Community</h3>
+                    <a href="#">Learner</a>
+                    <a href="#">Partner </a>
+                    <a href="#">Developer</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Tech Blog</a>
+                    <a href="#">Beta Tester</a>
+                </div>
+                <div class="box-item item-3">
+                    <h3>More</h3>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Help</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="box-item item-4">
+                    <h3>SIGN UP AS NEW </h3>
+                    <div >
+                    
+                    <input type="text" name="email" id="" >
+                    <button >Submit</button>
+                    
+                        
+                    </div>
+                    <a href="#">Consider Enrolling?</a>
+                    <a href="#">(+088) 903-5482</a>
+                    
+                </div>
+
+            </div>
+            <hr style="background-color: white;  width: 91%; border: 0; height: 0.3px;">
+            <p style="font-size: 38px; margin: 0; margin-top: 20px; margin-left: 65px; color: white;">Master</p>
+            <p style=" margin: 0; margin-top: 8px; margin-left: 65px; color: white;">Join Us To Become A Master</p>
+        </footer>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+<script src="./app/log-in.js"></script>
+<script>
+    window.onscroll= function() {myFunction()};
+
+    let header=document.getElementById("header");
+    let sticky=header.offsetTop;
+
+    function myFunction(){
+        if (window.pageYOffset >=sticky){
+            header.classList.add("sticky")
+        } else{
+            header.classList.remove("sticky")
+        }
+    }
+
+    let rating= document.getElementsByClassName("rating-btn");
+   var j;
+
+   for(j=0; j< rating.length; j++){
+       rating[j].addEventListener("click", function(){
+           this.classList.toggle("active");
+           let ratingContent= this.nextElementSibling;
+           if(ratingContent.style.display==="block"){
+               ratingContent.style.display="none";
+           } else{
+               ratingContent.style.display="block";
+           }
+       });
+   }
+
+   let topic= document.getElementsByClassName("topic-btn");
+   var k;
+
+   for(k=0; k< topic.length; k++){
+       topic[k].addEventListener("click", function(){
+           this.classList.toggle("active");
+           let topicContent= this.nextElementSibling;
+           if(topicContent.style.display==="block"){
+             topicContent.style.display="none";
+           } else{
+             topicContent.style.display="block";
+           }
+       });
+   }
+
+   let duration= document.getElementsByClassName("duration-btn");
+   var l;
+
+   for(l=0; l< duration.length; l++){
+       duration[l].addEventListener("click", function(){
+           this.classList.toggle("active");
+           let durationContent= this.nextElementSibling;
+           if(durationContent.style.display==="block"){
+             durationContent.style.display="none";
+           } else{
+             durationContent.style.display="block";
+           }
+       });
+   }
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+       var catagory = document.getElementsByClassName("catagory-btn");
+       var n;
+
+       for (n = 0; n < catagory.length; n++) {
+       catagory[n].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var catagoryContent = this.nextElementSibling;
+       if (catagoryContent.style.display === "block") {
+           catagoryContent.style.display = "none";
+       } else {
+           catagoryContent.style.display = "block";
+       }
+       });
+       }
+
+   let language= document.getElementsByClassName("language-btn");
+   var m;
+
+   for(m=0; m< language.length; m++){
+           language[m].addEventListener("click", function(){
+           this.classList.toggle("active");
+           let lanContent= this.nextElementSibling;
+           if(lanContent.style.display==="block"){
+               lanContent.style.display="none";
+           } else{
+               lanContent.style.display="block";
+           }
+       });
+   }
+    
+</script>
+</html>
+
