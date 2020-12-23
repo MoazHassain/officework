@@ -17,7 +17,10 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
             /* background-color: #342561; */
-            
+        }
+        a{
+            text-decoration: none;
+            /* color: black; */
         }
         .container{
             display: grid;
@@ -25,12 +28,12 @@
             /* grid-template-rows: auto auto auto auto auto; */
             grid-template-areas: 
             "header header header"
-            "sect1 sect1 sect1"
-            "sect2 sect2 sect2"
-            "sect3 sect3 sect3"
-            "sect4 sect4 ."
-            "sect5 sect5 ."
-            "sect6 sect6 ."
+            "sect1 sect1 sect7"
+            "sect2 sect2 sect7"
+            "sect3 sect3 sect7"
+            "sect4 sect4 sect7"
+            "sect5 sect5 sect7"
+            "sect6 sect6 sect7"
             "footer footer footer";
             
         }
@@ -62,6 +65,10 @@
         }
         section.sixx{
             grid-area: sect6;
+            
+        }
+        section.seven{
+            grid-area: sect7;
             
         }
         footer{
@@ -408,10 +415,12 @@ footer{
             margin-top: 4.3em;
             background-color: blanchedalmond;
         }
+        .one h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
         .two{
             margin-top: 5em;
             background-color: burlywood;
-            width: 40em;
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: auto auto;
@@ -621,6 +630,13 @@ footer{
             float: left;
         }
         
+    </style>
+    <style>
+        .seven{
+            /* height: 30em; */
+            margin-top: 4em;
+            background-color: cornsilk;
+        }
     </style>
 </head>
 <body>
@@ -1007,8 +1023,8 @@ footer{
         </header>
         
         <section class="one" >
-            <p>Development <i class="fas fa-angle-right"></i> Data Science 
-                <i class="fas fa-angle-right"></i> Machine Learning 
+            <a href="#"> Development</a> <i class="fas fa-angle-right"></i> <a href="#">Data Science</a> 
+                <i class="fas fa-angle-right"></i> <a href="#">Machine Learning </a>
             </p>
             <h1>Python for Data Science and Machine Learning Bootcamp</h1>
             <p>Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly ,
@@ -1027,9 +1043,9 @@ footer{
                 <i class="fas fa-globe"></i> English 
                 <i class="fas fab far fa-closed-captioning"> </i> English,French,Spanish,Russian
             </p>
-            <button><a href="#">Wishlist <i class="far fa-heart"></i></a></button>
-            <button><a href="#">Share <i class="fas fa-share"></i></a></button>
-            <button><a href="#">Gift This Course <i class="fas fa-gift"></i></a></button>
+            <a href="#"><button>Wishlist <i class="far fa-heart"></i></button></a>
+            <a href="#"><button>Share <i class="fas fa-share"></i></button></a>
+            <a href="#"><button>Gift This Course <i class="fas fa-gift"></i></button></a>
 
         </section>
 
@@ -1366,6 +1382,23 @@ footer{
             
         </section>
 
+        <section class="seven">
+            <h1>$ 129.99</h1>
+            <a href="#"><button>Add to cart</button></a>
+            <a href="#"><button>Buy now</button></a>
+            <p>30-Day Money Back Guarantee</p>
+            <p>This course includes:</p>
+            <p><i class="far fa-play-circle"></i><span>25 hours on-demand video</span></p>
+            <p><i class="far fa-file"></i><span>13 articles</span></p>
+            <p><i class="fas fa-download"></i><span>5 downloadable resourses</span></p>
+            <p><i class="fas fa-infinity"></i><span>Full lifetime access</span></p>
+            <p> <i class="fas fa-mobile-alt"></i><span>Access on mobile and TV</span></p>
+            <a href="#"><button>Apply Coupon</button></a>
+            <hr>
+            <h3>Training 5 or more people?</h3>
+            <p>Get your team access to 5000+ top Master courses anytime, anywhere</p>
+
+        </section>
 
         <footer>
             <div class="footer">
