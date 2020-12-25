@@ -715,24 +715,86 @@ footer{
             border-radius: 60%;
             float: left;
         }
+        .five p i{
+            margin: 10px 16px;
+        }
+        .five p{
+            color: #2D2D2D;
+        }
     </style>
     <style>
         .sixx{
-            background-color: blanchedalmond;
+            
             margin-top: 2em;
             margin-left: 12.2em;
             margin-right: 2em;
         }
-        
+        .sixx > h1{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: #202020;
+            margin: 16px 0px;
+        }
+        .sixx .partOne{
+            margin-left: 5px;
+            display: grid;
+            grid-template-columns: 25% 40%;
+        }
+        .sixx .partOne .left-side{
+            color: #D6A400;
+            
+        }
+        .sixx .partOne h1{
+            font-size: 66px;
+            padding: 0px;
+            margin: 16px 0px;
+            margin-bottom: 8px;
+        }
+        .sixx .partOne .left-side p{
+            font-size: 14px;
+            font-weight: 600;
+            margin: 8px 0px;
+        }
+        .sixx .partOne .right-side p i{
+            color: #D6A400;
+        }
+        .sixx .partOne .right-side p{
+            margin: 10px 0px;
+            color: #202020;
+        }
+        .sixx .partOne .right-side p span{
+            margin: 0px 1em;
+            font-weight: 600;
+            color: #257ACC;
+        }
+
+        .sixx .partTwo > span{
+            font-family: 'PT Sans', sans-serif;
+            margin-left: 5px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #202020;
+        }
+        .sixx .partTwo button{
+            background-color: white;
+            border: 2px solid;
+            border-color: #342561;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 12px;
+        }
         .sixx .partTwo .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f1f1f1;
-            min-width: 160px;
+            min-width: 145px;
             overflow: auto;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
-            left: 40%;
+            left: 46%;
+            margin-top: 16px;
         }
         .sixx .partTwo .dropdown-content a {
             color: black;
@@ -741,7 +803,8 @@ footer{
             display: block;
         }
         .sixx .partTwo .dropdown-content a:hover{
-            background-color: burlywood;
+            background-color: #D6A400;
+            color: white;
         }
         .sixx .partTwo .show-content{
             display: block;
@@ -1324,12 +1387,12 @@ footer{
             <h4>Head of Data Science, Pierian Data Inc.</h4>
             
                 <img  src="./project/img/instructor.jpg" alt="">
-            <p >
+            <p style="color: #2E2E2E; font-weight: 600;">
                 <i class="fas fa-star"></i> Rating: 4.6 <br>
                 <i class="fas fa-users"></i> 2,090,578 Students <br>
                 <i class="fas fa-play-circle"></i> 31 Courses
             
-            </p> <br><br><br>
+            </p> <br>
             
             <p> Jose Marcial Portilla has a BS and MS in Mechanical Engineering
                 from Santa Clara University and years of experience as a professional
@@ -1354,23 +1417,23 @@ footer{
         <section class="sixx">
             <h1>Student feedback</h1>
             <div class="partOne">
-                <div>
+                <div class="left-side">
                     <h1>4.6</h1>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <p>Course Rating</p>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p >Course Rating</p>
                 </div>
-                <div >
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>55%</span><br>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>37%</span><br>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>17%</span><br>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>7%</span><br>
-                    <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>>1%</span>
+                <div  class="right-side" >
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>55%</span></p>
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>37%</span></p> 
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>17%</span></p>
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>7%</span></p>
+                    <p><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><span>>1%</span></p>
+                    
+                    
                 </div>
             </div>
             <div class="partTwo">
-                <span>Reviews</span>
+                <span >Reviews</span>
                 <button onclick="myDropdown()" class="dropdownBtn" style="float: right;">All Reviews</button>
                 <div id="dropdown-content" class="dropdown-content">
                     <a href="#">Five Star</a>
