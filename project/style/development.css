@@ -57,10 +57,10 @@ body{
 
 .sticky {
     
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    
+    z-index: 1;
 }
 
 .header-container .part-one{
@@ -326,7 +326,7 @@ input{
 .one{
     min-height: 80em;
     /* background-color: wheat; */
-    margin-top: 3em; 
+    
 }
 
 

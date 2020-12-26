@@ -60,7 +60,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    
+    z-index: 1;
 }
 
 .header-container .part-one{
@@ -905,6 +905,11 @@ margin-left: 50px;
     font-size: 15px;
     border-radius: 3px;
 }
+.two .content-2 .list-item a{
+    text-decoration: none;
+    color: black;
+}
+
 .two .content-2 #main button:hover{
     background-color: #4a77ff;
     color: black;
@@ -916,7 +921,12 @@ margin-left: 50px;
     border-bottom: 1px solid;
     border-color: #342561;
     margin-left: 2em;
+
 }
+.two .content-2 .card:hover{
+    background-color: #F0F0F0;
+}
+
 .two .content-2 .card img{
     float: left;
     width: 250px;
