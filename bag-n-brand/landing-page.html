@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="./style/landing-page.css"> -->
+</head>
+<style>
+   body
+    {
+        margin: 0px;
+        background-color: black;
+        color: white;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a.btn
+    {
+        color: black;
+        text-transform: uppercase;
+        padding: 18px 28px;
+        background-color: white;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    a.btn:hover
+    {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    header
+    {
+        background-color: black;
+        height: 80px;
+        display: grid;
+        grid-template-columns: 3fr 2.5fr 1fr;
+        grid-template-areas: 
+        ". logo btn";
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    header .part-one
+    {
+        grid-area: logo;
+        margin: auto 0%;
+    }
+    .header-title-logo img
+    {
+        height: 50px; 
+       
+    }
+    header .part-two
+    {
+        grid-area: btn;
+        margin: auto 0%;
+    }
+
+    header .part-two a
+    {
+        font-family: "archivo black", sans-serif;
+    }
+    section.one
+    {
+        background-image: url(./img/karl-magnuson-LaHgrqo1ZRk-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 40.4em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2.5fr 1fr;
+        grid-template-areas: 
+        "text text"
+        "btnone btntwo";
+    }
+    .one .block-text
+    {
+        grid-area: text;
+        justify-self: center;
+        align-self: center;
+    }
+    .one .block-text h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 132px;
+        margin: 0px;
+        font-weight: 600;
+        letter-spacing: -13px;
+    }
+    .one .btn-area
+    {
+        justify-self: center;
+    }
+    .one .btn-area a
+    {
+        font-family: "archivo", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+    }
+    .one a.btn-hero-one
+    {
+        margin-left: 4em;
+    }
+    .two
+    {
+        height: 90vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .two .block-text p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 20px;
+    }
+    .two .block-text span
+    {
+        font-weight: 500;
+    }
+    .three
+    {
+        height: 90vh;
+        background-image: url(./img/karl-magnuson-LaHgrqo1ZRk-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .four
+    {
+        height: 60vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .four p
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 20px;
+        letter-spacing: -.06em;
+
+    }
+    .five
+    {
+        height: 90vh;
+        background-image: url(./img/karl-magnuson-LaHgrqo1ZRk-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .six
+    {
+        height: 60vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .six p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .six h3
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 26px;
+        margin: 0px;
+        letter-spacing: -.06em;
+    }
+    .seven
+    {
+        height: 90vh;
+        background-image: url(./img/karl-magnuson-LaHgrqo1ZRk-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .eight
+    {
+        height: 80vh;
+        display: grid;
+        align-content: center;
+    }
+    .eight p
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 32px;
+        letter-spacing: -0.07em;
+    }
+    .nine
+    {
+        height: 80vh;
+        display: grid;
+        align-content: center;
+    }
+    .nine p
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 32px;
+        letter-spacing: -0.07em;
+    }
+    .ten
+    {
+        background-image: url(./img/alex-bierwagen-5tW1ca0Zq18-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        
+    }
+    .ten .part-one
+    {
+        padding: 7em;
+    }
+    .ten .part-one p
+    {
+        font-family: "Archivo", sans-serif;
+    }
+    .ten .part-one h1
+    {
+        font-family: "Archivo black", sans-serif;
+        font-size: 100px;
+        letter-spacing: -0.08em;
+        line-height: 95px;
+        margin: 80px 0px;
+        
+    }
+    .ten .part-one a
+    {
+        font-family: "archivo", sans-serif;
+        font-weight: 500;
+    }
+    .ten .part-two 
+    {
+        background-image: url(./img/karl-magnuson-LaHgrqo1ZRk-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 5em 7em;
+    }
+    .eleven
+    {
+        height: 90vh;
+        display: grid;
+        align-content: center;
+        
+    }
+    .eleven .block-text h1
+    {
+        font-family: "heebo", sans-serif;
+        font-size: 76px;
+    }
+    .twelve
+    {
+        height: 90vh;
+        display: grid;
+        align-content: center;
+        
+    }
+    .twelve .block-text h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 32px;
+        letter-spacing: -0.07em;
+    }
+    .thirteen
+    {
+        
+        height: 41em;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+    .thirteen .part-one
+    {
+        z-index: 1;
+    }
+    .thirteen .part-one .block-text
+    {
+        
+        /* background-color: black; */
+        background-color: white;
+        margin: 3.5em 1em 0em 10em;
+        padding: 3em 6em;
+        
+    }
+    .thirteen .part-one h1
+    {
+        font-family: "archivo black", sans-serif;
+        letter-spacing: -0.065em;
+        color: black;
+    }
+    .thirteen .part-one p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        color: black;
+    }
+    .thirteen .part-one span
+    {
+        font-weight: 600;
+    }
+    .thirteen .part-two
+    {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        background-color: black;
+        height: 26em;
+        margin: 0em 12em 0em 0em;
+        margin-left: -8em;
+        
+    }
+    .thirteen .part-two h1
+    {
+        font-family: "heebo",sans-serif;
+        font-size: 56px;
+    }
+    
+    footer .footer-title-logo img
+    {
+        height: 60px;
+        margin: 40px 0px;
+        
+    }
+    footer .contact a
+    {
+        color: white;
+        text-decoration: underline;
+    }
+    footer .contact p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    footer .contact p:last-child
+    {
+        font-weight: 600;
+        margin-bottom: 70px;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <img src="./img/Bag-N-Brand.png" alt="Bag-N-Brand logo" >
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="#" class="btn btn-login">
+                        LogIn 
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="one">
+            <div class="block-text">
+                <h1>DREAM BIGGER</h1>
+            </div>
+            <div class="btn-area">
+                <a href="#" class="btn btn-hero-one">
+                    SHOP STRANDBRANDS™️
+                </a>
+            </div>
+            <div class="btn-area">
+                <a href="#" class="btn btn-hero-two">
+                    BUILD A BRAND
+                </a>
+            </div>
+        </section>
+        <section class="two">
+            <div class="block-text">
+                <p>SPECIAL RELEASE | <span>Strandbrands™️ </span></p>
+            </div>
+        </section>
+        <section class="three">
+
+        </section>
+        <section class="four">
+            <div class="block-text">
+                <p>Unfold the story. Share the experience. Increase sales</p>
+            </div>
+        </section>
+        <section class="five">
+
+        </section>
+        <section class="six">
+            <div class="block-text">
+                <center><p>Strandbrands™️ </p></center>
+                
+            </div>
+            <div >
+                <center><h3>A brand for every strand.</h3></center>
+                
+            </div>
+
+        </section>
+        <section class="seven">
+
+        </section>
+        <section class="eight">
+            <div class="block-text">
+                <center><p>Building a brand</p></center>
+            </div>
+        </section>
+        <section class="nine">
+            <div class="block-text">
+                <center><p>starts with a simple idea</p></center>
+            </div>
+        </section>
+        <section class="ten">
+            <div class="part-one">
+                <p>Share your idea for your brand and we will do the rest, It's your time now.</p>
+                <div class="area-text">
+                    <h1>Build The Brand!</h1>
+                </div>
+                <a href="#" class="btn btn-build">
+                    Build A Brand 
+                </a>
+            </div>
+            <div class="part-two">
+                <div class="img background-img">
+
+                </div>
+            </div>
+        </section>
+        <section class="eleven">
+            <div class="block-text">
+                <center><h1>Klarna.</h1></center>
+            </div>
+        </section>
+        <section class="twelve">
+            <div class="block-text">
+                <center><h1>Klarna splits order cost into 4 easy payment</h1></center>
+            </div>
+
+        </section>
+        <section class="thirteen">
+            <div class="part-one">
+                <div class="block-text">
+                    <h1>Our customers print faster than ever because of Klarna!</h1>
+                    <p>Bag-N-Brand is offering a 9 day free trial for custom memberships. <span>Start today,print tomorrow, and your membership is free.</span></p>
+                </div>
+
+            </div>
+            <div class="part-two">
+                <h1>Klarna.</h1>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-title-logo">
+                <Center><img src="./img/Bag-N-Brand.png" alt="Bag-N-Brand Logo" ></Center>
+            </div>
+            <!-- <center><i class="fab fa-cc-mastercard" style=" background-color: white;color: black;">i</i></center> -->
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="#" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="#" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="#" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="#" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+</body>
+</html>
