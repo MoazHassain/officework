@@ -185,6 +185,50 @@
         font-weight: 600;
         margin-bottom: 70px;
     }
+    .modal-bg
+    {
+        /* position: ; */
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: grid;
+        /* flex-direction: ; */
+        justify-content: center;
+        align-content: center;
+    }
+    .modal
+    {
+        /* position: absolute; */
+        background-color: white;
+        width: 30%;
+        margin: 0 auto;
+
+    }
+    .modal input
+    {
+        width: 90%;
+        margin: 0px 5%;
+    }
+    .modal label
+    {
+        
+        text-align: left !important; 
+        color: black;
+        width: 90%;
+        margin: 0px 5%;
+        
+    }
+    .modal .part-one img
+    {
+        width: 30%;
+    }
+    .modal-bg a 
+    {
+        width: 30%;
+        margin: 0px auto;
+    }
 </style>
 <body>
     <div class="container">
@@ -308,6 +352,46 @@
             </center>
             
         </footer>
+    </div>
+
+    <div class="modal-bg">
+        <!-- <center> -->
+            <div class="modal">
+                <div class="part-one">
+                    <img src="./img/bag-n-brand6.png" alt="">
+                    <h1>Create an account</h1>
+                </div>
+                <div class="part-two">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" name="first-name" placeholder="First Name">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" name="last-name" placeholder="Last Name">
+                    <label for="company">Company Name</label>
+                    <input id="company" type="text" name="company" placeholder="Company Name">
+                    <label for="street">Street Address(No PO Box)</label>
+                    <input id="street" type="text" name="street" placeholder="Street Address(No PO Box)">
+                    <label for="city">City</label>
+                    <input id="city" type="text" name="city" placeholder="City">
+                    <label for="state">State</label>
+                    <input id="state" type="text" name="state" placeholder="State">
+                    <label for="zip">Zip</label>
+                    <input id="zip" type="number" name="zip" placeholder="Zip">
+                    <label for="sale">Average Monthly Sale</label>
+                    <input id="sale" type="text" name="sale" placeholder="Average Monthly Sale">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="number" name="phone" placeholder="Phone Number">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" placeholder="Email Address">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Password">
+                    <input type="button" value="Sign Up">
+                    <p>Click above to agree to our <a href="#">Terms of Service</a></p>
+    
+                </div>
+            </div>
+            <a href="#" class="btn login">Already a member? <span>Log in here</span></a>
+        </center>
+        
     </div>
 </body>
 </html>
