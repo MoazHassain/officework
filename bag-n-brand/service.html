@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+</head>
+<style>
+    body
+    {
+        margin: 0px;
+        background-color: black;
+        color: white;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a.btn
+    {
+        color: black;
+        text-transform: uppercase;
+        padding: 18px 28px;
+        background-color: white;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    a.btn:hover
+    {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    header
+    {
+        background-color: black;
+        height: 80px;
+        display: grid;
+        grid-template-columns: 3fr 2.5fr 1fr;
+        grid-template-areas: 
+        ". logo btn";
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+    header .part-one
+    {
+        grid-area: logo;
+        margin: auto 0%;
+    }
+    .header-title-logo img
+    {
+        height: 50px; 
+       
+    }
+    header .part-two
+    {
+        grid-area: btn;
+        margin: auto 0%;
+    }
+
+    header .part-two a
+    {
+        font-family: "archivo black", sans-serif;
+    }
+    .one
+    {
+        height: 40.5em;
+        background-color: white;
+        color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-gap: 2em; */
+        
+    }
+    .one .part-one
+    {
+        padding: 6em;
+        padding-right: 3em;
+        padding-left: 7.5em;
+        padding-bottom: 0px;
+    }
+    .one .part-one div.text-area
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 25px;
+        margin-bottom: 65px;
+        letter-spacing: 0.5px;
+    }
+    
+    .one .part-one .text-area p
+    {
+        font-weight: 600;
+        
+    }
+    .one .part-one h1
+    {
+        font-family: "Archivo black", sans-serif;
+        font-size: 85px;
+        letter-spacing: -0.09em;
+        line-height: 85px;
+        margin: 40px 0px;
+        
+    }
+    .one .part-one a
+    {
+        font-family: "archivo", sans-serif;
+        font-weight: 500;
+        background-color: black;
+        color: white;
+        
+    }
+    .one .part-one a:hover
+    {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .one .part-two 
+    {
+        background-image: url(./img/bag-n-brand2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 3em 7em;
+    }
+    .two
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4em;
+        width: 85%;
+        margin: 3em auto;
+    }
+    .two .part-one img
+    {
+        width: 80%;
+    }
+    .two .part-one h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 80px;
+        letter-spacing: -.09em;
+        margin: 0px;
+    }
+    
+    .two .part-one p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        justify-items: center;
+        margin-left: 4em;
+    }
+    .two .part-two ul
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-left: 7em;
+    }
+    footer .footer-title-logo img
+    {
+        height: 60px;
+        margin: 40px 0px;
+        
+    }
+    footer .contact a
+    {
+        color: white;
+        text-decoration: underline;
+    }
+    footer .contact p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    footer .contact p:last-child
+    {
+        font-weight: 600;
+        margin-bottom: 70px;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="#" class="btn btn-login">
+                        LogIn 
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="one">
+            <div class="part-one">
+                <div class="area-text">
+                    <h1>Bring your dreams to life.</h1>
+                </div>
+                <div class="text-area">
+                    Every entrepreneur understands how exhausting 
+                    creating a brand can be. What if you only needed 
+                    the inspiration for your idea or a simple sketch 
+                    of the logo?<br>
+                    <p>
+                        Bag-N-Brand supports entrepreneurs who build bold 
+                        businesses
+                    </p>
+                </div>
+                
+
+                <a href="#" class="btn btn-build">
+                    Customize membership
+                </a>
+            </div>
+            <div class="part-two">
+                <div class="img background-img">
+
+                </div>
+            </div>
+        </section>
+        <hr style="margin: 2em auto; margin-top: 5em; background-color: white;  width: 85%; border: 0; height: 0.2px; ">
+        <section class="two">
+            <div class="part-one">
+                <img src="./img/bag-n-brand5.png" alt="">
+                <h1>Sign Up Now</h1>
+                <p>Do you have questions? Partners@bag-n-brand.com</p>
+            </div>
+            <div class="part-two">
+                <ul>
+                    <li>
+                        Building a brand is a delicate process. When building
+                        an impactful brand, approach the task with caution.
+                        It's important to remember you are building something
+                        that your customers will notice. It does not stop there,
+                        next you need to be memorable.
+                    </li>
+                    <li>
+                        Bag-N-Brand uses a simple system for collecting information 
+                        about your idea. We build complete concepts and share them 
+                        with you for edits. 
+                    </li>
+                    <li>
+                        From the beginning we've always focused on providing
+                        exceptional services. Doing this provided us with
+                        insights about our customers over the years.
+                    </li>
+                    <li>
+                        We understand you want the ability to test your 
+                        market and extend your budget. To assist you with 
+                        this, we offer a Partnership that offers a minimum
+                        order quantity of 100 units.
+                    </li>
+                    <li>
+                        We also offer Klarna for custom orders which splits
+                        orders in 4 separate payments.
+                    </li>
+                    <li>
+                        Partner up today on the Basic Plan and get 9 days
+                        Free Trial. This is more than enough time to submit
+                        your design, and start printing.
+                    </li>
+                    <li>
+                        For all partners who print before their membership
+                        ends, will receive $10 discount.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr style="margin: 2em auto; background-color: white;  width: 85%; border: 0; height: 0.2px; ">
+        <footer>
+            <div class="footer-title-logo">
+                <Center><img src="./img/bag-n-brand5.png" alt="Bag-N-Brand Logo" ></Center>
+            </div>
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="#" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="#" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="#" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="#" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+</body>
+</html>
