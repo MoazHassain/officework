@@ -36,6 +36,11 @@
     {
         background-color: rgba(255, 255, 255, 0.8);
     }
+    @font-face
+    {
+        src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
     header
     {
         background-color: black;
@@ -225,11 +230,7 @@
     }
 </style>
 <style>
-    @font-face
-    {
-        src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
-        font-family: nova;
-    }
+    
     p
     {
         font-family: nova;
@@ -339,12 +340,20 @@
         grid-template-columns: 1fr 1fr;
         text-align: center;
     }
+    .two .part-icon i
+    {
+        font-size: 24px;
+    }
     .two img.icon
     {
         color: white;
         width: 22px;
     }
-
+    .two .part-icon p
+    {
+        font-size: 16px;
+        font-weight: 500;
+    }
 </style>
 
 <!-- specific card img -->
@@ -611,7 +620,6 @@
         </section>
         <section class="two">
             <p>STRANDBRANDS™️ <span>Updated Every Sunday.</span></p>
-           
             <a href="#"><img src="./icon/square-shopping-bag-with-handle.png" alt="" ></a>
             <div class="cards-wrapper">
                 <div class="card-container">
@@ -1054,7 +1062,7 @@
                     </div>
                     <div class="icon icon-kart">
                         <img src="./icon/square-shopping-bag-with-handle.png" alt="" class="icon">
-                        <p>Shoppind Bag</p>
+                        <p>Shopping Bag</p>
     
                     </div>
                 </div>
