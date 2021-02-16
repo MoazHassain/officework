@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<style>
+    *
+    {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body
+    {
+        margin: 0px;
+        background-color: black;
+        color: white;
+        
+    }
+    a
+    {
+        text-decoration: none;
+        
+    }
+    a.btn
+    {
+        color: black;
+        text-transform: uppercase;
+        padding: 18px 28px;
+        background-color: white;
+        border-radius: 5px;
+       
+    }
+    a.btn:hover
+    {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    @font-face
+    {
+        src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    header
+    {
+        background-color: black;
+        height: 80px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 2.5fr 1fr;
+        grid-template-areas: 
+        ". logo btn";
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        transition: top 0.3s;
+        transition-delay: 0.2s;
+    }
+    header .part-one
+    {
+        grid-area: logo;
+        margin: auto 0%;
+    }
+    .header-title-logo img
+    {
+        height: 50px; 
+       
+    }
+    header .part-two
+    {
+        grid-area: btn;
+        margin: auto 0%;
+    }
+
+    header .part-two a
+    {
+        font-family: "archivo black", sans-serif;
+        letter-spacing: 0.05em;
+        padding: 13px 24px;
+    }
+
+
+    footer .footer-title-logo img
+    {
+        height: 60px;
+        margin: 40px 0px;
+        
+    }
+    
+    footer .contact a
+    {
+        color: white;
+        text-decoration: underline;
+    }
+    footer .contact p
+    {
+        font-family: "archivo", sans-serif;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    footer .contact p:last-child
+    {
+        font-weight: 600;
+        margin-bottom: 70px;
+    }
+    .login-modal-bg
+    {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 95vh;
+        top: 0;
+        left: 0;
+        padding-bottom: 5em;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: grid;
+        
+        justify-content: center;
+        align-content: center;
+        font-family: 'Segoe UI', sans-serif;
+        display: none;
+        z-index: 9999;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .login-modal
+    {
+        
+        background-color: white;
+        
+        width: 27%;
+        margin: 0 auto;
+        margin-top: 6em;
+        margin-bottom: 3em;
+        border-radius: 5px;
+    }
+    .login-modal .part-one
+    {
+        text-align: center;
+    }
+    .login-modal .part-one h1
+    {
+        color: black;
+        font-size: 28px;
+    }
+    .login-modal .part-one img
+    {
+        width: 30%;
+        margin-top: 2em;
+    }
+    .login-modal .part-two
+    {
+        background-color: rgba(250, 250, 250, 0.4);
+        padding: 8% 3%;
+        box-shadow: 0px 0px 5px 1px #f0f0f0 inset;
+    }
+    .login-modal input
+    {
+        width: 80%;
+        margin: 0px 8%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding: 1.2em;
+        padding-right: 0px;
+        border: 1px solid;
+        background-color: #fcfcfc;
+        border-color: #ebebeb;
+        border-radius: 4px;
+        box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+        transition: 0.3s;
+    }
+    .login-modal input:hover
+    {
+        background-color: white;
+        box-shadow: 0px 0px 4px 1px #f0f0f0;
+    }
+    .login-modal input:focus
+    {
+        outline: none;
+        box-shadow: 0px 0px 4px 1px #f0f0f0;
+    }
+    .login-modal input[type="button"]
+    {
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: none;
+        padding-right: 1.2em;
+        color: white;
+        background-color: red;
+        width: 84%;
+    }
+    .login-modal .part-two p
+    {
+        font-size: 12px;
+        font-weight: 700;
+        color: red;
+        text-align: right;
+        margin: 10px 8%;
+    }
+    .login-modal .part-two a
+    {
+        
+        font-size: 12px;
+        color: red;
+        
+    }
+    .login-modal label
+    {
+        font-size: 14px;
+        font-weight: 700; 
+        color: black;
+        width: 90%;
+        margin: 0px 8%;
+        margin-top: 20px;
+        padding: 0px 2px ;
+        
+    }
+    
+    .login-modal-bg a 
+    {
+        text-transform: none;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        width: 15%;
+        margin: 0px auto;
+        color: #7a7a7a;
+    }
+    .login-modal-bg a span
+    {
+        color: red;
+    }
+</style>
+<style>
+    h1
+    {
+        font-family: "archivo black",sans-serif;
+    }
+    .one
+    {
+        height: 18em;
+    }
+    .one .img::after
+    {
+        content: "";
+        height: 18em;
+        background-image: url(./img/bag-n-brand.jpg);
+        background-position-y: 22%;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        /* background-color: black; */
+        opacity: 0.5;
+        z-index: -1;
+    }
+    .one h1
+    {
+        
+        font-size: 88px;
+        letter-spacing: -0.1em;
+        margin: 0;
+        /* margin-top: -2em; */
+        text-align: center;
+        padding-top: 1.3em;
+        text-transform: uppercase;
+        
+
+    }
+    .two
+    {
+        padding: 5em;
+    }
+    .two h1
+    {
+        font-size: 23px;
+        letter-spacing: -0.09em;
+        padding: 1.5em;
+        text-align: center;
+
+    }
+    .two .form-container
+    {
+        border: 1px solid white;
+        width: 47%;
+        margin: 0 auto;
+        background-color: #fafafa;
+        color: black;
+    }
+    .form-container .img
+    {
+        height: 15em;
+        background-image: url(./img/bag-n-brand.jpg);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .form-container .location-intro
+    {
+        margin: 0em 2em;
+        margin-top: -3em;
+        padding: 2em;
+        background-color: white;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    }
+    .form-container .location-intro img
+    {
+        width: 40%;
+    }
+    .form-container .location-intro h2
+    {
+        font-family: "hind siliguri", sans-serif;
+        font-weight: 500;
+        font-size: 29px;
+        color: rgba(0, 0, 0, 0.8);
+        margin-top: 0.8em;
+
+    }
+    .form-container .location-intro p
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .form-container .form
+    {
+        margin: 4em;
+    }
+    .form label
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .form label span.required
+    {
+        color: red;
+    }
+    .form label span
+    {
+        font-size: 16px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button 
+    {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .form input
+    {
+        width: 100%;
+        margin: 1em 0em 2em 0em;
+        padding: 10px;
+        border-radius: 3px;
+        border: 2px solid;
+        border-color: rgba(92, 92, 92, 0.2);
+    }
+    .form input:hover
+    {
+        border-color: rgba(92, 92, 92, 0.4);
+
+    }
+    .form input:focus
+    {
+        
+        outline-color: rgba(38, 82, 255, 0.7);
+    }
+    .form input[type="checkbox"]
+    {
+        /* position: absolute;
+        left: 0; */
+        width: 3%;
+        
+        
+    }
+    /* .form input[type="checkbox"]:checked ~ input[type="checkbox"]
+    {
+        background-color: white;
+    } */
+    .form .hidden-form
+    {
+        display:none;
+    }
+    input[type="button"]
+    {
+        border: none;
+        border-radius: 6px;
+        width: 30%;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: rgba(38, 136, 255, 1);
+        color: white;
+        margin-bottom: 1.2em;
+        transition: 0.3s;
+    }
+    input[type="button"]:hover
+    {
+        background-color: rgba(38, 136, 255, 0.9);
+    }
+    input[type="button"]:focus
+    {
+        outline: none;
+    }
+    .form .report
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.3);
+        margin: 0px;
+    }
+    .form .report span
+    {
+        text-decoration: underline;
+    }
+    
+    .report-form
+    {
+        border: 2px solid;
+        border-color: rgba(92, 92, 92, 0.7);
+        border-radius: 5px;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+        padding: 2em;
+        position: absolute;
+        display: none;
+        font-family: 'Segoe UI', sans-serif;
+        color: rgba(0, 0, 0, 0.8);
+        width: 37.8%;
+        margin: 0em 2em;
+        background-color: white;
+        
+    }
+    .report-form h2,.report-form p
+    {
+        margin: 10px 0px;
+    }
+    .report-form .spam,
+    .report-form .other
+    {
+        height: 2em;
+    }
+    .report-form input[type="radio"]
+    {
+        width: auto;
+    }
+    .report-form textarea
+    {
+        width: 100%;
+        padding: 1em;
+        margin: 1em 0;
+        border-radius: 8px;
+        border: 2px solid;
+        border-color: rgba(92, 92, 92, 0.2);
+    }
+    .report-form textarea:focus
+    {
+        outline: none;
+        border-color: rgba(38, 82, 255, 0.7);
+        
+    }
+    .report-form textarea:placeholder-shown
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 14px;
+    }
+    .report-form .btn
+    {
+        text-align: right;
+        /* float: right; */
+    }
+    .report-form .btn .submit,
+    .report-form .btn .cancel
+    {
+        width: 20%;
+        margin: 0; 
+        padding: 8px;
+    }
+    .report-form .btn .cancel
+    {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .report-form .btn .cancel:hover
+    {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="#" class="btn btn-login">
+                        Log In 
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="one">
+            <div class="img">
+                <h1>Location</h1>
+            </div>
+            
+        </section>
+
+        <section class="two">
+            <h1>Enter your age and your zip code</h1>
+            <div class="form-container">
+                <div class="img"></div>
+                <div class="location-intro">
+                    <img src="./img/bag-n-brand6.png" alt="">
+                    <h2>SHOP LOCATION</h2>
+                    <p>
+                        Enter your age and your zip code to learn 
+                        where you can purchase our product today.
+                    </p>
+
+                </div>
+                <div class="report-form-bg">
+                    <div class="report-form">
+                        <h2>Report a malicious form</h2>
+                        <p>Please briefly describe how this form is being misused</p>
+                        <div class="spam">
+                            <input type="radio" name="report" id="spam">
+                            <label for="spam">Spam, malware, or Phishing</label>
+                        </div>
+                        <div class="other">
+                            <input type="radio" name="report" id="other">
+                            <label for="other">Other(please explain)</label>
+                        </div>
+                        <textarea name="explain-report" id="explain-report" cols="30" rows="10" placeholder="Optionally, please briefly describe how this form is being misused."></textarea>
+                        <div class="btn">
+                            <input type="button" value="Cancel" class="cancel">
+                            <input type="button" value="Submit" class="submit">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form">
+                    
+                    <label for="name">Name <span class="required">*</span><br>
+                        <span>How would you like to be addressed?</span>
+                    </label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="birth">BIRTH DAY <span class="required">*</span></label>
+                    <input type="date" name="birth" id="birth">
+                    <label for="zip">ZIP CODE <span class="required">*</span></label>
+                    <input type="number" name="zip" id="zip">
+                    <label for="shop-recommend">Recommend A Shop! <br>
+                        <span>Name the best vape/smoke shop in your area?</span>
+                    </label><br>
+                    <input type="checkbox" name="shop-recommend" id="shop-recommend">
+                    <div class="hidden-form">
+                        <label for="shop-name">Name Of Shop <span class="required">*</span><br>
+                            <span>What is the name of your favourite shop?</span>
+                        </label>
+                        <input type="text" name="shop-name" id="shop-name">
+                    </div><br>
+                    <a href="#">
+                        <input type="button" value="PUNCH ME!">
+                    </a>
+                    <p class="report">Never submit passwords through this form. <span>Report malicious form</span></p>
+                    
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+    <div class="login-modal-bg">
+        
+        <div class="login-modal">
+            <div class="part-one">
+                <img src="./img/bag-n-brand6.png" alt="">
+                <h1>Welcome Back</h1>
+            </div>
+            <div class="part-two">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" name="email" placeholder="Email Address">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password">
+                <p><a href="#">Reset my password</a></p>
+                <input type="button" value="Log In">
+                
+
+            </div>
+        </div>
+        <center><a href="#" class="btn login">Need an account? <span>Sign up here</span></a></center>
+        
+        
+    </div>
+
+    
+</body>
+<Script>
+    var header = document.querySelector("header");
+    var prevScrollPos = window.pageYoffset;
+    window.onscroll = function(){
+        var currentScrollPos = window.pageYOffset;
+            if(prevScrollPos> currentScrollPos){
+                header.style.top = "0";
+            }else{
+                header.style.top = "-80px"
+            }
+            prevScrollPos = currentScrollPos;
+    }
+
+    var modalBtn= document.querySelector(".btn-login");
+    var loginModalBg= document.querySelector(".login-modal-bg");
+
+    modalBtn.addEventListener("click",function(){
+        loginModalBg.style.display = "block";
+    });
+
+    window.addEventListener("click", function(e){
+        if(e.target == loginModalBg){
+            loginModalBg.style.display = "none";
+        }
+    })
+
+    var report = document.querySelector(".report span");
+    var reportFormBg= document.querySelector(".form-container")
+    var reportForm = document.querySelector(".report-form");
+    var clsBtn = document.querySelector(".cancel");
+
+    report.addEventListener("click", function(){
+        reportForm.style.display = "block";
+    })
+    window.addEventListener("click", function(w){
+        if(w.target === reportFormBg){
+            reportForm.style.display = "none";
+        }
+    })
+    clsBtn.addEventListener("click", function(){
+        reportForm.style.display = "none";
+    })
+
+</Script>
+</html>

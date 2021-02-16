@@ -44,14 +44,17 @@
     header
     {
         background-color: black;
+        width: 100%;
         height: 80px;
         display: grid;
         grid-template-columns: 3fr 2.5fr 1fr;
         grid-template-areas: 
         ". logo btn";
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 9999;
+        transition: top 0.3s;
+        transition-delay: 0.2s;
     }
     header .part-one
     {
@@ -239,15 +242,17 @@
     
     .one
     {
-        height: 21em;
+        height: 25em;
     }
     .one p
     {
+        padding-top: 120px;
         text-align: center;
+        
     }
     .one img
     {
-        width: 40%;
+        width: 42%;
     }
     .two
     {
@@ -604,7 +609,9 @@
         <header>
             <div class="part-one">
                 <div class="header-title-logo">
-                    <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    <a href="./landing-page.html">
+                        <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
                 </div>
             </div>
             <div class="part-two">
@@ -623,7 +630,7 @@
             <a href="#"><img src="./icon/square-shopping-bag-with-handle.png" alt="" ></a>
             <div class="cards-wrapper">
                 <div class="card-container">
-                    <a href="#">
+                    <a href="./product.html">
                         <div class="card">
                             <div class="img img-1"></div>
                             <p>100 Pouches - Acapulco Gold</p>
@@ -1083,16 +1090,16 @@
                         
                         Contact Us: <span>&nbsp;</span>
                         <Span>
-                            <a href="#" class="location">
+                            <a href="./location.html" class="location">
                                 Location
                             </a><span>&nbsp;</span>
-                            <a href="#" class="partner">
+                            <a href="./partner.html" class="partner">
                                 Partnerships
                             </a><span>&nbsp;</span>
-                            <a href="#" class="terms">
+                            <a href="./terms.html" class="terms">
                                 Terms of Service
                             </a><span>&nbsp;</span>
-                            <a href="#" class="refund">
+                            <a href="./return-refund.html" class="refund">
                                 Return/Refund Policy
                             </a>
                         </Span>
@@ -1127,6 +1134,19 @@
     </div>
 </body>
 <script>
+    var header = document.querySelector("header");
+    var prevScrollPos = window.pageYoffset;
+    window.onscroll = function(){
+        var currentScrollPos = window.pageYOffset;
+            if(prevScrollPos> currentScrollPos){
+                header.style.top = "0";
+            }else{
+                header.style.top = "-80px"
+            }
+            prevScrollPos = currentScrollPos;
+    }
+
+
     var modalBtn= document.querySelector(".btn-login");
     var loginModalBg= document.querySelector(".login-modal-bg");
 

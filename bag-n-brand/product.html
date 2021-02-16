@@ -43,13 +43,17 @@
     {
         background-color: black;
         height: 80px;
+        width: 100%;
         display: grid;
         grid-template-columns: 3fr 2.5fr 1fr;
         grid-template-areas: 
         ". logo btn";
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 9999;
+        
+        transition: top 0.3s;
+        transition-delay: 0.2s;
     }
     header .part-one
     {
@@ -195,7 +199,6 @@
     }
     .login-modal .part-two a
     {
-        
         font-size: 12px;
         color: red;
         
@@ -226,6 +229,60 @@
     {
         color: red;
     }
+    .img-view
+    {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: none;
+    }
+    .img-box
+    {
+        width: 68%;
+        height: 80vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(./img/product-img/1818227999.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+    
+    #prev-btn,
+    #next-btn
+    {
+        font-size: 36px;
+        position: fixed;
+        top: 50%;
+        height: 0;
+        width: 0;
+    }
+    #prev-btn
+    {
+        left: 30px;
+    }
+    #next-btn
+    {
+        right: 40px;
+    }
+    .img-view p
+    {
+        position: absolute;
+        bottom: -15px;
+        text-align: center;
+        /* left: 45%; */
+        width: 100%;
+        padding: 25px;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+    }
 </style>
 <style>
     p
@@ -235,15 +292,16 @@
     }
     .one
     {
-        height: 21em;
+        height: 25em;
     }
     .one p
     {
+        padding-top: 120px;
         text-align: center;
     }
     .one img
     {
-        width: 40%;
+        width: 42%;
     }
     .two
     {
@@ -288,6 +346,10 @@
         background-position: center;
         background-size: 110%;
         background-repeat: no-repeat;
+    }
+    .two .card-detail .img-2
+    {
+        display: none;
     }
     .two .detail
     {
@@ -433,12 +495,137 @@
     }
 
 </style>
+<style>
+    /* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  /* background-color: #fefefe; */
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  height: 90vh;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+.mySlides .img
+{
+    height: 92vh;
+    background-image: url(./img/product-img/1818227999.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.mySlides .img2
+{
+    background-image: url(./img/product-img/1818262341.png);
+}
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+    display: none;
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+</style>
 <body>
     <div class="container">
         <header>
             <div class="part-one">
                 <div class="header-title-logo">
-                    <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    <a href="./landing-page.html">
+                        <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
                 </div>
             </div>
             <div class="part-two">
@@ -461,12 +648,15 @@
 
             <div class="content-wrapper">
                 <div class="card-detail">
-                    <div class="img">
+                    <div class="img img-1 hover-shadow cursor" onclick="openModal();currentSlide(1)" >
+
+                    </div>
+                    <div class="img img-2 hover-shadow cursor" onclick="openModal();currentSlide(2)" >
 
                     </div>
                     <div class="detail">
                         <h1>100 Pouches - Acapulco Gold</h1>
-                        <a href="#"><p class="catalog">Back to catalog</p></a>
+                        <a href="./shop.html"><p class="catalog">Back to catalog</p></a>
                         <p class="price">$130.00</p>
                         <div class="stock">
                             <p>In Stock</p>
@@ -527,16 +717,16 @@
                         
                         Contact Us: <span>&nbsp;</span>
                         <Span>
-                            <a href="#" class="location">
+                            <a href="./location.html" class="location">
                                 Location
                             </a><span>&nbsp;</span>
-                            <a href="#" class="partner">
+                            <a href="./partner.html" class="partner">
                                 Partnerships
                             </a><span>&nbsp;</span>
-                            <a href="#" class="terms">
+                            <a href="./terms.html" class="terms">
                                 Terms of Service
                             </a><span>&nbsp;</span>
-                            <a href="#" class="refund">
+                            <a href="./return-refund.html" class="refund">
                                 Return/Refund Policy
                             </a>
                         </Span>
@@ -569,8 +759,59 @@
         
         
     </div>
+    
+
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 2</div>
+            <div class="img img1"></div>
+            <!-- <img src="./img/product-img/1818227999.jpg" style="width:100%; height: 42em;" > -->
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 2</div>
+            <div class="img img2"></div>
+            <!-- <img src="./img/bag-n-brand2.jpg" style="width:100%; height: 42em;" > -->
+          </div>
+      
+         
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+      
+      
+          <div class="column">
+            <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="100 Pouches - Acapulco Gold">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="100 Pouches - Acapulco Gold">
+          </div>
+          
+        </div>
+      </div>
 </body>
 <script>
+    var header = document.querySelector("header");
+    var prevScrollPos = window.pageYoffset;
+    window.onscroll = function(){
+        var currentScrollPos = window.pageYOffset;
+            if(prevScrollPos> currentScrollPos){
+                header.style.top = "0";
+            }else{
+                header.style.top = "-80px"
+            }
+            prevScrollPos = currentScrollPos;
+    }
+
+
     var modalBtn= document.querySelector(".btn-login");
     var loginModalBg= document.querySelector(".login-modal-bg");
 
@@ -583,5 +824,68 @@
             loginModalBg.style.display = "none";
         }
     })
+
+    // var imgZoom = document.querySelector(".card-detail .img");
+    // var imgView = document.querySelector(".img-view");
+
+    // imgZoom.addEventListener("click", 
+    // function(){
+    //     imgView.style.display = "block";
+    // })
+
+    // window.addEventListener("click",
+    // function(f){
+    //     if(f.target == imgView){
+    //         imgView.style.display= "none";
+    //     }
+    // })
+    
 </script>
+
+<script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    
+    var modalBg= document.querySelector("#myModal");
+    window.addEventListener("click",function(a){
+        if(a.target == modalBg){
+            modalBg.style.display = "none";
+        }
+    })
+    </script>
 </html>
