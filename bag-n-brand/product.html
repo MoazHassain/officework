@@ -542,6 +542,24 @@
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.zoom-in {
+    color: #999;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 45px;
+  padding: 16px;
+  border-radius: 0px 0px 5px 0px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.zoom-in:hover,
+.zoom-in:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 .mySlides {
   display: none;
@@ -767,8 +785,10 @@ img {
 
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&#10005;</span>
+        <span class="zoom-in cursor"><i class="fas fa-search-plus"></i></span>
         <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
-          <a class="next" onclick="plusSlides(1)">&#10093;</a>
+        <a class="next" onclick="plusSlides(1)">&#10093;</a>
+
         <div class="modal-content">
       
           <div class="mySlides">
