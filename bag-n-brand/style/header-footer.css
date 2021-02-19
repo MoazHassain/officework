@@ -1,0 +1,272 @@
+body
+{
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+a
+{
+    text-decoration: none;
+}
+a.btn
+{
+    color: black;
+    text-transform: uppercase;
+    padding: 18px 28px;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+a.btn:hover
+{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+@font-face
+{
+    src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+    font-family: nova;
+}
+header
+{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.9fr 2.5fr 1fr;
+    grid-template-areas: 
+    ". logo btn";
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    transition: top 0.3s;
+    transition-delay: 0.2s;
+}
+header .part-one
+{
+    grid-area: logo;
+    margin: auto 0%;
+}
+.header-title-logo img
+{
+    height: 50px; 
+    
+}
+header .part-two
+{
+    grid-area: btn;
+    margin: auto 0%;
+}
+
+header .part-two a
+{
+    font-family: "archivo black", sans-serif;
+    letter-spacing: 0.05em;
+    padding: 13px 24px;
+}
+
+footer .footer-title-logo img
+{
+    height: 60px;
+    margin: 40px 0px;
+    
+}
+
+footer .contact a
+{
+    color: white;
+    text-decoration: underline;
+}
+footer .contact p
+{
+    font-family: "archivo", sans-serif;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+footer .contact p:last-child
+{
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+
+
+
+.login-modal-bg
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 95vh;
+    top: 0;
+    left: 0;
+    padding-bottom: 5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    display: none;
+    z-index: 9999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.signup-modal-bg
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 95vh;
+    top: 0;
+    left: 0;
+    padding-bottom: 5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    display: none;
+    z-index: 9999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.modal
+{
+    background-color: white;
+    width: 26.7%;
+    margin: 0 auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    border-radius: 4px;
+}
+
+.modal .part-one
+{
+    text-align: center;
+}
+.modal .part-one h1
+{
+    color: black;
+    font-size: 26px;
+    margin: 13px 0px;
+}
+.modal .part-one img
+{
+    width: 34%;
+    margin-top: 1.5em;
+}
+.modal .part-two
+{
+    background-color: rgba(250, 250, 250, 0.4);
+    padding: 1.5em 0.5em;
+    box-shadow: 0px 0px 5px 1px #f0f0f0 inset;
+}
+.modal input
+{
+    font-family: 'Segoe UI', sans-serif;
+    width: 80%;
+    margin: 0px 8%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 1.2em;
+    padding-right: 0px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+    transition: 0.3s;
+}
+
+.modal input:hover
+{
+    background-color: white;
+    box-shadow: 0px 0px 4px 1px #f0f0f0;
+}
+
+
+.modal input:focus
+{
+    outline: none;
+    box-shadow: 0px 0px 4px 1px #f0f0f0;
+}
+
+.modal input[type="button"]
+{
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: none;
+    padding: 1em 0px;
+    border-radius: 4px;
+    color: white;
+    background-color: red;
+    width: 84%;
+}
+
+
+.modal .part-two p.reset
+{
+    font-size: 12px;
+    font-weight: 700;
+    color: red;
+    text-align: right;
+    margin: 10px 8%;
+    text-align: right;
+}
+
+.modal .part-two p.reset a
+{
+    
+    font-size: 12px;
+    color: red;
+    
+}
+
+.modal .part-two p.terms
+{
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #7a7a7a;
+}
+
+.modal .part-two p.terms a
+{
+    font-size: 10px;
+    color: red;
+    text-decoration: underline dotted;
+}
+
+
+
+.modal label
+{
+    font-size: 13px;
+    font-weight: 700; 
+    color: black;
+    width: 90%;
+    margin: 0px 8%;
+    margin-top: 20px;
+    padding: 0px 2px ;
+    
+}
+
+
+
+.modal-bg a
+{
+    text-transform: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    width: 15%;
+    margin: 0px auto;
+    color: #7a7a7a;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.modal-bg a span
+{
+    color: red;
+}
+
