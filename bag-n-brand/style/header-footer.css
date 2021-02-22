@@ -1,3 +1,9 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body
 {
     margin: 0px;
@@ -95,7 +101,7 @@ footer .contact p:last-child
     display: none;
     position: fixed;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     top: 0;
     left: 0;
     padding-bottom: 5em;
@@ -103,7 +109,7 @@ footer .contact p:last-child
     display: grid;
     justify-content: center;
     align-content: center;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', sans-serif !important;
     display: none;
     z-index: 9999;
     overflow-y: scroll;
@@ -115,7 +121,7 @@ footer .contact p:last-child
     display: none;
     position: fixed;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     top: 0;
     left: 0;
     padding-bottom: 5em;
@@ -270,3 +276,161 @@ footer .contact p:last-child
     color: red;
 }
 
+
+.reset-pass-bg
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding-bottom: 5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* display: grid;
+    justify-content: center;
+    align-content: center; */
+    font-family: 'Segoe UI', sans-serif !important;
+    z-index: 9999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+.set-newpass-bg
+{
+    
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding-bottom: 5em;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* display: grid;
+    justify-content: center;
+    align-content: center; */
+    font-family: 'Segoe UI', sans-serif !important;
+    z-index: 9999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+.second-modal
+{
+    background-color: #fafafa;
+    width: 31%;
+    margin: 0 auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    padding: 3em;
+    border-radius: 4px;
+}
+.second-modal p
+{
+    
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+.second-modal p.step 
+{
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.second-modal p.describe
+{
+    font-size: 14px;
+    padding: 10px 10% 30px 10%;
+}
+.second-modal h1
+{
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 25px;
+}
+.second-modal label
+{
+    color: rgba(0, 0, 0, 0.8);
+}
+.second-modal label
+{
+    font-size: 14px;
+    font-weight: 700; 
+    color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    margin-top: 20px;
+    padding: 0px 2px;
+}
+.second-modal input
+{
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+    /* margin: 0px 8%; */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 1.5em 1.2em;
+    padding-right: 0px;
+    border: 1px solid;
+
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    /* background-color: #fafafa; */
+    box-shadow: 0px 0px 4px 1px #f0f0f0;
+    transition: 0.3s;
+}
+.second-modal input:hover
+{
+    background-color: white;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+
+}
+.second-modal input:focus
+{
+    outline: none;
+    /* outline: 1px solid;
+    outline-color: rgba(0, 102, 255, 0.5); */
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    /* border-color: royalblue; */
+    border-color: rgba(36, 156, 255, 0.8);
+}
+.second-modal #one-time-pass
+{
+    font-size: 22px;
+    padding: 0.75em 0.6em;
+    letter-spacing: 8px;
+
+}
+.second-modal input[type="button"]
+{
+    box-shadow: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 1em;
+    background-color: red;
+}
+.second-modal .set-reset-code,
+.second-modal .get-reset-code
+{
+    padding-top: 10px;
+    margin-bottom: -15px;
+}
+.second-modal .get-reset-code a,
+.second-modal .set-reset-code a
+{
+    font-size: 14px;
+    color: red;
+}
+
+.modal .reset a,
+.second-modal .set-reset-code a,
+.second-modal .get-reset-code a
+{
+    font-family: 'Segoe UI', sans-serif !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
@@ -481,13 +481,47 @@
                 <label for="password">Password</label>
                 <input id="signup-password" type="password" name="password" placeholder="Password">
                 <input type="button" value="Sign Up">
-                <p class="terms">Click above to agree to our <a href="#">Terms of Service</a></p>
+                <p class="terms">Click above to agree to our <a href="./terms.html">Terms of Service</a></p>
 
             </div>
         </div>
         <center><a href="#" class="btn login">Already a member? <span>Log in here</span></a></center>
         
         
+    </div>
+
+    <div class="second-modal-bg reset-pass-bg">
+        <div class="second-modal reset-pass-modal">
+            <p class="step">STEP 1 OF 2</p>
+            <h1>Reset your password</h1>
+            <p class="describe">
+                Enter your email address, and we'll send instructions to
+                reset your password.
+            </p>
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="reset-pass-email" placeholder="Email">
+            <input type="button" value="Send Password Reset Email">
+            <p class="set-reset-code"><a href="#">I already have a reset code &#8594;</a></p>
+        </div>
+    </div>
+
+    <div class="second-modal-bg set-newpass-bg">
+        <div class="second-modal set-newpass-modal">
+            <p class="step">STEP 2 OF 2</p>
+            <h1>Check your email</h1>
+            <p class="describe">
+                Please enter your 6-digit one-time code. Then create 
+                and confirm your new password.
+            </p>
+            <label for="one-time-pass">6-digit one-time code</label>
+            <input type="text" name="one-time-pass" id="one-time-pass" placeholder="123456">
+            <label for="new-pass">New Password</label>
+            <input type="text" name="new-pass" id="new-pass" placeholder="New Password">
+            <label for="confirm-pass">Confirm Password</label>
+            <input type="text" name="confirm-pass" id="confirm-pass" placeholder="Confirm Password">
+            <input type="button" value="Reset Password">
+            <p class="get-reset-code"><a href="#">&#8592; Send a new reset code</a></p>
+        </div>
     </div>
 </body>
 <script src="./app/header-footer.js"></script>
