@@ -71,7 +71,7 @@
     {
         margin-bottom: 1em;
     }
-    .two .cards-wrapper .cart-describe h1 
+    .two .cards-wrapper h1 
     {
         font-family: "archivo black", sans-serif;
         font-size: 32px;
@@ -81,87 +81,7 @@
     {
         margin-bottom: 2em;
     }
-    .two .cards-wrapper p.center
-    {
-        /* text-align: center; */
-        padding: 10px 0px;
-    }
-    /* .two .cards-wrapper .btn-center input
-    {
-        font-family: nova;
-        font-weight: 600;
-        font-size: 16px;
-        padding: 10px 30px;
-        color: rgba(255, 255, 255, 1);
-        background-color: rgba(255, 255, 255, 0.2);
-        border: none;
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .two .cards-wrapper .btn-center input:hover
-    {
-        background-color: rgba(255, 255, 255, 0.4);
-    } */
-    .two .card-container
-    {
-        background-color: black;
-        
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 15px;
-    }
-    .two .card
-    {
-        color: white;
-        border-radius: 5px;
-        border: 1px solid;
-        border-color: rgba(120, 120, 120, 0.6);
-        opacity: 0.9;
-        transition: 0.3s;
-    }
-    .two .card:hover
-    {
-        opacity: 1;
-    }
-    .two .card .img
-    {
-
-        height: 25em;
-        background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg);
-        background-position: center;
-        background-size: 160%;
-        background-repeat: no-repeat;
-    }
-    .two .card p
-    {
-        font-size: 20px;
-        font-weight: 700;
-        margin-top: 16px;
-        margin-bottom: 0px;
-        text-align: center;
-    }
-    .two .card button
-    {
-        outline: none;
-        border: none;
-        border-radius: 4px;
-        font-family: nova;
-        font-weight: 600;
-        font-size: 16px;
-        color: white;
-        background-color: rgba(219, 219, 219, 0.2);
-        padding: 8px 12%;
-        margin: 16px 0px 28px 0px;
-        transition: 0.3s;
-    }
-    .two .card button span
-    {
-        color: #fd7474;
-    }
-    .two .card button:hover
-    {
-        background-color: rgba(219, 219, 219, 0.4);
-    }
+    
     .two .part-icon
     {
         width: 25%;
@@ -185,6 +105,67 @@
     {
         font-size: 16px;
         font-weight: 500;
+    }
+</style>
+<style>
+    .two .cards-wrapper
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 3em;
+    }
+    .cards-wrapper .product
+    {
+        margin: 20px 0px;
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 1em;
+    }
+    .cards-wrapper .product-img
+    {
+        width: 80px;
+        height: 100%;
+        background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .cards-wrapper .product-detail p
+    {   
+        padding: 3px 0px;
+    }
+    .cards-wrapper .product-price p
+    {
+        padding: 3px 0px;
+        text-align: right;
+    }
+    .cards-wrapper .total-price
+    {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 20px 0px;
+    }
+    .total-price .price 
+    {
+        float: right;
+    }
+    .cart-describe .promo
+    {
+        margin: 10px 0px 15px 0px;
+    }
+    .cart-describe .continue
+    {
+        margin: 15px 0px;
+    }
+    .cart-describe .continue a
+    {
+        color: rgba(255, 255, 255, 0.8);
+        transition: 0.2s;
+    }
+    .cart-describe .continue a:hover
+    {
+        color: rgba(255, 255, 255, 1);
+
     }
 </style>
 <body>
@@ -222,22 +203,84 @@
                     </g>
                 </svg>
                 <!-- <img src="./icon/square-shopping-bag-with-handle.png" alt="" > -->
-            </a>
+            </a><span>1</span>
             <div class="cards-wrapper">
                 <div class="cart-describe">
-                    <h1>My Favourites</h1>
+                    <h1>Shopping cart</h1>
                     <p>Store &nbsp;/ &nbsp;Shopping cart</p>
-                </div>
-                <div class="add-to">
-                    <div class="card-container">
-                        <a href="./product.html">
-                            <div class="card">
-                                <div class="img img-1"></div>
-                                <p>100 Pouches - Acapulco Gold</p>
-                                <center><button><span><i class="fas fa-heart"></i></span>&nbsp;  Fovourited</button></center> 
-                            </div>
-                        </a>
+                    <div class="product">
+                        <div class="product-img"></div>
+                        <div class="product-detail">
+                            <p>100 Pouches - Acapulco Gold</p>
+                            <p>Qty: 1 <i class="fas fa-chevron-down"></i></p>
+                        </div>
+                        <div class="product-price">
+                            <p class="btn-cancel">
+                                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                                        <path d="M.5.5l11 11M.5 11.5l11-11"></path>
+                                    </g>
+                                </svg>
+                            </p>
+                            <p>$130.00</p>
+                        </div>
+
                     </div>
+                    <hr style="background-color: rgba(255, 255, 255, 0.6);  width: 100%; border: 0; height: 0.2px; ">
+                    <p class="total-price"><span class="total">TOTAL</span><span class="price">$130.00</span></p>
+                    <p class="promo">
+                        Have a promo coupon or gift card?<br>
+                        Redeem your code
+                    </p>
+                    <p class="continue">Looking for more? <a href="./shop.html">Continue shopping</a></p>
+                </div>
+
+                <div class="payment">
+                    <h1>Checkout</h1>
+                    <p>
+                        Enter your email address. This address will be 
+                        used to send you order status updates.
+                    </p>
+                    <input type="text" name="email" placeholder="Your email address">
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">I agree with terms & conditions</label>
+                    <input type="checkbox" name="updated" id="updated">
+                    <label for="updated">Keep me up to date on new and exclusive offers</label>
+                    <div class="checkout">
+                        <input type="button" value="Checkout">
+                        <div class="encrypted">
+                            <svg width="18" height="23" viewBox="0 0 18 23" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="currentColor" fill-rule="evenodd">
+                                    <path d="M15 9h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h1V6a6 6 0 1 1 12 0v3zm-2 0V6a4 4 0 1 0-8 0v3h8zM2 10a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1H2z" fill-rule="nonzero">
+
+                                    </path>
+                                    <path d="M8 16.732a2 2 0 1 1 2 0V18a1 1 0 0 1-2 0v-1.268z"></path>
+                                </g>
+
+                            </svg>
+                            All data is transmitted encrypted via a secure TLS connection
+                        </div>
+                        <a href="#"><button class="paypal-check">
+                            <i class="fab fa-paypal"></i>
+                            <span class="pay">Pay</span >
+                            <span class="pal">Pal</span>
+                            Checkout
+                        </button></a>
+                        <a href="#"><button class="paypal-credit">
+                            <i class="fab fa-paypal"></i>
+                            PayPal CREDIT
+                        </button></a>
+
+                        <p class="next-step">Next steps</p>
+                        <hr>
+                        <p>Payment information</p>
+                        <p>Choose a payment method and enter your payment details.</p>
+                        <br>
+                        <p>Order confirmation</p>
+                        <p>Place your order and receive a confirmation email</p>
+                    </div>
+                    <!-- <p class="center">Your shopping cart is empty</p>
+                    <p class="btn-center"><a href="./shop.html"><input type="button" value="Browse Store"></a></p> -->
                 </div>
                 <div class="part-icon">
                     <div class="icon icon-fav">
@@ -251,7 +294,7 @@
                             </svg>
                             </span>
                         </a>
-                        <p>Favourites <span>( 1 )</span></p>
+                        <p>Favourites</p>
                         
                     </div>
                     <div class="icon icon-kart">
