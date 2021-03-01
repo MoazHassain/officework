@@ -14,7 +14,7 @@
 <style>
     section.one
     {
-        margin-top: 80px;
+        margin-top: 65px;
         background-image: url(./img/bag-n-brand.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -39,7 +39,7 @@
         font-size: 132px;
         margin: 0px;
         font-weight: 600;
-        letter-spacing: -13px;
+        letter-spacing: -0.09em;
     }
     .one .btn-area
     {
@@ -160,7 +160,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 90vh;
+        height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
@@ -280,6 +280,392 @@
     
 
 </style>
+
+<!-- responsiver part header & footer-->
+<!-- <style>
+    @media only screen and (max-width: 1025px) and (min-width: 760px){
+        header
+        {
+            padding: 0em 3em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "logo btn";
+        }
+        header .part-one
+        {
+            grid-area: logo;
+            margin: auto 0;
+        }
+        header .part-two
+        {
+            grid-area: btn;
+            justify-self: right;
+        }
+        header .part-two .btn-login
+        {
+            display: none;
+        }
+        header .part-two .btn-container
+        {
+            display: block;
+        }
+        .btn-container .bar1,
+        .btn-container .bar2
+        {
+            width: 35px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 11px 0;
+            transition: 0.3s;
+        }
+        .change .bar1
+        {
+            -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+            transform: rotate(135deg) translate(15px, 6px);
+        }
+        .change .bar2
+        {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(-135deg) translate(13px, -6px);
+        }
+        .my-nav
+        {
+            
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 1);
+            transition: 0.3s;
+            overflow-y: hidden;
+        }
+        
+        .my-nav .btn-login
+        {
+            position: absolute;
+            bottom: 3em;
+            left: 41%;
+            font-family: "archivo black", sans-serif;
+            letter-spacing: 0.05em;
+            padding: 13px 66px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 6px;
+            /* width: 50%; */
+            
+            
+        }
+        .close
+        {
+            
+            height: 90%;
+            transition: 0.3s;
+        }
+    }
+</style> -->
+<!-- responsive for tab -->
+<style>
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        .one .block-text h1 
+        {
+            font-size: 9vw;
+            
+        }
+        .one .btn-area a
+        {
+            font-size: 2vw;
+        }
+
+        .two .block-text p
+        {
+            font-size: 2vw;
+        }
+        .four p
+        {
+            font-size: 2.2vw;
+        }
+        .six p
+        {
+            font-size: 1.9vw;
+        }
+        .six h3 
+        {
+            font-size: 2.2vw;
+        }
+
+        .eight p,
+        .nine p 
+        {
+            font-size: 2.6vw;
+        }
+        .ten .part-one
+        {
+            padding: 8vw;
+        }
+        .ten .part-one p 
+        {
+            font-size: 1.6vw;
+        }
+        .ten .part-one h1
+        {
+            font-size: 7vw;
+            margin: 6vw 0;
+            line-height: 7vw;
+        }
+        .ten .part-one a
+        {
+            font-size: 1.7vw;
+        }
+        .ten .part-two 
+        {
+            margin: 5vw 7vw;
+        }
+        .twelve .block-text h1
+        {
+            font-size: 2.5vw;
+        }
+        .thirteen .part-one .block-text
+        {
+            margin: 3.5vw 1vw 0 9vw;
+            padding: 3vw 6vw;
+
+        }
+        .thirteen .part-one h1
+        {
+            font-size: 2.2vw;
+        }
+        .thirteen .part-one p 
+        {
+            font-size: 1.7vw;
+        }
+        .thirteen .part-two
+        {
+            height: 26vw;
+            margin: 0em 12vw 0em 0em;
+            margin-left: -8vw;
+        }
+    }
+        
+</style>
+<!-- responsive for mobile -->
+
+<style>
+    @media only screen and (max-width: 750px) 
+    {
+        section.one 
+        {
+            height: 32em;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 0.7fr 0.7fr;
+            grid-template-areas: 
+            "text"
+            "btnone"
+            "btntwo";
+        }
+        .one .block-text
+        {
+            align-self: flex-end;
+            justify-self: center;
+        }
+        .one .block-text h1 
+        {
+            font-size: clamp(56px, 9vw, 9vw);
+            padding: 0 20px;
+            line-height: 1em;
+        }
+        .one .btn-area.area1
+        {
+            align-self: center;
+            justify-self: center;
+            margin-left: -15vw;
+        }
+        .one .btn-area.area2
+        {
+            align-self: flex-start;
+            justify-self: center;
+            /* margin-left: 2vw; */
+        }
+        .one .btn-area a
+        {
+            font-size: clamp(16px, 2vw, 2vw);
+        }
+
+        .two .block-text p
+        {
+            font-size: clamp(15px, 2vw, 2vw);
+        }
+        .four p
+        {
+            font-size: clamp(16px, 2.2vw, 2.2vw);
+        }
+        .six p
+        {
+            font-size: clamp(14px, 1.9vw, 1.9vw);
+        }
+        .six h3 
+        {
+            font-size: clamp(16px, 2.2vw, 2.2vw);
+        }
+
+        .eight p,
+        .nine p 
+        {
+            font-size: clamp(20px, 2.6vw, 2.6vw);
+        }
+        section.ten 
+        {
+            display: grid;
+            grid-template-columns: auto;
+            /* grid-template-rows: 1fr 1fr; */
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "area2"
+            "area1";
+        }
+        .ten .part-one
+        {
+            grid-area: area1;
+            padding: 8vw;
+        }
+        .ten .part-one p 
+        {
+            font-size: clamp(14px, 1.6vw, 1.6vw);
+        }
+        .ten .part-one h1
+        {
+            font-size: clamp(36px, 7vw, 7vw);
+            margin: 8vw 0;
+            line-height: 12vw;
+        }
+        .ten .part-one a
+        {
+            font-size: clamp(14px, 1.6vw, 1.6vw);
+            margin-top: 3em;
+        }
+        .ten .part-two 
+        {
+
+            grid-area: area2;
+            height: 70vw;
+            margin: 5vw 7vw;
+        }
+        .twelve .block-text h1
+        {
+            font-size: clamp(16px, 2.5vw, 2.5vw);
+        }
+        /* section.thirteen 
+        {
+            height: auto;
+            padding: 2em 0;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            "area2"
+            "area1";
+        }
+        .thirteen .part-one
+        {
+            grid-area: area1;
+        }
+        .thirteen .part-one .block-text
+        {
+            margin: 0 12vw;
+            padding: 3vw 8vw 3vw 8vw;
+
+        }
+        .thirteen .part-one h1
+        {
+            font-size: clamp(14px, 2.2vw, 2.2vw);
+        }
+        .thirteen .part-one p 
+        {
+            font-size: clamp(13px, 1.7vw, 1.7vw);
+        }
+        .thirteen .part-two
+        {
+            grid-area: area2;
+            height: 18em;
+            margin: 0 5em;
+            margin-left: clamp(4em, 4em, 10em);
+            margin-bottom: -10em;
+        } */
+    }
+        
+</style>
+<style>
+    @media only screen and (max-width: 750px) and (min-width: 472px){
+        .thirteen
+        {
+            height: auto;
+            padding: 10em 0;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+        }
+        .thirteen .part-one .block-text
+        {
+            margin: 3.5vw 1vw 0 9vw;
+            padding: 3vw 6vw;
+
+        }
+        .thirteen .part-one h1
+        {
+            font-size: clamp(14px, 2.2vw, 2.2vw);
+        }
+        .thirteen .part-one p 
+        {
+            font-size: clamp(13px, 1.7vw, 1.7vw);
+        }
+        .thirteen .part-two
+        {
+            height: 8em;
+            margin: 0em 12vw 0em 0em;
+            margin-left: -10em;
+            margin-top: -4em;
+        }
+    }
+</style>
+<style>
+    @media only screen and (max-width: 470px){
+        .thirteen
+        {
+            height: auto;
+            padding: 10em 0;
+            display: grid;
+            grid-template-columns: 2fr 0.5fr;
+        }
+        .thirteen .part-one .block-text
+        {
+            margin: 3.5vw 1vw 0 9vw;
+            padding: 3vw 6vw;
+
+        }
+        .thirteen .part-one h1
+        {
+            font-size: clamp(14px, 2.2vw, 2.2vw);
+        }
+        .thirteen .part-one p 
+        {
+            font-size: clamp(13px, 1.7vw, 1.7vw);
+        }
+        .thirteen .part-two
+        {
+            height: 8em;
+            margin: 0em 12vw 0em 0em;
+            margin-left: -10em;
+            margin-top: -4em;
+        }
+        .thirteen .part-two h1 
+        {
+            font-size: clamp(18px, 2.5vw, 5vw);
+        }
+
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -292,22 +678,32 @@
             </div>
             <div class="part-two">
                 <div >
-                    <a href="#" class="btn btn-login">
+                    <a href="javascript:void(0)" class="btn btn-login">
                         Log In 
                     </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
                 </div>
             </div>
         </header>
+        <div id="my-nav" class="my-nav" >
+            <a href="javascript:void(0)" class="btn btn-login" >
+                <p>Log In </p>
+            </a>
+        </div>
         <section class="one">
             <div class="block-text">
-                <h1>DREAM BIGGER</h1>
+                <center><h1>DREAM BIGGER</h1></center>
             </div>
-            <div class="btn-area">
+            <div class="btn-area area1">
                 <a href="./shop.html" class="btn btn-hero-one">
                     SHOP STRANDBRANDS™️
                 </a>
             </div>
-            <div class="btn-area">
+            <div class="btn-area area2">
                 <a href="./service.html" class="btn btn-hero-two">
                     BUILD A BRAND
                 </a>
@@ -323,7 +719,7 @@
         </section>
         <section class="four">
             <div class="block-text">
-                <p>Unfold the story. Share the experience. Increase sales</p>
+               <center> <p>Unfold the story. Share the experience. Increase sales</p></center>
             </div>
         </section>
         <section class="five">
@@ -525,4 +921,13 @@
     </div>
 </body>
 <script src="./app/header-footer.js"></script>
+<!-- responsive -->
+<script>
+    var hamburger = document.querySelector(".btn-container");
+    var navBar = document.querySelector(".my-nav")
+    function openNav() {
+        hamburger.classList.toggle("change");
+        navBar.classList.toggle("close");
+    }
+</script>
 </html>

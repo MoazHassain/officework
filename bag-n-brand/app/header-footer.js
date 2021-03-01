@@ -11,9 +11,14 @@ window.onscroll = function(){
 }
 
 
-var loginModalBtn= document.querySelector(".btn-login");
+var loginModalBtn= document.querySelector("header .btn-login");
+var navloginModalBtn= document.querySelector(".my-nav .btn-login");
 var loginModalBg = document.querySelector(".login-modal-bg")
 var signupModalBg = document.querySelector(".signup-modal-bg")
+
+navloginModalBtn.addEventListener("click",function(){
+    loginModalBg.style.display = "block";
+});
 
 loginModalBtn.addEventListener("click",function(){
     loginModalBg.style.display = "block";

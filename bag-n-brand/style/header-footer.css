@@ -54,7 +54,9 @@ header .part-one
 }
 .header-title-logo img
 {
-    height: 50px; 
+    width: 30%;
+    min-width: 6em;
+    height: auto; 
     
 }
 header .part-two
@@ -62,7 +64,10 @@ header .part-two
     grid-area: btn;
     margin: auto 0%;
 }
-
+header .part-two .btn-container
+{
+    display: none;
+}
 header .part-two a
 {
     font-family: "archivo black", sans-serif;
@@ -72,7 +77,8 @@ header .part-two a
 
 footer .footer-title-logo img
 {
-    height: 60px;
+    width: 15%;
+    height: auto;
     margin: 40px 0px;
     
 }
@@ -87,6 +93,7 @@ footer .contact p
     font-family: "archivo", sans-serif;
     font-size: 12px;
     margin-bottom: 25px;
+    padding: 0 20px;
 }
 footer .contact p:last-child
 {
@@ -430,7 +437,223 @@ footer .contact p:last-child
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button 
+{
   -webkit-appearance: none;
   margin: 0;
+}
+/* responsive btn */
+header .part-two .btn-container
+    {
+        display: none;
+
+    }
+    .btn-container .bar1,
+    .btn-container .bar2
+    {
+        width: 35px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 11px 0;
+        transition: 0.3s;
+    }
+    .change .bar1
+    {
+        -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+        transform: rotate(135deg) translate(15px, 6px);
+    }
+    .change .bar2
+    {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(-135deg) translate(13px, -6px);
+    }
+    .my-nav
+    {
+        
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 9990;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 1);
+        transition: 0.3s;
+        overflow-y: hidden;
+    }
+    
+    .my-nav .btn-login
+    {
+        position: absolute;
+        bottom: 3em;
+        left: 41%;
+        font-family: "archivo black", sans-serif;
+        letter-spacing: 0.05em;
+        padding: 13px 66px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 6px;
+    }
+    .close
+    {
+        
+        height: 100%;
+        transition: 0.3s;
+    }
+
+
+
+@media only screen and (max-width: 1025px) and (min-width: 760px){
+    header
+    {
+        padding: 0em 5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "logo btn";
+    }
+    header .part-one
+    {
+        grid-area: logo;
+        margin: auto 0;
+    }
+    header .part-two
+    {
+        grid-area: btn;
+        justify-self: right;
+    }
+    header .part-two .btn-login
+    {
+        display: none;
+    }
+    header .part-two .btn-container
+    {
+        display: block;
+    }
+    /* .btn-container .bar1,
+    .btn-container .bar2
+    {
+        width: 35px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 11px 0;
+        transition: 0.3s;
+    } */
+    /* .change .bar1
+    {
+        -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+        transform: rotate(135deg) translate(15px, 6px);
+    }
+    .change .bar2
+    {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(-135deg) translate(13px, -6px);
+    } */
+    /* .my-nav
+    {
+        
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 9990;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 1);
+        transition: 0.3s;
+        overflow-y: hidden;
+    }
+    
+    .my-nav .btn-login
+    {
+        position: absolute;
+        bottom: 3em;
+        left: 41%;
+        font-family: "archivo black", sans-serif;
+        letter-spacing: 0.05em;
+        padding: 13px 66px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 6px;
+    }
+    .close
+    {
+        
+        height: 100%;
+        transition: 0.3s;
+    } */
+}
+
+@media only screen and (max-width: 750px) {
+    header
+    {
+        padding: 0em 5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "logo btn";
+    }
+    header .part-one
+    {
+        grid-area: logo;
+        margin: auto 0;
+    }
+    header .part-two
+    {
+        grid-area: btn;
+        justify-self: right;
+    }
+    header .part-two .btn-login
+    {
+        display: none;
+    }
+    header .part-two .btn-container
+    {
+        display: block;
+    }
+    /* .btn-container .bar1,
+    .btn-container .bar2
+    {
+        width: 35px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 11px 0;
+        transition: 0.3s;
+    }
+    .change .bar1
+    {
+        -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+        transform: rotate(135deg) translate(15px, 6px);
+    }
+    .change .bar2
+    {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(-135deg) translate(13px, -6px);
+    }
+    .my-nav
+    {
+        
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 9990;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 1);
+        transition: 0.3s;
+        overflow-y: hidden;
+    } 
+    
+    .my-nav .btn-login
+    {
+        position: absolute;
+        bottom: 3em;
+        left: 41%;
+        font-family: "archivo black", sans-serif;
+        letter-spacing: 0.05em;
+        padding: 13px 66px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 6px;
+    }
+    .close
+    {
+        height: 100%;
+        transition: 0.3s;
+    } */
 }
