@@ -98,3 +98,10 @@ window.addEventListener("click", function(e){
         setNewpassBg.style.display = "none";
     }
 })
+
+var hamburger = document.querySelector(".btn-container");
+var navBar = document.querySelector(".my-nav")
+function openNav() {
+    hamburger.classList.toggle("change");
+    navBar.classList.toggle("open-nav-modal");
+}

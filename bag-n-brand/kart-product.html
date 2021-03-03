@@ -223,6 +223,17 @@
     {
         font-size: 14px;
     }
+    .payment .paypal-check
+    {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffbf0f;
+        padding: 15px 30px;
+        font-size: clamp(14px, 1.25vw, 1.3vw);
+        font-style: italic;
+        
+    }
 </style>
 <body>
     <div class="container">
@@ -236,13 +247,22 @@
             </div>
             <div class="part-two">
                 <div >
-                    <a href="#" class="btn btn-login">
+                    <a href="javascript:void(0)" class="btn btn-login">
                         Log In 
                     </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
                 </div>
             </div>
         </header>
-
+        <div id="my-nav" class="my-nav" >
+            <a href="javascript:void(0)" class="btn btn-login" >
+                <p>Log In </p>
+            </a>
+        </div>
         <section class="one">
             <p><img src="./img/bag-n-brand5.png" alt=""></p>
         </section>
@@ -317,16 +337,18 @@
                             <p>All data is transmitted encrypted via a secure TLS connection</p>
                         </div>
                     </div>
-                        <a href="#"><button class="paypal-check">
+                    <a href="#"><button class="paypal-check">
                             <i class="fab fa-paypal"></i>
                             <span class="pay">Pay</span >
                             <span class="pal">Pal</span>
                             Checkout
-                        </button></a>
-                        <a href="#"><button class="paypal-credit">
+                        </button>
+                    </a>
+                    <a href="#"><button class="paypal-credit">
                             <i class="fab fa-paypal"></i>
                             PayPal CREDIT
-                        </button></a>
+                        </button>
+                    </a>
 
                         <p class="next-step">Next steps</p>
                         <hr>

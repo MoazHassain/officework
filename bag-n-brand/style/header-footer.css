@@ -486,13 +486,17 @@ header .part-two .btn-container
         position: absolute;
         bottom: 3em;
         left: 41%;
-        font-family: "archivo black", sans-serif;
+        font-family: "archivo black", sans-serif !important;
         letter-spacing: 0.05em;
         padding: 13px 66px;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 6px;
     }
-    .close
+    .my-nav .btn-login p
+    {
+        font-family: "archivo black", sans-serif !important;
+    }
+    .open-nav-modal
     {
         
         height: 100%;
