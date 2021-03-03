@@ -61,6 +61,15 @@
         width: 30px;
         margin: 1em 0.5em;
     }
+    .two .count span
+    {
+        padding: 3px 9px;
+        border-radius: 50px;
+        background-color: white;
+        color: black;
+        font-size: 14px;
+        margin-left: -15px;
+    }
     .two .cards-wrapper
     {
         background-color: black;
@@ -84,7 +93,7 @@
     
     .two .part-icon
     {
-        width: 25%;
+        width: auto;
         margin: 0px auto;
         padding: 40px;
         display: grid;
@@ -112,7 +121,22 @@
     {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "one two"
+        "three three";
         grid-gap: 3em;
+    }
+    .cards-wrapper .cart-describe
+    {
+        grid-area: one;
+    }
+    .cards-wrapper .payment
+    {
+        grid-area: two;
+    }
+    .cards-wrapper .part-icon
+    {
+        grid-area: three;
     }
     .cards-wrapper .product
     {
@@ -133,6 +157,15 @@
     .cards-wrapper .product-detail p
     {   
         padding: 3px 0px;
+    }
+    .product-detail>span
+    {
+        font-family: nova;
+    }
+    .product-detail select.qty
+    {
+        font-size: 16px;
+        background-color: black;
     }
     .cards-wrapper .product-price p
     {
@@ -207,7 +240,7 @@
         font-size: 18px;
         font-weight: 600;
         color: rgba(255, 255, 255, 1);
-        background-color: rgba(255, 255, 255, 0.24);
+        background-color: rgba(255, 255, 255, 0.2);
         border: none;
         border-radius: 4px;
         padding: 13px;
@@ -223,16 +256,47 @@
     {
         font-size: 14px;
     }
+    i.fa-paypal
+    {
+        color: #0307ff;
+    }
     .payment .paypal-check
     {
         outline: none;
         border: none;
         border-radius: 5px;
-        background-color: #ffbf0f;
-        padding: 15px 30px;
-        font-size: clamp(14px, 1.25vw, 1.3vw);
+        background-color: #ffc421;
+        padding: 12px;
+        font-size: clamp(14px, 1.28vw, 1.28vw);
         font-style: italic;
-        
+        font-weight: 900;
+        width: 12em;
+        margin: 5px 0;
+    }
+    .payment .paypal-credit
+    {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        font-size: clamp(14px, 1.28vw, 1.28vw);
+        font-style: italic;
+        font-weight: 900;
+        background-color: #1f2187;
+        color: white;
+        width: 12em;
+        margin: 5px 0;
+    }
+    .payment .next-step
+    {
+        margin: 10px 0;
+        font-size: clamp(16px, 1.45vw, 1.45vw);
+        font-weight: 700;
+    }
+    .payment .pay-info,
+    .payment .order-confirm
+    {
+        margin: 5px 0;
     }
 </style>
 <body>
@@ -268,18 +332,21 @@
         </section>
         <section class="two">
             <p>STRANDBRANDS™️ <span>Updated Every Sunday.</span></p>
-            <a href="./kart.html" style="color: white;">
-                <svg class="icon-shopping-bag" width="36" height="30" viewbox="0 0 36 30" xmlns="https://www.w3.org/2000/svg" style="margin: 30px 0px;">
-                    <g fill="none" fill-rule="evenodd">
-                        <path d="M7 7h22v18a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V7z" 
-                        stroke="currentColor" stroke-width="2"></path>
-                        <path d="M13 10V6c0-2.993 2.009-5 5-5s5 2.026 5 5v4" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <!-- <circle class="cart-not-empty" cx="18" cy="18" r="4" fill="currentColor"></circle> -->
-                    </g>
-                </svg>
+            <a href="./kart.html" style="color: white;" >
+                <p class="count" style="margin: 30px 0;">
+                    <svg class="icon-shopping-bag" width="36" height="30" viewbox="0 0 36 30" xmlns="https://www.w3.org/2000/svg" >
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M7 7h22v18a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V7z" 
+                            stroke="currentColor" stroke-width="2"></path>
+                            <path d="M13 10V6c0-2.993 2.009-5 5-5s5 2.026 5 5v4" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <!-- <circle class="cart-not-empty" cx="18" cy="18" r="4" fill="currentColor"></circle> -->
+                        </g>
+                    </svg><span>1</span>
+                </p>
+                
                 <!-- <img src="./icon/square-shopping-bag-with-handle.png" alt="" > -->
-            </a><span>1</span>
+            </a>
             <div class="cards-wrapper">
                 <div class="cart-describe">
                     <h1>Shopping cart</h1>
@@ -288,7 +355,30 @@
                         <div class="product-img"></div>
                         <div class="product-detail">
                             <p>100 Pouches - Acapulco Gold</p>
-                            <p>Qty: 1 <i class="fas fa-chevron-down"></i></p>
+                            <!-- <p>Qty: 1 <i class="fas fa-chevron-down"></i></p> -->
+                            <span>Qty</span>
+                            <select name="qty" id="qty">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
+                                <option value="6">7</option>
+                                <option value="7">8</option>
+                                <option value="8">9</option>
+                                <option value="9">10</option>
+                                <option value="10">11</option>
+                                <option value="11">12</option>
+                                <option value="12">13</option>
+                                <option value="13">14</option>
+                                <option value="14">15</option>
+                                <option value="15">16</option>
+                                <option value="16">17</option>
+                                <option value="17">18</option>
+                                <option value="18">19</option>
+                                <option value="19">20</option>
+                            </select>
                         </div>
                         <div class="product-price">
                             <p class="btn-cancel">
@@ -302,7 +392,7 @@
                         </div>
 
                     </div>
-                    <hr style="background-color: rgba(255, 255, 255, 0.6);  width: 100%; border: 0; height: 0.2px; ">
+                    <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; ">
                     <p class="total-price"><span class="total">TOTAL</span><span class="price">$130.00</span></p>
                     <p class="promo">
                         Have a promo coupon or gift card?<br>
@@ -339,24 +429,23 @@
                     </div>
                     <a href="#"><button class="paypal-check">
                             <i class="fab fa-paypal"></i>
-                            <span class="pay">Pay</span >
-                            <span class="pal">Pal</span>
-                            Checkout
+                            <span class="pay" style="color: #0307ff; ">Pay</span ><span class="pal" style="color: #47a3ff;">Pal</span>
+                            <span style="font-style: normal; font-weight: 400; font-size: clamp(12px, 1.1vw, 1.1vw);">Checkout</span> 
                         </button>
-                    </a>
+                    </a><br>
                     <a href="#"><button class="paypal-credit">
-                            <i class="fab fa-paypal"></i>
+                            <i class="fab fa-paypal" style="color: white;"></i>
                             PayPal CREDIT
                         </button>
                     </a>
 
                         <p class="next-step">Next steps</p>
-                        <hr>
-                        <p>Payment information</p>
-                        <p>Choose a payment method and enter your payment details.</p>
+                        <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; ">
+                        <p class="pay-info">Payment information</p>
+                        <p class="pay-info">Choose a payment method and enter your payment details.</p>
                         <br>
-                        <p>Order confirmation</p>
-                        <p>Place your order and receive a confirmation email</p>
+                        <p class="order-confirm">Order confirmation</p>
+                        <p class="order-confirm">Place your order and receive a confirmation email</p>
                     
                     <!-- <p class="center">Your shopping cart is empty</p>
                     <p class="btn-center"><a href="./shop.html"><input type="button" value="Browse Store"></a></p> -->
@@ -373,7 +462,7 @@
                             </svg>
                             </span>
                         </a>
-                        <p>Favourites</p>
+                        <p>Favourites <span>(1)</span></p>
                         
                     </div>
                     <div class="icon icon-kart">
@@ -391,7 +480,7 @@
                             </span>
                             <!-- <img src="./icon/square-shopping-bag-with-handle.png" alt="" > -->
                         </a>
-                        <p>Shopping Bag</p>
+                        <p>Shopping Bag <span>(1)</span></p>
     
                     </div>
                 </div>
