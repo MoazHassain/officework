@@ -323,6 +323,129 @@
         margin: 5px 0;
     }
 </style>
+<!-- terms & condition modal -->
+<style>
+    .terms-modal-bg
+    {
+        
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding-bottom: 5em;
+        background-color: rgba(255, 255, 255, 0.5);
+        
+        font-family: nova !important;
+        
+        z-index: 9999;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: none;
+    }
+    .modal-terms
+    {
+        /* background-color: black;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        
+        
+        overflow-x: hidden; */
+
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 1);
+        padding: 20px clamp(12px, 2.1vw, 2.1vw);
+        transition: 0.3s;
+        overflow-y: scroll;
+    }
+    /* .toggle-modal
+    {
+        width: 50%;
+        transition: 0.2s;
+        overflow: scroll;
+    } */
+    .modal-terms .modal-cancel-btn
+    {
+       
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        
+    }
+    .modal-terms .content-link
+    {
+        margin-bottom: 16px;
+    }
+    .modal-terms .content-link span
+    {
+        font-size: 14px;        
+        padding-right: 1em;
+    }
+    .terms-modal-bg h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    .terms-modal-bg h2,
+    .terms-modal-bg h3,
+    .terms-modal-bg h4,
+    .terms-modal-bg h5
+    {
+
+        font-family: "archivo black", sans-serif;
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    .terms-modal-bg p, .terms-modal-bg ul,.terms-modal-bg strong
+    {
+        font-size: 14px;
+        margin-bottom: 16px;
+        line-height: 1.4em;
+    }
+    .terms-modal-bg a
+    {
+        text-decoration: none;
+        color: white;
+    }
+    .terms-modal-bg ul
+    {
+        padding-left: 1.5em;
+
+    }
+    .terms-modal-bg ul li
+    {
+        margin-bottom: 4px;
+    }
+    .modal-terms .content-btn button
+    {
+        border: none;
+        outline: none;
+        padding: 8px 12px;
+        width: 6vw;
+        border-radius: 3px;
+        margin-left: 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-family: nova;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .modal-terms .content-btn button:hover
+    {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -647,8 +770,8 @@
 
     <div class="third-modal-bg terms-modal-bg">
         <div class="third-modal modal-terms">
-            <p class="btn btn-modal-cancel">
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+            <p class="btn modal-cancel-btn">
+                <svg width="16" height="16" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
                         <path d="M.5.5l11 11M.5 11.5l11-11"></path>
                     </g>
@@ -889,8 +1012,8 @@
                         </p>
                         <p>
                             As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.<br>
-                        </p>
-                        <strong><u>BAG-N-BRAND.COM A COWA ENTERTAINMENT LLC COMPANY</u></strong>
+                        </p><br>
+                        <p style="text-align: center; margin-bottom: 24px;"><strong ><u >BAG-N-BRAND.COM A COWA ENTERTAINMENT LLC COMPANY</u></strong></p>
                     </div>
                 </div>
                 <div class="content-body--privacy">
@@ -926,9 +1049,33 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="content-btn">
+                <button class="accept">Accept All</button>
+                <button class="decline">Decline</button>
+                <button class="print">Print</button>
+            </div>
         </div>
     </div>
 </body>
 <script src="./app/header-footer.js" ></script>
+<script>
+    var btnTermModal = document.querySelector(".terms-modal");
+    var termModalBg = document.querySelector(".terms-modal-bg");
+    var modalTerms = document.querySelector(".modal-terms");
+    var clsTermModal = document.querySelector(".modal-cancel-btn");
+
+    btnTermModal.addEventListener("click", function() {
+        termModalBg.style.display = "block";
+        // modalTerms.classList.toggle(".toggle-modal");
+    })
+    window.addEventListener("click", function(e){
+        if(e.target == termModalBg){
+            termModalBg.style.display = "none";
+        }
+    })
+
+    clsTermModal.addEventListener("click", function(){
+        ter
+    })
+</script>
 </html>

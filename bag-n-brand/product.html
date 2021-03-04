@@ -291,10 +291,17 @@
         padding: 10px;
         display: grid;
         grid-template-columns: 2fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+        /* grid-auto-rows: auto auto;
+        grid-template-areas: 
+        "topimg detail"
+        "midimg "
+        "bottomimg "; */
         grid-gap: 15px;
     }
     .two .card-detail .img
     {
+        
         height: 35em;
         /* background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg); */
         background-position: center;
@@ -306,6 +313,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        
     }
     .two .card-detail .img-2
     {
@@ -465,30 +473,30 @@
 </style>
 <style>
     /* The Modal (background) */
-.img-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  /* padding-top: 100px; */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  /* overflow: auto; */
-  background-color: black;
-}
+    .img-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        /* padding-top: 100px; */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        /* overflow: auto; */
+        background-color: black;
+    }
 
 /* Modal Content */
-.modal-content {
-  position: relative;
-  /* background-color: #fefefe; */
-  margin: auto;
-  margin-top: 2.3em;
-  padding: 0;
-  width: 67%;
-  /* height: 80vh; */
-  max-width: 1200px;
-}
+    .modal-content {
+        position: relative;
+        /* background-color: #fefefe; */
+        margin: auto;
+        margin-top: 2.3em;
+        padding: 0;
+        width: 67%;
+        /* height: 80vh; */
+        max-width: 1200px;
+    }
 
 /* The Close Button */
 .close {
@@ -667,7 +675,7 @@
 }
 
 .demo {
-    display: none;
+    /* display: none; */
     opacity: 0.6;
 }
 
@@ -725,7 +733,7 @@
 
             <div class="content-wrapper">
                 <div class="card-detail">
-                    <div class="img hover-shadow cursor" onclick="openModal();currentSlide(1)" >
+                    <div class="img img-1 hover-shadow cursor" onclick="openModal();currentSlide(1)" >
                         <img src="./img/product-img/1818227999.jpg" alt="">
                     </div>
                     
@@ -765,6 +773,9 @@
                     <div class="img img-2 hover-shadow cursor" onclick="openModal();currentSlide(2)" >
                         <img src="./img/product-img/1818262341.png" alt="">
                     </div>
+                    <!-- <div class="img img-2 hover-shadow cursor" onclick="openModal();currentSlide(2)" >
+                        <img src="./img/product-img/1818262341.png" alt="">
+                    </div> -->
                 </div>
 
                 <div class="part-icon">
@@ -955,34 +966,42 @@
           <div class="mySlides">
             <!-- <div class="numbertext">1 / 2</div> -->
             <div class="img img1 product_image-wrap">
-                <img src="./img/product-img/1818227999.jpg" alt="">
+                <!-- <img  src="./img/product-img/1818227999.jpg" alt=""> -->
+                <img class="demo cursor" src="./img/product-img/1818227999.jpg" style="width:100%" onclick="currentSlide(1)" alt="100 Pouches - Acapulco Gold">
             </div>
-            <!-- <img src="./img/product-img/1818227999.jpg" style="width:100%; height: 42em;" > -->
-          </div>
+            <div class="caption-container">
+                <p id="caption-one"></p>
+            </div>    
+        </div>
       
-          <div class="mySlides">
+        <div class="mySlides">
             <!-- <div class="numbertext">2 / 2</div> -->
             <div class="img img2 product_image-wrap">
-                <img src="./img/product-img/1818262341.png" alt="">
+                <!-- <img  src="./img/product-img/1818262341.png" alt=""> -->
+                <img class="demo cursor" src="./img/product-img/1818262341.png" style="width:100%" onclick="currentSlide(2)" alt="100 Pouches -Acapulco Gold">
             </div>
-            <!-- <img src="./img/bag-n-brand2.jpg" style="width:100%; height: 42em;" > -->
-          </div>
+            
+                
+            <div class="caption-container">
+                <p id="caption-two"></p>
+            </div>
+        </div>
       
          
           
           
       
-          <div class="caption-container">
+          <!-- <div class="caption-container">
             <p id="caption"></p>
-          </div>
+          </div> -->
       
       
-          <div class="column">
+          <!-- <div class="column">
             <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(1)" alt="100 Pouches - Acapulco Gold">
           </div>
           <div class="column">
             <img class="demo cursor" src="" style="width:100%" onclick="currentSlide(2)" alt="100 Pouches - Acapulco Gold">
-          </div>
+          </div> -->
           
         </div>
       </div>
@@ -1014,7 +1033,8 @@
       var i;
       var slides = document.getElementsByClassName("mySlides");
       var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
+      var captionOneText = document.getElementById("caption-one");
+      var captionTwoText = document.getElementById("caption-two");
       if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
@@ -1025,7 +1045,8 @@
       }
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
+      captionOneText.innerHTML = dots[slideIndex-1].alt;
+      captionTwoText.innerHTML = dots[slideIndex-1].alt;
     }
     
     var modalBg= document.querySelector("#myModal");

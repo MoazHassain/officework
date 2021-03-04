@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style/header-footer.css">
+</head>
+<style>
+    @font-face
+    {
+        src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    } 
+    p
+    {
+        font-family: nova;
+        /* letter-spacing: 0.03em; */
+    }
+    
+    .one
+    {
+        height: 25em;
+    }
+    .one p
+    {
+        padding-top: 120px;
+        text-align: center;
+        
+    }
+    .one img
+    {
+        width: 42%;
+    }
+    .two
+    {
+        background-color: #cb1e0b;
+        padding: 7.5em;
+
+    }
+    .two>p
+    {
+        font-weight: 600;
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin: 1.5em auto;
+    }
+    .two p span
+    {
+        
+        font-weight: 800;
+    }
+    .two a>img
+    {
+        width: 30px;
+        margin: 1em 0.5em;
+    }
+    .two .count span
+    {
+        padding: 3px 9px;
+        border-radius: 50px;
+        background-color: white;
+        color: black;
+        font-size: 14px;
+        margin-left: -15px;
+    }
+    .two .cards-wrapper
+    {
+        background-color: black;
+        padding: 10px;
+        padding-top: 0px;
+    }
+    .two .cards-wrapper .cart-describe
+    {
+        margin-bottom: 1em;
+    }
+    .two .cards-wrapper h1 
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    .two .cards-wrapper .payment
+    {
+        margin-bottom: 2em;
+    }
+    
+    .two .part-icon
+    {
+        width: auto;
+        margin: 0px auto;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        grid-gap: 2em;
+    }
+    .two .part-icon i
+    {
+        font-size: 24px;
+    }
+    .two img.icon
+    {
+        color: white;
+        width: 22px;
+    }
+    .two .part-icon p
+    {
+        font-size: 16px;
+        font-weight: 500;
+    }
+</style>
+<style>
+    .two .cards-wrapper
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "one two"
+        "three three";
+        grid-gap: 3em;
+    }
+    .cards-wrapper .cart-describe
+    {
+        grid-area: one;
+    }
+    .cards-wrapper .payment
+    {
+        grid-area: two;
+    }
+    .cards-wrapper .part-icon
+    {
+        grid-area: three;
+    }
+    .cards-wrapper .product
+    {
+        margin: 20px 0px;
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 1em;
+    }
+    .cards-wrapper .product_image-wrap
+    {
+        width: 80px;
+        height: 100%;
+        /* background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .cards-wrapper .product_image-wrap img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cards-wrapper .product-detail p
+    {   
+        padding: 3px 0px;
+    }
+    .product-detail>span
+    {
+        font-family: nova;
+    }
+    .product-detail select
+    {
+        color: white;
+        background-color: black;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+    .product-detail option:not(:checked)
+    {
+        background-color: white;
+        color: black;
+    }
+    .product-detail span,
+    .product-detail select
+    {
+        margin: 3px 0;
+    }
+    .cards-wrapper .product-price p
+    {
+        padding: 3px 0px;
+        text-align: right;
+    }
+    .cards-wrapper .total-price
+    {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 20px 0px;
+    }
+    .total-price .price 
+    {
+        float: right;
+    }
+</style>
+<style>
+    
+    .cart-checkout .selected-icon 
+    {
+        width: 35px;
+        padding: 7px 6px 4px 7px;
+        border: 1px solid;
+        border-radius: 50%;
+        float: left;
+        margin-right: 10px;
+    }
+    .email-info strong
+    {
+        font-family: nova;
+    }
+    .email-info p span
+    {
+        font-weight: 500;
+        padding-right: 10px;
+    }
+    .pay-info h2
+    {
+        font-family: nova;
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    .pay-info label
+    {
+        font-family: nova;
+        font-size: 16px;
+    }
+    .crdr-icon,
+    .slice-icon,
+    .paypal-icon
+    {
+        border: 1px solid;
+        border-color: rgba(255, 255, 255, 0.2);
+        padding: 1.5em 1em;
+        transition: 0.3s;
+    }
+    .crdr-icon:hover,
+    .slice-icon:hover,
+    .paypal-icon:hover
+    {
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+    .crdr-icon img,
+    .slice-icon img, 
+    .paypal-icon img
+    {
+        width: auto;
+        height: 30px;
+        float: right;
+        margin: 0 5px;
+        margin-top: -5px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .pay-instruct h3
+    {
+        font-family: nova;
+        font-size: 18px;
+        margin: 15px 0 5px 0px;
+    }
+    .pay-instruct p
+    {
+        margin-bottom: 15px;
+    }
+    .pay-instruct label
+    {
+        font-family: nova;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+    .pay-instruct select,
+    .pay-instruct input,
+    .pay-instruct textarea
+    {
+        width: 100%;
+    }
+    
+    
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+        <div id="my-nav" class="my-nav" >
+            <a href="javascript:void(0)" class="btn btn-login" >
+                <p>Log In </p>
+            </a>
+        </div>
+        <section class="one">
+            <p><img src="./img/bag-n-brand5.png" alt=""></p>
+        </section>
+        <section class="two">
+            <p>STRANDBRANDS™️ <span>Updated Every Sunday.</span></p>
+            <a href="./kart.html" style="color: white;" >
+                <p class="count" style="margin: 30px 0;">
+                    <svg class="icon-shopping-bag" width="36" height="30" viewbox="0 0 36 30" xmlns="https://www.w3.org/2000/svg" >
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M7 7h22v18a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V7z" 
+                            stroke="currentColor" stroke-width="2"></path>
+                            <path d="M13 10V6c0-2.993 2.009-5 5-5s5 2.026 5 5v4" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <!-- <circle class="cart-not-empty" cx="18" cy="18" r="4" fill="currentColor"></circle> -->
+                        </g>
+                    </svg><span>1</span>
+                </p>
+                
+                <!-- <img src="./icon/square-shopping-bag-with-handle.png" alt="" > -->
+            </a>
+            <div class="cards-wrapper">
+                <div class="cart-describe">
+                    <h1>Shopping cart</h1>
+                    <p>Store &nbsp;/ &nbsp;Shopping cart</p>
+                    <div class="product">
+                        <div class="product-img product_image-wrap">
+                            <img src="./img/bag-n-brand-product/bag-n-brand(59).jpg" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>100 Pouches - Acapulco Gold</p>
+                            <!-- <p>Qty: 1 <i class="fas fa-chevron-down"></i></p> -->
+                            <span>Qty :</span>
+                            <select name="qty" id="qty">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
+                                <option value="6">7</option>
+                                <option value="7">8</option>
+                                <option value="8">9</option>
+                                <option value="9">10</option>
+                                <option value="10">11</option>
+                                <option value="11">12</option>
+                                <option value="12">13</option>
+                                <option value="13">14</option>
+                                <option value="14">15</option>
+                                <option value="15">16</option>
+                                <option value="16">17</option>
+                                <option value="17">18</option>
+                                <option value="18">19</option>
+                                <option value="19">20</option>
+                            </select>
+                        </div>
+                        <div class="product-price">
+                            
+                            <br>
+                            <p style="margin-top: 7px;">$130.00</p>
+                        </div>
+
+                    </div>
+                    <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; ">
+                    <p class="total-price"><span class="total">TOTAL</span><span class="price">$130.00</span></p>
+                    
+                </div>
+
+                <div class="cart-checkout">
+                    <h1>Checkout</h1>
+                    <div class="email-info">
+                        <div class="selected-icon">
+                            <svg width="18" height="15" viewBox="0 0 27 23" xmlns="http://www.w3.org/2000/svg">
+                                <path class="svg-line-check" d="M1.97 11.94L10.03 20 25.217 2" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                            </svg>
+                        </div>
+                        <strong>Email</strong>
+                        <p >
+                            <span class="selected-email">moazhassain@gmail.com</span>
+                            <span class="change-email">Change email</span> 
+                        </p>
+                        
+                    </div>
+                    <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; margin: 1em 0px;">
+
+                    <div class="pay-info">
+                        <h2>Payment information</h2>
+                        <p style="margin-bottom: 10px;">choose a way to pay for your order:</p>
+                        
+                        <div class="crdr-icon">
+                            <input type="radio" name="crdr-card" id="crdr-card">
+                            <label for="crdr-card">Credit or debit card</label>
+                            <img src="./img/checkout/visa.svg" alt="">
+                            <img src="./img/checkout/mastercard.svg" alt="">
+                            <img src="./img/checkout/amex.svg" alt="">
+                            <img src="./img/checkout/discover.svg" alt="">
+                            <img src="./img/checkout/jcb.svg" alt="">
+                            <img src="./img/checkout/diners_club.svg" alt="">
+                            <img src="./img/checkout/union-pay.svg" alt="">
+                        </div>
+                        
+                        <div class="slice-icon">
+                            <input type="radio" name="slice" id="slice">
+                            <label for="slice">Slice IT</label>
+                            <img src="./img/checkout/klarna.svg" alt="">
+                        </div>
+                        
+                        <div class="paypal-icon">
+                            <input type="radio" name="paypal" id="paypal">
+                        <label for="paypal">PayPal</label>
+                            <img src="./img/checkout/paypal.svg" alt="">
+                            <img src="./img/checkout/master-card.svg" alt="">
+                            <img src="./img/checkout/visa.svg" alt="">
+                            <img src="./img/checkout/amex.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="pay-instruct">
+                        <h3>Payment instruction</h3>
+                        <p>You can use <strong>Klarna</strong> to breakup the purchase into multiple purchases.</p>
+                        <h3>Billing address</h3>
+                        <p>All fields are required unless they're explicitly marked as optional.</p>
+                        <!-- <p>Country</p> -->
+                        <label for="Country">Country</label>
+                        <select name="qty" id="qty" name="country">
+                            <option value="0">Afganistan</option>
+                            <option value="1">Algeria</option>
+                            <option value="2">Argentina</option>
+                            <option value="3">Bangladesh</option>
+                            <option value="4">Barbados</option>
+                            <option value="5">Brazil</option>
+                            <option value="6">Canada</option>
+                            <option value="7">China</option>
+                            <option value="8">Chili</option>
+                            <option value="9">Denmark</option>
+                            <option value="10">Ecuador</option>
+                            <option value="11">Egypt</option>
+                            <option value="12">France</option>
+                            <option value="13">Finland</option>
+                            <option value="14">Germany</option>
+                            <option value="15">Ghana</option>
+                            <option value="16">Haiti</option>
+                            <option value="17">Hongkong</option>
+                            <option value="18">Island</option>
+                            <option value="19">Italy</option>
+                        </select>
+                        <label for="name">Full name</label>
+                        <input type="text" name="name" id="name">
+                        <label for="phone">Phone(optional)</label>
+                        <input type="number" name="phone" id="phone">
+                        <label for="company">Company name(optional)</label>
+                        <input type="text" name="company" id="company">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" class="address" placeholder="Street address, apartment, suite, floor, etc">
+                        <input type="text" name="address" class="address" placeholder="City">
+                        <input type="text" name="address" class="address" placeholder="Postal code">
+                        <label for="advise">How can we improve our site</label>
+                        <textarea rows="4" cols="50" name="advise" class="advise" placeholder="Leave us a note about your order"></textarea>
+                        <button class="continue">Continue</button>
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+    <div class="modal-bg login-modal-bg">
+        
+        <div class="modal login-modal">
+            <div class="part-one">
+                <img src="./img/bag-n-brand6.png" alt="">
+                <h1>Welcome Back</h1>
+            </div>
+            <div class="part-two">
+                <label for="email">Email Address</label>
+                <input id="login-email" type="email" name="email" placeholder="Email">
+                <label for="password">Password</label>
+                <input id="login-password" type="password" name="password" placeholder="Password">
+                <p class="reset"><a href="#">Reset my password</a></p>
+                <input type="button" value="Login">
+                
+
+            </div>
+        </div>
+        <center><a href="#" class="btn signup">Need an account? <span>Sign up here</span></a></center>
+        
+        
+    </div>
+
+    <div class="modal-bg signup-modal-bg">
+        
+        <div class="modal signup-modal">
+            <div class="part-one">
+                <img src="./img/bag-n-brand6.png" alt="">
+                <h1>Create an account</h1>
+            </div>
+            <div class="part-two">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" name="first-name" placeholder="First Name">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" name="last-name" placeholder="Last Name">
+                <label for="company">Company Name</label>
+                <input id="company" type="text" name="company" placeholder="Company Name">
+                <label for="street">Street Address(No PO Box)</label>
+                <input id="street" type="text" name="street" placeholder="Street Address(No PO Box)">
+                <label for="city">City</label>
+                <input id="city" type="text" name="city" placeholder="City">
+                <label for="state">State</label>
+                <input id="state" type="text" name="state" placeholder="State">
+                <label for="zip">Zip</label>
+                <input id="zip" type="number" name="zip" placeholder="Zip">
+                <label for="sale">Average Monthly Sale</label>
+                <input id="sale" type="text" name="sale" placeholder="Average Monthly Sale">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="number" name="phone" placeholder="Phone Number">
+                <label for="email">Email Address</label>
+                <input id="signup-email" type="email" name="email" placeholder="Email Address">
+                <label for="password">Password</label>
+                <input id="signup-password" type="password" name="password" placeholder="Password">
+                <input type="button" value="Sign Up">
+                <p class="terms">Click above to agree to our <a href="./terms.html">Terms of Service</a></p>
+
+            </div>
+        </div>
+        <center><a href="#" class="btn login">Already a member? <span>Log in here</span></a></center>
+        
+        
+    </div>
+
+    <div class="second-modal-bg reset-pass-bg">
+        <div class="second-modal reset-pass-modal">
+            <p class="step">STEP 1 OF 2</p>
+            <h1>Reset your password</h1>
+            <p class="describe">
+                Enter your email address, and we'll send instructions to
+                reset your password.
+            </p>
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="reset-pass-email" placeholder="Email">
+            <input type="button" value="Send Password Reset Email">
+            <p class="set-reset-code"><a href="#">I already have a reset code &#8594;</a></p>
+        </div>
+    </div>
+
+    <div class="second-modal-bg set-newpass-bg">
+        <div class="second-modal set-newpass-modal">
+            <p class="step">STEP 2 OF 2</p>
+            <h1>Check your email</h1>
+            <p class="describe">
+                Please enter your 6-digit one-time code. Then create 
+                and confirm your new password.
+            </p>
+            <label for="one-time-pass">6-digit one-time code</label>
+            <input type="text" name="one-time-pass" id="one-time-pass" placeholder="123456">
+            <label for="new-pass">New Password</label>
+            <input type="text" name="new-pass" id="new-pass" placeholder="New Password">
+            <label for="confirm-pass">Confirm Password</label>
+            <input type="text" name="confirm-pass" id="confirm-pass" placeholder="Confirm Password">
+            <input type="button" value="Reset Password">
+            <p class="get-reset-code"><a href="#">&#8592; Send a new reset code</a></p>
+        </div>
+    </div>
+</body>
+<script src="./app/header-footer.js"></script>
+</html>
