@@ -296,15 +296,19 @@
     .two .card-detail .img
     {
         height: 35em;
-        background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg);
+        /* background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg); */
         background-position: center;
         background-size: 110%;
         background-repeat: no-repeat;
     }
+    .two .card-detail .img img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     .two .card-detail .img-2
     {
-        background-image: url(./img/product-img/1818262341.png);
-        /* background-color: #999; */
         margin-top: -4em;
     }
     .two .detail
@@ -551,18 +555,20 @@
 {
     width: 100%;
     height: 90vh;
-    background-image: url(./img/product-img/1818227999.jpg);
+    /* background-image: url(./img/product-img/1818227999.jpg); */
     /* background-color: white; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     /* background-color: #ebebeb; */
 }
-
-.mySlides .img2
+.mySlides .img img
 {
-    background-image: url(./img/product-img/1818262341.png);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 .cursor {
   cursor: pointer;
 }
@@ -657,7 +663,7 @@
   padding: 0px ;
   color: white;
   font-size: 14px;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .demo {
@@ -719,8 +725,8 @@
 
             <div class="content-wrapper">
                 <div class="card-detail">
-                    <div class="img img-1 hover-shadow cursor" onclick="openModal();currentSlide(1)" >
-
+                    <div class="img hover-shadow cursor" onclick="openModal();currentSlide(1)" >
+                        <img src="./img/product-img/1818227999.jpg" alt="">
                     </div>
                     
                     <div class="detail">
@@ -757,7 +763,7 @@
 
                     </div>
                     <div class="img img-2 hover-shadow cursor" onclick="openModal();currentSlide(2)" >
-
+                        <img src="./img/product-img/1818262341.png" alt="">
                     </div>
                 </div>
 
@@ -948,13 +954,17 @@
       
           <div class="mySlides">
             <!-- <div class="numbertext">1 / 2</div> -->
-            <div class="img img1"></div>
+            <div class="img img1 product_image-wrap">
+                <img src="./img/product-img/1818227999.jpg" alt="">
+            </div>
             <!-- <img src="./img/product-img/1818227999.jpg" style="width:100%; height: 42em;" > -->
           </div>
       
           <div class="mySlides">
             <!-- <div class="numbertext">2 / 2</div> -->
-            <div class="img img2"></div>
+            <div class="img img2 product_image-wrap">
+                <img src="./img/product-img/1818262341.png" alt="">
+            </div>
             <!-- <img src="./img/bag-n-brand2.jpg" style="width:100%; height: 42em;" > -->
           </div>
       
