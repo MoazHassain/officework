@@ -87,12 +87,19 @@
     {
         opacity: 1;
     }
-    .two .card .img
+    .two .card .product_image-wrap
     {
         height: 25em;
-        background-position: center;
+        /* width: 408px; */
+        /* background-position: center;
         background-size: 157%;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
+    }
+    .two .product_image-wrap img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .two .card p
     {
@@ -102,7 +109,7 @@
         margin-bottom: 0px;
         text-align: center;
     }
-    .two .card input[type="button"]
+    .two .card .buy-now
     {
         outline: none;
         border: none;
@@ -112,13 +119,20 @@
         font-size: 17px;
         color: white;
         background-color: rgba(219, 219, 219, 0.2);
-        padding: 10px 18%;
-        margin: 16px 0px 28px 0px;
+        padding: 10px 2vw;
+        display: block;
+        width: clamp(95px, 12vw, 12vw);
+        margin: 16px auto 28px auto;
         transition: 0.3s;
     }
-    .two .card input[type="button"]:hover
+    .two .card .buy-now:hover
     {
         background-color: rgba(219, 219, 219, 0.4);
+    }
+    .two .card button p
+    {
+        margin: 0;
+        text-align: center;
     }
     .two .part-icon
     {
@@ -437,430 +451,550 @@
                 <div class="card-container">
                     <a href="./product.html">
                         <div class="card">
-                            <div class="img img-1"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(59).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Acapulco Gold</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-2"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(54).jpg" alt="">
+                            </div>
                             <p>100 Pouches - 9 Pound Hammer</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-3"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(53).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Afghani's</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-4"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(55).jpg" alt="">
+                            </div>
                             <p>100 Pouches - AFGOD</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-5"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(56).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Amnesia</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-6"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(57).jpg" alt="">
+                            </div>
                             <p>100 Pouches - banana OG</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-7"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(24).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Bay 11</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-8"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(36).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Berry Hungry</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-9"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(34).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Canatonic</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-10"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(25).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Chemdawg</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-11"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(26).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Chernobyl</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-12"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(37).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Chocolope</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-13"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(27).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Cinderella 99</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-14"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(58).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Cinex</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-15"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(21).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Cracklin Schrom</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-16"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(32).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Diesel</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-17"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(33).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Dirty Girl</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-18"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(20).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Double Doze</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-19"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(35).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Durban Poison</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-20"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(30).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Dutch Treat</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-21"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(23).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Ewok's Treasure</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-22"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(31).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Gelato</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-23"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(39).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Golden Goat</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-24"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(46).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Grand Daddy Purple</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-25"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(51).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Green Crack</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-26"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(44).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Hallows AK-47</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-27"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(42).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Headband</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-28"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(49).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Hindu Kush</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-29"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(47).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Honeygrams</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-30"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(43).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Ingrid</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-31"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(52).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Island Sweet Skunk</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-32"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(40).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Jack herer</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-33"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(45).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Jean Guy</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-34"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(50).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Kali Mist</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-35"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(38).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Kosher Kush</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-36"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(41).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Laughing Buddha</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-37"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(48).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Lemon Haze</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-38"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(17).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Lemonder</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-39"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(29).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Lucky Pie</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-40"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(13).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Mango Kush</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-41"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(8).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Master Kush</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-42"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(19).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Maui Wowie</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-43"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(11).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Meltdown</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-44"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(22).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Mendocino</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-45"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(12).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Nothern Lights</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-46"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(15).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Permafrost</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-47"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(18).jpg" alt="">
+                            </div>
                             <p>100 Pouches - PEZ</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-48"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(14).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Pineapple Dream</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
 
                     <a href="#">
                         <div class="card">
-                            <div class="img img-49"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(28).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Pink Kush</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-50"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(16).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Plush Berry</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-51"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(2).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Pumpking</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-52"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(5).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Raskal OG</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-53"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(1).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Sage</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-54"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand.jpg" alt="">
+                            </div>
                             <p>100 Pouches - SFV OG</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button>
                         </div>
                     </a>
                     
                     <a href="#">
                         <div class="card">
-                            <div class="img img-55"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(10).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Shiatsu kush</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-56"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(3).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Snowcap</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-57"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(4).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Sour OG</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-58"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(9).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Sour Tsunami</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-59"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(7).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Space Queen</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     <a href="#">
                         <div class="card">
-                            <div class="img img-60"></div>
+                            <div class="product_image-wrap">
+                                <img src="./img/bag-n-brand-product/bag-n-brand(6).jpg" alt="">
+                            </div>
                             <p>100 Pouches - Strawberry Couch</p>
-                            <center><input type="button" value="Buy Now"></center> 
+                            <button class="buy-now">Buy Now</button> 
                         </div>
                     </a>
                     
