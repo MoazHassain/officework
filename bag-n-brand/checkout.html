@@ -117,27 +117,28 @@
     }
 </style>
 <style>
+    
     .two .cards-wrapper
     {
+
+        
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-areas: 
-        "one two"
-        "three three";
+        grid-template-rows: 100%;
         grid-gap: 3em;
+        
     }
     .cards-wrapper .cart-describe
     {
-        grid-area: one;
+        
+        /* position: -webkit-sticky; */
+        position: sticky;
+        top: 20%; 
+        height: fit-content;
+        
     }
-    .cards-wrapper .payment
-    {
-        grid-area: two;
-    }
-    .cards-wrapper .part-icon
-    {
-        grid-area: three;
-    }
+    
+    
     .cards-wrapper .product
     {
         margin: 20px 0px;
@@ -207,7 +208,7 @@
     .cart-checkout .selected-icon 
     {
         width: 35px;
-        padding: 7px 6px 4px 7px;
+        padding: 7px 4px 4px 7px;
         border: 1px solid;
         border-radius: 50%;
         float: left;
@@ -248,6 +249,12 @@
     {
         border-color: rgba(255, 255, 255, 0.8);
     }
+    .crdr-icon:focus,
+    .slice-icon:focus,
+    .paypal-icon:focus
+    {
+        border-color: rgba(255, 255, 255, 1);
+    }
     .crdr-icon img,
     .slice-icon img, 
     .paypal-icon img
@@ -271,8 +278,10 @@
     }
     .pay-instruct label
     {
+        display: block;
         font-family: nova;
         font-size: 16px;
+        font-weight: 600;
         margin: 5px 0;
     }
     .pay-instruct select,
@@ -280,9 +289,77 @@
     .pay-instruct textarea
     {
         width: 100%;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px 7px;
+        font-size: 15px;
+        border: 1px solid;
+        border-color: rgba(255, 255, 255, 0.9);
+        border-radius: 4px;
+        margin-bottom: 15px ;
+        resize: none;
+        transition: 0.3s;
     }
+    .pay-instruct select:hover,
+    .pay-instruct input:hover,
+    .pay-instruct textarea:hover
+    {
+        background-color: rgba(0, 0, 0, 1);
+        border-color: rgba(255, 255, 255, 1);
+    }
+    .pay-instruct select:focus,
+    .pay-instruct input:focus,
+    .pay-instruct textarea:focus
+    {
+        background-color: rgba(0, 0, 0, 1);
+        border-color: rgba(255, 255, 255, 1);
+    }
+    .pay-instruct option:not(:checked),
+    .pay-instruct option:checked
+    {
+        background-color: white;
+        color: black;
+    }
+    /* .pay-instruct input[name="name"]
     
-    
+    {
+        width: 60%;
+    }
+    .pay-instruct input[name="phone"]
+    {
+        width: 30%;
+    } */
+    .pay-instruct .name-phone
+    {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 0.8em;
+    }
+    .pay-instruct div.address 
+    {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 0.8em;
+    }
+    .pay-instruct button
+    {
+        font-family: nova;
+        font-size: 18px;
+        font-weight: 800;
+        color: white;
+        width: 50%;
+        padding: 12px 0;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: 0.3s;
+    }
+    .pay-instruct button:hover
+    {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 </style>
 <body>
     <div class="container">
@@ -401,7 +478,7 @@
                         <p style="margin-bottom: 10px;">choose a way to pay for your order:</p>
                         
                         <div class="crdr-icon">
-                            <input type="radio" name="crdr-card" id="crdr-card">
+                            <input type="radio" name="rdo-btn" id="crdr-card">
                             <label for="crdr-card">Credit or debit card</label>
                             <img src="./img/checkout/visa.svg" alt="">
                             <img src="./img/checkout/mastercard.svg" alt="">
@@ -413,13 +490,13 @@
                         </div>
                         
                         <div class="slice-icon">
-                            <input type="radio" name="slice" id="slice">
+                            <input type="radio" name="rdo-btn" id="slice">
                             <label for="slice">Slice IT</label>
                             <img src="./img/checkout/klarna.svg" alt="">
                         </div>
                         
                         <div class="paypal-icon">
-                            <input type="radio" name="paypal" id="paypal">
+                            <input type="radio" name="rdo-btn" id="paypal">
                         <label for="paypal">PayPal</label>
                             <img src="./img/checkout/paypal.svg" alt="">
                             <img src="./img/checkout/master-card.svg" alt="">
@@ -434,7 +511,7 @@
                         <p>All fields are required unless they're explicitly marked as optional.</p>
                         <!-- <p>Country</p> -->
                         <label for="Country">Country</label>
-                        <select name="qty" id="qty" name="country">
+                        <select id="country" name="country">
                             <option value="0">Afganistan</option>
                             <option value="1">Algeria</option>
                             <option value="2">Argentina</option>
@@ -456,18 +533,26 @@
                             <option value="18">Island</option>
                             <option value="19">Italy</option>
                         </select>
-                        <label for="name">Full name</label>
-                        <input type="text" name="name" id="name">
-                        <label for="phone">Phone(optional)</label>
-                        <input type="number" name="phone" id="phone">
+                        <div class="name-phone">
+                            <div class="name">
+                                <label for="name">Full name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="phone">
+                                <label for="phone">Phone(optional)</label>
+                                <input type="number" name="phone" id="phone">
+                            </div>
+                        </div>
                         <label for="company">Company name(optional)</label>
                         <input type="text" name="company" id="company">
                         <label for="address">Address</label>
                         <input type="text" name="address" class="address" placeholder="Street address, apartment, suite, floor, etc">
-                        <input type="text" name="address" class="address" placeholder="City">
-                        <input type="text" name="address" class="address" placeholder="Postal code">
+                        <div class="address">
+                            <input type="text" name="address" class="address" placeholder="City">
+                            <input type="text" name="address" class="address" placeholder="Postal code">
+                        </div>
                         <label for="advise">How can we improve our site</label>
-                        <textarea rows="4" cols="50" name="advise" class="advise" placeholder="Leave us a note about your order"></textarea>
+                        <textarea rows="3" cols="50" name="advise" class="advise" placeholder="Leave us a note about your order"></textarea>
                         <button class="continue">Continue</button>
                     </div>
                     
