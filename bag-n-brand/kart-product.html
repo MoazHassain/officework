@@ -162,10 +162,23 @@
     {
         font-family: nova;
     }
-    .product-detail select.qty
+    .product-detail select
     {
-        font-size: 16px;
+        color: white;
         background-color: black;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+    .product-detail option:not(:checked)
+    {
+        background-color: white;
+        color: black;
+    }
+    .product-detail span,
+    .product-detail select
+    {
+        margin: 3px 0;
     }
     .cards-wrapper .product-price p
     {
@@ -244,6 +257,11 @@
         border: none;
         border-radius: 4px;
         padding: 13px;
+        transition: 0.3s;
+    }
+    .checkout input[type="button"]:hover
+    {
+        background-color: rgba(255, 255, 255, 0.3);
     }
     .payment .encrypted
     {
@@ -356,7 +374,7 @@
                         <div class="product-detail">
                             <p>100 Pouches - Acapulco Gold</p>
                             <!-- <p>Qty: 1 <i class="fas fa-chevron-down"></i></p> -->
-                            <span>Qty</span>
+                            <span>Qty :</span>
                             <select name="qty" id="qty">
                                 <option value="0">1</option>
                                 <option value="1">2</option>

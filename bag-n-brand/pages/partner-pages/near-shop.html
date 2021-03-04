@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style/header-footer.css">
+</head>
+
+<style>
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    } 
+    section.one 
+    {
+        height: 80vw;
+        min-height: 60em;
+        background-image: url(../../img/bag-n-brand2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-position-y: 82%;
+        
+    }
+    .one .overlay
+    {
+        height: 80vw;
+        min-height: 60em;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: grid;
+        grid-template-rows: auto auto;
+        align-items: center;
+        text-align: center;
+    }
+    .overlay .part-one
+    {
+        /* height: 50vh; */
+        align-self: center;
+        /* margin-top: 10em; */
+    }
+    .overlay h2
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: clamp(20px, 2.15vw, 4vw);
+        letter-spacing: -0.1em;
+    }
+    .overlay h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: clamp(54px, 8.5vw,10vw);
+        letter-spacing: -0.1em;
+    }
+
+    .overlay .part-two
+    {
+        background-color: #cb1e0b;
+        padding: 50px;
+        align-self: flex-start;
+    }
+    .overlay p
+    {
+        font-family: nova;
+        font-size: clamp(13px, 1vw, 1vw);
+        margin-bottom: 10px;
+    }
+    .overlay h3
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: clamp(16px, 1.5vw, 2vw);
+        letter-spacing: -0.1em;
+        margin: 20px 0;
+    }
+    .overlay button
+    {
+        /* text-decoration: none; */
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-family: nova;
+        font-size: clamp(16px, 1.5vw, 2vw);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px 40px;
+        margin-bottom: 15px;
+    }
+    .overlay button:hover
+    {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+        <div id="my-nav" class="my-nav" >
+            <a href="javascript:void(0)" class="btn btn-login" >
+                <p>Log In </p>
+            </a>
+        </div>
+
+        <section class="one">
+            <div class="overlay">
+                <div class="part-one">
+                    <h2>STRANDBRANDS™</h2>
+                    <h1>OVER 75</h1>
+                </div>
+                <div class="part-two">
+                    <p>
+                        STRANDBRANDS™ NOW AVAILABLE IN STORES ACROSS THE NATION.
+                    </p>
+                    <h3>FIND A SHOP NEAR YOU</h3>
+                    <a href="./near-shop-np.html">
+                        <button>LOCATE A SHOP</button>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+
+    <div class="modal-bg login-modal-bg">
+        
+        <div class="modal login-modal">
+            <div class="part-one">
+                <img src="./img/bag-n-brand6.png" alt="">
+                <h1>Welcome Back</h1>
+            </div>
+            <div class="part-two">
+                <label for="email">Email Address</label>
+                <input id="login-email" type="email" name="email" placeholder="Email">
+                <label for="password">Password</label>
+                <input id="login-password" type="password" name="password" placeholder="Password">
+                <p class="reset"><a href="#">Reset my password</a></p>
+                <input type="button" value="Login">
+                
+
+            </div>
+        </div>
+        <center><a href="#" class="btn signup">Need an account? <span>Sign up here</span></a></center>
+        
+        
+    </div>
+
+    <div class="modal-bg signup-modal-bg">
+        
+        <div class="modal signup-modal">
+            <div class="part-one">
+                <img src="./img/bag-n-brand6.png" alt="">
+                <h1>Create an account</h1>
+            </div>
+            <div class="part-two">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" name="first-name" placeholder="First Name">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" name="last-name" placeholder="Last Name">
+                <label for="company">Company Name</label>
+                <input id="company" type="text" name="company" placeholder="Company Name">
+                <label for="street">Street Address(No PO Box)</label>
+                <input id="street" type="text" name="street" placeholder="Street Address(No PO Box)">
+                <label for="city">City</label>
+                <input id="city" type="text" name="city" placeholder="City">
+                <label for="state">State</label>
+                <input id="state" type="text" name="state" placeholder="State">
+                <label for="zip">Zip</label>
+                <input id="zip" type="number" name="zip" placeholder="Zip">
+                <label for="sale">Average Monthly Sale</label>
+                <input id="sale" type="text" name="sale" placeholder="Average Monthly Sale">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="number" name="phone" placeholder="Phone Number">
+                <label for="email">Email Address</label>
+                <input id="signup-email" type="email" name="email" placeholder="Email Address">
+                <label for="password">Password</label>
+                <input id="signup-password" type="password" name="password" placeholder="Password">
+                <input type="button" value="Sign Up">
+                <p class="terms">Click above to agree to our <a href="./terms.html">Terms of Service</a></p>
+
+            </div>
+        </div>
+        <center><a href="#" class="btn login">Already a member? <span>Log in here</span></a></center>
+        
+        
+    </div>
+
+    <div class="second-modal-bg reset-pass-bg">
+        <div class="second-modal reset-pass-modal">
+            <p class="step">STEP 1 OF 2</p>
+            <h1>Reset your password</h1>
+            <p class="describe">
+                Enter your email address, and we'll send instructions to
+                reset your password.
+            </p>
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="reset-pass-email" placeholder="Email">
+            <input type="button" value="Send Password Reset Email">
+            <p class="set-reset-code"><a href="#">I already have a reset code &#8594;</a></p>
+        </div>
+    </div>
+
+    <div class="second-modal-bg set-newpass-bg">
+        <div class="second-modal set-newpass-modal">
+            <p class="step">STEP 2 OF 2</p>
+            <h1>Check your email</h1>
+            <p class="describe">
+                Please enter your 6-digit one-time code. Then create 
+                and confirm your new password.
+            </p>
+            <label for="one-time-pass">6-digit one-time code</label>
+            <input type="text" name="one-time-pass" id="one-time-pass" placeholder="123456">
+            <label for="new-pass">New Password</label>
+            <input type="text" name="new-pass" id="new-pass" placeholder="New Password">
+            <label for="confirm-pass">Confirm Password</label>
+            <input type="text" name="confirm-pass" id="confirm-pass" placeholder="Confirm Password">
+            <input type="button" value="Reset Password">
+            <p class="get-reset-code"><a href="#">&#8592; Send a new reset code</a></p>
+        </div>
+    </div>
+</body>
+<script src="../../app/header-footer.js"></script>
+</html>
