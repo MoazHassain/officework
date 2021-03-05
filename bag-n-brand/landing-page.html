@@ -585,6 +585,130 @@
 
     }
 </style>
+<style>
+    .ms-style
+    {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        /* padding-bottom: 5em; */
+        background-color: rgba(0, 0, 0, 0.96);
+        
+        
+        
+        z-index: 9999;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .ms-loader
+    {
+        /* display: grid;
+      justify-items: center;
+      align-items: center; */
+        position:fixed;
+        left:48%;
+        top:46%;
+        right:0;
+        bottom:0;
+        z-index:1000000;
+        /* display:none; */
+        padding-bottom:5vh;
+        -webkit-box-pack:center;
+        -webkit-justify-content:center;
+        -ms-flex-pack:center;
+        justify-content:center;
+        -webkit-box-align:center;
+        -webkit-align-items:center;
+        -ms-flex-align:center;
+        align-items:center;
+        /* background-color:rgba(0,0,0,.7); */
+    }
+    .ms-ellipsis
+    {
+        display:inline-block;
+        position:relative;
+        width:64px;
+        height:64px;
+    }
+    .ms-ellipsis div
+    {
+        position:absolute;
+        top:27px;
+        width:11px;
+        height:11px;
+        border-radius:50%;
+        background:#fff;
+        animation-timing-function:cubic-bezier(0,1,1,0);
+    }
+    .ms-ellipsis div:nth-child(1)
+    {
+        left:6px;
+        animation:ms-ellipsis1 .6s infinite
+    }
+    .ms-ellipsis div:nth-child(2)
+    {
+        left:6px;
+        animation:ms-ellipsis2 .6s infinite;
+    }
+    .ms-ellipsis div:nth-child(3)
+    {
+        left:26px;animation:ms-ellipsis2 .6s infinite;
+    }
+    .ms-ellipsis div:nth-child(4)
+    {
+        left:45px;
+        animation:ms-ellipsis3 .6s infinite;
+    }
+    @keyframes ms-ellipsis1
+    {
+        0%{transform:scale(0)}100%{transform:scale(1)}
+    }
+    @keyframes ms-ellipsis3
+    {
+        0%{transform:scale(1)}100%{transform:scale(0)}
+    }
+    @keyframes ms-ellipsis2
+    {
+        0%{transform:translate(0,0)}100%{transform:translate(19px,0)}
+    }
+</style>
+
+    <!-- sign up modal error msg -->
+<style>
+    #ms-message-box
+    {
+        
+        position: fixed;
+        bottom: 1.5em;
+        width: 100%;
+        
+        display: none;
+    }
+    .ms-error-message
+    {
+        
+        
+        width: 90%;
+        margin: 0 auto;
+        /* position: ; */
+        /* bottom: 1em; */
+        background-color: rgb(253, 58, 87);
+        padding: 1.2em;
+        border: 2px solid white;
+        border-radius: 6px;
+    }
+    #ms-message 
+    {
+        
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -800,9 +924,26 @@
 
             </div>
         </div>
-        <center><a href="#" class="btn login">Already a member? <span>Log in here</span></a></center>
+        <p style="text-align: center; margin-bottom: 4em;"><a href="#" class="btn login">Already a member? <span>Log in here</span></a></p>
+        <div id="ms-message-box">
+            <div id="ms-error-message-box" class="ms-error-message" > 
+              <div  id="ms-message" >Email already taken</div> 
+            </div> 
+        </div>
         
-        
+    </div>
+
+    <!-- <div class="ms-style" style="position: relative; z-index: 2147483645;">  -->
+    <div class="ms-style">  
+        <div id="ms-loader" class="ms-loader" style="display: block;  margin: auto;"> 
+            <div class="ms-ellipsis"> 
+            <div></div> 
+            <div></div> 
+            <div></div> 
+            <div></div>
+            </div> 
+            <div class="w-embed"> </div> 
+        </div>
     </div>
 
     <div class="second-modal-bg secure-checkout-bg">
@@ -890,4 +1031,31 @@
         navBar.classList.toggle("close");
     }
 </script> -->
+<script>
+        var errMsg = document.querySelector("#ms-message-box");
+    var openCheckoutModal = document.querySelector(".sign-up-btn");
+    var checoutModalBg =document.querySelector(".secure-checkout-bg");
+    var animatedLoading = document.querySelector(".ms-style");
+
+    openCheckoutModal.addEventListener("click", function(){
+        
+        errMsg.style.display = "block";
+        checoutModalBg.style.display = "none";
+        // animatedLoading.style.display = "block";
+        setInterval(function(){ 
+            errMsg.style.display = "none";
+        }, 5000);
+        return;
+        // setInterval(function(){ 
+        //     animatedLoading.style.display = "none";
+            
+        // }, 2000);
+        // var modalfunc = setInterval(function (){ 
+        //     checoutModalBg.style.display = "block";
+            
+        // }, 2000) ;
+        // clearInterval(modalfunc);
+    })
+
+</script>
 </html>

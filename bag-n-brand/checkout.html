@@ -366,6 +366,32 @@
         background-color: rgba(255, 255, 255, 0.3);
     }
 </style>
+<style>
+    .pay-info .notice
+    {
+        position: fixed;
+        top: 20%;
+        right: 2%;
+        background-color: #363636;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .pay-info .notice-icon
+    {
+        color: rgba(255, 82, 82, 0.6);
+    }
+    .pay-info .notice div
+    {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+    }
+    .pay-info .notice-text
+    {
+        width: 300px;
+        line-height: 20px;
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -507,6 +533,25 @@
                             <img src="./img/checkout/master-card.svg" alt="">
                             <img src="./img/checkout/visa.svg" alt="">
                             <img src="./img/checkout/amex.svg" alt="">
+                        </div>
+                        <div class="notice">
+                            <div>
+                                <div class="notice-icon">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-18.121l-3.89-3.89a1.5 1.5 0 1 0-2.12 2.122L13.879 16l-3.89 3.89a1.5 1.5 0 1 0 2.122 2.12L16 18.121l3.89 3.89a1.5 1.5 0 1 0 2.12-2.122L18.121 16l3.89-3.89a1.5 1.5 0 1 0-2.122-2.12L16 13.879z" fill="currentColor" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="notice-text">
+                                    <p>Sorry, this payment option is not available for your country. Please choose a different payment option.</p>
+                                </div>
+                                <div class="cls-notice">
+                                    <svg width="16" height="16" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                                            <path d="M.5.5l11 11M.5 11.5l11-11"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="pay-instruct">
@@ -700,4 +745,12 @@
     </div>
 </body>
 <script src="./app/header-footer.js"></script>
+<script>
+    var notice = document.querySelector(".notice");
+    var clsNoticeButton  = document.querySelector(".cls-notice");
+
+    clsNoticeButton.addEventListener("click", function(){
+        notice.style.display= "none";
+    })
+</script>
 </html>

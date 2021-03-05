@@ -114,7 +114,7 @@ footer .contact p:last-child
 
 .login-modal-bg
 {
-    display: none;
+    
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -122,10 +122,10 @@ footer .contact p:last-child
     left: 0;
     padding-bottom: 5em;
     background-color: rgba(0, 0, 0, 0.8);
-    display: grid;
+    /* display: grid;
     justify-content: center;
-    align-content: center;
-    font-family: 'Segoe UI', sans-serif !important;
+    align-content: center; */
+    font-family: 'Segoe UI', sans-serif ;
     display: none;
     z-index: 9999;
     overflow-y: scroll;
@@ -134,7 +134,7 @@ footer .contact p:last-child
 
 .signup-modal-bg
 {
-    display: none;
+    
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -142,9 +142,9 @@ footer .contact p:last-child
     left: 0;
     padding-bottom: 5em;
     background-color: rgba(0, 0, 0, 0.8);
-    display: grid;
+    /* display: grid;
     justify-content: center;
-    align-content: center;
+    align-content: center; */
     font-family: 'Segoe UI', sans-serif;
     display: none;
     z-index: 9999;
