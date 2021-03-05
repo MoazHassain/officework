@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/header-footer.css">
+</head>
+<style>
+    @font-face
+    {
+        src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    } 
+    section.one 
+    {
+        height: clamp(250px, 25vw, 25vw);
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        /* background-color: blanchedalmond; */
+    }
+    .one h3
+    {
+        font-family: nova;
+        font-size: 21px;
+    }
+
+
+</style>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+        
+        <section class="one">
+            <h3>
+                LOADING...
+            </h3>
+        </section>
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+    <div class="modal-bg started-modal-bg">
+        <div class="modal started-modal">
+            <div class="img-logo"></div>
+            <h2>
+                Send us your mobile and one of our partners will text you back asap!
+            </h2>
+            <p>
+                Enter your mobile number below.
+            </p>
+            <div class="input-wrapper">
+                <button>US <i class="fas fa-caret-down"></i></button>
+                <input type="number" name="number" id="number" placeholder="+1">
+            </div>
+            <button class="subscribe">Subscribe</button>
+            <p class="small-text">
+                Please note that by subscribing you are agreeing to receive autodialed personal and marketing text messages to your mobile number from us. Consent is not required for purchase. Message and data rates may apply. Reply “STOP” by SMS to cancel.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
