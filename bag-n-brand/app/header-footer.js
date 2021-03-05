@@ -13,8 +13,10 @@ window.onscroll = function(){
 
 var loginModalBtn= document.querySelector("header .btn-login");
 var navloginModalBtn= document.querySelector(".my-nav .btn-login");
-var loginModalBg = document.querySelector(".login-modal-bg")
-var signupModalBg = document.querySelector(".signup-modal-bg")
+var loginModalBg = document.querySelector(".login-modal-bg");
+var signupModalBg = document.querySelector(".signup-modal-bg");
+var checoutModalBg =document.querySelector(".secure-checkout-bg");
+var openCheckoutModal = document.querySelector(".sign-up-btn");
 
 navloginModalBtn.addEventListener("click",function(){
     loginModalBg.style.display = "block";
@@ -49,6 +51,14 @@ window.addEventListener("click", function(e){
 //     }
 // })
 
+openCheckoutModal.addEventListener("click", function(){
+    checoutModalBg.style.display= "block";
+})
+window.addEventListener("click", function(e){
+    if(e.target == checoutModalBg){
+        checoutModalBg.style.display = "none";
+    }
+})
 
 var newAccount = document.querySelector(".login-modal-bg .signup")
 

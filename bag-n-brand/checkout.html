@@ -249,10 +249,11 @@
     {
         border-color: rgba(255, 255, 255, 0.8);
     }
-    .crdr-icon:focus,
-    .slice-icon:focus,
+    .crdr-icon:focus .crdr-icon,
+    .slice-icon:focus .slice-icon,
     .paypal-icon:focus
     {
+        background-color: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 1);
     }
     .crdr-icon img,
@@ -265,6 +266,10 @@
         margin: 0 5px;
         margin-top: -5px;
         background-color: rgba(255, 255, 255, 0.2);
+    }
+    .pay-instruct
+    {
+        padding-bottom: 5em;
     }
     .pay-instruct h3
     {

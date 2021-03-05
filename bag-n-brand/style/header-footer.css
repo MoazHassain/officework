@@ -10,6 +10,14 @@ body
     background-color: black;
     color: white;
 }
+.btn 
+{
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px ;
+}
 a
 {
     text-decoration: none;
@@ -27,6 +35,7 @@ a.btn:hover
 {
     background-color: rgba(255, 255, 255, 0.8);
 }
+
 @font-face
 {
     src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
@@ -285,7 +294,7 @@ footer .contact p:last-child
 }
 
 
-.reset-pass-bg
+.second-modal-bg
 {
     position: fixed;
     width: 100%;
@@ -294,34 +303,14 @@ footer .contact p:last-child
     left: 0;
     padding-bottom: 5em;
     background-color: rgba(0, 0, 0, 0.8);
-    /* display: grid;
-    justify-content: center;
-    align-content: center; */
-    font-family: 'Segoe UI', sans-serif !important;
-    z-index: 9999;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    display: none;
-}
-.set-newpass-bg
-{
     
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    padding-bottom: 5em;
-    background-color: rgba(0, 0, 0, 0.9);
-    /* display: grid;
-    justify-content: center;
-    align-content: center; */
     font-family: 'Segoe UI', sans-serif !important;
     z-index: 9999;
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;
 }
+
 .second-modal
 {
     background-color: #fafafa;
@@ -443,6 +432,85 @@ input::-webkit-inner-spin-button
   -webkit-appearance: none;
   margin: 0;
 }
+
+.secure-checkout-modal p
+{
+    text-align: unset;
+}
+.secure-checkout-modal strong
+{
+    color: rgba(0, 0, 0, 1);
+}
+.secure-checkout-modal 
+{
+    padding: unset;
+    padding-bottom: 2em;
+}
+.secure-checkout-modal .secure 
+{
+    padding: 1em 2em;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 2px 3px 0px #f0f0f0;
+    margin-bottom: 25px;
+}
+.secure-checkout-modal .wrapper
+{
+    display: grid;
+    background-color: white;
+    box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 5px 2em;
+    padding: 15px;
+}
+.secure-checkout-modal .custom-pakage-wrapper
+{
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+.secure-checkout-modal .img-logo
+{
+    width: 80px;
+    height: 15px;
+    background-image: url(../img/bag-n-brand6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-self: center;
+}
+.secure-checkout-modal .subtotal-wrapper,
+.secure-checkout-modal .total-wrapper
+{
+    grid-template-columns: auto auto;
+}
+.subtotal-wrapper .price,
+.total-wrapper .price
+{
+    justify-self: right;
+    
+}
+.secure-checkout-modal button
+{
+    
+    margin: 2em 2em 15px 2em;
+    width: 87%;
+    background-color: red;
+    color: white;
+}
+.secure-checkout-modal p.terms
+{
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+.secure-checkout-modal p.terms a
+{
+    font-size: 10px;
+    color: red;
+    text-decoration: underline dotted;
+}
+
 /* responsive btn */
 header .part-two .btn-container
     {
