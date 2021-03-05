@@ -249,13 +249,14 @@
     {
         border-color: rgba(255, 255, 255, 0.8);
     }
-    .crdr-icon:focus .crdr-icon,
-    .slice-icon:focus .slice-icon,
-    .paypal-icon:focus
+    /* .paypal-icon input[type="radio"]:checked .paypal-icon */
+    /* input[name="rdo-btn"]:checked + label
     {
+        content: "suiob";
+        margin: 10px;
         background-color: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 1);
-    }
+    } */
     .crdr-icon img,
     .slice-icon img, 
     .paypal-icon img
@@ -312,9 +313,9 @@
         background-color: rgba(0, 0, 0, 1);
         border-color: rgba(255, 255, 255, 1);
     }
-    .pay-instruct select:focus,
-    .pay-instruct input:focus,
-    .pay-instruct textarea:focus
+    .pay-instruct select,
+    .pay-instruct input,
+    .pay-instruct textarea
     {
         background-color: rgba(0, 0, 0, 1);
         border-color: rgba(255, 255, 255, 1);
@@ -507,7 +508,7 @@
                     <div class="pay-info">
                         <h2>Payment information</h2>
                         <p style="margin-bottom: 10px;">choose a way to pay for your order:</p>
-                        
+                       
                         <div class="crdr-icon">
                             <input type="radio" name="rdo-btn" id="crdr-card">
                             <label for="crdr-card">Credit or debit card</label>
@@ -528,7 +529,7 @@
                         
                         <div class="paypal-icon">
                             <input type="radio" name="rdo-btn" id="paypal">
-                        <label for="paypal">PayPal</label>
+                            <label for="paypal">PayPal</label>
                             <img src="./img/checkout/paypal.svg" alt="">
                             <img src="./img/checkout/master-card.svg" alt="">
                             <img src="./img/checkout/visa.svg" alt="">
@@ -555,9 +556,33 @@
                         </div>
                     </div>
                     <div class="pay-instruct">
-                        <h3>Payment instruction</h3>
-                        <p>You can use <strong>Klarna</strong> to breakup the purchase into multiple purchases.</p>
+                        <div>
+                            <h3>Payment instruction</h3>
+                            <p>You can use <strong>Klarna</strong> to breakup the purchase into multiple purchases.</p>
+                        </div>
+                        <div class="hidden-content">
+                            <p>⚠️Using <strong>Print Now Pay later?</strong>Contact a representative before placing the order to assure you are using the correct transaction method. </p>
+
+                            <div>
+                                <p>Secure payment form</p>
+                                <svg width="18" height="23" viewBox="0 0 18 23" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="currentColor" fill-rule="evenodd">
+                                        <path d="M15 9h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h1V6a6 6 0 1 1 12 0v3zm-2 0V6a4 4 0 1 0-8 0v3h8zM2 10a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1H2z" fill-rule="nonzero"></path>
+                                        <path d="M8 16.732a2 2 0 1 1 2 0V18a1 1 0 0 1-2 0v-1.268z"></path>
+                                    </g>
+                                </svg>
+                                <label for="card">Card Number</label>
+                                <input type="number" name="card" id="card" placeholder="Number as it appears on card">
+                                <label for="expire">Expiration Date</label>
+                                <input type="date" name="expire" id="expire" placeholder="MM / YY">
+                                <label for="security">Security Code</label>
+                                <input type="text" name="security" id="security" placeholder="CVC">
+                                <p>What's This?</p>
+                            </div>
+                        </div>
+                        
                         <h3>Billing address</h3>
+
                         <p>All fields are required unless they're explicitly marked as optional.</p>
                         <!-- <p>Country</p> -->
                         <label for="Country">Country</label>
