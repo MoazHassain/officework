@@ -17,6 +17,73 @@
         src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
         font-family: nova;
     } 
+    /* body
+    {
+        background-color: #cb1e0b;
+    } */
+    section.one 
+    {
+        padding: 13em 8em;
+        background-color: #cb1e0b;
+    }
+    .one h3, p
+    {
+        font-family: nova;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .one h3
+    {
+        font-size: 21px;
+    }
+    .one h1, 
+    .one h2
+    {
+        font-family: "archivo black", sans-serif;
+        text-align: center;
+        letter-spacing: -0.1em;
+        margin-bottom: 24px;
+    }
+    .one h1
+    {
+        font-size: 132px;
+        margin: unset;
+    }
+    .one h2
+    {
+        font-size: 34px;
+    }
+    .one .content-img
+    {
+        width: 1274px;
+        height: 704px;
+        background-image: url(./img/Screen+Shot+2020-09-14+at+8.06.55+PM.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 24px;
+    }
+    .one .btn-container
+    {
+        display: grid;
+        justify-items: center;
+    }
+    .one button
+    {
+        width: 133px;
+        padding: 19px 32px;
+        font-size: 23px;
+        font-family: nova;
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+        border-radius: 6px;
+        margin: 24px 0;
+        transition: 0.3s;
+    }
+    .one button:hover
+    {
+        opacity: 0.8;
+    }
 </style>
 <body>
     <div class="container">
@@ -41,9 +108,36 @@
                 </div>
             </div>
         </header>
+        <section class="one">
+            <h3>
+                NOW INTRODUCING
+            </h3>
+            <h1>
+                <h1 style="text-align:center;white-space:pre-wrap;">BAG-N-BRAND</h1>
+            </h1>
+            <h2>
+                PARTNER PORTAL 
+            </h2>
+            <div class="content-img">
 
+            </div>
+            <p>
+                The 
+                <strong>
+                    BAG-N-BRAND
+                </strong>
+                partner portal is your own personal dashboard where you can track your mock-up’s development and print your designs. We will email you once we’ve completed our review process. When we are done, you will automatically be redirected to your partner portal once you log in.  
+            </p><br>
+            <div class="btn-container">
+                <a href="./landing-page.html">
+                    <button class="btn">
+                        HOME
+                    </button>
+                </a>
+            </div>
+        </section>
 
-        <footer>
+        <footer >
             <div class="footer-title-logo">
                 <Center>
                     <img src="./img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
