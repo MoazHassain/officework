@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="./style/header-footer.css">
 </head>
@@ -32,6 +33,151 @@
     }
 
 
+</style>
+<!-- modal style -->
+<style>
+    .started-modal-bg
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        /* padding-bottom: 5em; */
+        background-color: rgba(0, 0, 0, 0.8);
+        /* display: grid;
+        justify-content: center;
+        align-content: center; */
+        font-family: 'Segoe UI', sans-serif ;
+        /* display: block; */
+        z-index: 9999;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        transition: 0.3s;
+    }
+    .change-modal
+    {
+        height: 0%;
+        transition: 0.3s;
+    }
+    .modal
+    {
+        background-color: white;
+        width: 26em;
+        margin: 0 auto;
+        margin-top: 6.5em;
+        margin-bottom: 3em;
+        border-radius: 4px;
+        font-family: "lato", sans-serif;        
+    }
+    .modal .bg-img
+    {
+        
+        min-height: 31em;
+        background-image: url(./img/bag-n-brand.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .modal .bg-img-overlay
+    {
+        min-height: 31em;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2.5em;
+        position: relative;
+    }
+    .modal .cls-started-modal
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.8em;
+    }
+    .modal .img-logo
+    {
+        width: 100%;
+        height: 65px;
+        background-image: url(./img/bag-n-brand6.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px 0px;
+    }
+    .block-text h2
+    {
+        font-size: 27px;
+        font-weight: 500;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    .modal .label p
+    {
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 0px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .input-wrapper
+    {
+        display: grid;
+        grid-template-columns: 70px auto;
+        grid-gap: 10px;
+    }
+    .input-wrapper button
+    {
+        
+        font-size: 18px;
+        font-weight: 400;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+    .input-wrapper input
+    {
+        margin: unset;
+        width: 100%;
+        padding: 12px 16px 12px 16px;
+    }
+    .input-wrapper input[type="number"]:hover,
+    .input-wrapper input[type="number"]:focus
+    {
+        /* background-color: thistle; */
+        box-shadow: unset;
+    }
+    .subscribe
+    {
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        background-color: rgb(229, 57, 53);
+        width: 100%;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 12px 20px;
+        margin: 12px 0px;
+
+    }
+    .modal .small-text
+    {
+        font-size: 9px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .modal .err-text
+    {
+        display: none;
+        background-color: rgba(235, 80, 56, 0.8);
+        margin-top: 12px;
+        padding: 10px 8px;
+        border-radius: 6px;
+    }
+    .modal .err-text p
+    {
+        font-size: 13px;
+        text-align: center;
+    }
 </style>
 <body>
 
@@ -100,22 +246,51 @@
     </div>
     <div class="modal-bg started-modal-bg">
         <div class="modal started-modal">
-            <div class="img-logo"></div>
-            <h2>
-                Send us your mobile and one of our partners will text you back asap!
-            </h2>
-            <p>
-                Enter your mobile number below.
-            </p>
-            <div class="input-wrapper">
-                <button>US <i class="fas fa-caret-down"></i></button>
-                <input type="number" name="number" id="number" placeholder="+1">
-            </div>
-            <button class="subscribe">Subscribe</button>
-            <p class="small-text">
-                Please note that by subscribing you are agreeing to receive autodialed personal and marketing text messages to your mobile number from us. Consent is not required for purchase. Message and data rates may apply. Reply “STOP” by SMS to cancel.
-            </p>
+           <div class="bg-img">
+                <div class="bg-img-overlay">
+                    <div class="cls-started-modal">
+                        <svg class="nNd_kXs- MoXmsfyU #FFFFFF" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" fill="#FFFFFF" viewBox="0 0 1024 1024">
+                            <path d="M592.352 512l409.984-409.888c22.272-22.304 22.272-58.176 0-80.448-22.304-22.272-58.112-22.272-80.416 0l-409.984 409.984-409.92-409.984c-22.272-22.272-58.112-22.272-80.416 0-22.208 22.272-22.208 58.144 0 80.448l409.952 409.888-409.952 409.952c-22.208 22.304-22.208 58.112 0 80.416 11.040 11.2 25.6 16.64 40.128 16.64 14.56 0 29.184-5.632 40.224-16.64l409.92-409.952 410.016 410.016c11.104 11.008 25.664 16.64 40.192 16.64 14.56 0 29.152-5.632 40.224-16.64 22.272-22.336 22.272-58.144 0-80.416l-409.952-410.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="img-logo"></div>
+                    <div class="block-text">
+                        <h2>
+                            Send us your mobile and one of our partners will text you back asap!
+                        </h2>
+                    </div>
+                    <div class="label">
+                        <p>
+                            Enter your mobile number below.
+                        </p>
+                    </div>
+                    <div class="input-wrapper">
+                        <button>US <i class="fas fa-caret-down"></i></button>
+                        <input type="number" name="number" id="number" placeholder="+1">
+                    </div>
+                    <div class="err-text">
+                        <p>The phone number has an incorrect format. Please enter the full 10 digit number in international format with the country code including “+”. For example: +15417543010</p>
+                    </div>
+                    <button class="subscribe">Subscribe</button>
+                    <p class="small-text">
+                        Please note that by subscribing you are agreeing to receive autodialed personal and marketing text messages to your mobile number from us. Consent is not required for purchase. Message and data rates may apply. Reply “STOP” by SMS to cancel.
+                    </p>
+                </div>
+           </div>
         </div>
     </div>
 </body>
+<script>
+    var clsStartModal = document.querySelector(".cls-started-modal");
+    var startModalBg = document.querySelector(".started-modal-bg");
+
+    clsStartModal.addEventListener("click", function(){
+        startModalBg.classList.add("change-modal");
+    })
+    window.addEventListener("click", function(e){
+        if(e.target == startModalBg){
+            startModalBg.classList.add("change-modal");
+        }
+    })
+</script>
 </html>
