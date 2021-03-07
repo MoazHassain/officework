@@ -166,11 +166,15 @@
     {
         background-color: rgba(0, 0, 0, 0.7);
         height: auto;
+        
+        padding: 5em 7em 7em 7em;
+        
+    }
+    .ten .grid-content
+    {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
-        padding: 5em 7em 7em 7em;
-        
     }
     .ten .part-one
     {
@@ -718,6 +722,41 @@
         text-align: center;
     }
 </style>
+<!-- fade in, slide in -->
+<style>
+    .fade-in
+    {
+        transform: translateY(5%);
+        opacity: 0; 
+        transition: transform 0.3s ease-in, opacity 0.8s ease-in;
+    }
+    .fade-in.appear
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .from-left
+    {
+        transform: translateX(3%);
+        opacity: 0;
+    }
+    .from-right
+    {
+        transform: translateX(-3%);
+        opacity: 0;
+    }
+    .from-left,
+    .from-right
+    {
+        transition: transform 0.5s ease-in, opacity 0.8s ease-in;
+    }
+    .from-left.appear,
+    .from-right.appear
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -803,42 +842,44 @@
         </section>
         <section class="ten">
             <div class="overlay">
-                <div class="part-one">
-                    <p>Share your idea for your brand and we will do the rest, It's your time now.</p>
-                    <div class="area-text">
-                        <h1>Build The Brand!</h1>
+                <div class="grid-content fade-in">
+                    <div class="part-one ">
+                        <p>Share your idea for your brand and we will do the rest, It's your time now.</p>
+                        <div class="area-text">
+                            <h1>Build The Brand!</h1>
+                        </div>
+                        <a href="./service.html" class="btn btn-build">
+                            Build A Brand 
+                        </a>
                     </div>
-                    <a href="./service.html" class="btn btn-build">
-                        Build A Brand 
-                    </a>
-                </div>
-                <div class="part-two">
-                    <div class="img background-img">
-    
+                    <div class="part-two">
+                        <div class="img background-img">
+        
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="eleven">
-            <div class="block-text">
-                <center><h1>Klarna.</h1></center>
+            <div class="block-text slide-in from-right">
+                <h1 style="text-align: center;">Klarna.</h1>
             </div>
         </section>
         <section class="twelve">
             <div class="block-text">
-                <center><h1>Klarna splits order cost into 4 easy payment</h1></center>
+                <h1 style="text-align: center;">Klarna splits order cost into 4 easy payment</h1>
             </div>
 
         </section>
         <section class="thirteen">
-            <div class="part-one">
+            <div class="part-one slide-in from-left">
                 <div class="block-text">
                     <h1>Our customers print faster than ever because of Klarna!</h1>
                     <p>Bag-N-Brand is offering a 9 day free trial for custom memberships. <span>Start today,print tomorrow, and your membership is free.</span></p>
                 </div>
 
             </div>
-            <div class="part-two">
+            <div class="part-two slide-in from-right">
                 <h1>Klarna.</h1>
             </div>
         </section>
@@ -1068,5 +1109,32 @@
         // clearInterval(modalfunc);
     })
 
+</script>
+<!-- intersection Observer -->
+<script>
+    var faders = document.querySelectorAll(".fade-in");
+    var slideIn = document.querySelectorAll(".slide-in");
+    var appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -250px 0px"
+    };
+    var appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add("appear");
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    },appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    slideIn.forEach(slideIn => {
+        appearOnScroll.observe(slideIn);
+    })
 </script>
 </html>
