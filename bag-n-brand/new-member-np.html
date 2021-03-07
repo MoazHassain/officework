@@ -122,25 +122,30 @@
     {
         display: grid;
         grid-template-columns: 70px auto;
+        grid-template-areas: 
+        "btn input"
+        "countryCode countryCode";
         grid-gap: 10px;
     }
     .input-wrapper button
     {
-        
+        grid-area: btn;
         font-size: 18px;
         font-weight: 400;
         border-radius: 5px;
         border: none;
         outline: none;
     }
-    .input-wrapper input
+    .input-wrapper input[type="tel"]
     {
+        
         margin: unset;
         width: 100%;
         padding: 12px 16px 12px 16px;
+        border-radius: 0 5px 5px 0;
     }
-    .input-wrapper input[type="number"]:hover,
-    .input-wrapper input[type="number"]:focus
+    .input-wrapper input[type="tel"]:hover,
+    .input-wrapper input[type="tel"]:focus
     {
         /* background-color: thistle; */
         box-shadow: unset;
@@ -177,6 +182,108 @@
     {
         font-size: 13px;
         text-align: center;
+    }
+</style>
+<!-- input wrapper  -->
+<style>
+    .input-wrapper .input-wrap
+    {
+        grid-area: input;
+        display: grid;
+        grid-template-columns: auto auto;
+        border-top: 1px solid;
+        
+    }
+    .input-wrap .input-text
+    {
+        background-color: white;
+        color: black;
+        height: 100%;
+        padding: 10px 12px;
+        text-align: center;
+        border-radius: 4px 0 0 4px;
+        border-left: 1px solid ;
+        border-color: white ;
+    }
+    
+</style>
+<!-- Country code number -->
+<style>
+    .country-code-container
+    {
+        grid-area: countryCode;
+        position: relative;
+        color: black;
+        display: none;
+    }
+    .toggle-country-code
+    {
+        display: block;
+    }
+    .country-number-code
+    {
+        
+        background-color: white;
+        position: absolute;
+        /* display: none; */
+        /* width:21.8vw; */
+        width: 100%;
+        padding: 8px;
+        
+        /* overflow: hidden;
+        height: 180px;
+        overflow-y: scroll;
+        overflow: hidden;
+        overflow-x: hidden; */
+    }
+    .searchbar-container
+    {
+        width: 100%;
+    }
+    .searchbar-container .search-bar i
+    {
+        position: absolute;
+        font-size: 20px;
+        padding: 16px;
+        font-weight: 400;
+        
+    }
+    .search-bar input,
+    .search-bar input:hover,
+    .search-bar input:focus
+    {
+        width: 100%;
+        margin: unset;
+        box-shadow: unset;
+        
+    }
+    .search-bar input
+    {
+        /* padding: unset; */
+        padding-left: 45px;
+        /* font-size: 16px; */
+    }
+    .search-bar input::placeholder
+    {
+        font-size: 16px;
+    }
+    .country-list
+    {
+        
+        height: 105px;
+        overflow-y: scroll;
+        
+        overflow-x: hidden;
+    }
+    .country-list ul
+    {
+        padding: 8px 5px;
+        list-style-type: none;
+    }
+    .country-list li
+    {
+        
+        padding: 8px 0px;
     }
 </style>
 <body>
@@ -265,8 +372,34 @@
                         </p>
                     </div>
                     <div class="input-wrapper">
-                        <button>US <i class="fas fa-caret-down"></i></button>
-                        <input type="number" name="number" id="number" placeholder="+1">
+                        <button class="country-content">US <i class="fas fa-caret-down"></i></button>
+                        <div class="input-wrap">
+                            <div class="input-text"><p>+1</p></div>
+                            <input type="tel" name="number" id="number">
+                        </div>
+                        <div class="country-code-container">
+                            <div class="country-number-code">
+                                <div class="searchbar-container">
+                                    <div class="search-bar">
+                                        <i class="fas fa-search"></i>
+                                        <input type="search" name="search" id="search" placeholder="Enter country">
+        
+                                    </div>
+                                </div>
+                                <div class="country-list">
+                                    <ul>
+                                        <li><Strong>AD &nbsp; Andorra</Strong> +371</li>
+                                        <li><Strong>AE &nbsp; United Arab Emirates</Strong> +971</li>
+                                        <li><Strong>BG &nbsp; Bulgeria</Strong> +371</li>
+                                        <li><Strong>DK &nbsp; Denmark</Strong> +371</li>
+                                        <li><Strong>EG &nbsp; Egypt</Strong> +371</li>
+                                        <li><Strong>HT &nbsp; Haiti</Strong> +371</li>
+                                        <li><Strong>IE &nbsp; Ireland</Strong> +371</li>
+                                        <li><Strong>JP &nbsp; Japan</Strong> +371</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="err-text">
                         <p>The phone number has an incorrect format. Please enter the full 10 digit number in international format with the country code including “+”. For example: +15417543010</p>
@@ -291,6 +424,12 @@
         if(e.target == startModalBg){
             startModalBg.classList.add("change-modal");
         }
+    })
+    var toggleBtn = document.querySelector("button.country-content")
+    var countryContainer = document.querySelector(".country-code-container")
+
+    toggleBtn.addEventListener("click", function(){
+        countryContainer.classList.toggle("toggle-country-code");
     })
 </script>
 </html>
