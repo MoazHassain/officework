@@ -161,14 +161,21 @@
         background-size: cover;
         background-position: center;
         height: auto;
+    }
+    .ten .overlay
+    {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
+        padding: 5em 7em 7em 7em;
         
     }
     .ten .part-one
     {
-        padding: 7em;
+        align-self: center;
+       /* padding: 7em; */
     }
     .ten .part-one p
     {
@@ -177,10 +184,10 @@
     .ten .part-one h1
     {
         font-family: "Archivo black", sans-serif;
-        font-size: 100px;
+        font-size: 86px;
         letter-spacing: -0.08em;
         line-height: 95px;
-        margin: 80px 0px;
+        margin: 60px 0px;
         
     }
     .ten .part-one a
@@ -190,11 +197,13 @@
     }
     .ten .part-two 
     {
+        height: 580px;
+        width: 580px;
         background-image: url(./img/bag-n-brand2.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        margin: 5em 7em;
+        /* margin: 5em 7em; */
     }
     .eleven
     {
@@ -793,18 +802,20 @@
             </div>
         </section>
         <section class="ten">
-            <div class="part-one">
-                <p>Share your idea for your brand and we will do the rest, It's your time now.</p>
-                <div class="area-text">
-                    <h1>Build The Brand!</h1>
+            <div class="overlay">
+                <div class="part-one">
+                    <p>Share your idea for your brand and we will do the rest, It's your time now.</p>
+                    <div class="area-text">
+                        <h1>Build The Brand!</h1>
+                    </div>
+                    <a href="./service.html" class="btn btn-build">
+                        Build A Brand 
+                    </a>
                 </div>
-                <a href="./service.html" class="btn btn-build">
-                    Build A Brand 
-                </a>
-            </div>
-            <div class="part-two">
-                <div class="img background-img">
-
+                <div class="part-two">
+                    <div class="img background-img">
+    
+                    </div>
                 </div>
             </div>
         </section>
