@@ -11,7 +11,65 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
 </head>
-
+<style>
+    @font-face
+    {
+        /* ./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf */
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    section.sales-partner
+    {
+        padding: clamp(27px, 6.5vw, 6.6vw) clamp(16px, 8.2vw, 8.5vw);
+    }
+    h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 5.6vw;
+        line-height: 1.1em;
+        letter-spacing: -0.1em;
+        padding: 2vw 0;
+        padding-top: 4vw;
+    }
+    .sales-partner .title
+    { 
+        text-align: center;
+        
+    }
+    .sales-partner-content
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8em;
+    }
+    .sales-img
+    {
+        background-image: url(../../img/image-asset.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .sales-describe h3
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 1.5vw;
+        line-height: 1.1em;
+        letter-spacing: -0.1em;
+    }
+    .sales-describe button
+    {
+        font-family: nova;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 18px 32px;
+        transition: 0.3s;
+    }
+    .sales-describe button:hover
+    {
+        opacity: 0.8;
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -40,6 +98,29 @@
                 <p>Log In </p>
             </a>
         </div>
+
+        <section class="sales-partner">
+            <div>
+                <div class="title">
+                    <h1>Sales Partner</h1>
+                </div>
+                <div class="sales-partner-content">
+                    <div class="img sales-img">
+
+                    </div>
+                    <div class="sales-describe">
+                        <h3>
+                            Make huge commissions in the bag-n-brand sales nation.
+                        </h3>
+                        <h1>
+                            imagine the possibilities.
+                        </h1>
+                        <a href="./sales-partner-np.html"><button >JOIN</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <footer>
             <div class="footer-title-logo">
