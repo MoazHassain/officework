@@ -495,6 +495,81 @@
         margin-bottom: 2.5em;
     }
 </style>
+<!-- custom checkbox -->
+<style>
+    .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    /* font-size: 22px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a grey background color */
+/* .checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+} */
+
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #e6e6e6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid black;
+    /* border-radius: 3px; */
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</style>
 <body>
     <div class="container">
         <header>
@@ -569,7 +644,7 @@
                         <p class="descript-product"><strong>6 items</strong><svg style="margin-left: 10px;" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 4L6 9 1 4" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg></p>
                     </div>
 
-                    <div class="product">
+                    <div class="product" style="display: block;">
                         <div class="product-img product_image-wrap">
                             <img src="./img/bag-n-brand-product/bag-n-brand(59).jpg" alt="">
                         </div>
@@ -612,49 +687,7 @@
                         </div>
 
                     </div>
-                    <div class="product">
-                        <div class="product-img product_image-wrap">
-                            <img src="./img/bag-n-brand-product/bag-n-brand(59).jpg" alt="">
-                        </div>
-                        <div class="product-detail">
-                            <p>100 Pouches - Acapulco Gold</p>
-                            <!-- <p>Qty: 1 <i class="fas fa-chevron-down"></i></p> -->
-                            <span>Qty :</span>
-                            <select name="qty" id="qty">
-                                <option value="0">1</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">4</option>
-                                <option value="4">5</option>
-                                <option value="5">6</option>
-                                <option value="6">7</option>
-                                <option value="7">8</option>
-                                <option value="8">9</option>
-                                <option value="9">10</option>
-                                <option value="10">11</option>
-                                <option value="11">12</option>
-                                <option value="12">13</option>
-                                <option value="13">14</option>
-                                <option value="14">15</option>
-                                <option value="15">16</option>
-                                <option value="16">17</option>
-                                <option value="17">18</option>
-                                <option value="18">19</option>
-                                <option value="19">20</option>
-                            </select>
-                        </div>
-                        <div class="product-price">
-                            <p class="btn-cancel">
-                                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
-                                        <path d="M.5.5l11 11M.5 11.5l11-11"></path>
-                                    </g>
-                                </svg>
-                            </p>
-                            <p>$130.00</p>
-                        </div>
-
-                    </div>
+                    
                     <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; ">
                     <p class="total-price"><span class="total">TOTAL</span><span class="price">$130.00</span></p>
                     <p class="promo">
@@ -671,10 +704,16 @@
                         used to send you order status updates.
                     </p>
                     <input type="text" name="email" placeholder="Your email address">
-                    <input type="checkbox" name="terms" id="terms">
-                    <label for="terms">I agree with <span class="terms-modal">Terms & Conditions</span></label><br>
-                    <input type="checkbox" name="updated" id="updated">
-                    <label for="updated">Keep me up to date on new and exclusive offers</label>
+                    
+                    <label class="checkbox-container" for="terms">I agree with <span class="terms-modal">Terms & Conditions</span>
+                        <input type="checkbox" name="terms" id="terms">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    
+                    <label class="checkbox-container" for="updated">Keep me up to date on new and exclusive offers
+                        <input type="checkbox" name="updated" id="updated">
+                        <span class="checkmark"></span>
+                    </label>
                     <div class="checkout">
                         <input type="button" value="Checkout">
                         <div class="encrypted">
