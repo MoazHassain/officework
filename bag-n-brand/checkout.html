@@ -17,6 +17,10 @@
         src: url(./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
         font-family: nova;
     } 
+    a{
+        color: white;
+        cursor: pointer;
+    }
     p
     {
         font-family: nova;
@@ -117,6 +121,21 @@
         font-size: 16px;
         font-weight: 500;
     }
+    .two .count 
+    {
+        padding: 3px 5px;
+        border-radius: 50px;
+        background-color: white;
+        color: black;
+        font-size: 14px;
+        margin-left: -15px;
+        margin-top: 22px;
+        position: absolute;
+        font-family: nova;
+        min-width: 1.7em;
+        height: 1.7em;
+        text-align: center;
+    }
 </style>
 <style>
     
@@ -139,13 +158,16 @@
         height: fit-content;
         
     }
-    
+    .cart-describe p a:hover
+    {
+        color: rgba(255, 255, 255, 0.9);
+    }
     
     .cards-wrapper .product
     {
         margin: 20px 0px;
         display:grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 90px auto 60px;
         grid-gap: 1em;
     }
     .cards-wrapper .product_image-wrap
@@ -165,7 +187,7 @@
     }
     .cards-wrapper .product-detail p
     {   
-        padding: 3px 0px;
+        padding: 5px 0px;
     }
     .product-detail>span
     {
@@ -191,8 +213,20 @@
     }
     .cards-wrapper .product-price p
     {
-        padding: 3px 0px;
+        padding: 3px 5px 3px 0;
         text-align: right;
+        justify-self: right;
+    }
+    .cards-wrapper .product-price a.btn-cancel
+    {
+        float: right;
+        padding: 5px;
+        padding-left: 7px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .cards-wrapper .product-price a.btn-cancel:hover
+    {
+        color: rgba(255, 255, 255, 1);
     }
     .cards-wrapper .total-price
     {
@@ -249,7 +283,7 @@
     .slice-icon:hover,
     .paypal-icon:hover
     {
-        border-color: rgba(255, 255, 255, 0.8);
+        border-color: rgba(255, 255, 255, 0.9);
     }
     /* .paypal-icon input[type="radio"]:checked .paypal-icon */
     /* input[name="rdo-btn"]:checked + label
@@ -270,6 +304,12 @@
         margin-top: -5px;
         background-color: rgba(255, 255, 255, 0.2);
     }
+    .focused
+    {
+        border-color: rgba(255, 255, 255, 1);
+    }
+
+
     .pay-instruct
     {
         padding-bottom: 5em;
@@ -471,8 +511,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 21px;
-        width: 21px;
+        height: 20px;
+        width: 20px;
         border: 1px solid;
         border-color: #eee;
         border-radius: 50%;
@@ -505,7 +545,7 @@
     /* Style the indicator (dot/circle) */
     .custom-content .custom-radio:after {
         top: 5px;
-        left: 6px;
+        left: 5px;
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -513,9 +553,66 @@
     }
     .slice-icon .custom-radio:after
     {
-        top: 6px;
-        left: 6px;
+        top: 5px;
+        left: 5px;
     }
+</style>
+<!-- disallowed input -->
+<style>
+    input[type="text"].err-email
+    
+    {
+        border-color: rgb(229, 100, 100);
+        background-color: rgba(229, 100, 100, 0.1);
+    }
+    input[type="text"].err-email:focus
+    {
+        border-color: rgb(229, 100, 100);
+        background-color: rgba(229, 100, 100, 0.1);
+        outline: none;
+    }
+    input[type="text"].err-email::placeholder
+    {
+        color: rgb(229, 100, 100);
+    }
+    .err-email-msg
+    {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(229, 100, 100);
+        margin: -10px 0 20px 0;
+        display: none;
+    }
+    .dot-container
+    {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+    }
+    .disallowed-dots
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 5px;
+        height: 8px;
+        width: 8px;
+        /* border: 1px solid; */
+        /* border-color: #eee; */
+        border-radius: 50%;
+        background-color: red;
+        /* display: none; */
+    }
+    /* form label::before
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 5px;
+        background-color: red;
+    } */
 </style>
 <body>
     <div class="container">
@@ -550,26 +647,23 @@
         </section>
         <section class="two">
             <p>STRANDBRANDS™️ <span>Updated Every Sunday.</span></p>
-            <a href="./kart.html" style="color: white;" >
-                <p class="count" style="margin: 30px 0;">
-                    <svg class="icon-shopping-bag" width="36" height="30" viewbox="0 0 36 30" xmlns="https://www.w3.org/2000/svg" >
+            <a href="/shop" style="color: white;" >
+                <!-- <p class="count" > -->
+                    <svg class="icon-shopping-bag" width="36" height="30" viewbox="0 0 36 30" xmlns="https://www.w3.org/2000/svg" style="margin: 30px 0;">
                         <g fill="none" fill-rule="evenodd">
-                            <path d="M7 7h22v18a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V7z" 
-                            stroke="currentColor" stroke-width="2"></path>
-                            <path d="M13 10V6c0-2.993 2.009-5 5-5s5 2.026 5 5v4" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M7 7h22v18a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V7z" stroke="currentColor" stroke-width="2"></path>
+                            <path d="M13 10V6c0-2.993 2.009-5 5-5s5 2.026 5 5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             <!-- <circle class="cart-not-empty" cx="18" cy="18" r="4" fill="currentColor"></circle> -->
                         </g>
-                    </svg>
-                    <span>1</span>
-                </p>
+                    </svg><span class="count">1</span>
+                <!-- </p> -->
                 
                 <!-- <img src="./icon/square-shopping-bag-with-handle.png" alt="" > -->
             </a>
             <div class="cards-wrapper">
                 <div class="cart-describe">
                     <h1>Shopping cart</h1>
-                    <p>Store &nbsp;/ &nbsp;Shopping cart</p>
+                    <p><a href="./shop.html">Store</a> &nbsp;/ &nbsp;<a href="./kart-product.html">Shopping cart</a></p>
                     <div class="product">
                         <div class="product-img product_image-wrap">
                             <img src="./img/bag-n-brand-product/bag-n-brand(59).jpg" alt="">
@@ -602,7 +696,13 @@
                             </select>
                         </div>
                         <div class="product-price">
-                            
+                            <a class="btn-cancel" data-trxid="{{$trxid}}" data-id="{{$itemID}}">
+                                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                                        <path d="M.5.5l11 11M.5 11.5l11-11"></path>
+                                    </g>
+                                </svg>
+                            </a>
                             <br>
                             <p style="margin-top: 7px;">$130.00</p>
                         </div>
@@ -634,9 +734,9 @@
                         <h2>Payment information</h2>
                         <p style="margin-bottom: 10px;">choose a way to pay for your order:</p>
                        
-                        <div class="crdr-icon">
+                        <div class="custom-content-wrapper crdr-icon">
                             
-                            <label class="custom-content" for="crdr-card">
+                            <label class="custom-content" for="crdr-card" >
                                 Credit or debit card
                                 <input type="radio" name="rdo-btn" id="crdr-card">
                                 <span class="custom-radio"></span>
@@ -651,7 +751,7 @@
                             
                         </div>
                         
-                        <div class="slice-icon">
+                        <div class="custom-content-wrapper slice-icon">
                             
                             <label class="custom-content" for="slice">
                                 Slice IT
@@ -662,7 +762,7 @@
                            
                         </div>
                         
-                        <div class="paypal-icon">
+                        <div class="custom-content-wrapper paypal-icon">
                             
                             <label class="custom-content" for="paypal">
                                 PayPal
@@ -736,50 +836,56 @@
 
                         <p>All fields are required unless they're explicitly marked as optional.</p>
                         <!-- <p>Country</p> -->
-                        <label for="Country">Country</label>
-                        <select id="country" name="country">
-                            <option value="0">Afganistan</option>
-                            <option value="1">Algeria</option>
-                            <option value="2">Argentina</option>
-                            <option value="3">Bangladesh</option>
-                            <option value="4">Barbados</option>
-                            <option value="5">Brazil</option>
-                            <option value="6">Canada</option>
-                            <option value="7">China</option>
-                            <option value="8">Chili</option>
-                            <option value="9">Denmark</option>
-                            <option value="10">Ecuador</option>
-                            <option value="11">Egypt</option>
-                            <option value="12">France</option>
-                            <option value="13">Finland</option>
-                            <option value="14">Germany</option>
-                            <option value="15">Ghana</option>
-                            <option value="16">Haiti</option>
-                            <option value="17">Hongkong</option>
-                            <option value="18">Island</option>
-                            <option value="19">Italy</option>
-                        </select>
-                        <div class="name-phone">
-                            <div class="name">
-                                <label for="name">Full name</label>
-                                <input type="text" name="name" id="name">
+                        <div class="form">
+                            <label for="Country">Country</label>
+                            <select id="country" name="country">
+                                <option value="0">Afganistan</option>
+                                <option value="1">Algeria</option>
+                                <option value="2">Argentina</option>
+                                <option value="3">Bangladesh</option>
+                                <option value="4">Barbados</option>
+                                <option value="5">Brazil</option>
+                                <option value="6">Canada</option>
+                                <option value="7">China</option>
+                                <option value="8">Chili</option>
+                                <option value="9">Denmark</option>
+                                <option value="10">Ecuador</option>
+                                <option value="11">Egypt</option>
+                                <option value="12">France</option>
+                                <option value="13">Finland</option>
+                                <option value="14">Germany</option>
+                                <option value="15">Ghana</option>
+                                <option value="16">Haiti</option>
+                                <option value="17">Hongkong</option>
+                                <option value="18">Island</option>
+                                <option value="19">Italy</option>
+                            </select>
+                            <div class="name-phone">
+                                <div class="name">
+                                    <label class="name-label " for="name"><div class="disallowed-dots"></div> Full name</label>
+                                    <input type="text" name="name" id="name" class="my-name">
+                                    <p class="err-email-msg">Please enter your name</p>
+                                </div>
+                                <div class="phone">
+                                    <label for="phone">Phone(optional)</label>
+                                    <input type="number" name="phone" id="phone">
+                                </div>
                             </div>
-                            <div class="phone">
-                                <label for="phone">Phone(optional)</label>
-                                <input type="number" name="phone" id="phone">
+                            <label for="company">Company name(optional)</label>
+                            <input type="text" name="company" id="company">
+                            <label for="address"><div class="disallowed-dots"></div>Address</label>
+                            <input type="text" name="address" class="street" placeholder="Street address, apartment, suite, floor, etc">
+                            <p class="err-email-msg">Please enter a valid street address</p>
+                            <div class="address">
+                                <input type="text" name="address" class="city" placeholder="City">
+                                <p class="err-email-msg">Please enter your city</p>
+                                <input type="text" name="address" class="post-code" placeholder="Postal code">
+                                <p class="err-email-msg">Please enter your postal code</p>
                             </div>
+                            <label for="advise">How can we improve our site</label>
+                            <textarea rows="3" cols="50" name="advise" class="advise" placeholder="Leave us a note about your order"></textarea>
+                           <button class="continue">Continue</button>
                         </div>
-                        <label for="company">Company name(optional)</label>
-                        <input type="text" name="company" id="company">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" class="address" placeholder="Street address, apartment, suite, floor, etc">
-                        <div class="address">
-                            <input type="text" name="address" class="address" placeholder="City">
-                            <input type="text" name="address" class="address" placeholder="Postal code">
-                        </div>
-                        <label for="advise">How can we improve our site</label>
-                        <textarea rows="3" cols="50" name="advise" class="advise" placeholder="Leave us a note about your order"></textarea>
-                        <button class="continue">Continue</button>
                     </div>
                     
                 </div>
@@ -929,5 +1035,35 @@
         notice.style.display= "none";
     })
 
+</script>
+
+<script>
+    var customLabel = document.querySelector(".custom-content");
+    var changeBorder =document.querySelector(".crdr-icon")
+   
+    customLabel.addEventListener("click", function() {
+        console.log(456);
+        changeBorder.classList.add("focused");
+    });
+
+    
+</script>
+
+<!-- disallowed input -->
+<script>
+    var errinputBtn = document.querySelector(".continue");
+    var openErrEmail = document.querySelector("#name");
+    var dotContainer = document.querySelector(".name-label")
+    // var openErrdot = document.querySelector(".disallowed-dots");
+    var openErrEmailMsg = document.querySelector(".err-email-msg");
+
+    errinputBtn.addEventListener("click", function(){
+        console.log(123);
+        
+        openErrEmail.classList.add("err-email");
+        dotContainer.classList.add("dot-container");
+        openErrEmailMsg.style.display = "block";
+        // openErrdot.style.display = "block";
+    });
 </script>
 </html>

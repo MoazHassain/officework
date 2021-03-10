@@ -15,11 +15,11 @@ input[type="submit"],
 input[type="button"],
 .btn 
 {
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 15px ;
-    cursor: pointer;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px !important;
+    padding: 15px !important;
+    cursor: pointer !important;
 }
 a
 {
