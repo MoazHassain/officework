@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Engagement Survey</title>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,14 +39,19 @@
         text-align: center;
         font-size: 24px;
     }
-    .mdc-layout-grid
+    .content-wrapper .content .grid-layer
     {
-        padding: 0;
+        min-height: 96px;
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+        grid-gap: 1em;
+        text-align: center;
+        align-items: center;
     }
     .button-container button
     {
         height: 46px;
-        width: 12vw;
+        width: 185px;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.01em;
@@ -68,6 +73,11 @@
         {
             padding: 5em;
         }
+        .content-wrapper .content .grid-layer
+        {
+            grid-template-columns: 150px auto 150px;
+            grid-gap: 0.5em;
+        }
     }
     @media only screen and (max-width: 750px)
     {
@@ -79,12 +89,42 @@
         {
             text-align: center;
         }
+        .content-wrapper .content .grid-layer
+        {
+            grid-template-columns: 90px auto 90px;
+            grid-gap: 0;
+            
+        }
+        .content-wrapper .content .left-text,
+        .content-wrapper .content .right-text
+        {
+            font-size: 13px;
+            letter-spacing: -0.07em;
+            
+        }
         .button-container button
         {
             width: 95%;
             margin: 10px 0;
         }
 
+    }
+    @media only screen and (max-width: 400px)
+    {
+        .content-wrapper .content .grid-layer
+            {
+                grid-template-columns: 70px auto 70px;
+                grid-gap: 0;
+                text-align: justify;
+            }
+            .content-wrapper .title h1
+            {
+                font-size: clamp(26px, 8vw, 30px);
+            }
+            .content-wrapper .content h1
+            {
+                font-size: clamp(16px, 5vw, 20px);
+            }
     }
 </style>
 <body>
@@ -172,65 +212,51 @@
     
             <section class="content-wrapper">
                 <div class="text">
-                    <p style="text-align: center; margin-top: 1em;">Please rate today's session by clicking the line nearest to the description that fits your experience</p>
+                    <p style="text-align: center; margin-top: 1em; font-weight: 500;">Please rate today's session by clicking the line nearest to the description that fits your experience</p>
                 </div>
                 <div class="content">
                     <div class="content-title">
                         <h1>Listening</h1>
                     </div>
                     <div class="grid-layer">
-                        <div class="mdc-layout-grid">
-                            <div class="mdc-layout-grid__inner">
-                              <div class="mdc-layout-grid__cell--span-2">
-                                <div class="left-text">
-                                    I did not feel heard and understood by IEP team. 
-                                </div>
+                        <div class="left-text">
+                            I did not feel heard and understood by IEP team. 
+                        </div>
+                        <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                            <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
+                            <div class="mdc-slider__track">
+                              <div class="mdc-slider__track--inactive"></div>
+                              <div class="mdc-slider__track--active">
+                                <div class="mdc-slider__track--active_fill"></div>
                               </div>
-                              <div class="mdc-layout-grid__cell--span-8">
-                                <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
-                                    <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
-                                    <div class="mdc-slider__track">
-                                      <div class="mdc-slider__track--inactive"></div>
-                                      <div class="mdc-slider__track--active">
-                                        <div class="mdc-slider__track--active_fill"></div>
-                                      </div>
-                                      <div class="mdc-slider__tick-marks">
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                      </div>
-                                    </div>
-                                    <div class="mdc-slider__thumb">
-                                      <div class="mdc-slider__value-indicator-container" aria-hidden="true">
-                                        <div class="mdc-slider__value-indicator">
-                                          <span class="mdc-slider__value-indicator-text">
-                                            50
-                                          </span>
-                                        </div>
-                                      </div>
-                                      <div class="mdc-slider__thumb-knob"></div>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="mdc-layout-grid__cell--span-2">
-                                <div class="right-text">
-                                    I did feel and understood by IEP team
-                                </div>
+                              <div class="mdc-slider__tick-marks">
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
                               </div>
                             </div>
-                          </div>
-    
-                        
-                        
-                        
+                            <div class="mdc-slider__thumb">
+                              <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+                                <div class="mdc-slider__value-indicator">
+                                  <span class="mdc-slider__value-indicator-text">
+                                    50
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="mdc-slider__thumb-knob"></div>
+                            </div>
+                        </div>
+                        <div class="right-text">
+                            I did feel and understood by IEP team
+                        </div>
                     </div>
                 </div>
                 <div class="content">
@@ -238,58 +264,44 @@
                         <h1>Respect</h1>
                     </div>
                     <div class="grid-layer">
-                        <div class="mdc-layout-grid">
-                            <div class="mdc-layout-grid__inner">
-                              <div class="mdc-layout-grid__cell--span-2">
-                                    <div class="left-text">
-                                        I did not feel my perspective was valued by IEP team.  
-                                    </div>
+                        <div class="left-text">
+                            I did not feel my perspective was valued by IEP team. 
+                        </div>
+                        <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                            <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
+                            <div class="mdc-slider__track">
+                              <div class="mdc-slider__track--inactive"></div>
+                              <div class="mdc-slider__track--active">
+                                <div class="mdc-slider__track--active_fill"></div>
                               </div>
-                              <div class="mdc-layout-grid__cell--span-8">
-                                    <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
-                                        <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
-                                        <div class="mdc-slider__track">
-                                          <div class="mdc-slider__track--inactive"></div>
-                                          <div class="mdc-slider__track--active">
-                                            <div class="mdc-slider__track--active_fill"></div>
-                                          </div>
-                                          <div class="mdc-slider__tick-marks">
-                                            <div class="mdc-slider__tick-mark--active"></div>
-                                            <div class="mdc-slider__tick-mark--active"></div>
-                                            <div class="mdc-slider__tick-mark--active"></div>
-                                            <div class="mdc-slider__tick-mark--active"></div>
-                                            <div class="mdc-slider__tick-mark--active"></div>
-                                            <div class="mdc-slider__tick-mark--active"></div>
-                                            <div class="mdc-slider__tick-mark--inactive"></div>
-                                            <div class="mdc-slider__tick-mark--inactive"></div>
-                                            <div class="mdc-slider__tick-mark--inactive"></div>
-                                            <div class="mdc-slider__tick-mark--inactive"></div>
-                                            <div class="mdc-slider__tick-mark--inactive"></div>
-                                          </div>
-                                        </div>
-                                        <div class="mdc-slider__thumb">
-                                          <div class="mdc-slider__value-indicator-container" aria-hidden="true">
-                                            <div class="mdc-slider__value-indicator">
-                                              <span class="mdc-slider__value-indicator-text">
-                                                50
-                                              </span>
-                                            </div>
-                                          </div>
-                                          <div class="mdc-slider__thumb-knob"></div>
-                                        </div>
-                                    </div>
-                              </div>
-                              <div class="mdc-layout-grid__cell--span-2">
-                                    <div class="right-text">
-                                        I did feel like an important member of IEP Team. 
-                                    </div>
+                              <div class="mdc-slider__tick-marks">
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
                               </div>
                             </div>
-                          </div>
-    
-                        
-                        
-                        
+                            <div class="mdc-slider__thumb">
+                              <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+                                <div class="mdc-slider__value-indicator">
+                                  <span class="mdc-slider__value-indicator-text">
+                                    50
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="mdc-slider__thumb-knob"></div>
+                            </div>
+                        </div>
+                        <div class="right-text">
+                            I did feel like an important member of IEP Team. 
+                        </div>
                     </div>
                 </div>
                 <div class="content">
@@ -297,58 +309,44 @@
                         <h1>Concerns</h1>
                     </div>
                     <div class="grid-layer">
-                        <div class="mdc-layout-grid">
-                            <div class="mdc-layout-grid__inner">
-                              <div class="mdc-layout-grid__cell--span-2">
-                                <div class="left-text">
-                                    I feel we did not address my concerns in this IEP meeting  
-                                </div>
+                        <div class="left-text">
+                            I feel we did not address my concerns in this IEP meeting 
+                        </div>
+                        <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                            <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
+                            <div class="mdc-slider__track">
+                              <div class="mdc-slider__track--inactive"></div>
+                              <div class="mdc-slider__track--active">
+                                <div class="mdc-slider__track--active_fill"></div>
                               </div>
-                              <div class="mdc-layout-grid__cell--span-8">
-                                <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
-                                    <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
-                                    <div class="mdc-slider__track">
-                                      <div class="mdc-slider__track--inactive"></div>
-                                      <div class="mdc-slider__track--active">
-                                        <div class="mdc-slider__track--active_fill"></div>
-                                      </div>
-                                      <div class="mdc-slider__tick-marks">
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                      </div>
-                                    </div>
-                                    <div class="mdc-slider__thumb">
-                                      <div class="mdc-slider__value-indicator-container" aria-hidden="true">
-                                        <div class="mdc-slider__value-indicator">
-                                          <span class="mdc-slider__value-indicator-text">
-                                            50
-                                          </span>
-                                        </div>
-                                      </div>
-                                      <div class="mdc-slider__thumb-knob"></div>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="mdc-layout-grid__cell--span-2">
-                                <div class="right-text">
-                                    I did feel All my concerns were addressed in this IEP meeting.  
-                                </div>
+                              <div class="mdc-slider__tick-marks">
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
                               </div>
                             </div>
-                          </div>
-    
-                        
-                        
-                        
+                            <div class="mdc-slider__thumb">
+                              <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+                                <div class="mdc-slider__value-indicator">
+                                  <span class="mdc-slider__value-indicator-text">
+                                    50
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="mdc-slider__thumb-knob"></div>
+                            </div>
+                        </div>
+                        <div class="right-text">
+                            I did feel All my concerns were addressed in this IEP meeting.  
+                        </div>
                     </div>
                 </div>
                 <div class="content">
@@ -356,58 +354,44 @@
                         <h1>Supports</h1>
                     </div>
                     <div class="grid-layer">
-                        <div class="mdc-layout-grid">
-                            <div class="mdc-layout-grid__inner">
-                              <div class="mdc-layout-grid__cell--span-2">
-                                <div class="left-text">
-                                    I feel the services and interventions discussed will not address my Child’s needs 
-                                </div>
+                        <div class="left-text">
+                            I feel the services and interventions discussed will not address my Child’s needs
+                        </div>
+                        <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                            <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
+                            <div class="mdc-slider__track">
+                              <div class="mdc-slider__track--inactive"></div>
+                              <div class="mdc-slider__track--active">
+                                <div class="mdc-slider__track--active_fill"></div>
                               </div>
-                              <div class="mdc-layout-grid__cell--span-8">
-                                <div class="mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
-                                    <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" step="1" aria-label="Discrete slider with tick marks demo">
-                                    <div class="mdc-slider__track">
-                                      <div class="mdc-slider__track--inactive"></div>
-                                      <div class="mdc-slider__track--active">
-                                        <div class="mdc-slider__track--active_fill"></div>
-                                      </div>
-                                      <div class="mdc-slider__tick-marks">
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--active"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                        <div class="mdc-slider__tick-mark--inactive"></div>
-                                      </div>
-                                    </div>
-                                    <div class="mdc-slider__thumb">
-                                      <div class="mdc-slider__value-indicator-container" aria-hidden="true">
-                                        <div class="mdc-slider__value-indicator">
-                                          <span class="mdc-slider__value-indicator-text">
-                                            50
-                                          </span>
-                                        </div>
-                                      </div>
-                                      <div class="mdc-slider__thumb-knob"></div>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="mdc-layout-grid__cell--span-2">
-                                <div class="right-text">
-                                    I feel The supports will address all of my child’s academic  needs.
-                                </div>
+                              <div class="mdc-slider__tick-marks">
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--active"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
+                                <div class="mdc-slider__tick-mark--inactive"></div>
                               </div>
                             </div>
-                          </div>
-    
-                        
-                        
-                        
+                            <div class="mdc-slider__thumb">
+                              <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+                                <div class="mdc-slider__value-indicator">
+                                  <span class="mdc-slider__value-indicator-text">
+                                    50
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="mdc-slider__thumb-knob"></div>
+                            </div>
+                        </div>
+                        <div class="right-text">
+                            I feel The supports will address all of my child’s academic needs.
+                        </div>
                     </div>
                 </div>
 

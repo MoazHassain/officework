@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
+    <title>Subjective Outcome Survey</title>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -42,7 +42,7 @@
     }
     .content-wrapper .content .slider-container
     {
-        
+        min-height: 96px;
         display: grid;
         grid-template-columns: 200px auto 200px;
         grid-gap: 1em;
@@ -62,7 +62,7 @@
     .button-container button
     {
         height: 46px;
-        width: 12vw;
+        width: 185px;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.01em;
@@ -97,6 +97,7 @@
             grid-template-columns: 150px auto 150px;
             grid-gap: 0.5em;
         }
+        
     }
     @media only screen and (max-width: 750px)
     {
@@ -214,7 +215,7 @@
             <div class="title">
                 <h1>Progression Chart</h1>
                 <p style="margin-bottom: 20px; color: rgba(0, 0, 0, 0.7);">This is session number: 1 </p>
-                <p style="text-align: center;">Please rate today's session by clicking the line nearest to the description that fits your experience</p>
+                <p style="text-align: center; font-weight: 500;">Please rate today's session by clicking the line nearest to the description that fits your experience</p>
             </div>
             
             <div class="content">
