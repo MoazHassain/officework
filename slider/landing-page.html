@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Home</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    @font-face
+    {
+        src: url(./font/Gibson.ttf);
+        font-family: gibson;
+    }
+    
+    body
+    {
+        font-family: gibson;
+    }
+    a
+    {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    .basic-btn
+    {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: #5a00db;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 0.8em 1.5em;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .basic-btn:hover
+    {
+        transform: translateY(-8%);
+    }
+    
+    header
+    {
+        height: 80px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        display: grid;
+        grid-template-columns: 10em auto auto auto;
+        grid-template-areas: 
+        "logo one . two";
+        padding: 0 2em;
+        align-items: center;
+        font-weight: 600;
+
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        transition: top 0.3s;
+        transition-delay: 0.2s;
+    }
+    header .logo-container
+    {
+        grid-area: logo;
+        justify-self: center;
+    }
+    header .left-part
+    {
+        grid-area: one;
+        width: 20em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        justify-items: center;
+    }
+    header .right-part
+    {
+        grid-area: two;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        justify-items: center;
+        align-items: center;
+    }
+    .bar-content .comment-icon,
+    .bar-content .search-icon
+    {
+        width: 24px;
+        height: 24px;
+        margin-top: -4px;
+        font-size: 24px;
+        font-weight: 100;
+    }
+    .one
+    {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    .one .left-part
+    {
+        
+        padding: 5em ;
+        align-self: center;
+        
+    }
+    .one .left-part .title h1,
+    .four .right-part .title h1,
+    .six .title h1
+    {
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 0.95em;
+        padding-right: 1em;
+    }
+    .one .left-part .text p
+    {
+        font-size: 22px;
+        color: rgba(0, 0, 0, 0.7);
+        padding: 20px 50px 20px 0;
+        
+    }
+    .one .right-part
+    {
+        /* background-color: rosybrown; */
+        overflow: hidden;
+
+    }
+    .one .right-part .bg-img
+    {
+        height: 200%;
+        width: 200%;
+        background-color: #fae053;
+        transform: rotate(120deg)  translateX(0%) translateY(5%);
+    }
+    .one .right-part .bg-img img
+    {
+        width: 30%;
+        height: auto;
+        /* transform: rotate(-90deg) translateX(-200%) translateY(180%); */
+        transform: rotate(-120deg) translateX(-220%) translateY(0%);
+    }
+    .two
+    {
+        padding: 3em 10em;
+        text-align: center;
+    }
+    
+    .two .head-title h2
+    {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .two .head-title p,
+    .two .text p
+    {
+        font-size: 22px;
+        color: rgba(0, 0, 0, 0.7);
+        padding: 1em 3em;
+    }
+    .two .grid-content
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .three
+    {
+        padding: 2em 15em;
+        text-align: center;
+    }
+    .three .content-wrapper
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2em;
+
+    }
+    .three .content-items
+    {
+        padding: 1.5em;
+    }
+    .three .content-title,
+    .three .content-text
+    {
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .three .content-title
+    {
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .three .content-icon i
+    {
+        color: #5a00db;
+        font-size: 40px;
+        padding: 20px;
+    }
+    .four
+    {
+        padding: 3em 8em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    .four .left-part
+    {
+        height: 30em;
+        padding: 0 4em;
+    }
+    .four .left-part .img
+    {
+        background-color: #fae053;
+        height: 100%;
+        width: 40%;
+        border-radius: 30px 0 0 30px;
+    }
+    .four .left-part .overlay
+    {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 30px 0 0 30px;
+    }
+    .four .left-part img
+    {
+        
+        height: 15em;
+        margin: 7em 6em;
+        border-radius: 0px 30px 30px 0px;
+    }
+    .four .right-part
+    {
+        align-self: center;
+        padding: 4em;
+    }
+    .four .learn-more
+    {
+        width: 115px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+        transition: 0.3s;
+    }
+    .four .learn-more:hover
+    {
+        border-bottom: 2px solid;
+        border-color: #fae053;
+    }
+    .four .right-part p,
+    .four .right-part i
+    {
+        font-size: 18px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .four .right-part i
+    {
+        padding-left: 10px;
+    }
+    .five
+    {
+        height: 25em;
+        background-color: bisque;
+        color: white;
+        margin: 2em 0;
+    }
+    .five .bg-img
+    {
+        height: 100%;
+        background-image: url(./img/georgie-cobbs-muOHbrFGEQY-unsplash.jpg);
+        background-position-x: center;
+        background-position-y: 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .five .overlay
+    {
+        height: 100%;
+        
+        padding: 7em 8em;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        justify-items: center;
+    }
+    .five .survey-reached
+    {
+        padding: 10px 60px 10px 20px;
+        border-right: 1px solid white;
+        text-align: right;
+        font-size: 36px;
+        letter-spacing: -0.02em;
+        line-height: 1.4em;
+    }
+    .five .number
+    {
+        /* justify-self: start; */
+        font-size: 84px;
+        font-weight: 800;
+    }
+    .six
+    {
+        margin: 5em;
+        text-align: center;
+    }
+    .six button
+    {
+        margin: 2em 0 5px 0;
+        font-size: 22px;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    }
+    footer
+    {
+        padding: 2em 7em 2em 7em;
+    }
+    footer,
+    footer p
+    {
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+    footer .part-one
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    footer .left-part
+    {
+        width: 250px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:  
+        "flogo floge"
+        "imgone imgtwo";
+        grid-gap: 5px;
+        padding: 1em;
+    }
+    footer .right-part
+    {
+        justify-self: right;
+        width: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 1em;
+        justify-items: right;
+        align-items: center;
+    }
+    footer .copyright
+    {
+        padding: 1em;
+        text-align: center;
+        font-size: 14px;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <a href="javascript:void(0)" class="logo-container">
+                <div class="logo">
+                
+                    ECWID
+                </div>
+            </a>
+            <div class="bar-content left-part">
+                
+                
+                <div class="sell">
+                    <a href="javascript:void(0)">
+                        <p>Sell</p>
+                    </a>
+                    
+                </div>
+
+                <div class="market">
+                    <a href="javascript:void(0)">
+                        <p>Market</p>
+                    </a>
+                    
+                </div>
+                <div class="manage">
+                    <a href="javascript:void(0)">
+                        <p>Manage</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bar-content right-part">
+                <div class="learn">
+                    <a href="javascript:void(0)">
+                        <p>Learn</p>
+                    </a>
+                    
+                </div>
+                <div class="partners">
+                    <a href="javascript:void(0)">
+                        <p>Partners</p>
+                    </a>
+                    
+                </div>
+                <div class="comment-icon">
+                    <a href="javascript:void(0)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Support</title><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.17 12.17c0 3.07-2.44 5.42-4.3 6.8-2.58 1.9-6.88 4.2-6.88 4.2V19.5h-.28c-3.8 0-6.88-3.28-6.88-7.33 0-4.05 3.08-7.34 6.88-7.34h4.58c3.8 0 6.88 3.29 6.88 7.34z"></path></svg>
+                    </a>
+                </div>
+    
+                <div class="search-icon">
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+    
+                <div class="login">
+                    <a href="javascript:void(0)">
+                        <p>Log In</p>
+                    </a>
+                </div>
+                <div class="signup">
+                    <a href="javascript:void(0)">
+                        <button class="basic-btn">Get started for FREE</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="one">
+            <div class="left-part">
+                <div class="title">
+                    <h1>Start Creating Your Survey Online for Free</h1>
+                </div>
+                <div class="text">
+                    <p>Capture data anywhere (even offline) with beautiful surveys and mobile forms you can build in minutes.</p>
+                </div>
+                <div class="btn-container">
+                    <button class="basic-btn" style="font-size: 19px; box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);">Create My First Survey</button>
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="bg-img">
+                    <img src="./img/isaac-smith-6EnTPvPPL6I-unsplash.jpg" alt="" >
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="two">
+            <div class="head-title">
+                <h2 >How Our Survey Tool Works</h2>
+                <p style="width: 70%; margin: auto;">Create your survey or mobile form in minutes and capture data anywhere with our offline survey app (no internet required).</p>
+            </div>
+            <div class="grid-content">
+                <div class="content-left">
+                    <div class="img process-img">
+                        <img src="./img/home-process-1-en.jpg" alt="">
+                    </div>
+                    <div class="text process-text">
+                        <p>Create and design your perfect survey</p>
+                    </div>
+                </div>
+                <div class="content-middle">
+                    <div class="img process-img">
+                        <img src="./img/home-process-2-en.jpg" alt="">
+                    </div>
+                    <div class="text process-text">
+                        <p>Collect your data in-person or with a kiosk</p>
+                    </div>
+
+                </div>
+                <div class="content-right">
+                    <div class="img process-img">
+                        <img src="./img/home-process-3-en.jpg" alt="">
+                    </div>
+                    <div class="text process-text">
+                        <p>Take action with your insights</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="three">
+            <div class="content-wrapper">
+                <div class="content-items">
+                    <div class="content-icon">
+                        <!-- <svg class="qts-icon"><use xlink:href="https://www.quicktapsurvey.com/images/icons/iconset.svg#list"></use></svg> -->
+                        <i class="fas fa-list-ul"></i>
+                    </div>
+                    <div class="content-title">
+                        <h3>35+ Survey Question Types</h3>
+                    </div>
+                    <div class="content-text">
+                        <p>Choose from dozens of quantitative and qualitative question types.</p>
+                    </div>
+                </div>
+
+                <div class="content-items">
+                    <div class="content-icon">
+                        <!-- <svg class="qts-icon"><use xlink:href="https://www.quicktapsurvey.com/images/icons/iconset.svg#word-bubbles"></use></svg> -->
+                        <i class="far fa-comment-alt"></i>
+                    </div>
+                    <div class="content-title">
+                        <h3>Unlimited Survey Responses</h3>
+                    </div>
+                    <div class="content-text">
+                        <p>Whether it's a simple poll or in-depth market research, never worry about form response limits again.</p>
+                    </div>
+                </div>
+                <div class="content-items">
+                    <div class="content-icon">
+                        <!-- <svg class="qts-icon"><use xlink:href="https://www.quicktapsurvey.com/images/icons/iconset.svg#iphone"></use></svg> -->
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="content-title">
+                        <h3>Mobile Friendly Surveys</h3>
+                    </div>
+                    <div class="content-text">
+                        <p>Create surveys that look awesome and are designed for mobile data capture.</p>
+                    </div>
+                </div>
+                <div class="content-items">
+                    <div class="content-icon">
+                        <!-- <svg class="qts-icon"><use xlink:href="https://www.quicktapsurvey.com/images/icons/iconset.svg#email-notifications"></use></svg> -->
+                        <i class="fab fa-creative-commons-share"></i>
+                    </div>
+                    <div class="content-title">
+                        <h3>Automated Alerts & Notifications</h3>
+                    </div>
+                    <div class="content-text">
+                        <p>Created automated alerts and notifications based on the data you collect.</p>
+                    </div>
+                </div>
+                <div class="content-items">
+                    <div class="content-icon">
+                        <!-- <svg class="qts-icon"><use xlink:href="https://www.quicktapsurvey.com/images/icons/iconset.svg#iphone-landscape"></use></svg> -->
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="content-title">
+                        <h3>iOS & Android App</h3>
+                    </div>
+                    <div class="content-text">
+                        <p>Use iPads, iPhones Android tablets or smartphones to collect data offline, online and anywhere.</p>
+                    </div>
+                </div>
+                <div class="content-items">
+                    <div class="content-icon">
+                        <i class="fas fa-cog"></i>
+                        <!-- <svg id="cog" viewBox="0 0 50 50" style="width: 50px; height: 50px;"><path d="M20.5 42.1l-4.4-1.8-.8-1.6.6-1.9-.1-.5c-.8-.6-1.5-1.3-2.1-2.1l-.4-.2-1.9.6-1.6-.8L8 29.4l.6-1.7 1.8-.9.2-.4c-.1-1-.1-2 0-2.9l-.2-.4-1.8-.9-.6-1.7 1.8-4.3 1.6-.8 1.9.6.5-.2c.6-.8 1.3-1.5 2.1-2.1l.1-.5-.6-1.9.8-1.6L20.5 8l1.7.6.9 1.8.4.2c1-.1 2-.1 3 0l.4-.2.9-1.8 1.7-.6 4.3 1.8.8 1.6-.6 1.9.2.5c.8.6 1.5 1.3 2.1 2.1l.5.1 1.9-.6 1.5.8 1.8 4.4-.6 1.7-1.8.9-.2.4c.1 1 .1 2 0 3l.2.4 1.8.9.6 1.7-1.8 4.3-1.7.8-1.8-.7-.5.1c-.6.8-1.3 1.5-2.1 2.1l-.2.5.6 1.9-.8 1.7-4.4 1.8-1.7-.6-.9-1.8-.4-.2c-1 .1-2 .1-3 0l-.4.2-.7 1.7-1.7.7zm8.5-1.9l.5.2 3.2-1.3.2-.5-.6-1.8.5-1.4.2-.1c.8-.6 1.5-1.4 2.2-2.2l.2-.2 1.4-.5 1.8.6.5-.2 1.3-3.2-.3-.6-1.7-.9-.7-1.3v-.2c.1-1 .1-2.1 0-3.1v-.2l.7-1.3 1.7-.9.2-.5-1.3-3.1-.5-.2-1.8.6-1.5-.6-.2-.2c-.6-.8-1.4-1.5-2.2-2.2l-.2-.2-.4-1.3.6-1.8-.1-.6-3.2-1.3-.5.2-.9 1.7-1.3.7h-.2c-1-.1-2.1-.1-3.1 0h-.2l-1.3-.7-.9-1.7-.5-.2-3.3 1.3-.2.5.6 1.8-.5 1.5-.2.2c-.8.6-1.5 1.4-2.1 2.2l-.1.2-1.4.4-1.8-.6-.5.2-1.3 3.2.2.5 1.7.9.7 1.3v.2c-.1 1-.1 2.1 0 3.1v.2l-.7 1.3-.3.2-1.6.7-.2.5 1.3 3.2.5.2 1.8-.6 1.4.5.1.2c.6.8 1.4 1.5 2.2 2.2l.2.1.5 1.4-.6 1.8.2.5 3.2 1.3.5-.2.9-1.7 1.3-.7h.2c1 .1 2.1.1 3.1 0h.2l1.3.7 1.1 1.8z"></path><path d="M25 33.8c-4.9 0-8.8-3.9-8.8-8.8s3.9-8.8 8.8-8.8 8.8 3.9 8.8 8.8c-.1 4.8-4 8.8-8.8 8.8zm0-16c-4 0-7.2 3.3-7.1 7.2s3.3 7.2 7.2 7.1c3.9 0 7.1-3.2 7.1-7.1 0-4-3.2-7.2-7.2-7.2z"></path></svg> -->
+                    </div>
+                    <div class="content-title">
+                        <h3>Powerful Integrations</h3>
+                    </div>
+                    <div class="content-text">
+                        <p>Your survey responses integrate with partners like Zapier, MailChimp, Salesforce and more.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="four">
+            <div class="left-part">
+                <div class="img">
+                    <div class="overlay">
+                        <img src="./img/celpax-1Lf5Adh9SCg-unsplash.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="title">
+                    <h1>Create Anywhere</h1>
+                </div>
+                <div class="text">
+                    <p>Set up your survey once to easily sync and use across a website, social media, marketplaces like Amazon, and live in-person. Get started with one, or try them all.</p>
+                </div>
+                <div class="learn-more">
+                    <a href=""><p>Learn more <i class="fas fa-long-arrow-alt-right"></i></p></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="five">
+            <div class="bg-img">
+                <div class="overlay">
+                    <div class="survey-reached">
+                        <h1>Our Survey <br> Reaching <br> Worldwide</h1>
+                    </div>
+                    <div class="number">$ 11,111,111,111</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="six">
+            <div class="title">
+                <h1>Start Creating Your Survey Online for Free</h1>
+                
+            </div>
+            <a href="javascript:void(0)">
+                <button class="basic-btn">Create My First Survey</button>
+            </a>
+            <div class="requirment">
+                <p style="color: rgba(0, 0, 0, 0.6);">No credit card required</p>
+            </div>
+        </section>
+        <footer>
+            <div class="part-one">
+                <div class="left-part">
+                    <div class="logo" style="grid-area: flogo; ">
+                        ECWID
+                    </div>
+                    <div class="img" style="grid-area: imgone;">
+                        <a href=""><img src="https://don16obqbay2c.cloudfront.net/wp-content/themes/ecwid/images/badges/gray-app-store.svg" alt="Available on the App Store" width="auto" height="auto"></a>
+                    </div>
+                    <div class="img" style="grid-area: imgtwo;">
+                        <a href=""><img src="https://don16obqbay2c.cloudfront.net/wp-content/themes/ecwid/images/badges/gray-google.svg" alt="Get it on Google play" width="auto" height="auto"></a>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="support">
+                        <a href=""><p>Support</p></a>
+                    </div>
+                    <div class="about">
+                        <a href=""><p>About </p></a>
+                    </div>
+                    <div class="product">
+                        <a href=""><p>Product</p></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="background-color: white;  width: 100%; border: 0; height: 0.2px; ">
+            <div class="copyright">
+                <p>Made in Toronto, Canada. Copyright © 2010-2021 Formstack</p>
+                <p>Privacy Policy | CCPA | </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+var header = document.querySelector("header");
+var prevScrollPos = window.pageYoffset;
+
+window.onscroll = function(){
+    var currentScrollPos = window.pageYOffset;
+        if(prevScrollPos> currentScrollPos){
+            header.style.top = "0";
+        }else{
+            header.style.top = "-80px"
+        }
+        prevScrollPos = currentScrollPos;
+}
+</script>
+</html>
