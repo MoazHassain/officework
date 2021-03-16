@@ -97,6 +97,15 @@
         font-size: 24px;
         font-weight: 100;
     }
+    header .left-part div p:hover,
+    header .right-part div p:hover,
+    header .right-part div i:hover,
+    header .right-part div svg:hover
+    {
+        transition: 0.2s;
+        opacity: 0.6;
+    }
+
     .one
     {
         height: 100vh;
@@ -135,19 +144,25 @@
     }
     .one .right-part .bg-img
     {
-        height: 200%;
-        width: 200%;
+        height: 145em;
+        width: 145em;
         background-color: #fae053;
         
-        transform: rotate(120deg) translateX(0) translateY(4em);
+        transform: rotate(120deg) translateX(0) translateY(4vh);
+        position: relative;
     }
     .one .right-part .bg-img img
     {
-        width: 30%;
+        width: 36em;
         height: auto;
         /* transform: rotate(-90deg) translateX(-200%) translateY(180%); */
-        
-        transform: rotate(-120deg) translateX(-80.5em) translateY(0);
+        position: absolute;
+        /* top: 0; */
+        /* right:0; */
+        left: 40em;
+        bottom: -8em;
+        /* transform: rotate(-120deg) translateX(-80.5em) translateY(0); */
+        transform: rotate(-120deg) ;
     }
     .two
     {
@@ -178,6 +193,14 @@
         width: 100%;
         height: auto;
     } */
+    .two .content-left:hover,
+    .two .content-middle:hover,
+    .two .content-right:hover,
+    .three .content-items:hover
+    {
+        opacity: 0.6;
+        transition: 0.2s;
+    }
     .three
     {
         padding: 2em 15em;
@@ -366,6 +389,11 @@
         justify-items: right;
         align-items: center;
     }
+    footer .right-part p:hover
+    {
+        opacity: 0.7;
+        transition: 0.2s;
+    }
     footer .copyright
     {
         padding: 1em;
@@ -428,9 +456,15 @@
     .nav-content-wrapper
     {
         padding: 8em 2em;
-    }.nav-content
+    }
+    .nav-content
     {
         margin: 1em 0;
+    }
+    .nav-content:hover
+    {
+        opacity: 0.6;
+        transition: 0.2s;
     }
     .nav-content i
     {
@@ -492,12 +526,14 @@
             height: 90%;
             width: 100%;
             transform: unset;
-            
+            position: unset;
         }
         .one .right-part .bg-img img 
         {
+            width: 30%;
             transform: unset;
-
+            position: unset;
+            
             transform: scale(1.8) translateX(20.5em) translateY(-5em);
             
         }
@@ -648,14 +684,14 @@
             height: 90%;
             width: 100%;
             transform: unset;
-            
+            position: 0;
         }
         .one .right-part .bg-img img 
         {
             transform: unset;
-
+            width: 30%;
             transform: scale(1.8) translateX(31vw) translateY(-.5em);
-            
+            position: unset;
         }
 
         .two
@@ -700,6 +736,7 @@
             
             height: clamp(160px, 35vw, 200px);
             margin: clamp(1em, 9vw, 8em) clamp(3em, 16vw, 10em);
+            margin-right: 0;
         }
         .four .right-part
         {
