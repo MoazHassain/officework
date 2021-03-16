@@ -138,14 +138,16 @@
         height: 200%;
         width: 200%;
         background-color: #fae053;
-        transform: rotate(120deg)  translateX(0%) translateY(5%);
+        
+        transform: rotate(120deg) translateX(0) translateY(4em);
     }
     .one .right-part .bg-img img
     {
         width: 30%;
         height: auto;
         /* transform: rotate(-90deg) translateX(-200%) translateY(180%); */
-        transform: rotate(-120deg) translateX(-220%) translateY(0%);
+        
+        transform: rotate(-120deg) translateX(-80.5em) translateY(0);
     }
     .two
     {
@@ -171,6 +173,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         
     }
+    /* .two .grid-content img
+    {
+        width: 100%;
+        height: auto;
+    } */
     .three
     {
         padding: 2em 15em;
@@ -337,11 +344,17 @@
         width: 250px;
         display: grid;
         grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
         grid-template-areas:  
         "flogo floge"
         "imgone imgtwo";
         grid-gap: 5px;
         padding: 1em;
+    }
+    footer .left-part .logo
+    {
+        grid-area: flogo;
+        
     }
     footer .right-part
     {
@@ -359,6 +372,377 @@
         text-align: center;
         font-size: 14px;
     }
+</style>
+
+<style>
+    /* responsive header */
+    .hamburger-menu .bar1,
+    .hamburger-menu .bar2
+    {
+        width: 30px;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 11px 0;
+        transition: 0.3s;
+    }
+    .responsive-btn
+    {
+        display: none;
+    }
+    .change .bar1
+    {
+        -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+        transform: rotate(135deg) translate(8px, -1px);
+    }
+    .change .bar2
+    {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(-135deg) translate(8px, 1px);
+    }
+    .my-nav-menu
+    {
+        
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9990;
+        top: 0;
+        right: 0;
+        
+        background-color: rgba(255, 255, 255, 1);
+        transition: 0.3s;
+        overflow: hidden;
+    }
+    .nav-content-wrapper
+    {
+        padding: 8em 2em;
+    }.nav-content
+    {
+        margin: 1em 0;
+    }
+    .nav-content i
+    {
+        float: right;
+    }
+    
+    
+</style>
+<!-- responsive -->
+<style>
+    /* tab */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        .bar-content.right-part
+        {
+            grid-template-columns: auto auto;
+            justify-items: right;
+        }
+        .bar-content.right-part .learn,
+        .bar-content.right-part .partners,
+        .bar-content.right-part .comment-icon,
+        .bar-content.right-part .search-icon,
+        .bar-content.right-part .signup
+        {
+            display: none;
+        }
+        .responsive-btn
+        {
+            display: block;
+        }
+        .open-nav-modal
+        {
+            
+            width: 50%;
+            transition: 0.3s;
+        }
+        .one
+        {
+            grid-template-columns: auto;
+        }
+        .one .left-part
+        {
+            width: 85%;
+        }
+        .one .right-part
+        {
+            
+            /* background-color: rosybrown; */
+            overflow: unset;
+            
+        }
+        .one .right-part .bg-img
+        {
+            height: 90%;
+            width: 100%;
+            transform: unset;
+            
+        }
+        .one .right-part .bg-img img 
+        {
+            transform: unset;
+
+            transform: scale(1.8) translateX(20.5em) translateY(-5em);
+            
+        }
+        
+
+        .two
+        {
+            padding: 3em 1.5em;
+        }
+        
+        .three
+        {
+            padding: 3em 1.5em;
+        }
+
+
+        .four
+        {
+            padding: 3em 1.5em;
+        }
+        .four .left-part
+        {
+            padding-right: 0;
+        }
+        .four .right-part
+        {
+            padding-left: 0;
+        }
+
+        .five .overlay
+        {
+            padding: 7em 4em;
+        }
+    }
+    @media only screen and (max-width: 770px) and (min-width:765px)
+    {
+        .one .right-part .bg-img img 
+        {
+            transform: unset;
+            transform: scale(1.6) translateX(18em) translateY(-3em);
+            
+        }
+        .two .head-title p
+        {
+            padding: 22px 0;
+        }
+        .two .grid-content img
+        {
+            width: 100%;
+        }
+        .four .left-part
+        {
+            padding-left: 1em;
+        }
+        .four .right-part 
+        {
+            padding-right: 1.5em;
+        }
+        .four .overlay img
+        {
+            height: 160px;
+            margin: 10em 6em;
+        }
+        .five .overlay
+        {
+            padding: 7em 2em;
+        }
+        .survey-reached h1
+        {
+            font-size: 34px;
+        }
+        .five .overlay .number
+        {
+            font-size: 64px;
+        }
+        footer
+        {
+            padding: 2em 4em 2em 4em;
+        }
+    }
+    /* mobile */
+    @media only screen and (max-width: 750px) 
+    {
+        header
+        {
+            padding: clamp(0px, 1vw, 30px);
+        }
+        .basic-btn
+        {
+            width: 100%;
+        }
+        .bar-content.left-part
+        {
+            display: none;
+        }
+        .bar-content.right-part
+        {
+            grid-template-columns: auto auto;
+            justify-items: right;
+            grid-gap: 5px;
+            padding-right: 10px;
+        }
+        .bar-content.right-part .learn,
+        .bar-content.right-part .partners,
+        .bar-content.right-part .comment-icon,
+        .bar-content.right-part .search-icon,
+        .bar-content.right-part .signup
+        {
+            display: none;
+        }
+        .responsive-btn
+        {
+            display: block;
+        }
+        .open-nav-modal
+        {
+            
+            width: 100%;
+            transition: 0.3s;
+        }
+        .one
+        {
+            /* height: 100vh; */
+            margin-top: 20px;
+            grid-template-columns: auto;
+        }
+        .one .left-part
+        {
+            width: 100%;
+            padding: 1em;
+        }
+        .one .title h1,
+        .one .text p
+        {
+            padding: 0px 0 30px 0 !important;
+        }
+        .one .right-part
+        {
+            
+            /* background-color: rosybrown; */
+            overflow: unset;
+            
+        }
+        .one .right-part .bg-img
+        {
+            height: 90%;
+            width: 100%;
+            transform: unset;
+            
+        }
+        .one .right-part .bg-img img 
+        {
+            transform: unset;
+
+            transform: scale(1.8) translateX(31vw) translateY(-.5em);
+            
+        }
+
+        .two
+        {
+            padding: 3em 1.5em;
+        }
+        .two .head-title p
+        {
+            padding: 22px 0;
+            width: 100% !important;
+        }
+        .two .grid-content
+        {
+            grid-template-columns: auto;
+        }
+        .two .grid-content img
+        {
+            width: 100%;
+        }
+        
+        .three
+        {
+            padding: 3em 1.5em;
+        }
+        .three .content-wrapper
+        {
+            grid-template-columns: auto;
+        }
+        .four
+        {
+            grid-template-columns: auto;
+            padding: 3em 1em;
+        }
+        .four .left-part
+        {
+            padding: 0 clamp(0px, 2vw, 1em);
+            height: clamp(12em, 40vw, 20em);
+            width: 90vw;
+        }
+        .four .overlay img
+        {
+            height: clamp(100px, 30vw, 160px);
+            margin: clamp(2em, 5vw, 5em) clamp(3em, 10vw, 5em);
+        }
+        .four .right-part
+        {
+            padding: 2em clamp(5px, 3.5vw, 1.5em);
+        }
+        .five .overlay
+        {
+            padding: 4em clamp(15px, 4.5vw, 25px);
+            grid-template-columns: auto;
+        }
+        .survey-reached
+        {
+            padding: 0 !important;
+            border: none !important;
+        }
+        .survey-reached h1
+        {
+            font-size: 34px;
+            text-align: center;
+        }
+        .five .overlay .number
+        {
+            font-size: clamp(34px, 10vw, 54px);
+        }
+        .six
+        {
+            margin: 0;
+            padding: 3em clamp(15px, 4.5vw, 25px);
+        }
+        footer
+        {
+            padding: 2em clamp(15px, 4vw, 30px);
+        }
+        footer .part-one
+        {
+            grid-template-columns: auto;
+            justify-items: center;
+        }
+        footer .part-one .logo 
+        {
+            justify-self: center;
+        }
+        footer .right-part
+        {
+            grid-gap: 5px;
+            justify-self: center;
+            justify-items: center;
+            padding: 1em 0;
+            width: unset;
+        }
+    }
+    @media only screen and (max-width: 350px)
+    {
+        .one
+        {
+            margin-top: 40px !important;
+        }
+        .basic-btn
+        {
+            font-size: 16px !important;
+        }
+
+    } 
 </style>
 <body>
     <div class="container">
@@ -422,6 +806,12 @@
                         <p>Log In</p>
                     </a>
                 </div>
+                <div class="responsive-btn">
+                    <a href="javascript:void(0)" class="hamburger-menu" onclick="navMenu()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                </div>
                 <div class="signup">
                     <a href="javascript:void(0)">
                         <button class="basic-btn">Get started for FREE</button>
@@ -429,6 +819,67 @@
                 </div>
             </div>
         </header>
+        <div id="my-nav-menu" class="my-nav-menu" >
+            <div class="nav-content-wrapper">
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <span>Sell </span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <span>Market </span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <span>Manage </span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <span>learn </span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <span>Partners </span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <hr style="margin: 1em 0; background-color: black;  width: 100%; border: 0; height: 0.2px; ">
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <div class="chat-icon" style="float: left; padding-right: 15px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>Support</title><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.17 12.17c0 3.07-2.44 5.42-4.3 6.8-2.58 1.9-6.88 4.2-6.88 4.2V19.5h-.28c-3.8 0-6.88-3.28-6.88-7.33 0-4.05 3.08-7.34 6.88-7.34h4.58c3.8 0 6.88 3.29 6.88 7.34z"></path></svg>
+                        </div>
+                        <span>Presale Chat </span>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <div class="search-icon" >
+                            <i class="fas fa-search" style="float: left; padding-right: 15px; font-size: 16px;"></i>
+                        </div>
+                        <span>Search </span>
+                    </a>
+                </div>
+                <div class="nav-signup">
+                    <a href="javascript:void(0)" >
+                        <button class="basic-btn">Get started for FREE</button>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <a href="javascript:void(0)">
+                        <p>Log In </p>
+                    </a>
+                </div>
+            </div>
+        </div>
         <section class="one">
             <div class="left-part">
                 <div class="title">
@@ -598,7 +1049,7 @@
 
         <section class="six">
             <div class="title">
-                <h1>Start Creating Your Survey Online for Free</h1>
+                <h1 style="padding: 0;">Start Creating Your Survey Online for Free</h1>
                 
             </div>
             <a href="javascript:void(0)">
@@ -611,7 +1062,7 @@
         <footer>
             <div class="part-one">
                 <div class="left-part">
-                    <div class="logo" style="grid-area: flogo; ">
+                    <div class="logo" >
                         ECWID
                     </div>
                     <div class="img" style="grid-area: imgone;">
@@ -642,17 +1093,23 @@
     </div>
 </body>
 <script>
-var header = document.querySelector("header");
-var prevScrollPos = window.pageYoffset;
+    var header = document.querySelector("header");
+    var prevScrollPos = window.pageYoffset;
 
-window.onscroll = function(){
-    var currentScrollPos = window.pageYOffset;
-        if(prevScrollPos> currentScrollPos){
-            header.style.top = "0";
-        }else{
-            header.style.top = "-80px"
-        }
-        prevScrollPos = currentScrollPos;
-}
+    window.onscroll = function(){
+        var currentScrollPos = window.pageYOffset;
+            if(prevScrollPos> currentScrollPos){
+                header.style.top = "0";
+            }else{
+                header.style.top = "-80px"
+            }
+            prevScrollPos = currentScrollPos;
+    }
+    var hamburger = document.querySelector(".hamburger-menu");
+    var navBar = document.querySelector(".my-nav-menu")
+    function navMenu() {
+        hamburger.classList.toggle("change");
+        navBar.classList.toggle("open-nav-modal");
+    }
 </script>
 </html>
