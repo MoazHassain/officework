@@ -399,6 +399,18 @@
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(-135deg) translate(8px, 1px);
     }
+    .nav-bg
+    {
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        z-index: 9990;
+        top: 0;
+        right: 0;
+        transition: 0.2s;
+    }
+    
     .my-nav-menu
     {
         
@@ -454,6 +466,11 @@
             
             width: 50%;
             transition: 0.3s;
+        }
+        .open-nav-bg
+        {
+            width: 100%;
+            transition: 0.2s;
         }
         .one
         {
@@ -606,11 +623,13 @@
             /* height: 100vh; */
             margin-top: 20px;
             grid-template-columns: auto;
+            
         }
         .one .left-part
         {
             width: 100%;
             padding: 1em;
+            text-align: center;
         }
         .one .title h1,
         .one .text p
@@ -673,18 +692,21 @@
         .four .left-part
         {
             padding: 0 clamp(0px, 2vw, 1em);
-            height: clamp(12em, 40vw, 20em);
+            height: clamp(14em, 55vw, 25em);
             width: 90vw;
         }
         .four .overlay img
         {
-            height: clamp(100px, 30vw, 160px);
-            margin: clamp(2em, 5vw, 5em) clamp(3em, 10vw, 5em);
+            
+            height: clamp(160px, 35vw, 200px);
+            margin: clamp(1em, 9vw, 8em) clamp(3em, 16vw, 10em);
         }
         .four .right-part
         {
             padding: 2em clamp(5px, 3.5vw, 1.5em);
+            /* text-align: center; */
         }
+        
         .five .overlay
         {
             padding: 4em clamp(15px, 4.5vw, 25px);
@@ -819,64 +841,66 @@
                 </div>
             </div>
         </header>
-        <div id="my-nav-menu" class="my-nav-menu" >
-            <div class="nav-content-wrapper">
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <span>Sell </span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <span>Market </span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <span>Manage </span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <span>learn </span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <span>Partners </span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-                <hr style="margin: 1em 0; background-color: black;  width: 100%; border: 0; height: 0.2px; ">
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <div class="chat-icon" style="float: left; padding-right: 15px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>Support</title><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.17 12.17c0 3.07-2.44 5.42-4.3 6.8-2.58 1.9-6.88 4.2-6.88 4.2V19.5h-.28c-3.8 0-6.88-3.28-6.88-7.33 0-4.05 3.08-7.34 6.88-7.34h4.58c3.8 0 6.88 3.29 6.88 7.34z"></path></svg>
-                        </div>
-                        <span>Presale Chat </span>
-                    </a>
-                </div>
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <div class="search-icon" >
-                            <i class="fas fa-search" style="float: left; padding-right: 15px; font-size: 16px;"></i>
-                        </div>
-                        <span>Search </span>
-                    </a>
-                </div>
-                <div class="nav-signup">
-                    <a href="javascript:void(0)" >
-                        <button class="basic-btn">Get started for FREE</button>
-                    </a>
-                </div>
-                <div class="nav-content">
-                    <a href="javascript:void(0)">
-                        <p>Log In </p>
-                    </a>
+        <div class="nav-bg">
+            <div id="my-nav-menu" class="my-nav-menu" >
+                <div class="nav-content-wrapper">
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <span>Sell </span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <span>Market </span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <span>Manage </span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <span>learn </span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <span>Partners </span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <hr style="margin: 1em 0; background-color: black;  width: 100%; border: 0; height: 0.2px; ">
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <div class="chat-icon" style="float: left; padding-right: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><title>Support</title><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.17 12.17c0 3.07-2.44 5.42-4.3 6.8-2.58 1.9-6.88 4.2-6.88 4.2V19.5h-.28c-3.8 0-6.88-3.28-6.88-7.33 0-4.05 3.08-7.34 6.88-7.34h4.58c3.8 0 6.88 3.29 6.88 7.34z"></path></svg>
+                            </div>
+                            <span>Presale Chat </span>
+                        </a>
+                    </div>
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <div class="search-icon" >
+                                <i class="fas fa-search" style="float: left; padding-right: 15px; font-size: 16px;"></i>
+                            </div>
+                            <span>Search </span>
+                        </a>
+                    </div>
+                    <div class="nav-signup">
+                        <a href="javascript:void(0)" >
+                            <button class="basic-btn">Get started for FREE</button>
+                        </a>
+                    </div>
+                    <div class="nav-content">
+                        <a href="javascript:void(0)">
+                            <p>Log In </p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1106,10 +1130,12 @@
             prevScrollPos = currentScrollPos;
     }
     var hamburger = document.querySelector(".hamburger-menu");
-    var navBar = document.querySelector(".my-nav-menu")
+    var navBar = document.querySelector(".my-nav-menu");
+    var navBg = document.querySelector(".nav-bg");
     function navMenu() {
         hamburger.classList.toggle("change");
         navBar.classList.toggle("open-nav-modal");
+        navBg.classList.toggle("open-nav-bg");
     }
 </script>
 </html>
