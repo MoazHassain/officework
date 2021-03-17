@@ -149,20 +149,37 @@
         background-color: #fae053;
         
         transform: rotate(120deg) translateX(0) translateY(4vh);
+        /* position: relative; */
+    }
+    .one .right-part .bg-img .view-area
+    {
+        width: 550px;
+        height: 350px;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        overflow: hidden;
         position: relative;
+        /* transform: rotate(-90deg) translateX(-200%) translateY(180%); */
+        /* position: absolute;
+        
+        left: 40em;
+        bottom: -8em; */
+        transform: rotate(-120deg) translateX(-127.5em) translateY(-32em);
+        /* transform: rotate(-120deg) ; */
+    }
+    
+    .one .right-part .bg-img .img-area
+    {
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        width: 600px;
+        height: 400px;
     }
     .one .right-part .bg-img img
     {
-        width: 36em;
-        height: auto;
-        /* transform: rotate(-90deg) translateX(-200%) translateY(180%); */
-        position: absolute;
-        /* top: 0; */
-        /* right:0; */
-        left: 40em;
-        bottom: -8em;
-        /* transform: rotate(-120deg) translateX(-80.5em) translateY(0); */
-        transform: rotate(-120deg) ;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .two
     {
@@ -521,6 +538,7 @@
             overflow: unset;
             
         }
+        
         .one .right-part .bg-img
         {
             height: 90%;
@@ -528,8 +546,17 @@
             transform: unset;
             position: unset;
         }
+        .one .right-part .bg-img .view-area
+        {
+            all: unset;   
+        }
+        .one .right-part .bg-img .img-area
+        {
+            all: unset;
+        }
         .one .right-part .bg-img img 
         {
+            all: unset;
             width: 30%;
             transform: unset;
             position: unset;
@@ -686,8 +713,17 @@
             transform: unset;
             position: 0;
         }
+        .one .right-part .bg-img .view-area
+        {
+            all: unset;   
+        }
+        .one .right-part .bg-img .img-area
+        {
+            all: unset;
+        }
         .one .right-part .bg-img img 
         {
+            all: unset;
             transform: unset;
             width: 30%;
             transform: scale(1.8) translateX(31vw) translateY(-.5em);
@@ -955,7 +991,13 @@
             </div>
             <div class="right-part">
                 <div class="bg-img">
-                    <img src="./img/isaac-smith-6EnTPvPPL6I-unsplash.jpg" alt="" >
+                    <!-- <div class="position-area">5 -->
+                        <div class="view-area">
+                            <div class="img-area">
+                                <img src="./img/isaac-smith-6EnTPvPPL6I-unsplash.jpg" alt="" >
+                            </div>
+                        </div>
+                    <!-- </div> -->
                 </div>
             </div>
             
