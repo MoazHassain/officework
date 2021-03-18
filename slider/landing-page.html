@@ -548,20 +548,29 @@
         }
         .one .right-part .bg-img .view-area
         {
-            all: unset;   
+            transform: unset;
+            transform: translateX(29.5em) translateY(-10em);
+            
         }
         .one .right-part .bg-img .img-area
         {
-            all: unset;
+            /* all: unset;
+            position: absolute;
+            top: -200px;
+            left: -205px;
+            width: 950px;
+            height: 750px; */
         }
         .one .right-part .bg-img img 
         {
-            all: unset;
-            width: 30%;
+            /* all: unset;
             transform: unset;
-            position: unset;
+            position: unset; */
+            /* width: 100%;
+            height: 100%;
+            object-fit: cover; */
             
-            transform: scale(1.8) translateX(20.5em) translateY(-5em);
+            
             
         }
         
@@ -597,12 +606,17 @@
     }
     @media only screen and (max-width: 770px) and (min-width:765px)
     {
-        .one .right-part .bg-img img 
+        .one .right-part .bg-img .view-area
+        {
+            transform: unset;
+            transform: scale(0.66) translateX(29.5em) translateY(-16em);
+        }
+        /* .one .right-part .bg-img img 
         {
             transform: unset;
             transform: scale(1.6) translateX(18em) translateY(-3em);
             
-        }
+        } */
         .two .head-title p
         {
             padding: 22px 0;
@@ -681,9 +695,9 @@
             width: 100%;
             transition: 0.3s;
         }
-        .one
+        /* .one
         {
-            /* height: 100vh; */
+            height: 100vh;
             margin-top: 20px;
             grid-template-columns: auto;
             
@@ -702,24 +716,37 @@
         .one .right-part
         {
             
-            /* background-color: rosybrown; */
+            
             overflow: unset;
             
         }
         .one .right-part .bg-img
         {
+            
             height: 90%;
             width: 100%;
             transform: unset;
-            position: 0;
+            
         }
         .one .right-part .bg-img .view-area
         {
-            all: unset;   
+            all: unset;
+            position: relative;
+            
+            width: clamp(200px, 30vw, 300px);
+            height: clamp(130px, 20vw, 200px);
+            transform: unset;
+            transform: translateX(29.5em) translateY(-10em);
+            overflow: hidden;
         }
         .one .right-part .bg-img .img-area
         {
             all: unset;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: clamp(350px, 45vw, 450px);
+            height: clamp(280px,35vw, 350px);
         }
         .one .right-part .bg-img img 
         {
@@ -729,7 +756,65 @@
             transform: scale(1.8) translateX(31vw) translateY(-.5em);
             position: unset;
         }
-
+        .one .right-part .bg-img .view-area
+        {
+            300X200-200X130
+            transform: unset;
+            transform:  translateX(0em) translateY(-30em);
+        }  */
+        .one
+        {
+            margin-top: 20px;
+            grid-template-columns: auto;
+        }
+        .one .left-part
+        {
+            padding: 1em;
+            width: 100%;
+            text-align: center;
+        }
+        .one .left-part h1,
+        .one .left-part p
+        {
+            padding-right: 0 !important;
+        }
+        .one .right-part
+        {
+            all:unset;
+            /* background-color: rosybrown; */
+            overflow: unset;
+            
+        }
+        
+        .one .right-part .bg-img
+        {
+            /* display: none; */
+            
+            height: 90%;
+            width: 100%;
+            transform: unset;
+            position: unset;
+        }
+        .one .right-part .bg-img .view-area
+        {
+            all: unset;
+            
+            
+        }
+        .one .right-part .bg-img img 
+        {
+            all: unset;
+            transform: unset;
+            width: 30%;
+            transform: scale(1.8) translateX(31vw) translateY(-.5em);
+            position: unset;
+            
+        }
+        .one .right-part .bg-img .img-area
+        {
+            all: unset;
+            
+        }
         .two
         {
             padding: 3em 1.5em;
