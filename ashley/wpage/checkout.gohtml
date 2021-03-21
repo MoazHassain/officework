@@ -1,0 +1,1253 @@
+{{block "link" .}}
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <!-- <link rel="stylesheet" href="./resources/css/global.css" /> -->
+{{end}}
+
+    
+
+{{block "style" .}}
+
+    <style>
+        @font-face
+        {
+            src: url(./resources/fonts/proxima_ssv/ProximaNova-Regular.otf);
+            font-family: nova;
+        } 
+        a{
+            color: white;
+            cursor: pointer;
+        }
+        p
+        {
+            font-family: nova;
+            /* letter-spacing: 0.03em; */
+        }
+        
+        .one
+        {
+            height: 25em;
+        }
+        .one p
+        {
+            padding-top: 120px;
+            text-align: center;
+            
+        }
+        .one img
+        {
+            width: 42%;
+        }
+        .two
+        {
+            background-color: #cb1e0b;
+            padding: 7.5em;
+
+        }
+        .two>p
+        {
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            margin: 1.5em auto;
+        }
+        .two p span
+        {
+            
+            font-weight: 800;
+        }
+        .two a>img
+        {
+            width: 30px;
+            margin: 1em 0.5em;
+        }
+        .two .count span
+        {
+            padding: 3px 9px;
+            border-radius: 50px;
+            background-color: white;
+            color: black;
+            font-size: 14px;
+            margin-left: -15px;
+            margin-top: -8px;
+            position: absolute;
+        }
+        .two .cards-wrapper
+        {
+            background-color: black;
+            padding: 10px;
+            padding-top: 0px;
+        }
+        .two .cards-wrapper .cart-describe
+        {
+            margin-bottom: 1em;
+        }
+        .two .cards-wrapper h1 
+        {
+            font-family: "archivo black", sans-serif;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        /* .two .cards-wrapper .payment
+        {
+            margin-bottom: 2em;
+        } */
+        
+        .two .part-icon
+        {
+            width: auto;
+            margin: 0px auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            grid-gap: 2em;
+        }
+        .two .part-icon i
+        {
+            font-size: 24px;
+        }
+        .two img.icon
+        {
+            color: white;
+            width: 22px;
+        }
+        .two .part-icon p
+        {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .two .count 
+        {
+            padding: 3px 5px;
+            border-radius: 50px;
+            background-color: white;
+            color: black;
+            font-size: 14px;
+            margin-left: -15px;
+            margin-top: 22px;
+            position: absolute;
+            font-family: nova;
+            min-width: 1.7em;
+            height: 1.7em;
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        
+        .two .cards-wrapper
+        {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            
+            grid-gap: 3em;
+            
+        }
+        .cards-wrapper .cart-describe
+        {
+            position: sticky;
+            top: 20%; 
+            height: fit-content;
+        }
+        .cart-describe p a:hover
+        {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .cards-wrapper .product
+        {
+            margin: 20px 0px;
+            display:grid;
+            grid-template-columns: 90px auto 60px;
+            grid-gap: 1em;
+        }
+        .cards-wrapper .product_image-wrap
+        {
+            width: 80px;
+            height: 100%;
+            /* background-image: url(./img/bag-n-brand-product/bag-n-brand\(59\).jpg); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .cards-wrapper .product_image-wrap img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cards-wrapper .product-detail p
+        {   
+            padding: 5px 0px;
+        }
+        .product-detail>span
+        {
+            font-family: nova;
+        }
+        .product-detail select
+        {
+            color: white;
+            background-color: black;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .product-detail option:not(:checked)
+        {
+            background-color: white;
+            color: black;
+        }
+        .product-detail span,
+        .product-detail select
+        {
+            margin: 3px 0;
+        }
+        .cards-wrapper .product-price p
+        {
+            padding: 3px 5px 3px 0;
+            text-align: right;
+            justify-self: right;
+        }
+        .cards-wrapper .product-price a.btn-cancel
+        {
+            float: right;
+            padding: 5px;
+            padding-left: 7px;
+            color: rgba(255, 255, 255, 0.6);
+            visibility: hidden;
+        }
+        .cards-wrapper .product-price a.btn-cancel:hover
+        {
+            color: rgba(255, 255, 255, 1);
+        }
+        .cards-wrapper .total-price
+        {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 20px 0px;
+        }
+        .total-price .price 
+        {
+            float: right;
+        }
+    </style>
+
+    <style>
+        
+        .cart-checkout .selected-icon 
+        {
+            width: 35px;
+            padding: 7px 4px 4px 7px;
+            border: 1px solid;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+        .email-info strong
+        {
+            font-family: nova;
+        }
+        .email-info p span
+        {
+            font-weight: 500;
+            padding-right: 10px;
+        }
+        .pay-info h2
+        {
+            font-family: nova;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .pay-info label
+        {
+            font-family: nova;
+            font-size: 16px;
+        }
+        .crdr-icon,
+        .slice-icon,
+        .paypal-icon
+        {
+            border: 1px solid;
+            border-color: rgba(255, 255, 255, 0.2);
+            padding: 1.5em 1em;
+            transition: 0.3s;
+        }
+        .crdr-icon:hover,
+        .slice-icon:hover,
+        .paypal-icon:hover
+        {
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+        .active{
+            border-color: rgba(255, 255, 255, 1);
+            border: 3px solid;
+        }
+
+        .crdr-icon img,
+        .slice-icon img, 
+        .paypal-icon img
+        {
+            width: auto;
+            height: 30px;
+            float: right;
+            margin: 0 5px;
+            margin-top: -5px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .focused
+        {
+            border-color: rgba(255, 255, 255, 1);
+        }
+
+
+        .pay-instruct
+        {
+            padding-bottom: 5em;
+        }
+        .pay-instruct h3
+        {
+            font-family: nova;
+            font-size: 18px;
+            margin: 15px 0 5px 0px;
+        }
+        .pay-instruct p
+        {
+            margin-bottom: 15px;
+        }
+        .pay-instruct label
+        {
+            display: block;
+            font-family: nova;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        .pay-instruct select,
+        .pay-instruct input,
+        .pay-instruct textarea,
+        .pay-instruct #card-element 
+        {
+            width: 100%;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 7px;
+            font-size: 15px;
+            border: 1px solid;
+            border-color: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+            margin-bottom: 15px ;
+            resize: none;
+            transition: 0.3s;
+        }
+        .pay-instruct select:hover,
+        .pay-instruct input:hover,
+        .pay-instruct textarea:hover,
+        .pay-instruct #card-element:hover
+        {
+            background-color: rgba(0, 0, 0, 1) ;
+            border-color: rgba(255, 255, 255, 1);
+        }
+        .pay-instruct select
+        {
+            -moz-appearance:none; 
+            -webkit-appearance:none; 
+            appearance:none;
+        }
+        .pay-instruct .country-select
+        {
+            position: relative;
+        }
+        .pay-instruct .form-control__arrow
+        {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-25%);
+            opacity: 0.5;
+        }
+        /* .pay-instruct select,
+        .pay-instruct input,
+        .pay-instruct textarea
+        {
+            background-color: rgba(0, 0, 0, 1);
+            border-color: rgba(255, 255, 255, 1);
+        }
+        .pay-instruct option:not(:checked),
+        .pay-instruct option:checked
+        {
+            background-color: white;
+            color: black;
+        } */
+        /* .pay-instruct input[name="name"]
+        
+        {
+            width: 60%;
+        }
+        .pay-instruct input[name="phone"]
+        {
+            width: 30%;
+        } */
+        .pay-instruct .name-phone
+        {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 0.8em;
+        }
+        .pay-instruct div.address 
+        {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 0.8em;
+        }
+        /* .pay-instruct #card-element 
+        {
+            background-color: black;
+            color: black;
+            border
+        } */
+        .pay-instruct button
+        {
+            font-family: nova;
+            font-size: 18px;
+            font-weight: 800;
+            color: white;
+            width: 50%;
+            padding: 12px 0;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+        .pay-instruct button:hover
+        {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+
+    <style>
+        .pay-info .notice
+        {
+            position: fixed;
+            top: 20%;
+            right: 2%;
+            background-color: #363636;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        .pay-info .notice-icon
+        {
+            color: rgba(255, 82, 82, 0.6);
+        }
+        .pay-info .notice div
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+        }
+        .pay-info .notice-text
+        {
+            width: 300px;
+            line-height: 20px;
+        }
+    </style>
+
+    <style>
+        .hidden-content
+        {
+            /* display: none; */
+        }
+        .hidden-content>div
+        {
+            width: 65%;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2em;
+            border-radius: 30px;
+        }
+        .hidden-content .part-one
+        {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+        }
+        .hidden-content .svg-icon
+        {
+            align-self: flex-start;
+            justify-self: right;
+            width: 70px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 80px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            
+        }
+        .hidden-content svg
+        {
+            background-color: rgba(0, 0, 0, 0.1);
+            /* padding: 10px 20px; */
+        }
+        .hidden-content .oneline
+        {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            align-items: center;
+        }
+        .oneline input[type=text]
+        {
+            padding: 12px;
+        }
+        
+    </style>
+
+    <style>
+        .custom-content{
+            display: block;
+            position: relative;
+            padding-left: 40px;
+            /* margin-bottom: 12px; */
+            cursor: pointer;
+            /* font-size: 22px; */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default radio button */
+        .custom-content input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Create a custom radio button */
+        .custom-radio {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 1px solid;
+            border-color: #eee;
+            border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        /* .custom-content:hover input ~ .custom-radio {
+            background-color: #ccc;
+        } */
+
+        /* When the radio button is checked, add a blue background */
+        .custom-content input:checked ~ .custom-radio {
+            background-color: #fff;
+            transition: 0.5s;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .custom-radio:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .custom-content input:checked ~ .custom-radio:after {
+            display: block;
+            transition: 0.5s;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .custom-content .custom-radio:after {
+            top: 5px;
+            left: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: black;
+        }
+        .slice-icon .custom-radio:after
+        {
+            top: 5px;
+            left: 5px;
+        }
+    </style>
+
+    <!-- disallowed input -->
+    <style>
+        .err-email
+        {
+            border-color: rgb(229, 100, 100);
+            background-color: rgba(229, 100, 100, 0.1);
+        }
+        .err-email:focus
+        {
+            border-color: rgb(229, 100, 100);
+            background-color: rgba(229, 100, 100, 0.1);
+            outline: none;
+        }
+        .err-email::placeholder
+        {
+            color: rgb(229, 100, 100);
+        }
+        .err-email-msg
+        {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(229, 100, 100);
+            margin: -10px 0 20px 0;
+            display: none;
+        }
+
+
+        .dot-container
+        {
+            display: block;
+            position: relative;
+            padding-left: 20px;
+        }
+        .disallowed-dots
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 5px;
+            height: 8px;
+            width: 8px;
+            /* border: 1px solid; */
+            /* border-color: #eee; */
+            border-radius: 50%;
+            background-color: red;
+            /* display: none; */
+        }
+        /* form label::before
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: 5px;
+            background-color: red;
+        } */
+    </style>
+    <!-- responsive -->
+    <style>
+        /* responsive  for tab */
+        @media only screen and (max-width: 1025px) and (min-width: 760px)
+        {
+            .one
+            {
+                height: 50vw;
+                padding: 32px;
+            }
+            .one img
+            {
+                width: 80%;
+            }
+            section.two 
+            {
+                padding: clamp(60px, 7.5vw, 7.5vw);
+            }
+            .two .cards-wrapper
+            {
+                grid-template-columns: 1.3fr 2fr;
+
+            }
+            .two .cards-wrapper p
+            {
+                font-size: 14px;
+            }
+            .two .cards-wrapper h1 
+            {
+                font-size: 28px;
+            }
+            .cards-wrapper .product
+            {
+                grid-template-columns: 55px auto 50px;
+                grid-gap: 0.8em;
+            }
+            .cards-wrapper .product .product-img
+            {
+                width: 55px;
+                height: 40px;
+            }
+            .product .product-detail p
+            {
+                padding: 2px 0;
+            }
+            .cards-wrapper .product-price a.btn-cancel
+            {
+                padding: 2px 2px 2px 5px;
+            }
+            .cards-wrapper .total-price span,
+            .payment p.next-step
+            {
+                font-size: 18px !important;
+            }
+            .crdr-icon img,
+            .slice-icon img, 
+            .paypal-icon img
+            {
+                width: auto;
+                height: 30px;
+                float: right;
+                margin: 0 3px;
+                margin-top: -5px;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            
+            /* responsive  for mobile */
+            
+        }
+        @media only screen and (max-width: 1000px) and (min-width: 760px)
+        {
+            .two .cards-wrapper
+            {
+                grid-template-columns: 1.5fr 2fr;
+
+            }
+            .cards-wrapper .product
+            {
+                grid-template-columns: auto auto;
+                grid-gap: 0.8em;
+            }
+            .cards-wrapper .product-img
+            {
+                display: none;
+            }
+            .crdr-icon img,
+            .slice-icon img, 
+            .paypal-icon img
+            {
+                width: auto;
+                height: 20px;
+                float: right;
+                margin: 0 2px;
+                margin-top: -2px;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+        @media only screen and (max-width: 750px)
+        {
+            .one
+            {
+                height: 60vw;
+                padding: 32px;
+            }
+            .one p
+            {
+                padding-top: 17vw;
+            }
+            .one img
+            {
+                width: 80%;
+            }
+            section.two 
+            {
+                padding: clamp(18px, 7.5vw, 7.5vw);
+            }
+            .two .cards-wrapper
+            {
+                grid-template-rows: auto auto;
+                grid-template-areas: 
+                "describe describe"
+                "checkout checkout";
+                grid-gap: 0;
+            }
+            .two .cards-wrapper .cart-describe
+            {
+                
+                grid-area: describe;
+            }
+            .two .cards-wrapper .cart-checkout
+            {
+                grid-area: checkout;
+            }
+            .cards-wrapper .cart-describe
+            {
+                position: relative;
+                top: 0;
+            }
+            .two .cart-describe .shop-cart-text,
+            .two .cards-wrapper .cart-checkout h1,
+            .two .cards-wrapper .cart-checkout .selected-icon,
+            .two .cards-wrapper .cart-checkout .email-info strong.email-text
+            {
+                display: none;
+            }
+            .two .cart-describe .checkout-text
+            {
+                display: block !important;
+                font-size: 28px;
+            }
+            .two .cart-describe
+            {
+                margin-bottom: 0 !important;
+            }
+            .crdr-icon img,
+            .slice-icon img, 
+            .paypal-icon img
+            {
+                width: auto;
+                height: 20px;
+                float: right;
+                margin: 0 2px;
+                margin-top: -2px;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            .form .name-phone
+            {
+                display: block;
+            }
+            .form .address
+            {
+                display: block !important;
+            }
+            .cards-wrapper .cart-checkout #btnPay
+            {
+                width: 100%;
+            }
+            .cards-wrapper .product
+            {
+                grid-template-columns: 55px auto 50px;
+                grid-gap: 0.8em;
+            }
+            
+            .cards-wrapper .product .product-img
+            {
+                width: 55px;
+                height: 40px;
+            }
+            .pay-info .notice
+            {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                background-color: #363636;
+                padding: 20px 20px 10px 20px;
+                border-radius: 0px;
+                
+                z-index: 9990;
+            }
+            .pay-info .notice div
+            {
+                /* display: grid; */
+                /* grid-template-columns: 50% 50%; */
+                /* grid-template-rows: auto auto; */
+                grid-template-areas: 
+                "noticeicon . noticeclose"
+                "noticetxt noticetxt noticetxt";
+                grid-gap: 10px;
+            }
+            .pay-info .notice-icon
+            {
+                grid-area: noticeicon;
+            }
+            .pay-info .notice-text
+            {
+                grid-area: noticetxt;
+                width: 300px;
+                line-height: 20px;
+            }
+            .pay-info .cls-notice
+            {
+                grid-area: noticeclose;
+            }
+            .custom-content
+            {
+                padding-left: 30px;
+            }
+        }
+    </style>
+{{end}}
+
+     <!--<div class="container">-->
+
+        {{block "section" .}}
+
+            {{ $qtySlc := .MaxQty}}
+            {{ $totalQty := .TotalQty}}
+            {{ $docNumber := .DocNumber}}
+            {{ $email := .EmailAddress}}
+            {{ $totalPrice := .TotalPrice}}
+
+            <section class="one">
+                <p><img src="./resources/images/bag-n-brand5.png" alt=""></p>
+            </section>
+            
+            <section class="two">
+                <p>STRANDBRANDS™️ <span>Updated Every Sunday.</span></p>
+                <a href="/cart" style="color: white;" >
+                    <!-- <p class="count" > -->
+                        <svg class="icon-shopping-bag" width="36" height="30" viewbox="0 0 36 30" xmlns="https://www.w3.org/2000/svg" style="margin: 30px 0;">
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M7 7h22v18a4 4 0 0 1-4 4H11a4 4 0 0 1-4-4V7z" stroke="currentColor" stroke-width="2"></path>
+                                <path d="M13 10V6c0-2.993 2.009-5 5-5s5 2.026 5 5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <!-- <circle class="cart-not-empty" cx="18" cy="18" r="4" fill="currentColor"></circle> -->
+                            </g>
+                        </svg><span class="count">{{$totalQty}}</span>
+                    <!-- </p> -->
+                    
+                    <!-- <img src="./icon/square-shopping-bag-with-handle.png" alt="" > -->
+                </a>
+                <div class="cards-wrapper">
+                    <div class="cart-describe">
+                        <h1 class="shop-cart-text">Shopping cart</h1>
+                        <h1 class="checkout-text" style="display: none;">Checkout</h1>
+                        <p><a href="/shop">Store</a> &nbsp;/ &nbsp;<a href="/cart">Shopping cart</a></p>
+                        
+                        {{range $i, $rMap := .ShoppingList}}
+                         {{$itemImage := index $rMap "item_image"}}
+                         {{$itemUrl := index $rMap "item_url"}}
+                         {{$itemName := index $rMap "item_name"}}
+                         {{$price := index $rMap "price"}}
+                         {{$quantity := index $rMap "quantity"}}
+                         {{$itemID := index $rMap "item_id"}}
+                         {{$trxid := index $rMap "trxid"}}
+
+                        <div class="product">
+                            <div class="product-img product_image-wrap">
+                                <img src="{{$itemImage}}" alt="{{$itemUrl}}">
+                            </div>
+
+                            <div class="product-detail">
+                                <p>{{$itemName}}</p>
+                                <span>Qty :</span>
+                                <select name="qty" class="qty" data-id="{{$itemID}}" data-trxid="{{$trxid}}">
+                                    {{range $qty := $qtySlc}}
+                                     <option value="{{$qty}}" {{if compare $quantity $qty}}selected{{end}}>{{$qty}}</option>
+                                    {{end}}
+                                </select>
+                            </div>
+
+                            <div class="product-price">
+                                <a class="btn-cancel" data-trxid="" data-id="">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                                            <path d="M.5.5l11 11M.5 11.5l11-11"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <br>
+                                <p style="margin-top: 7px;">${{toRound $price}}</p>
+                            </div>
+
+                        </div>
+
+                        {{end}}
+
+                        <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; ">
+                        <p class="total-price"><span class="total">TOTAL</span><span class="price">${{toRound $totalPrice}}</span></p>
+                        
+                    </div>
+
+                    <div class="cart-checkout">
+                        <h1>Checkout</h1>
+                        <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; margin: 1em 0px;">
+                        <div class="email-info">
+                            <div class="selected-icon">
+                                <svg width="18" height="15" viewBox="0 0 27 23" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="svg-line-check" d="M1.97 11.94L10.03 20 25.217 2" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                                </svg>
+                            </div>
+                            <strong class="email-text">Email</strong>
+                            <p >
+                                <span class="selected-email">{{$email}}</span>
+                                <a href="/cart"><span class="change-email">Change email</span></a>
+                            </p>
+                            
+                        </div>
+                        <hr style="background-color: rgba(255, 255, 255, 0.5);  width: 100%; border: 0; height: 0.2px; margin: 1em 0px;">
+
+                        <div class="pay-info">
+                            <h2>Payment information</h2>
+                            <p style="margin-bottom: 10px;">choose a way to pay for your order:</p>
+                        
+                            {{range $i, $rMap := .PaymentProviderList}}
+                             <div class="custom-content-wrapper crdr-icon">
+                                
+                                <label class="custom-content" for="crdr-card" >
+                                    {{index $rMap "name"}}
+                                    <input type="radio" name="rdo-btn" class="crdr_card">
+                                    <span class="custom-radio"></span>
+                                    {{range $slc := index $rMap "icons"}}
+                                     <img src="{{$slc}}" alt="">
+                                    {{end}}
+                                </label>
+
+                             </div>
+                            {{end}}
+
+                            <div class="notice">
+                                <div>
+                                    <div class="notice-icon">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-18.121l-3.89-3.89a1.5 1.5 0 1 0-2.12 2.122L13.879 16l-3.89 3.89a1.5 1.5 0 1 0 2.122 2.12L16 18.121l3.89 3.89a1.5 1.5 0 1 0 2.12-2.122L18.121 16l3.89-3.89a1.5 1.5 0 1 0-2.122-2.12L16 13.879z" fill="currentColor" fill-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="notice-text">
+                                        <p>Sorry, this payment option is not available for your country. Please choose a different payment option.</p>
+                                    </div>
+                                    <div class="cls-notice">
+                                        <svg width="16" height="16" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                            <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                                                <path d="M.5.5l11 11M.5 11.5l11-11"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pay-instruct">
+                            <div>
+                                <h3>Payment instruction</h3>
+                                <p>You can use <strong>Klarna</strong> to breakup the purchase into multiple purchases.</p>
+                            </div>
+                            <div class="hidden-content">
+                                <p>⚠️Using <strong>Print Now Pay later?</strong>Contact a representative before placing the order to assure you are using the correct transaction method. </p>
+
+                               
+                            </div>
+                            
+                            <h3>Billing address</h3>
+
+                            <p>All fields are required unless they're explicitly marked as optional.</p>
+                            <!-- <p>Country</p> -->
+                            <form id="payment-form" method="post" style="padding: 0;">
+                            <div class="form">
+                                <div class="country-select">
+                                    <label for="Country">Country</label>
+                                    <select id="country" name="country" required>
+                                        <option value="0">Afganistan</option>
+                                        <option value="1">Algeria</option>
+                                        <option value="2">Argentina</option>
+                                        <option value="3">Bangladesh</option>
+                                        <option value="4">Barbados</option>
+                                        <option value="5">Brazil</option>
+                                        <option value="6">Canada</option>
+                                        <option value="7">China</option>
+                                        <option value="8">Chili</option>
+                                        <option value="9">Denmark</option>
+                                        <option value="10">Ecuador</option>
+                                        <option value="11">Egypt</option>
+                                        <option value="12">France</option>
+                                        <option value="13">Finland</option>
+                                        <option value="14">Germany</option>
+                                        <option value="15">Ghana</option>
+                                        <option value="16">Haiti</option>
+                                        <option value="17">Hongkong</option>
+                                        <option value="18">Island</option>
+                                        <option value="19">Italy</option>
+                                    </select>
+                                    <div class="form-control__arrow">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 4L6 9 1 4" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="name-phone">
+                                    <div class="name">
+                                        <label class="name-label " for="fname"><div class="disallowed-dots"></div> Full name</label>
+                                        <input type="text" name="full_name" id="fname" class="my-name" required>
+                                        <p class="err-email-msg">Please enter your name</p>
+                                    </div>
+                                    <div class="phone">
+                                        <label for="phone">Phone(optional)</label>
+                                        <input type="number" name="phone">
+                                    </div>
+                                </div>
+
+                                <label for="icompany">Company name(optional)</label>
+                                <input type="text" name="company" id="icompany">
+
+                                <label for="address"><div class="disallowed-dots"></div>Address</label>
+                                <input type="text" name="address" class="street" placeholder="Street address, apartment, suite, floor, etc">
+
+                                <p class="err-email-msg">Please enter a valid street address</p>
+                                <div class="address">
+                                    <input type="text" name="address" class="city" placeholder="City" required>
+                                    <p class="err-email-msg">Please enter your city</p>
+                                    <input type="text" name="zip" class="post-code" placeholder="Postal code" required>
+                                    <p class="err-email-msg">Please enter your postal code</p>
+                                </div>
+
+                                <label for="advise">How can we improve our site</label>
+                                <textarea rows="3" cols="50" name="advise" class="advise" placeholder="Leave us a note about your order" required></textarea>
+
+                                <!--<input type="submit" class="continue" value="Continue">-->
+                                <!--<button id="btnContinue" type="submit" class="continue">Continue</button>-->
+
+                                    <div id="card-element">
+                                        <!-- Stripe.js injects the Card Element -->
+                                    </div>
+                                    <button id="btnPay">
+                                        <div class="spinner hidden" id="spinner"></div>
+                                        <span id="button-text">Pay now</span>
+                                    </button>
+                                    <p id="card-error" role="alert"></p>
+                                    <p class="result-message hidden">
+                                        Payment succeeded, see the result in your
+                                        <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+                                    </p>
+                            </div>
+                            </form>
+
+                            <!--<form id="payment-form" method="post">
+
+                            </form>-->
+
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+            </section>
+            
+        {{end}}
+
+    <!--</div>-->
+
+
+{{block "custom_script" .}}
+    
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+   
+
+    <script>
+
+        $(document).ready(function(){
+
+            // Set your publishable key: remember to change this to your live publishable key in production
+            // See your keys here: https://dashboard.stripe.com/account/apikeys
+            var stripe = Stripe('pk_test_mHd5f3aozKgs3NT3krbBhSLA006TGobs0x');
+            var elements = stripe.elements();
+
+
+            // Custom styling can be passed to options when creating an Element.
+            var style = {
+            base: {
+                // Add your base input styles here. For example:
+                fontSize: '16px',
+                color: '#32325d',
+            },
+            };
+
+            // Create an instance of the card Element.
+            var card = elements.create('card', {style: style});
+
+            // Add an instance of the card Element into the `card-element` <div>.
+            card.mount('#card-element');
+
+            $('.cls-notice').on("click", function(){
+                $('.notice').hide();
+            });
+
+            $('.notice').hide();
+
+            $('.pay-info').on("click", ".crdr-icon", function(){
+            
+                $(".pay-info").find("div.crdr-icon").each(function(indx){
+                    //console.log($(this).html());
+                    $(this).removeClass("active");
+                    $(this).find('input[type="radio"]').prop("checked", false);
+
+                });
+                var text=$(this).text();
+                //alert(text);
+                //$('.notice').show();
+                $(this).addClass("active");
+                $(this).find('input[type="radio"]').prop("checked", true);
+                
+            });
+
+            $('#btnPay').on("click", function(event){
+
+                event.preventDefault();
+
+                stripe.createToken(card).then(function(result) {
+
+                    if (result.error) {
+                    // Inform the customer that there was an error.
+                    //var errorElement = document.getElementById('card-errors');
+                    //errorElement.textContent = result.error.message;
+                    } else {
+                      // Send the token to your server.
+                      //stripeTokenHandler(result.token);
+                      console.log(result);
+                      console.log(result.token.card.id);
+                      console.log(result.token.client_ip);
+                      console.log(result.token.id);
+
+                      $("#payment-form").append(`<input type="hidden" name="card_id" value="${result.token.card.id}">`);
+                      $("#payment-form").append(`<input type="hidden" name="token_id" value="${result.token.id}">`);
+                      $("#payment-form").append(`<input type="hidden" name="client_ip" value="${result.token.client_ip}">`);
+
+                        $.ajax({
+                            dataType:"json", 
+                            async: true,
+                            url:"/create-payment-intent",
+                            type: "POST",
+                            data: $("#payment-form").serialize(),
+                            error: function(){
+                            
+                            }
+                        
+                        }).done(function(rdata){
+
+                            console.log(rdata);
+                        
+                        });
+
+                      
+                    }
+                });
+
+              //alert();
+
+
+              return false;
+            
+            });
+
+
+            $("#btnContinue").on('click', function(){
+            
+                //alert();
+                $(':input[required]', $("#billingInfo")).each(function () {
+
+                    var tagName=$(this).prop('tagName');
+                    var name=$(this).attr('name');
+                    var val="";
+                    if (tagName=="SELECT"){
+                      val=$(this).val();
+                    }else if (tagName=="TEXTAREA"){
+                    
+                    }
+
+                    if ($(this).val().trim() !== '' ) {
+                        // ...
+                        $(this).addClass("err-email");
+                    }else{
+                        $(this).addClass("err-email");
+                    }
+                    console.log(tagName+'-'+name+'-'+$(this).val());
+                });
+
+            });
+           
+        });
+
+
+    </script>
+{{end}}
