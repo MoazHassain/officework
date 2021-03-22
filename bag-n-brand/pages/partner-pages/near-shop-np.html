@@ -67,6 +67,263 @@
         
     }
 </style>
+
+<!-- modal style -->
+<style>
+    .started-modal-bg
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        /* padding-bottom: 5em; */
+        background-color: rgba(0, 0, 0, 0.8);
+        /* display: grid;
+        justify-content: center;
+        align-content: center; */
+        font-family: 'Segoe UI', sans-serif ;
+        /* display: block; */
+        z-index: 9999;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        transition: 0.3s;
+    }
+    .change-modal
+    {
+        height: 0%;
+        transition: 0.3s;
+    }
+    .modal
+    {
+        background-color: white;
+        width: 26em;
+        margin: 0 auto;
+        margin-top: 6.5em;
+        margin-bottom: 3em;
+        border-radius: 4px;
+        font-family: "lato", sans-serif;        
+    }
+    .modal .bg-img
+    {
+        
+        min-height: 31em;
+        background-image: url(../../img/bag-n-brand.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .modal .bg-img-overlay
+    {
+        min-height: 31em;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2.5em;
+        position: relative;
+    }
+    .modal .cls-started-modal
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.8em;
+    }
+    .modal .img-logo
+    {
+        width: 100%;
+        height: 65px;
+        background-image: url(./img/bag-n-brand6.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px 0px;
+    }
+    .block-text h2
+    {
+        font-size: 27px;
+        font-weight: 500;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    .modal .label p
+    {
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 0px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .input-wrapper
+    {
+        display: grid;
+        grid-template-columns: 70px auto;
+        grid-template-areas: 
+        "btn input"
+        "countryCode countryCode";
+        grid-gap: 10px;
+    }
+    .input-wrapper button
+    {
+        grid-area: btn;
+        font-size: 15px;
+        font-weight: 400;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 15px 0;
+    }
+    .input-wrapper input[type="tel"]
+    {
+        
+        margin: unset;
+        width: 100%;
+        padding: 12px 16px 12px 16px;
+        border-radius: 0 5px 5px 0;
+    }
+    .input-wrapper input[type="tel"]:hover,
+    .input-wrapper input[type="tel"]:focus
+    {
+        /* background-color: thistle; */
+        box-shadow: unset;
+    }
+    .subscribe
+    {
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        background-color: rgb(229, 57, 53);
+        width: 100%;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 12px 20px;
+        margin: 12px 0px;
+
+    }
+    .modal .small-text
+    {
+        font-size: 9px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .modal .err-text
+    {
+        display: none;
+        background-color: rgba(235, 80, 56, 0.8);
+        margin-top: 12px;
+        padding: 10px 8px;
+        border-radius: 6px;
+    }
+    .modal .err-text p
+    {
+        font-size: 13px;
+        text-align: center;
+    }
+</style>
+<!-- input wrapper  -->
+<style>
+    .input-wrapper .input-wrap
+    {
+        grid-area: input;
+        display: grid;
+        grid-template-columns: auto auto;
+        border-top: 1px solid;
+        
+    }
+    .input-wrap .input-text
+    {
+        background-color: white;
+        color: black;
+        height: 100%;
+        padding: 12px;
+        text-align: center;
+        border-radius: 4px 0 0 4px;
+        border-left: 1px solid ;
+        border-color: white ;
+    }
+    
+</style>
+<!-- Country code number -->
+<style>
+    .country-code-container
+    {
+        grid-area: countryCode;
+        position: relative;
+        color: black;
+        display: none;
+    }
+    .toggle-country-code
+    {
+        display: block;
+    }
+    .country-number-code
+    {
+        
+        background-color: white;
+        position: absolute;
+        /* display: none; */
+        /* width:21.8vw; */
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        
+        /* overflow: hidden;
+        height: 180px;
+        overflow-y: scroll;
+        overflow: hidden;
+        overflow-x: hidden; */
+    }
+    .searchbar-container
+    {
+        width: 100%;
+    }
+    .searchbar-container .search-bar i
+    {
+        position: absolute;
+        font-size: 20px;
+        padding: 16px;
+        font-weight: 400;
+        
+    }
+    .search-bar input,
+    .search-bar input:hover,
+    .search-bar input:focus
+    {
+        width: 100%;
+        margin: unset;
+        box-shadow: unset;
+        
+    }
+    .search-bar input
+    {
+        /* padding: unset; */
+        padding-left: 45px;
+        /* font-size: 16px; */
+    }
+    .search-bar input::placeholder
+    {
+        font-size: 16px;
+    }
+    .country-list
+    {
+        
+        height: 105px;
+        overflow-y: scroll;
+        
+        overflow-x: hidden;
+    }
+    .country-list ul
+    {
+        padding: 8px 5px;
+        list-style-type: none;
+    }
+    .country-list li
+    {
+        
+        padding: 8px 0px;
+    }
+</style>
+
+
 <!-- reponsive -->
 <style>
     /* tab */
@@ -272,6 +529,88 @@
             <p class="get-reset-code"><a href="#">&#8592; Send a new reset code</a></p>
         </div>
     </div>
+
+
+    <div class="modal-bg started-modal-bg">
+        <div class="modal started-modal">
+           <div class="bg-img">
+                <div class="bg-img-overlay">
+                    <div class="cls-started-modal">
+                        <svg class="nNd_kXs- MoXmsfyU #FFFFFF" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" fill="#FFFFFF" viewBox="0 0 1024 1024">
+                            <path d="M592.352 512l409.984-409.888c22.272-22.304 22.272-58.176 0-80.448-22.304-22.272-58.112-22.272-80.416 0l-409.984 409.984-409.92-409.984c-22.272-22.272-58.112-22.272-80.416 0-22.208 22.272-22.208 58.144 0 80.448l409.952 409.888-409.952 409.952c-22.208 22.304-22.208 58.112 0 80.416 11.040 11.2 25.6 16.64 40.128 16.64 14.56 0 29.184-5.632 40.224-16.64l409.92-409.952 410.016 410.016c11.104 11.008 25.664 16.64 40.192 16.64 14.56 0 29.152-5.632 40.224-16.64 22.272-22.336 22.272-58.144 0-80.416l-409.952-410.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="img-logo"></div>
+                    <div class="block-text">
+                        <h2>
+                            TEXT US YOUR ZIP CODE 
+                        </h2>
+                    </div>
+                    <div class="label">
+                        <p>
+                            To help you find the shop nearest you with your product
+                        </p>
+                    </div>
+                    <div class="input-wrapper">
+                        <button class="country-content">US <i class="fas fa-caret-down"></i></button>
+                        <div class="input-wrap">
+                            <div class="input-text"><p>+1</p></div>
+                            <input type="tel" name="number" id="number">
+                        </div>
+                        <div class="country-code-container">
+                            <div class="country-number-code">
+                                <div class="searchbar-container">
+                                    <div class="search-bar">
+                                        <i class="fas fa-search"></i>
+                                        <input type="search" name="search" id="search" placeholder="Enter country">
+        
+                                    </div>
+                                </div>
+                                <div class="country-list">
+                                    <ul>
+                                        <li><Strong>AD &nbsp; Andorra</Strong> &nbsp; +371</li>
+                                        <li><Strong>AE &nbsp; United Arab Emirates</Strong> &nbsp; +971</li>
+                                        <li><Strong>BG &nbsp; Bulgeria</Strong> &nbsp; +371</li>
+                                        <li><Strong>DK &nbsp; Denmark</Strong> &nbsp; +371</li>
+                                        <li><Strong>EG &nbsp; Egypt</Strong> &nbsp; +371</li>
+                                        <li><Strong>HT &nbsp; Haiti</Strong> &nbsp; +371</li>
+                                        <li><Strong>IE &nbsp; Ireland</Strong> &nbsp; +371</li>
+                                        <li><Strong>JP &nbsp; Japan</Strong> &nbsp; +371</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="err-text">
+                        <p>The phone number has an incorrect format. Please enter the full 10 digit number in international format with the country code including “+”. For example: +15417543010</p>
+                    </div>
+                    <button class="subscribe">Share Mobile Number</button>
+                    <p class="small-text">
+                        Please note that by subscribing you are agreeing to receive autodialed personal and marketing text messages to your mobile number from us. Consent is not required for purchase. Message and data rates may apply. Reply “STOP” by SMS to cancel.
+                    </p>
+                </div>
+           </div>
+        </div>
+    </div>
 </body>
 <script src="../../app/header-footer.js"></script>
+<script>
+    var clsStartModal = document.querySelector(".cls-started-modal");
+    var startModalBg = document.querySelector(".started-modal-bg");
+
+    clsStartModal.addEventListener("click", function(){
+        startModalBg.classList.add("change-modal");
+    })
+    window.addEventListener("click", function(e){
+        if(e.target == startModalBg){
+            startModalBg.classList.add("change-modal");
+        }
+    })
+    var toggleBtn = document.querySelector("button.country-content")
+    var countryContainer = document.querySelector(".country-code-container")
+
+    toggleBtn.addEventListener("click", function(){
+        countryContainer.classList.toggle("toggle-country-code");
+    })
+</script>
 </html>
