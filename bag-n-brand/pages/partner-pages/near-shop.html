@@ -20,9 +20,9 @@
     } 
     section.one 
     {
-        height: 80vw;
-        min-height: 60em;
-        background-image: url(../../img/bag-n-brand2.jpg);
+        height: 160vh;
+        min-height: 70em;
+        background-image: url(../../img/bag-n-brand.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -31,19 +31,22 @@
     }
     .one .overlay
     {
-        height: 80vw;
-        min-height: 60em;
+        height: 160vh;
+        min-height: 70em;
         background-color: rgba(0, 0, 0, 0.6);
-        display: grid;
+        /* display: grid;
         grid-template-rows: auto auto;
         align-items: center;
-        text-align: center;
+        text-align: center; */
     }
     .overlay .part-one
     {
-        /* height: 50vh; */
-        align-self: center;
-        /* margin-top: 10em; */
+        height: clamp(40em, 100vh, 100vh);
+        
+        text-align: center;
+        display: grid;
+        align-content: center;
+        
     }
     .overlay h2
     {
@@ -62,7 +65,7 @@
     {
         background-color: #cb1e0b;
         padding: 50px;
-        align-self: flex-start;
+        text-align: center;
     }
     .overlay p
     {
@@ -96,7 +99,24 @@
     }
     
 </style>
-
+<!-- reponsive -->
+<style>
+    /* tab */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        section.one 
+        {
+            height: 150vh;
+        }
+    }
+    @media only screen and (max-width: 750px)
+    {
+        .overlay .part-two
+        {
+            padding: 50px clamp(22px, 6vw, 32px);
+        }
+    }
+</style>
 <body>
     <div class="container">
         <header>

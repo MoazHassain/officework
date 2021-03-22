@@ -11,7 +11,288 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
 </head>
+<style>
+    section.one 
+    {
+        margin: 8em;
+        border: 1px solid white;
+        background-color: #fafafa;
+        position: relative;
+    }
+    .one .img
+    {
+        height: 15em;
+        background-image: url(../../img/image-asset.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .one .form-container
+    {
+        border: 1px solid white;
+        width: 47%;
+        margin: -3em auto 0;
+        border-radius: 6px;
+        background-color: #fafafa;
+        color: black;
+        /* position: relative; */
+    }
+    .form-container .sales-intro
+    {
+        padding: 2em;
+        background-color: white;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    }
 
+    .form-container .sales-intro img
+    {
+        width: 40%;
+    }
+    .form-container .sales-intro h2
+    {
+        font-family: 'Segoe UI', Tahoma , Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        font-size: 29px;
+        color: rgba(0, 0, 0, 0.8);
+        margin-top: 0.8em;
+
+    }
+    .form-container .sales-intro p
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .form-container .form
+    {
+        padding: 2em;
+    }
+    .form label
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .form label span.required
+    {
+        color: red;
+    }
+    .form label span
+    {
+        font-size: 16px;
+    }
+    .form input,
+    .form textarea
+    {
+        width: 100%;
+        margin: 1em 0em 2em 0em;
+        padding: 10px;
+        border-radius: 3px;
+        border: 2px solid;
+        border-color: rgba(92, 92, 92, 0.2);
+        resize: none;
+    }
+    .form input:hover,
+    .form textarea:hover
+    {
+        border-color: rgba(92, 92, 92, 0.4);
+
+    }
+    .form input:focus,
+    .form textarea
+    {
+        
+        outline-color: rgba(38, 82, 255, 0.7);
+    }
+    .form-container input[type="submit"]
+    {
+        background-color: rgba(38, 136, 255, 1);
+        color: white;
+        width: 20%;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px !important;
+        transition: 0.3s;
+    }
+    .form-container input[type="submit"]:hover
+    {
+        background-color: rgba(38, 136, 255, 0.8);
+    }
+    .form input[type="submit"]
+    {
+        margin: 1em 0;
+    }
+    .err-msg
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 16px;
+        color: rgba(255, 0, 0, 0.8);
+        display: none;
+    }
+    .form .report
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.3);
+        margin: 0px;
+    }
+    .form .report span
+    {
+        text-decoration: underline;
+    }
+</style>
+<!-- report form -->
+<style>
+    .report-form
+    {
+        border: 2px solid;
+        border-color: rgba(92, 92, 92, 0.7);
+        border-radius: 5px;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+        padding: 2em;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Segoe UI', sans-serif;
+        color: rgba(0, 0, 0, 0.8);
+        width: 55%;
+        
+        background-color: white;
+        display: none;
+    }
+    .report-form h2,.report-form p
+    {
+        margin: 10px 0px;
+    }
+    .report-form p,
+    .report-form .spam,
+    .report-form .other
+    {
+        font-size: 13px;
+        margin: 10px 0;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .report-form textarea
+    {
+        width: 100%;
+        padding: 1em;
+        margin: 1em 0;
+        border-radius: 8px;
+        border: 2px solid;
+        border-color: rgba(92, 92, 92, 0.2);
+        resize: none;
+    }
+    .report-form textarea:focus
+    {
+        outline: none;
+        border-color: rgba(38, 82, 255, 0.7);
+        
+    }
+    .report-form textarea:placeholder-shown
+    {
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 14px;
+    }
+    .report-form .btn
+    {
+        text-align: right;
+        /* float: right; */
+    }
+    .report-form .btn .submit,
+    .report-form .btn .cancel
+    {
+        width: 20%;
+        margin: 0; 
+        padding: 8px;
+    }
+    .report-form .btn .cancel
+    {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.6);
+        border: none;
+        transition: 0.3s;
+    }
+    .report-form .btn .cancel:hover
+    {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .report-form .btn .cancel:focus
+    {
+        outline: none;
+    }
+</style>
+<!-- responsive -->
+<style>
+    /* tab */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        section.one
+        {
+            margin: 8em clamp(60px, 8vw, 80px);
+            
+        }
+        .one .form-container
+        {
+            width: 65%;
+        }
+        .report-form
+        {
+            width: 65%;
+        }
+    }
+    @media only screen and (max-width: 770px) and (min-width: 760px)
+    {
+        .one .form-container
+        {
+            width: 90%;
+        }
+    }
+    /* mobile */
+    @media only screen and (max-width: 750px)
+    {
+        section.one
+        {
+            margin: 8em clamp(16px, 5.5vw, 32px);
+            
+        }
+        .one .form-container
+        {
+            width: 100%;
+            border-radius: 0;
+        }
+        .form-container input[type="submit"]
+        {
+            width: unset;   
+        }
+        .form-container .sales-intro
+        {
+            padding: 2em clamp(16px, 5.5vw, 32px);
+        }
+        
+        .form-container .form
+        {
+            
+            padding: 2em clamp(16px, 5.5vw, 32px);
+        }
+        
+        .report-form
+        {
+            width: 90%;
+            padding: clamp(16px, 5.5vw, 32px);
+            
+        }
+        .report-form .btn .submit,
+        .report-form .btn .cancel
+        {
+            width: unset;
+        }
+
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -40,6 +321,72 @@
                 <p>Log In </p>
             </a>
         </div>
+
+        <section class="one">
+            <div class="img"></div>
+            <div class="form-container">
+                <div class="sales-intro">
+                    <img src="../../img/bag-n-brand6.png" alt="">
+                    <h2>Sales Partner Form</h2>
+                    <p>
+                        Fill the form out and click submit.
+                    </p>
+
+                </div>
+                <div class="report-form">
+                    <h2>Report a malicious form</h2>
+                    <p>Please briefly describe how this form is being misused. Our team will review your report as soon as possible</p>
+                    <div class="spam">
+                        <input type="radio" name="report" id="spam">
+                        <label for="spam">Spam, malware, or Phishing</label>
+                    </div>
+                    <div class="other">
+                        <input type="radio" name="report" id="other">
+                        <label for="other">Other(please explain)</label>
+                    </div>
+                    <textarea name="explain-report" id="explain-report" cols="30" rows="10" placeholder="Optionally, please briefly describe how this form is being misused."></textarea>
+                    <div class="btn">
+                        <input type="button" value="Cancel" class="cancel">
+                        <input type="submit" value="Submit" class="submit">
+                    </div>
+                </div>
+
+                <div class="form">
+                    
+                    <label for="number">Mobile Number <span class="required">*</span><br>
+                        <span>We Will send you a text messege.</span>
+                    </label>
+                    <input type="number" name="number" id="number" required>
+                    <label for="email">Email <span class="required">*</span><br>
+                        <span>We will use this email</span>
+                    </label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="name">Name <span class="required">*</span><br>
+                        <span>First & Last name</span>
+                    </label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="bg-story">Background <span class="required">*</span><br>
+                        <span>Tell us your story. Be brief. Be honest</span>
+                    </label>
+                    <textarea name="bg-story" id="bg-story" cols="30" rows="3" required></textarea>
+                    
+                    <label for="linkedin">LinkedIn URL <span class="required">*</span><br>
+                        <span>Give us a snapshot of your professional background</span>
+                    </label>
+                    <input type="text" name="linkedin" id="linkedin" required>
+                    <br>
+                    <p class="err-msg">Looks like this form is empty.Try filling it out before submitting</p>
+                    <a href="javascript:void(0)" class="btn-submit">
+                        <input type="submit" value="Submit">
+                    </a>
+                    <p class="report">Never submit passwords through this form. <span>Report malicious form</span></p>
+                    
+                </div>
+            </div>
+
+            </div>
+        </section>
+
 
         <footer>
             <div class="footer-title-logo">
@@ -174,4 +521,31 @@
     </div>
 </body>
 <script src="../../app/header-footer.js"></script>
+<script>
+    var report = document.querySelector(".report span");
+    var reportFormBg= document.querySelector(".form-container")
+    var reportForm = document.querySelector(".report-form");
+    var clsBtn = document.querySelector(".cancel");
+
+    report.addEventListener("click", function(){
+        reportForm.style.display = "block";
+    })
+    window.addEventListener("click", function(w){
+        if(w.target === reportFormBg){
+            reportForm.style.display = "none";
+        }
+    })
+    clsBtn.addEventListener("click", function(){
+        reportForm.style.display = "none";
+    })
+
+    var errSubmit = document.querySelector(".btn-submit");
+    var openErrMsg = document.querySelector(".err-msg");
+
+    errSubmit.addEventListener("click", function(){
+        openErrMsg.style.display = "block";
+
+    })
+
+</script>
 </html>

@@ -20,7 +20,7 @@
     }
     section.sales-partner
     {
-        padding: clamp(27px, 6.5vw, 6.6vw) clamp(16px, 8.2vw, 8.5vw);
+        padding: 6em clamp(16px, 8.2vw, 8.5vw);
     }
     h1
     {
@@ -53,7 +53,7 @@
     .sales-describe h3
     {
         font-family: "archivo black", sans-serif;
-        font-size: 1.5vw;
+        font-size: 23px;
         line-height: 1.1em;
         letter-spacing: -0.1em;
     }
@@ -62,12 +62,42 @@
         font-family: nova;
         font-size: 16px;
         font-weight: 600;
-        padding: 18px 32px;
+        padding: 20px 35px !important;
         transition: 0.3s;
     }
     .sales-describe button:hover
     {
         opacity: 0.8;
+    }
+    
+</style>
+<!-- responsive -->
+<style>
+    /* tab  */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        .sales-partner-content
+        {
+            grid-gap: 3em;
+        }
+    }
+    /* mobile */
+    @media only screen and (max-width: 750px)
+    {
+        .sales-partner-content
+        {
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 2em;
+        }
+        .sales-describe h3
+        {
+            font-size: clamp(18px, 4vw, 22px);
+        }
+        h1
+        {
+            font-size: clamp(40px, 12vw, 50px);
+        }
     }
 </style>
 <body>

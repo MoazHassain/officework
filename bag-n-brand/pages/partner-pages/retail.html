@@ -11,7 +11,77 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
 </head>
-
+<style>
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    section.one 
+    {
+        width: 40%;
+        margin: 8em auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .one img
+    {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .one h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 132px;
+        
+        letter-spacing: -0.1em;
+        line-height: 1em;
+        margin: 15px 0;
+    }
+    .one p
+    {
+        font-family: nova;
+        font-size: 21px;
+        font-weight: 700;
+        margin: 15px 0;
+    }
+    .one button
+    {
+        font-family: nova;
+        font-size: 21px;
+        font-weight: 600;
+        padding: 15px 30px !important;
+        margin: 15px 0;
+    }
+</style>
+<!-- responsive -->
+<style>
+    /* tab */
+    @media only screen and (max-width: 770px) and (min-width: 760px)
+    {
+        .one h1 
+        {
+            font-size: 90px;
+        }
+    }
+    /* mobile */
+    @media only screen and (max-width: 750px)
+    {
+        section.one
+        {
+            width: 90%;
+        }
+        .one h1 
+        {
+            font-size: 60px;
+        }
+        .one p
+        {
+            font-size: 16px;
+        }
+    } 
+</style>
 <body>
     <div class="container">
         <header>
@@ -40,6 +110,19 @@
                 <p>Log In </p>
             </a>
         </div>
+
+        <section class="one">
+            <div class="img">
+                <img src="../../img/Brick+and+Mortars.png" alt="">
+            </div>
+            <h1>sign up now</h1>
+            <p>We support local businss</p>
+            <hr style="margin: 2em auto; background-color: white;  width: 85%; border: 0; height: 0.2px; ">
+
+            <div class="signin-btn">
+                <button>Sign Up</button>
+            </div>
+        </section>
 
         <footer>
             <div class="footer-title-logo">

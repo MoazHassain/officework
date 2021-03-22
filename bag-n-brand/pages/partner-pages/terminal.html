@@ -11,7 +11,83 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
 </head>
+<style>
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    section.one
+    {
+        text-align: center;
+        
+        background-image: url(../../img/weedy_s.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .overlay
+    {
+        
+        padding: 10em 8em;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .overlay h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 132px;
+        margin: 32px 0;
 
+    }
+    .overlay p, .overlay li , .overlay button
+    {
+        font-family: nova;
+        margin: 1em 0;
+    }
+    .overlay ul
+    {
+        list-style-position: inside;
+    }
+    .return a 
+    {
+        text-decoration: none;
+        color: white;
+        text-decoration: underline;
+    }
+    .overlay button
+    {
+        font-size: 24px;
+        padding: 15px 30px !important;
+        transition: 0.3s;
+    }
+    .overlay button:hover
+    {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+</style>
+<!-- responsive -->
+<style>
+    /* mobile */
+    @media only screen and (max-width: 750px)
+    {
+        .overlay
+        {
+            
+            padding: clamp(64px, 15vw, 72px) clamp(16px, 6vw, 32px);
+            padding-top: 100px;
+        }
+        .overlay h1
+        {
+            font-size: 68px;
+        }
+        .overlay p 
+        {
+            font-size: 14px;
+        }
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -40,6 +116,24 @@
                 <p>Log In </p>
             </a>
         </div>
+
+        <section class="one">
+            <div class="overlay">
+                <h1>404</h1>
+            <p >
+                <strong>We couldn't find the page you were looking for. This is either because:</strong>
+            </p>
+
+            <ul data-rte-list="default">
+                <li><strong> There is an error in the URL entered into your web browser. Please check the URL and try again.</strong></li>
+                <li><strong>The page you are looking for has been moved or deleted.</strong></li>
+            </ul>
+            <p style="text-align:center;white-space:pre-wrap;" class="return"><strong>   You can return to our homepage by </strong><a href=""><strong>clicking here</strong></a><strong>, or you can try searching for the   content you are seeking by </strong><a href=""><strong>clicking here</strong></a><strong>. </strong></p>
+            <a href="#"><button class="return-home">RETURN HOME</button></a>
+            </div>
+        
+        </section>
+
 
         <footer>
             <div class="footer-title-logo">

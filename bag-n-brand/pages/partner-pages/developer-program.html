@@ -16,83 +16,117 @@
     {
         src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
         font-family: nova;
-    } 
-    section.one
-    {
-        height: 100vh;
-        min-height: 36em;
     }
-    .one .part-one
-    {
-        
-        height: 18em;
-        background-image: url(../../img/bag-n-brand.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-position-y: 24%;
-        
-    }
-    .part-one .overlay
-    {
-        height: 18em;
-        background-color: rgba(0, 0, 0, 0.6);
-        display: grid;
-        align-items: center;
-        
-    }
-    .overlay h1
-    {
-        margin: 1em 10px 0 10px;
-        font-family: "archivo black", sans-serif;
-        font-size: clamp(36px, 5.5vw, 5.5vw);
-        letter-spacing: -0.09em;
-        text-align: center;
-        
-    }
-    .one .part-two 
-    {
-        height: 22em;
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        padding: 10px;
-    }
-    section.one .part-two p
+    section p
     {
         font-family: nova;
-        font-size: clamp(15px, 1.4vw, 1.4vw);
+    }
+    section.one 
+    {
+        height: 26em;
+        background-image: url(../../img/image-asset-leverage.jpeg);
+        background-position-y: 7%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 8em;
         text-align: center;
-        margin: 10px ;
-        
+        display: grid;
+        align-items: center;
+    }
+    .title h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 85px;
+        letter-spacing: -0.1em;
+    }
+    .one p
+    {
+        font-family: nova;
+        font-size: 16px ;
+        font-weight: 600;
+    }
+    .two 
+    {
+        background-color: white;
+        padding: 50px 120px;
+        color: black;
+        display: grid;
+        grid-template-columns: 0.8fr 1.5fr;
+        grid-gap: 3em;
+    }
+    .two img
+    {
+        width: 100%;
+    }
+    .two .part-two
+    {
+        padding: 0 3em;
+    }
+    .two .title, .two .block-text, .two .partner-btn
+    {
+        margin-bottom: 2em ;
+    }
+    .two .block-text p
+    {
+        font-weight: 600;
+    }
+    .two .partner-btn button
+    {
+        background-color: black;
+        color: white;
+        font-family: nova;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 20px 40px !important;
     }
 </style>
-<!-- reponsive -->
+<!-- responsive -->
 <style>
     /* tab */
     @media only screen and (max-width: 1025px) and (min-width: 760px)
     {
-        .one .part-one,
-        .part-one .overlay
+        section.one 
         {
-            height: 40vh;
+            height: 70vh;
         }
-        .one .part-two
+        .two 
         {
-            height: 50vh;
+            min-height: 30vh;
         }
-        section.one .part-two p
+    }
+    @media only screen and (max-width: 770px) and (min-width: 760px)
+    {
+        .two
         {
-            font-size: 20px;
-            width: 35ch;
+            padding: 50px 80px;
         }
+        .title h1
+        {
+            font-size: 65px;
+        }
+
     }
     /* mobile */
     @media only screen and (max-width: 750px)
     {
-        section.one .part-two p
+        section.one
         {
-            width: 80%;
+            padding: unset;
+        }
+        .title h1
+        {
+            font-size: 44px;
+        }
+        .two
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-gap: unset;
+            padding: 30px clamp(16px, 6vw, 32px);
+        }
+        .two .part-two
+        {
+            padding: unset;
         }
     }
 </style>
@@ -126,20 +160,32 @@
         </div>
 
         <section class="one">
-            <div class="part-one">
-                <div class="overlay">
-                    <h1>TEXT YOUR ZIP</h1>
+            <div>
+                <div class="title">
+                    <h1>Leverage</h1>
+                    
                 </div>
-                
+                <p>Regarding the trade. Regardless of the product.</p>
+            </div>
+        </section>
+
+        <section class="two">
+            <div class="part-one">
+                <div class="img"><img src="../../img/bag-n-brand6.png" alt=""></div>
             </div>
             <div class="part-two">
-                <p>
-                    We use your zip code to make data driven decisions about where to
-                    distribute our products. 
-                </p>
+                <div class="title"><h1>the trade</h1></div>
+                <div class="block-text">
+                    <p>Excute the deal</p>
+                </div>
+                <div class="partner-btn">
+                    <button>PARTNER UP</button>
+                </div>
             </div>
-
+            
+            
         </section>
+
 
         <footer>
             <div class="footer-title-logo">

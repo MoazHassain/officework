@@ -11,7 +11,95 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
 </head>
-
+<style>
+    @font-face
+    {
+        /* ./font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf */
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    section.design-partner
+    {
+        padding: 6em clamp(16px, 8.2vw, 8.5vw);
+    }
+    h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 5.6vw;
+        line-height: 1.1em;
+        letter-spacing: -0.1em;
+        padding: 2vw 0;
+        padding-top: 4vw;
+    }
+    .design-partner .title
+    { 
+        text-align: center;
+        
+    }
+    .design-partner-content
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8em;
+    }
+    .design-img
+    {
+        background-image: url(../../img/image-asset.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .design-describe h3
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 23px;
+        line-height: 1.1em;
+        letter-spacing: -0.1em;
+    }
+    .design-describe button
+    {
+        font-family: nova;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 20px 35px !important;
+        transition: 0.3s;
+    }
+    .design-describe button:hover
+    {
+        opacity: 0.8;
+    }
+    
+</style>
+<!-- responsive -->
+<style>
+    /* tab  */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        .design-partner-content
+        {
+            grid-gap: 3em;
+        }
+    }
+    /* mobile */
+    @media only screen and (max-width: 750px)
+    {
+        .design-partner-content
+        {
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 2em;
+        }
+        .design-describe h3
+        {
+            font-size: clamp(18px, 4vw, 22px);
+        }
+        h1
+        {
+            font-size: clamp(40px, 12vw, 50px);
+        }
+    }
+</style>
 <body>
     <div class="container">
         <header>
@@ -40,6 +128,28 @@
                 <p>Log In </p>
             </a>
         </div>
+
+        <section class="design-partner">
+            <div>
+                <div class="title">
+                    <h1>Design Partner</h1>
+                </div>
+                <div class="design-partner-content">
+                    <div class="img design-img">
+
+                    </div>
+                    <div class="design-describe">
+                        <h3>
+                            We sell to retail shops. Get paid when your design sells.                        </h3>
+                        <h1>
+                            imagine the possibilities.
+                        </h1>
+                        <a href="./design-partner-np.html"><button >JOIN</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <footer>
             <div class="footer-title-logo">
