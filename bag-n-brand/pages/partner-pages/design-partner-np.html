@@ -264,7 +264,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.2);
-        display: none;
+        /* display: none; */
     }
     .attachment-modal
     {
@@ -424,7 +424,7 @@
         border-radius: 4px 0 0 4px;
         font-size: 13px;
     }
-    .search-btn
+    .attachment-modal .search-btn
     {
         outline: none;
         border: 1px solid #2d7ff9;
@@ -432,7 +432,7 @@
         color: white;
         padding: 15px;
         margin-left: -5px;
-        border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0 !important;
     }
     .photo-content .photo-icon,
     .drive-content .drive-icon,
@@ -517,8 +517,8 @@
         font-weight: 500;
         color: rgba(0, 0, 0, 0.7);
         background-color: white;
-        padding: 8px;
-        border: 1px ridge rgba(0, 0, 0, 0.15);
+        padding: 8px !important;
+        border: 1px ridge rgba(0, 0, 0, 0.15) !important;
         border-radius: 4px;
     }
     .connect-btn
@@ -530,7 +530,7 @@
         color: white;
         font-size: 14px;
         font-weight: 500;
-        padding: 10px 15px;
+        padding: 10px 15px !important;
         transition: 0.3s;
     }
     .connect-btn:hover
@@ -569,12 +569,24 @@
         {
             width: 65%;
         }
+        .attachment-modal
+        {
+            width: 80%;
+        }
     }
     @media only screen and (max-width: 770px) and (min-width: 760px)
     {
         .one .form-container
         {
             width: 90%;
+        }
+        .attachment-modal
+        {
+            width: 90%;
+        }
+        .attachment-modal .side-bar:hover
+        {
+            width: 35%;
         }
     }
     /* mobile */
@@ -616,7 +628,21 @@
         {
             width: unset;
         }
-
+        .attachment-modal
+        {
+            width: 95%;
+        }
+        .attachment-modal .side-bar:hover
+        {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 300px)
+    {
+        .content-wrap div .area
+        {
+            height: 500px;
+        }
     }
 </style>
 
@@ -681,7 +707,7 @@
                 <div class="attachment-modal-bg">
                     <div class="attachment-modal">
                         <div class="side-bar">
-                            <div class="active-sidebar">
+                            <div >
                                 <i class="fas fa-paperclip"></i> <span>My Device</span>
                             </div>
                             <div >
@@ -690,7 +716,7 @@
                             <div>
                                 <i class="fas fa-search"></i> <span>Web Search</span>
                             </div>
-                            <div>
+                            <div class="active-sidebar">
                                 <i class="fas fa-camera"></i> <span>Take Photo</span>
                             </div>
                             <div>
@@ -725,7 +751,7 @@
                             </div>
             
                             <div class="content">
-                                <div class="attach-content active-content">
+                                <div class="attach-content ">
                                     <div class="head">
                                         <i class="fas fa-laptop"></i>
                                     </div>
@@ -791,7 +817,7 @@
                                             <p> You need to authenticate with Google Drive. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="google-signin">
+                                        <div class="google-signin ">
                                             <button class="signin">
                                                 <img src="../../icon/icons8-google.svg" alt="">
                                                 Sign in with Google
@@ -817,7 +843,7 @@
                                             <p> You need to authenticate with Dropbox. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="btn">
+                                        <div>
                                             <button class="connect-btn">Connect Dropbox</button>
                                         </div>
                                         <div class="text-wrap">
@@ -827,7 +853,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="instagram-content ">
+                                <div class="instagram-content active-content">
                                     <div class="head">
                                         <i class="fab fa-instagram"></i>
                                     </div>
@@ -840,7 +866,7 @@
                                             <p> You need to authenticate with Instagram. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="btn">
+                                        <div>
                                             <button class="connect-btn">Connect Instagram</button>
                                         </div>
                                         <div class="text-wrap">
@@ -856,7 +882,7 @@
                                     </div>
                                     <div class="area email-area">
                                         <p style="font-size: 16px; color: rgba(0, 0, 0, 0.6);">Something went wrong.</p>
-                                        <div class="btn">
+                                        <div >
                                             <button class="connect-btn">Retry</button>
                                         </div>
                                     </div>
@@ -875,7 +901,7 @@
                                             <p> You need to authenticate with Facebook. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="btn">
+                                        <div>
                                             <button class="connect-btn">Connect Facebook</button>
                                         </div>
                                         <div class="text-wrap">
@@ -898,7 +924,7 @@
                                             <p> You need to authenticate with Box. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="btn">
+                                        <div>
                                             <button class="connect-btn">Connect Box</button>
                                         </div>
                                         <div class="text-wrap">
@@ -921,7 +947,7 @@
                                             <p> You need to authenticate with OneDrive. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="btn">
+                                        <div>
                                             <button class="connect-btn">Connect OneDrive</button>
                                         </div>
                                         <div class="text-wrap">
@@ -944,7 +970,7 @@
                                             <p> You need to authenticate with OneDrive Business. </p>
                                             <p> We only extract images and never modify or delete them. </p>
                                         </div>
-                                        <div class="btn">
+                                        <div>
                                             <button class="connect-btn">Connect OneDrive Business</button>
                                         </div>
                                         <div class="text-wrap">
