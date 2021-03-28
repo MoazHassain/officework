@@ -252,6 +252,305 @@
         outline: none;
     }
 </style>
+
+<!-- attachment modal -->
+<style>
+
+    .attachment-modal-bg
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    .attachment-modal
+    {
+        width: 60%;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    .attachment-modal .side-bar
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ededed;
+        height: 100%;
+        width: 56px;
+        overflow: hidden;
+        overflow-y: scroll;
+        transition: 0.2s;
+        z-index: 99;
+    }
+    .attachment-modal .side-bar:hover
+    {
+        width: 30%;
+        
+    }
+
+    .attachment-modal .side-bar>div.active-sidebar
+    {
+        color: #2d7ff9;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .attachment-modal .side-bar::-webkit-scrollbar
+    {
+        display: none;
+    }
+    .side-bar div
+    {
+        white-space: nowrap;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .side-bar div span
+    {
+        display: inline-flex;
+    }
+    .side-bar div:hover
+    {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    .side-bar div:active
+    {
+        color: #2d7ff9;
+    }
+
+    .side-bar div:hover span
+    {
+        color: #2d7ff9;
+        
+    }
+    .side-bar i,
+    .side-bar img
+    {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        
+        padding: 10px;
+        text-align: center;
+        margin: 5px 10px;
+        vertical-align: middle;
+    }
+    .attachment-modal .content-wrap
+    {
+        margin-left: 58px;
+        padding: 15px;
+    }
+    .attachment-modal .content-wrap .content>div
+    {
+        display: none;
+        text-align: center;
+    }
+    .attachment-modal .content-wrap>div.cls-modal
+    {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.6);
+        transition: 0.3s;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .attachment-modal .content-wrap>div.cls-modal:hover
+    {
+        color: rgba(0, 0, 0, 0.4);
+    }
+    .content-wrap .head
+    {
+        margin-bottom: 10px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .content-wrap div .area
+    {
+        color: rgba(0, 0, 0, 0.5);
+        height: 400px;
+        border-radius: 6px;
+        display: grid;
+        align-content: center;
+        transition: 0.3s;
+    }
+    .content-wrap div .area > *
+    {
+        margin: 10px 0;
+    }
+    .content-wrap .area h3
+    {
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .content-wrap .area p
+    {
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+    
+    .content-wrap .attach-content .area
+    {
+        border: 1px dashed rgba(0, 0, 0, 0.3);
+        
+    }
+    .attach-content .area i
+    {
+        font-size: 50px;
+        transition: 0.2s;
+    }
+    .attach-content .area:hover i
+    {
+        color: #2d7ff9;
+    }
+
+    .area input
+    {
+        width: 50%;
+        padding: 15px ;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 4px 0 0 4px;
+        font-size: 13px;
+    }
+    .search-btn
+    {
+        outline: none;
+        border: 1px solid #2d7ff9;
+        background-color: #2d7ff9;
+        color: white;
+        padding: 15px;
+        margin-left: -5px;
+        border-radius: 0 4px 4px 0;
+    }
+    .photo-content .photo-icon,
+    .drive-content .drive-icon,
+    .dropbox-content .dropbox-icon,
+    .instagram-content .instagram-icon,
+    .facebook-content .facebook-icon, 
+    .box-content .box-icon ,
+    .onedrive-content .onedrive-icon,
+    .onedrive-business-content .onedrive-icon
+    {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        justify-self: center;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    .photo-content .photo-icon
+    {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .dropbox-content .dropbox-icon,
+    .onedrive-content .onedrive-icon,
+    .onedrive-business-content .onedrive-icon
+    {
+        background-color: #2d7ff9;
+    }
+    .instagram-content .instagram-icon
+    {
+        background-color: black;
+        background-image: linear-gradient(to top right,#fccc63, #fbad50 ,#bc2a8d, #8a3ab9);
+    }
+    .facebook-content .facebook-icon
+    {
+        background-color: #3B5998;
+    }
+    .box-content .box-icon
+    {
+        background-color: #388ce0;
+    }
+    .photo-content .photo-icon img,
+    .drive-content .drive-icon img,
+    .box-content .box-icon svg,
+    .onedrive-content .onedrive-icon svg,
+    .onedrive-business-content .onedrive-icon svg
+    {
+        width: 36px;
+        height: 36px;
+        
+    }
+    .dropbox-content .dropbox-icon i,
+    .instagram-content .instagram-icon i,
+    .facebook-content .facebook-icon i
+    {
+        font-size: 30px;
+        line-height: 56px;
+        color: white;
+    }
+    .content-wrap .head img,
+    .content-wrap .head svg
+    {
+        width: 22px;
+        height: 22px;
+        
+    }
+    .content-wrap .head i
+    {
+        font-size: 18px;
+    }
+    .google-signin button.signin img 
+    {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .google-signin button.signin
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.7);
+        background-color: white;
+        padding: 8px;
+        border: 1px ridge rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+    .connect-btn
+    {
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: #2d7ff9;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 15px;
+        transition: 0.3s;
+    }
+    .connect-btn:hover
+    {
+        opacity: 0.85;
+    }
+    .facebook-content .head i
+    {
+        color: #3B5998;
+    }
+
+
+
+    
+    .attachment-modal .content-wrap .content>div.active-content
+    {
+        display: block;
+    }
+</style>
+
 <!-- responsive -->
 <style>
     /* tab */
@@ -320,6 +619,7 @@
 
     }
 </style>
+
 <body>
     <div class="container">
         <header>
@@ -377,6 +677,288 @@
                         <input type="submit" value="Submit" class="submit">
                     </div>
                 </div>
+
+                <div class="attachment-modal-bg">
+                    <div class="attachment-modal">
+                        <div class="side-bar">
+                            <div class="active-sidebar">
+                                <i class="fas fa-paperclip"></i> <span>My Device</span>
+                            </div>
+                            <div >
+                                <i class="fas fa-link"></i> <span>Link(URL)</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-search"></i> <span>Web Search</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-camera"></i> <span>Take Photo</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-google-drive"></i> <span>Goole Drive</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-dropbox"></i> <span>Dropbox</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-instagram"></i> <span>Instagram</span>
+                            </div>
+                            <div>
+                                <i class="far fa-envelope"></i> <span>Gmail</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+                            </div>
+                            <div>
+                                <img src="../../icon/icons8-box.svg" alt=""> <span> Box</span>
+                            </div>
+                            <div>
+                                <img src="../../icon/icons8-onedrive.svg" alt=""> <span>OneDrive</span>
+                            </div>
+                            <div>
+                                <img src="../../icon/icons8-onedrive.svg" alt=""> <span>OneDrive Business</span>
+                            </div>
+                        </div>
+            
+                        <div class="content-wrap" style="position: relative;">
+                            <div class="cls-modal">
+                                <i class="fas fa-times"></i> 
+                            </div>
+            
+                            <div class="content">
+                                <div class="attach-content active-content">
+                                    <div class="head">
+                                        <i class="fas fa-laptop"></i>
+                                    </div>
+                                    
+                                    <div class="area upload-area">
+                                        <i class="fas fa-file-medical"></i>
+                                        <div class="text-wrap">
+                                            <h3>Select Files to upload</h3>
+                                            <p>or drag and drop, copy paste files.</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                
+                                <div class="link-content ">
+                                    <div class="head">
+                                        <i class="fas fa-link"></i>
+                                    </div>
+                                    <div class="area link-area">
+                                        <div class="oneline">
+                                            <input type="search" placeholder="Enter a URL">
+                                            <button class="search-btn"><i class="fas fa-link"></i></button>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                
+                                <div class="search-content ">
+                                    <div class="head">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="area search-area">
+                                        <div class="oneline">
+                                            <input type="search" placeholder="Srach images...">
+                                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="photo-content ">
+                                    <div class="head">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <div class="area photo-area">
+                                        <div class="photo-icon">
+                                            <img src="../../icon/icons8-no-camera-60.png" alt="" >
+                                        </div>
+                                        <h3>Webcam Disabled</h3>
+                                        <p>Please enable your webcam to take a photo.</p>
+                                    </div>
+                                </div>
+                
+                                <div class="drive-content ">
+                                    <div class="head">
+                                        <img src="../../icon/icons8-google-drive-50.png" alt="">
+                                    </div>
+                                    <div class="area drive-area">
+                                        <div class="drive-icon">
+                                            <img src="../../icon/icons8-google-drive-50.png" alt="">
+                                        </div>
+                                        <h3>Select Files from Google Drive</h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with Google Drive. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="google-signin">
+                                            <button class="signin">
+                                                <img src="../../icon/icons8-google.svg" alt="">
+                                                Sign in with Google
+                                            </button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from Google Drive click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="dropbox-content ">
+                                    <div class="head">
+                                        <i class="fab fa-dropbox"></i>
+                                    </div>
+                                    <div class="area dropbox-area">
+                                        <div class="dropbox-icon">
+                                            <i class="fab fa-dropbox"></i>
+                                        </div>
+                                        <h3> Select Files from Dropbox </h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with Dropbox. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="btn">
+                                            <button class="connect-btn">Connect Dropbox</button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from Dropbox click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="instagram-content ">
+                                    <div class="head">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <div class="area instagram-area">
+                                        <div class="instagram-icon">
+                                            <i class="fab fa-instagram"></i>
+                                        </div>
+                                        <h3> Select Files from Instagram </h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with Instagram. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="btn">
+                                            <button class="connect-btn">Connect Instagram</button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from Instagram click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="gmail-content ">
+                                    <div class="head">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="area email-area">
+                                        <p style="font-size: 16px; color: rgba(0, 0, 0, 0.6);">Something went wrong.</p>
+                                        <div class="btn">
+                                            <button class="connect-btn">Retry</button>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="facebook-content ">
+                                    <div class="head">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="area facebook-area">
+                                        <div class="facebook-icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <h3> Select Files from Facebook </h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with Facebook. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="btn">
+                                            <button class="connect-btn">Connect Facebook</button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from Facebook click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="box-content ">
+                                    <div class="head">
+                                        <svg fill="#388ce0" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="26px" height="26px"><path fill="none" d="M0 0H26V26H0z"/><path d="M14,9.9c-1.9,0-3.6,1.1-4.5,2.7C8.7,11,7,9.9,5,9.9c-1.1,0-2.2,0.4-3,1V6.4h0c0-0.5-0.5-1-1-1 c-0.6,0-1,0.4-1,1h0V15h0c0,2.7,2.3,5,5,5c1.9,0,3.6-1.1,4.5-2.7C10.4,18.9,12,20,14,20c2.8,0,5-2.3,5-5C19,12.2,16.8,9.9,14,9.9 M5,18c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3s3,1.4,3,3C8.1,16.6,6.7,18,5,18z M14,18c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3c1.7,0,3,1.4,3,3 C17,16.6,15.6,18,14,18z"/><path d="M25.8,18.4l-2.6-3.5l2.6-3.5l0,0c0.3-0.4,0.2-1.1-0.2-1.4c-0.4-0.3-1.1-0.2-1.4,0.2l0,0l-2.2,3l-2.2-3l0,0 c-0.3-0.4-1-0.5-1.4-0.2s-0.5,1-0.2,1.4l0,0l2.6,3.5l-2.6,3.5l0,0c-0.3,0.4-0.2,1.1,0.2,1.4c0.4,0.3,1.1,0.2,1.4-0.2l0,0l2.2-3 l2.2,3l0,0c0.3,0.4,1,0.5,1.4,0.2C26,19.5,26.1,18.8,25.8,18.4L25.8,18.4"/></svg>
+                                    </div>
+                                    <div class="area box-area">
+                                        <div class="box-icon">
+                                            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="26px" height="26px"><path fill="none" d="M0 0H26V26H0z"/><path d="M14,9.9c-1.9,0-3.6,1.1-4.5,2.7C8.7,11,7,9.9,5,9.9c-1.1,0-2.2,0.4-3,1V6.4h0c0-0.5-0.5-1-1-1 c-0.6,0-1,0.4-1,1h0V15h0c0,2.7,2.3,5,5,5c1.9,0,3.6-1.1,4.5-2.7C10.4,18.9,12,20,14,20c2.8,0,5-2.3,5-5C19,12.2,16.8,9.9,14,9.9 M5,18c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3s3,1.4,3,3C8.1,16.6,6.7,18,5,18z M14,18c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3c1.7,0,3,1.4,3,3 C17,16.6,15.6,18,14,18z"/><path d="M25.8,18.4l-2.6-3.5l2.6-3.5l0,0c0.3-0.4,0.2-1.1-0.2-1.4c-0.4-0.3-1.1-0.2-1.4,0.2l0,0l-2.2,3l-2.2-3l0,0 c-0.3-0.4-1-0.5-1.4-0.2s-0.5,1-0.2,1.4l0,0l2.6,3.5l-2.6,3.5l0,0c-0.3,0.4-0.2,1.1,0.2,1.4c0.4,0.3,1.1,0.2,1.4-0.2l0,0l2.2-3 l2.2,3l0,0c0.3,0.4,1,0.5,1.4,0.2C26,19.5,26.1,18.8,25.8,18.4L25.8,18.4"/></svg>
+                                        </div>
+                                        <h3> Select Files from Box </h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with Box. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="btn">
+                                            <button class="connect-btn">Connect Box</button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from Box click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="onedrive-content ">
+                                    <div class="head">
+                                        <svg fill="#388ce0" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="26px" height="26px"><path d="M24.1,14.6l-0.5-0.2l-0.1-0.7c-0.2-2.4-2.6-3.8-5.1-3L17.9,11l-0.6-0.6c-1-1.1-1.8-1.4-3.2-1.4 c-1,0-1.5,0.1-2.3,0.5c-0.8,0.4-1.6,1.4-2,2.6c-0.1,0.3-0.2,0.6-0.2,0.7c0,0.3-0.2,0.5-0.8,0.6c-1.3,0.3-2.2,1-2.6,1.9 C6,15.6,6,15.9,6,16.5c0,1.8,0.9,3.1,2.4,3.4C8.8,20,10.7,20,16.6,20l7.7,0l0.3-0.2c0.7-0.4,1.2-1.2,1.3-2.2 C26.1,16.1,25.5,15.1,24.1,14.6z"/><path d="M19.6,8.5c-0.8-2.3-2.9-3.9-5.4-3.9c-0.9,0-1.6,0.2-2.3,0.5c-0.7,0.3-1.5,1-1.9,1.5c-0.7,0.9-0.6,0.9-1,0.7 C8.1,7,7,6.9,6.1,7.2c-1.7,0.5-2.9,2.2-3,4c0,0.3,0,0.6-0.1,0.6C3,11.9,2.8,12,2.5,12c-1,0.3-1.9,0.9-2.3,1.9C0,14.3,0,14.5,0,15.3 c0,0.9,0,1,0.3,1.5c0.5,0.9,1.4,1.7,2.3,2c0.3,0.1,2.7,0.1,2.8,0c0,0,0-0.2-0.1-0.4c-0.2-0.5-0.4-1.3-0.4-2c0-1.9,1.1-3.3,3.1-4 c0.6-0.2,0.8-0.3,0.8-0.5c0-0.3,0.5-1.3,0.8-1.8c0.5-0.8,1.2-1.4,2-1.8c2.1-1,4.6-0.7,6.1,0.8l0.5,0.5l0.6-0.2 c0.3-0.1,0.7-0.2,0.8-0.2C19.8,9.4,19.8,9,19.6,8.5z"/></svg>
+                                    </div>
+                                    <div class="area onedrive-area">
+                                        <div class="onedrive-icon">
+                                            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="26px" height="26px"><path d="M24.1,14.6l-0.5-0.2l-0.1-0.7c-0.2-2.4-2.6-3.8-5.1-3L17.9,11l-0.6-0.6c-1-1.1-1.8-1.4-3.2-1.4 c-1,0-1.5,0.1-2.3,0.5c-0.8,0.4-1.6,1.4-2,2.6c-0.1,0.3-0.2,0.6-0.2,0.7c0,0.3-0.2,0.5-0.8,0.6c-1.3,0.3-2.2,1-2.6,1.9 C6,15.6,6,15.9,6,16.5c0,1.8,0.9,3.1,2.4,3.4C8.8,20,10.7,20,16.6,20l7.7,0l0.3-0.2c0.7-0.4,1.2-1.2,1.3-2.2 C26.1,16.1,25.5,15.1,24.1,14.6z"/><path d="M19.6,8.5c-0.8-2.3-2.9-3.9-5.4-3.9c-0.9,0-1.6,0.2-2.3,0.5c-0.7,0.3-1.5,1-1.9,1.5c-0.7,0.9-0.6,0.9-1,0.7 C8.1,7,7,6.9,6.1,7.2c-1.7,0.5-2.9,2.2-3,4c0,0.3,0,0.6-0.1,0.6C3,11.9,2.8,12,2.5,12c-1,0.3-1.9,0.9-2.3,1.9C0,14.3,0,14.5,0,15.3 c0,0.9,0,1,0.3,1.5c0.5,0.9,1.4,1.7,2.3,2c0.3,0.1,2.7,0.1,2.8,0c0,0,0-0.2-0.1-0.4c-0.2-0.5-0.4-1.3-0.4-2c0-1.9,1.1-3.3,3.1-4 c0.6-0.2,0.8-0.3,0.8-0.5c0-0.3,0.5-1.3,0.8-1.8c0.5-0.8,1.2-1.4,2-1.8c2.1-1,4.6-0.7,6.1,0.8l0.5,0.5l0.6-0.2 c0.3-0.1,0.7-0.2,0.8-0.2C19.8,9.4,19.8,9,19.6,8.5z"/></svg>
+                                        </div>
+                                        <h3> Select Files from OneDrive </h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with OneDrive. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="btn">
+                                            <button class="connect-btn">Connect OneDrive</button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from OneDrive click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="onedrive-business-content ">
+                                    <div class="head">
+                                        <svg fill="#388ce0" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="26px" height="26px"><path d="M24.1,14.6l-0.5-0.2l-0.1-0.7c-0.2-2.4-2.6-3.8-5.1-3L17.9,11l-0.6-0.6c-1-1.1-1.8-1.4-3.2-1.4 c-1,0-1.5,0.1-2.3,0.5c-0.8,0.4-1.6,1.4-2,2.6c-0.1,0.3-0.2,0.6-0.2,0.7c0,0.3-0.2,0.5-0.8,0.6c-1.3,0.3-2.2,1-2.6,1.9 C6,15.6,6,15.9,6,16.5c0,1.8,0.9,3.1,2.4,3.4C8.8,20,10.7,20,16.6,20l7.7,0l0.3-0.2c0.7-0.4,1.2-1.2,1.3-2.2 C26.1,16.1,25.5,15.1,24.1,14.6z"/><path d="M19.6,8.5c-0.8-2.3-2.9-3.9-5.4-3.9c-0.9,0-1.6,0.2-2.3,0.5c-0.7,0.3-1.5,1-1.9,1.5c-0.7,0.9-0.6,0.9-1,0.7 C8.1,7,7,6.9,6.1,7.2c-1.7,0.5-2.9,2.2-3,4c0,0.3,0,0.6-0.1,0.6C3,11.9,2.8,12,2.5,12c-1,0.3-1.9,0.9-2.3,1.9C0,14.3,0,14.5,0,15.3 c0,0.9,0,1,0.3,1.5c0.5,0.9,1.4,1.7,2.3,2c0.3,0.1,2.7,0.1,2.8,0c0,0,0-0.2-0.1-0.4c-0.2-0.5-0.4-1.3-0.4-2c0-1.9,1.1-3.3,3.1-4 c0.6-0.2,0.8-0.3,0.8-0.5c0-0.3,0.5-1.3,0.8-1.8c0.5-0.8,1.2-1.4,2-1.8c2.1-1,4.6-0.7,6.1,0.8l0.5,0.5l0.6-0.2 c0.3-0.1,0.7-0.2,0.8-0.2C19.8,9.4,19.8,9,19.6,8.5z"/></svg>
+                                    </div>
+                                    <div class="area onedrive-area">
+                                        <div class="onedrive-icon">
+                                            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="26px" height="26px"><path d="M24.1,14.6l-0.5-0.2l-0.1-0.7c-0.2-2.4-2.6-3.8-5.1-3L17.9,11l-0.6-0.6c-1-1.1-1.8-1.4-3.2-1.4 c-1,0-1.5,0.1-2.3,0.5c-0.8,0.4-1.6,1.4-2,2.6c-0.1,0.3-0.2,0.6-0.2,0.7c0,0.3-0.2,0.5-0.8,0.6c-1.3,0.3-2.2,1-2.6,1.9 C6,15.6,6,15.9,6,16.5c0,1.8,0.9,3.1,2.4,3.4C8.8,20,10.7,20,16.6,20l7.7,0l0.3-0.2c0.7-0.4,1.2-1.2,1.3-2.2 C26.1,16.1,25.5,15.1,24.1,14.6z"/><path d="M19.6,8.5c-0.8-2.3-2.9-3.9-5.4-3.9c-0.9,0-1.6,0.2-2.3,0.5c-0.7,0.3-1.5,1-1.9,1.5c-0.7,0.9-0.6,0.9-1,0.7 C8.1,7,7,6.9,6.1,7.2c-1.7,0.5-2.9,2.2-3,4c0,0.3,0,0.6-0.1,0.6C3,11.9,2.8,12,2.5,12c-1,0.3-1.9,0.9-2.3,1.9C0,14.3,0,14.5,0,15.3 c0,0.9,0,1,0.3,1.5c0.5,0.9,1.4,1.7,2.3,2c0.3,0.1,2.7,0.1,2.8,0c0,0,0-0.2-0.1-0.4c-0.2-0.5-0.4-1.3-0.4-2c0-1.9,1.1-3.3,3.1-4 c0.6-0.2,0.8-0.3,0.8-0.5c0-0.3,0.5-1.3,0.8-1.8c0.5-0.8,1.2-1.4,2-1.8c2.1-1,4.6-0.7,6.1,0.8l0.5,0.5l0.6-0.2 c0.3-0.1,0.7-0.2,0.8-0.2C19.8,9.4,19.8,9,19.6,8.5z"/></svg>
+                                        </div>
+                                        <h3> Select Files from OneDrive Business </h3>
+                                        <div class="text-wrap">
+                                            <p> You need to authenticate with OneDrive Business. </p>
+                                            <p> We only extract images and never modify or delete them. </p>
+                                        </div>
+                                        <div class="btn">
+                                            <button class="connect-btn">Connect OneDrive Business</button>
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p> A new page will open to connect your account. </p>
+                                            <p> To disconnect from OneDrive Business click "Sign out" button in the menu. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
 
                 <div class="form">
                     
@@ -554,6 +1136,7 @@
             <p class="get-reset-code"><a href="#">&#8592; Send a new reset code</a></p>
         </div>
     </div>
+
 </body>
 <script src="../../app/header-footer.js"></script>
 <script>
@@ -580,6 +1163,19 @@
     errSubmit.addEventListener("click", function(){
         openErrMsg.style.display = "block";
 
+    })
+
+    var attachBtn = document.querySelector(".attachment-btn");
+    var attachModal = document.querySelector(".attachment-modal-bg");
+
+    attachBtn.addEventListener("click", function(){
+        attachModal.style.display = "block";
+    })
+
+    var clsAttachModal = document.querySelector(".content-wrap>div.cls-modal");
+
+    clsAttachModal.addEventListener("click", function(){
+        attachModal.style.display = "none";
     })
 
 </script>
