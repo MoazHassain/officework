@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style/header-footer.css">
+</head>
+<style>
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    
+    section.one
+    {
+        margin-top: 5em;
+        padding: 100px 120px;
+        text-align: center;
+    }
+    .one .head-text h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 86px;
+        letter-spacing: -0.1em;
+    }
+    section.two
+    {
+        padding: 0px 120px 100px;
+        text-align: center;
+    }
+    .two .grid-content
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .two .text, 
+    .two .img
+    {
+        padding: 18px;
+    }
+    .two .buttons div,
+    .two .hr
+    {
+        padding: 18px 0;
+    }
+    .text p
+    {
+        font-family: nova;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .two img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .two .btn
+    {
+        font-family: nova;
+        font-size: 23px;
+        font-weight: 500 !important;
+        text-transform: uppercase;
+        padding: 20px 32px !important;
+        background-color: white !important;
+        display: block;
+        margin: auto;
+        transition: 0.3s;
+    }
+    .two .btn:hover
+    {
+        opacity: 0.8;
+    }
+    .two hr
+    {
+        background-color: white;
+        border: 0;
+        height: 1px;
+    }
+</style>
+<!-- responsive -->
+<style>
+    /* tab */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        section.one
+        {
+            padding: clamp(70px, 9vw, 90px) clamp(60px, 8vw, 80px);
+        }
+
+        section.two 
+        {
+            padding: 0px clamp(70px, 9vw, 90px) clamp(60px, 8vw, 80px);
+        }
+        .one .head-text h1
+        {
+            font-size: clamp(61px, 8vw, 77px);
+            line-height: 1em;
+            padding: 20px;
+        }
+        .two .btn
+        {
+            font-size: clamp(19px, 2.5vw, 22px);
+        }
+        
+    }
+    /* mobile */
+    @media only screen and (max-width: 750px)
+    {
+        section.one 
+        {
+            padding: clamp(15px, 6.5vw, 35px) clamp(15px, 6vw, 32px);
+        }
+        section.two
+        {
+            padding: 0 clamp(15px, 6.5vw, 35px) clamp(15px, 6vw, 32px);
+        }
+        .one .head-text h1
+        {
+            font-size: clamp(42px, 10vw, 46px);
+        }
+        .two .grid-content
+        {
+            grid-template-columns: 1fr;
+        }
+        .two .btn
+        {
+            font-size: clamp(15px, 4vw, 17px);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+    </div>
+    <div id="my-nav" class="my-nav" >
+        <a href="javascript:void(0)" class="btn btn-login" >
+            <p>Log In </p>
+        </a>
+    </div>
+
+    <section class="one">
+        <div class="head-text">
+            <h1>WELCOME BROCK CITY</h1>
+        </div>
+    </section>
+    <section class="two">
+        <div class="grid-content">
+            <div class="left-part">
+                <div class="text">
+                    <p>CURRENT MOCK-UP</p>
+                </div>
+                <div class="img">
+                    <img src="../../img/custom/BagNBrand.png" alt="">
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="text">
+                    <p>PARTNER CONTROL PANEL</p>
+                </div>
+                <div class="hr">
+                    <hr>
+                </div>
+                <div class="buttons">
+                    <div>
+                        <a href="#">
+                            <button class="btn">print</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <button class="btn">edit credit</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <button class="btn">contact my rep</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <button class="btn">track my order</button>
+                        </a>
+                    </div>
+                    <div class="last-btn">
+                        <a href="./new-mockup.html">
+                            <button class="btn">Create a new mock-up</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="hr">
+                    <hr>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="text">
+            <p style="margin: 12px 0px;">The project terminal is your dedicated space for managing your packaging and design project. No one but you has access to this page.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-title-logo">
+            <Center>
+                <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+            </Center>
+        </div>
+        
+        
+        <center>
+            <div class="contact">
+                <p>
+                    
+                    Contact Us: <span>&nbsp;</span>
+                    <Span>
+                        <a href="./location.html" class="location">
+                            Location
+                        </a><span>&nbsp;</span>
+                        <a href="./partner.html" class="partner">
+                            Partnerships
+                        </a><span>&nbsp;</span>
+                        <a href="./terms.html" class="terms">
+                            Terms of Service
+                        </a><span>&nbsp;</span>
+                        <a href="./return-refund.html" class="refund">
+                            Return/Refund Policy
+                        </a>
+                    </Span>
+                </p>
+                <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+            </div>      
+        </center>
+        
+    </footer>
+</body>
+
+<script src="../../app/header-footer.js"></script>
+</html>
