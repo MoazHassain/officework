@@ -20,6 +20,7 @@ input[type="button"],
     border-radius: 5px !important;
     padding: 15px !important;
     cursor: pointer !important;
+    transition: 0.3s;
 }
 a
 {

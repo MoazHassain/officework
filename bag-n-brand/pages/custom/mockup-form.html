@@ -112,6 +112,10 @@
         font-weight: 500;
 
     }
+    .form .submit-btn button:hover
+    {
+        opacity: 0.8;
+    }
     .name-field .grid-content
     {
         display: grid;
@@ -127,6 +131,50 @@
         display: grid;
         grid-template-columns: 8% 10% 10% 12%;
         grid-gap: 1em;
+    }
+    .err-msg
+    {
+        display: none;
+    }
+    
+    .err-msg p
+    {
+        font-family: nova;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 10px 6px 10px;
+        margin: 12px 0;
+        display: inline-block;
+        background-color: rgba(204, 59, 59, 1);
+    }
+    .err-msg .cross-mark
+    {
+        font-size: 16px;
+    }
+    .two legend.title.required.err,
+    .two legend.describe.required.err,
+    .two label.caption.required.err 
+    {
+        color: rgba(189, 0, 0, 1);
+    }
+</style>
+<!-- input autofill -->
+<style>
+    input:-webkit-autofill,
+    input:-webkit-autofill:active
+    { 
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-box-shadow:0 0 0 50px #fff inset;
+        -webkit-text-fill-color: #000;
+        border-color: rgba(255, 255, 255, 1);
+    }
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus
+    {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-box-shadow:0 0 0 50px #fff inset;
+        -webkit-text-fill-color: #000;
+        border-color: rgba(255, 255, 255, 1);
     }
 </style>
 <body>
@@ -169,54 +217,69 @@
                 <h3>FILL OUT THE FORM & UPLOAD YOUR IMAGES</h3>
             </div>
             <form class="form">
+                <div class="err-msg">
+                    <p><span class="cross-mark">×</span>&nbsp; &nbsp;Your form has encounter a problem. Please scroll down to review.</p>
+                </div>
                 <div class="brand-field">
-                    <legend class="title">BRAND NAME *</legend>
-                    <legend class="describe">What is the brand name of the product?</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;BRAND NAME is required.</p>
+                    </div>
+                    <legend class="title required">BRAND NAME *</legend>
+                    <legend class="describe required">What is the brand name of the product?</legend>
                     <input type="text" name="brand-name" id="brand-name" class="brand" placeholder="Releaf" required>
                 </div>
 
                 <div class="name-field">
-                    <legend class="title">NAME *</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;NAME is required.</p>
+                    </div>
+                    <legend class="title required">NAME *</legend>
                     <div class="grid-content">
                        <div class="fname-field">
                             <input type="text" name="fname" id="fname" class="fname" required>
-                            <label for="fname" class="caption">First Name</label>
+                            <label for="fname" class="caption required">First Name</label>
                        </div>
                        <div class="lname-field">
                             <input type="text" name="lname" id="lname" class="lname" required>
-                            <label for="lname" class="caption">Last Name</label>
+                            <label for="lname" class="caption required">Last Name</label>
                        </div>
                     </div>
                 </div>
 
                 <div class="email-field">
-                    <legend class="title">EMAIL *</legend>
-                    <legend class="describe">We will contact you here when your mock up is ready.</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;EMAIL is required.</p>
+                    </div>
+                    <legend class="title required">EMAIL *</legend>
+                    <legend class="describe required">We will contact you here when your mock up is ready.</legend>
                     <input type="email" name="email" id="email" class="email">
                 </div>
 
                 <div class="phone-field">
-                    <legend class="title">PHONE *</legend>
-                    <legend class="describe">We may contact you via text with a link.</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;PHONE is required.</p>
+                    </div>
+                    <legend class="title required">PHONE *</legend>
+                    <legend class="describe required">We may contact you via text with a link.</legend>
                     <div class="grid-content">
                         <div class="country-part">
                             <input type="number" name="country" id="country" class="country" required>
-                            <label for="country" class="caption">Country</label>
+                            <label for="country" class="caption required">Country</label>
                         </div>
 
                         <div class="three-digit-part">
                             <input type="number" name="three-digit" id="three-digit" class="three-digit">
-                            <label for="three-digit" class="threedigit-label caption">(###)</label>
+                            <label for="three-digit" class="threedigit-label caption required">(###)</label>
                         </div>
 
                         <div class="three-digit-part">
                             <input type="number" name="three-digit" id="three-digit" class="three-digit" required>
-                            <label for="three-digit" class="threedigit-label caption">###</label>
+                            <label for="three-digit" class="threedigit-label caption required">###</label>
                         </div>
                         
                         <div class="four-digit-part">
                             <input type="number" name="four-digit" id="four-digit" class="four-digit">
-                            <label for="four-digit" class="threedigit-label caption">####</label>
+                            <label for="four-digit" class="threedigit-label caption required">####</label>
                         </div>
                     
                     </div>
@@ -225,8 +288,11 @@
                 </div>
 
                 <div class="product-type-field">
-                    <legend class="title">PRODUCT TYPE *</legend>
-                    <legend class="describe">Select the desired surface of file type.</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;PRODUCT TYPE is required.</p>
+                    </div>
+                    <legend class="title required">PRODUCT TYPE *</legend>
+                    <legend class="describe required">Select the desired surface of file type.</legend>
                     <select name="product-type" id="product-type">
                         <option value="0"></option>
                         <option value="1">Stand Up Pouch Bag</option>
@@ -237,19 +303,25 @@
                 </div>
 
                 <div class="bg-color-field">
-                    <legend class="title">BAG BACKGROUND COLOR *</legend>
-                    <legend class="describe">Use color code to be specific.  (If you don't know your color code, you can use google to find it.)</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;BAG BACKGROUND COLOR is required.</p>
+                    </div>
+                    <legend class="title required">BAG BACKGROUND COLOR *</legend>
+                    <legend class="describe required">Use color code to be specific.  (If you don't know your color code, you can use google to find it.)</legend>
                     <input type="text" name="bg-color" id="bg-color" class="" placeholder="#ffffff or White" required>
                 </div>
 
                 <div class="txt-color-field">
-                    <legend class="title">LOGO TEXT COLOR *</legend>
-                    <legend class="describe">Use color code to be specific.  (If you don't know your color code, you can use google to find it.)</legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;LOGO TEXT COLOR is required.</p>
+                    </div>
+                    <legend class="title required">LOGO TEXT COLOR *</legend>
+                    <legend class="describe required">Use color code to be specific.  (If you don't know your color code, you can use google to find it.)</legend>
                     <input type="text" name="txt-color" id="txt-color" class="" placeholder="#000000 or Black" required>
                 </div>
 
                 <div class="atr-one-field">
-                    <legend class="title">ATTRIBUTE ONE(OPTIONAL)</legend>
+                    <legend class="title ">ATTRIBUTE ONE(OPTIONAL)</legend>
                     <legend class="describe">Use this input to request additional design input. </legend>
                     <input type="text" name="atr-one" id="atr-one" class="" placeholder="Background setting image; Planet Mars">
                 </div>
@@ -261,13 +333,16 @@
                 </div>
 
                 <div class="labels-field">
-                    <legend class="title">LABELS *</legend>
-                    <legend class="describe">Use this input to request additional design input. </legend>
+                    <div class="err-msg">
+                        <p><span class="cross-mark">×</span>&nbsp; &nbsp;LABELS is required.</p>
+                    </div>
+                    <legend class="title required">LABELS *</legend>
+                    <legend class="describe required">Use this input to request additional design input. </legend>
                     <textarea rows="3" cols="50" name="advise" class="advise" placeholder="Example: 1.Logo on the front and the back. 2. Blend Bag-N-Brand logo with brand logo"></textarea>
                 </div>
                 
                 <div class="submit-btn">
-                    <button type="submit" class="btn">Send</button>
+                    <button type="submit" class="btn" ><span class="send">Send</span><span class="submitting" style="display: none;">Submitting...</span></button>
                 </div>
             </form>
             
@@ -308,5 +383,43 @@
         </footer>
     </div>
 </body>
-<script src="../../app/header-footer.js"></script>
+<!-- <script src="../../app/header-footer.js"></script> -->
+<script>
+    var i, j, k, l;
+    var errMsg = document.querySelectorAll(".err-msg");
+    var errBtn = document.querySelector(".submit-btn button");
+    var errTitleStyle =document.querySelectorAll("legend.title.required");
+    var errDescribeStyle =document.querySelectorAll("legend.describe.required");
+    var errCaptionStyle =document.querySelectorAll("label.caption.required");
+
+    errBtn.addEventListener("click", function(){
+        for (i=0; i<errMsg.length; i++){
+            errMsg[i].style.display = "block";
+        }
+
+        for (j=0; j<errTitleStyle.length; j++){
+            errTitleStyle[j].classList.add("err");
+        }
+
+        for (k=0; k<errDescribeStyle.length; k++){
+            errDescribeStyle[k].classList.add("err");
+        }
+
+        for (l=0; l<errCaptionStyle.length; l++){
+            errCaptionStyle[l].classList.add("err");
+        }
+        
+        // errTitleStyle.classList.add("err");
+        // errDescribeStyle.classList.add("err");
+        // errCaptionStyle.classList.add("err");
+    })
+
+    // function errFunction(){
+    //     var i;
+    //     var errMsg = document.querySelectorAll(".err-msg");
+    //     for (i=0; i<errMsg.length; i++){
+    //         errMsg[i].style.display = "block";
+    //     }
+    // }
+</script>
 </html>
