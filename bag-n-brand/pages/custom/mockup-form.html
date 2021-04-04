@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mock-up form</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style/header-footer.css">
+</head>
+<style>
+
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    .head-text h1
+    {
+        font-family: "archivo black", sans-serif;
+        font-size: 34px;
+        letter-spacing: -0.09em;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    .mid-text h3
+    {
+        font-family: nova;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    section.one
+    {
+        margin-top: 5em;
+        padding: 50px 120px;
+    }
+
+    section.two
+    {
+        background-color: rgba(203, 30, 11, 1);
+        padding: 50px 120px;
+        
+    }
+    .two .form
+    {
+        width: 50%;
+        margin: auto;
+        padding: 18px;
+    }
+    .two .form> div
+    {
+        margin-bottom: 25px;
+    }
+    .two legend.title
+    {
+        font-family: nova;
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 10px;
+    }
+    .two legend.describe
+    {
+        font-family: nova;
+        font-size: 12px;
+        color: black;
+        margin: 10px 0;
+    }
+    .two label.caption
+    {
+        font-family: nova;
+        font-size: 12px;
+        color: black;
+    }
+    .two .form input,
+    /* .two .form select, */
+    .two .form textarea
+    {
+        width: 100%;
+        margin: 4px 0;
+        padding: 12px;
+        font-size: 12px;
+        border: none;
+        border-radius: 2px;
+    }
+    .two .form input:focus,
+    /* .two .form select, */
+    .two .form textarea:focus
+    {
+        outline-color: white;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-offset: 4px;
+
+    }
+    .form .submit-btn
+    {
+        text-align: center;
+    }
+    .form .submit-btn button
+    {
+        
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+        padding: 20px 32px !important;
+        font-size: 15px;
+        font-weight: 500;
+
+    }
+    .name-field .grid-content
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .phone-field input
+    {
+        font-size: 14px;
+    }
+    .phone-field .grid-content
+    {
+        display: grid;
+        grid-template-columns: 8% 10% 10% 12%;
+        grid-gap: 1em;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+
+        <section class="one">
+            <div class="head-text">
+                <h1>Step 1:</h1>
+            </div>
+            <div class="head-text">
+                <h1>Fill out form</h1>
+            </div>
+        </section>
+        <section class="two">
+            <div class="head-text">
+                <h1 style="text-transform: none;">Tell us what you need.</h1>
+            </div>
+            <div class="mid-text">
+                <h3>FILL OUT THE FORM & UPLOAD YOUR IMAGES</h3>
+            </div>
+            <form class="form">
+                <div class="brand-field">
+                    <legend class="title">BRAND NAME *</legend>
+                    <legend class="describe">What is the brand name of the product?</legend>
+                    <input type="text" name="brand-name" id="brand-name" class="brand" placeholder="Releaf" required>
+                </div>
+
+                <div class="name-field">
+                    <legend class="title">NAME *</legend>
+                    <div class="grid-content">
+                       <div class="fname-field">
+                            <input type="text" name="fname" id="fname" class="fname" required>
+                            <label for="fname" class="caption">First Name</label>
+                       </div>
+                       <div class="lname-field">
+                            <input type="text" name="lname" id="lname" class="lname" required>
+                            <label for="lname" class="caption">Last Name</label>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="email-field">
+                    <legend class="title">EMAIL *</legend>
+                    <legend class="describe">We will contact you here when your mock up is ready.</legend>
+                    <input type="email" name="email" id="email" class="email">
+                </div>
+
+                <div class="phone-field">
+                    <legend class="title">PHONE *</legend>
+                    <legend class="describe">We may contact you via text with a link.</legend>
+                    <div class="grid-content">
+                        <div class="country-part">
+                            <input type="number" name="country" id="country" class="country" required>
+                            <label for="country" class="caption">Country</label>
+                        </div>
+
+                        <div class="three-digit-part">
+                            <input type="number" name="three-digit" id="three-digit" class="three-digit">
+                            <label for="three-digit" class="threedigit-label caption">(###)</label>
+                        </div>
+
+                        <div class="three-digit-part">
+                            <input type="number" name="three-digit" id="three-digit" class="three-digit" required>
+                            <label for="three-digit" class="threedigit-label caption">###</label>
+                        </div>
+                        
+                        <div class="four-digit-part">
+                            <input type="number" name="four-digit" id="four-digit" class="four-digit">
+                            <label for="four-digit" class="threedigit-label caption">####</label>
+                        </div>
+                    
+                    </div>
+
+
+                </div>
+
+                <div class="product-type-field">
+                    <legend class="title">PRODUCT TYPE *</legend>
+                    <legend class="describe">Select the desired surface of file type.</legend>
+                    <select name="product-type" id="product-type">
+                        <option value="0"></option>
+                        <option value="1">Stand Up Pouch Bag</option>
+                        <option value="2">Box</option>
+                        <option value="3">T-Shirts/Clothing Merch</option>
+                        <option value="4">Logo Design/ Graphic Creation .psd/.png</option>
+                    </select>
+                </div>
+
+                <div class="bg-color-field">
+                    <legend class="title">BAG BACKGROUND COLOR *</legend>
+                    <legend class="describe">Use color code to be specific.  (If you don't know your color code, you can use google to find it.)</legend>
+                    <input type="text" name="bg-color" id="bg-color" class="" placeholder="#ffffff or White" required>
+                </div>
+
+                <div class="txt-color-field">
+                    <legend class="title">LOGO TEXT COLOR *</legend>
+                    <legend class="describe">Use color code to be specific.  (If you don't know your color code, you can use google to find it.)</legend>
+                    <input type="text" name="txt-color" id="txt-color" class="" placeholder="#000000 or Black" required>
+                </div>
+
+                <div class="atr-one-field">
+                    <legend class="title">ATTRIBUTE ONE(OPTIONAL)</legend>
+                    <legend class="describe">Use this input to request additional design input. </legend>
+                    <input type="text" name="atr-one" id="atr-one" class="" placeholder="Background setting image; Planet Mars">
+                </div>
+
+                <div class="atr-two-field">
+                    <legend class="title">ATTRIBUTE TWO(OPTIONAL)</legend>
+                    <legend class="describe">Use this input to request additional design input. </legend>
+                    <input type="text" name="atr-two" id="atr-two" class="" placeholder="Back of Bag: Add Ingredients">
+                </div>
+
+                <div class="labels-field">
+                    <legend class="title">LABELS *</legend>
+                    <legend class="describe">Use this input to request additional design input. </legend>
+                    <textarea rows="3" cols="50" name="advise" class="advise" placeholder="Example: 1.Logo on the front and the back. 2. Blend Bag-N-Brand logo with brand logo"></textarea>
+                </div>
+                
+                <div class="submit-btn">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+            </form>
+            
+        </section>
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+</body>
+<script src="../../app/header-footer.js"></script>
+</html>
