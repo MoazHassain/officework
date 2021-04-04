@@ -129,7 +129,7 @@
     .phone-field .grid-content
     {
         display: grid;
-        grid-template-columns: 8% 10% 10% 12%;
+        grid-template-columns: 60px 65px 65px 70px;
         grid-gap: 1em;
     }
     .err-msg
@@ -175,6 +175,65 @@
         -webkit-box-shadow:0 0 0 50px #fff inset;
         -webkit-text-fill-color: #000;
         border-color: rgba(255, 255, 255, 1);
+    }
+</style>
+<!-- responsive -->
+<style>
+    /* tab */
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        .head-text h1
+        {
+            font-size: clamp(26px, 3.5vw, 32px);
+        }
+        .two .form
+        {
+            width: 60%;
+        }
+    }
+    @media only screen and (max-width: 770px) and (min-width: 760px)
+    {
+        .two .form
+        {
+            width: 70%;
+        }
+    }
+    @media only screen and (max-width: 750px)
+    {
+        .head-text h1
+        {
+            font-size: 22px;
+        }
+        .mid-text h3
+        {
+            font-size: 13px;
+        }
+        section.one,
+        section.two
+        {
+            padding: clamp(15px, 6.5vw, 23px) clamp(15px, 6vw, 32px);
+        }
+        .two .form
+        {
+            width: 100%;
+            padding: 0;
+        }
+        .two .form select
+        {
+            width: 100%;
+        }
+        .two legend.title
+        {
+            font-size: 13px;
+        }
+        
+    }
+    @media only screen and (max-width: 750px)
+    {
+        .phone-field .grid-content
+        {
+            grid-template-columns: auto auto auto auto;
+        }
     }
 </style>
 <body>
@@ -383,7 +442,7 @@
         </footer>
     </div>
 </body>
-<!-- <script src="../../app/header-footer.js"></script> -->
+<script src="../../app/header-footer.js"></script>
 <script>
     var i, j, k, l;
     var errMsg = document.querySelectorAll(".err-msg");
