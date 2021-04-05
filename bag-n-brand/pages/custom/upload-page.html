@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
+    <link rel="stylesheet" href="./custom-style.css">
 </head>
 <style>
     @font-face
@@ -19,7 +20,7 @@
     }
     section
     {
-        height: 40em;
+        height: 90vh;
         margin-top: 5em;
         padding: 50px 120px;
         display: grid;
@@ -29,18 +30,42 @@
         color: black;
         
     }
+    section .content
+    {
+        width: 50%;
+        margin: 0 auto;
+    }
     .head-text h1
     {
         font-family: "archivo black", sans-serif;
         font-size: 86px;
         margin-bottom: 25px;
         letter-spacing: -0.09em;
+        line-height: 1em;
     }
     .text p
     {
         font-family: nova;
         font-size: 17px;
         margin-bottom: 25px;
+    }
+</style>
+<style>
+    @media only screen and (max-width: 750px) 
+    {
+        section
+        {
+            padding: clamp(15px, 6.5vw, 35px) clamp(15px, 6vw, 32px);
+        }
+        section .content
+        {
+            width: 100% ;
+        }
+        .head-text h1
+        {
+            font-size: clamp(42px, 10vw, 46px);
+        }
+
     }
 </style>
 <body>
@@ -73,7 +98,7 @@
         </div>
 
         <section>
-            <div class="content" style="width: 50%; margin: 0 auto;">
+            <div class="content" >
                 <div class="head-text">
                     <h1>Quick Upload</h1>
                 </div>

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="../../style/header-footer.css">
+    <link rel="stylesheet" href="./custom-style.css">
 </head>
 <style>
     @font-face
@@ -19,7 +20,7 @@
     }
     section
     {
-        height: 30em;
+        height: 70vh;
         margin-top: 5em;
         padding: 50px 120px;
         display: grid;
@@ -43,6 +44,20 @@
     section .btn:hover
     {
         opacity: 0.8;
+    }
+</style>
+<style>
+    @media only screen and (max-width: 750px)
+    {
+        section 
+        {
+            padding: clamp(15px, 6.5vw, 35px) clamp(15px, 6vw, 32px);
+        }
+        section .btn
+        {
+            font-size: clamp(16px, 5.5vw, 18px);
+        }
+        
     }
 </style>
 <body>
@@ -80,7 +95,7 @@
                     <p>Click the Launch button below...</p>
                 </div>
                 <div class="launch-btn">
-                    <button class="btn">
+                    <button class="custom-btn ">
                         LAUNCH DDM1000
                     </button>
                 </div>
