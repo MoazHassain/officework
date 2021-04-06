@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Credit</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style/header-footer.css">
+    <link rel="stylesheet" href="../custom/custom-style.css">
+</head>
+<style>
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    section.one
+    {
+        height: 100vh;
+        background-image: url(../../img/custom/howard-bouchevereau-MU3SIgq5Gpw-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    section.one .overlay
+    {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.75);
+        display:grid;
+        text-align: center;
+        align-items: center;
+    }
+    .one .content
+    {
+        padding-top: 5em;
+
+    }
+    .head-text h1
+    {
+        font-size: 85px;
+    }
+    .text p
+    {
+        font-family: nova;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+</style>
+<!-- reponsive -->
+<style>
+    @media only screen and (max-width: 750px)
+    {
+        .head-text h1
+        {
+            font-size: clamp(42px, 10vw, 46px);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+    
+        <div id="my-nav" class="my-nav" >
+            <a href="javascript:void(0)" class="btn btn-login" >
+                <p>Log In </p>
+            </a>
+        </div>
+
+        <section class="one">
+            <div class="overlay">
+                <div class="content">
+                    <div class="head-text">
+                        <h1>EDIT</h1>
+                    </div>
+                    <div class="text">
+                        <p>Get the design you want.</p>
+                    </div>
+                    <div class="upload-btn">
+                        <a href="./puchase-credit.html">
+                            <button class="custom-btn">UPLOAD EDITS</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+</body>
+<script src="../../app/header-footer.js"></script>
+</html>
