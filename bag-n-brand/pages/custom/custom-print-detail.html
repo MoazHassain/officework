@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style/header-footer.css">
+    <link rel="stylesheet" href="../custom/custom-style.css">
+</head>
+<style>
+    @font-face
+    {
+        src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
+        font-family: nova;
+    }
+    section.one
+    {
+        margin-top: 5em;
+        padding: 120px;
+        background-color: white;
+        color: black;
+    }
+    a
+    {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    .page-travel p
+    {
+        font-family: nova;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+    .page-travel i
+    {
+        font-size: 9px;
+        font-weight: 600;
+    }
+    .one .grid-content
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 80px;
+    }
+    .grid-content .field-content
+    {
+        padding-right: 70px;
+        text-align: center;
+    }
+    .head-text h1
+    {
+        font-size: 85px;
+        letter-spacing: -0.1em;
+        line-height: 0.8em;
+    }
+    .sub-text h1
+    {
+        font-family: "archivo black", sans-serif;
+        letter-spacing: -0.1em;
+        margin-bottom: 25px;
+    }
+    .form > div
+    {
+        margin: 25px 0;
+    }
+    .form label
+    {
+        font-family: nova;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    .form select
+    {
+        outline: none;
+        width: 100%;
+        font-family: nova;
+        font-size: 13px;
+        padding: 18px;
+        -webkit-appearance: none;
+    }
+    .selectable-img img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div class="part-one">
+                <div class="header-title-logo">
+                    <a href="./landing-page.html">
+                        <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand logo" >
+                    </a>
+                </div>
+            </div>
+            <div class="part-two">
+                <div >
+                    <a href="javascript:void(0)" class="btn btn-login">
+                        Log In 
+                    </a>
+                    <a href="javascript:void(0)" class="btn-container " onclick="openNav()"> 
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+    
+        <div id="my-nav" class="my-nav" >
+            <a href="javascript:void(0)" class="btn btn-login" >
+                <p>Log In </p>
+            </a>
+        </div>
+
+        <section class="one">
+            <div class="page-travel">
+                <p>
+                    <a href="./custom-print.html">Classic Stand Up Pouch</a>&nbsp;
+                    <i class="fas fa-chevron-right"></i>&nbsp;
+                    <a href="./custom-print-detail.html">Classic Stand Up Pouch</a>
+                </p>
+            </div>
+            <div class="grid-content">
+                <div class="field-content">
+                    <div class="head-text">
+                        <h1>Classic Stand Up Pouch</h1>
+                    </div>
+                    <div class="sub-text">
+                        <h1>from $165.00</h1>
+                    </div>
+                    <form action="" class="form">
+                        <div class="select-unit-field">
+                            <label for="unit">Units Per Order:</label>
+                            <div class="select-container">
+                                <i class="fas fa-chevron-down"></i>
+                                <select name="unit" id="unit" class="unit" aria-label="Select Units Per Order">
+                                    <option value="0">Select Units Per Order</option>
+                                    <option value="1">100</option>
+                                    <option value="2">500</option>
+                                    <option value="3">1K</option>
+                                    <option value="4">2K</option>
+                                    <option value="5">5K</option>
+                                    <option value="6">10K</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-size-field">
+                            <label for="size">Size:</label>
+                            <div class="select-container">
+                                <i class="fas fa-chevron-down"></i>
+                                <select name="size" id="size" class="size">
+                                    <option value="0">Select Size</option>
+                                    <option value="1">9x15</option>
+                                    <option value="2">13x21</option>
+                                    <option value="3">14x23</option>
+                                    <option value="4">18x28</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="quantity-field">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" name="quantity" id="quantity" class="quantity" value="1" min="1">
+                        </div>
+
+                        <div class="purchase-btn">
+                            <button type="submit" class="btn">PURCHASE</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="img-content">
+                    <div class="img-container">
+                        <img id="expand-img">
+                    </div>
+                    <div class="selectable-img">
+                        <div class="img-one">
+                            <img src="../../img/custom/9x15.png" alt="">
+                        </div>
+                        <div class="img-two">
+                            <img src="../../img/custom/13x21.png" alt="">
+                        </div>
+                        <div class="img-three">
+                            <img src="../../img/custom/14x23.png" alt="">
+                        </div>
+                        <div class="img-four">
+                            <img src="../../img/custom/18x28.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footer-title-logo">
+                <Center>
+                    <img src="../../img/bag-n-brand5.png" alt="Bag-N-Brand Logo" >
+                </Center>
+            </div>
+            
+            
+            <center>
+                <div class="contact">
+                    <p>
+                        
+                        Contact Us: <span>&nbsp;</span>
+                        <Span>
+                            <a href="./location.html" class="location">
+                                Location
+                            </a><span>&nbsp;</span>
+                            <a href="./partner.html" class="partner">
+                                Partnerships
+                            </a><span>&nbsp;</span>
+                            <a href="./terms.html" class="terms">
+                                Terms of Service
+                            </a><span>&nbsp;</span>
+                            <a href="./return-refund.html" class="refund">
+                                Return/Refund Policy
+                            </a>
+                        </Span>
+                    </p>
+                    <p>BAG-N-BRAND.COM, A COWA ENTERTAINMENT LLC COMPANY</p>
+                </div>      
+            </center>
+            
+        </footer>
+    </div>
+</body>
+<script src="../../app/header-footer.js"></script>
+</html>
