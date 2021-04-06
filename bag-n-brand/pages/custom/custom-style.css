@@ -9,6 +9,10 @@
     src: url(../../font/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf);
     font-family: nova;
 }
+a
+{
+    text-decoration: none;
+}
 .custom-btn
 {
     padding: 20px 32px !important;
