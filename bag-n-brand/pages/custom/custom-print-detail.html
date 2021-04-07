@@ -111,18 +111,18 @@
     {
         outline-offset: 6px;
     }
-    .form .purchase-btn button
+    .form .purchase-btn input[type="submit"]
     {
         background-color: black;
         color: white;
         font-family: "archivo", sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         padding: 20px !important;
         font-weight: 600;
         width: 100%;
 
     }
-    .form .purchase-btn button:hover
+    .form .purchase-btn input[type="submit"]:hover
     {
         opacity: 0.8;
     }
@@ -151,6 +151,8 @@
         opacity: 0;
         pointer-events: none;
         background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: 100%; */
     }
     .img-container:hover .img-zoom-result
     {
@@ -172,11 +174,116 @@
         margin: 10px 0;
     }
 </style>
-<script>
-    function imgGallery(imgs) {
-        var expandImg = document.querySelector("#expand-img");
-        expandImg.src = imgs.src
+<!-- modal -->
+<style>
+    .unable-purchase-modalbg
+    {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
     }
+    .unable-purchase-modal
+    {
+        background-color: #f6f6f6;
+        width: fit-content;
+        color: rgba(0, 0, 0, 0.9);
+        border-radius: 6px;
+        box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 2.5em;
+        left: 2em;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    .unable-purchase-modal .text
+    {
+        padding: 25px 40px;
+    }
+    .unable-purchase-modal .title
+    {
+        margin-bottom: 15px;
+    }
+    .unable-purchase-modal .text p
+    {
+        font-size: 15px;
+    }
+    .modal-btn
+    {
+        width: 100%;
+        background-color: #f6f6f6;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        border-radius: 0 0 6px 6px !important;
+    }
+    .modal-btn:hover
+    {
+        background-color: white;
+    }
+</style>
+<!-- responsive -->
+<style>
+    @media only screen and (max-width: 1025px) and (min-width: 760px)
+    {
+        section.one
+        {
+            padding: clamp(60px, 8vw, 80px);
+        }
+        .head-text h1
+        {
+            font-size: clamp(40px, 5vw, 50px);
+        }
+        .form > div
+        {
+            padding: clamp(10px, 1.8vw, 20px) 0px;
+        }
+    }
+    @media only screen and (max-width: 750px)
+    {
+        section.one
+        {
+            padding: clamp(18px, 7vw, 38px);
+        }
+        .head-text h1
+        {
+            font-size: clamp(30px, 7vw, 38px);
+        }
+        .grid-content .field-content
+        {
+            padding-right: 0;
+        }
+        .one .page-travel
+        {
+            display: none;
+        }
+        .one .grid-content
+        {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "img"
+            "form";
+        }
+        .grid-content .img-content
+        {
+            grid-area: img;
+        }
+    }
+    @media only screen and (max-width: 500px)
+    {
+        .unable-purchase-modal
+        {
+            left: 0;
+        }
+        .unable-purchase-modal .text
+        {
+            padding: 25px clamp(25px, 10vw, 40px);
+        }
+    }
+</style>
+<script>
+    
     function imageZoom(imgID, resultID) {
     var img, lens, result, cx, cy;
     
@@ -188,8 +295,8 @@
     /*insert lens:*/
     img.parentElement.insertBefore(lens, img);
     /*calculate the ratio between result DIV and lens:*/
-    cx = result.offsetWidth / lens.offsetWidth / 7;
-    cy = result.offsetHeight / lens.offsetHeight / 7;
+    cx = result.offsetWidth / lens.offsetWidth / 6;
+    cy = result.offsetHeight / lens.offsetHeight / 6;
     /*set background properties for the result DIV:*/
     var expandImg = document.querySelector("#expand-img");
     result.style.backgroundImage = "url('" + expandImg.src + "')";
@@ -282,7 +389,7 @@
                     <div class="sub-text">
                         <h1>from $165.00</h1>
                     </div>
-                    <form action="" class="form">
+                    <form action="javascript:void(0)" class="form">
                         <div class="select-unit-field">
                             <label for="unit">Units Per Order:</label>
                             <div class="select-container">
@@ -320,9 +427,11 @@
                         </div>
 
                         <div class="purchase-btn">
-                            <button type="submit" class="btn">PURCHASE</button>
+                            <a href="javascript:void(0)"><input type="submit" href="javascript:void(0)" value="PURCHASE"></a>
                         </div>
+                        
                     </form>
+                    
                 </div>
                 <div class="img-content">
                     <div class="img-container">
@@ -384,15 +493,47 @@
             
         </footer>
     </div>
+
+    <div class="unable-purchase-modalbg">
+        <div class="unable-purchase-modal">
+            <div class="text">
+                <div class="title">
+                    <p>UNABLE TO PURCHASE ITEM</p>
+                </div>
+                <div class="messege">
+                    <p>Please select the Units Per Order and Size options.</p>
+                </div>
+            </div>
+            <div>
+                <button class="modal-btn">OKAY</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="../../app/header-footer.js"></script>
 <script>
-    // function imgGallery(imgs) {
-    //     var expandImg = document.querySelector("#expand-img");
-    //     expandImg.src = imgs.src
-    // }
+    function imgGallery(imgs) {
+        var expandImg = document.querySelector("#expand-img");
+        expandImg.src = imgs.src
+    }
     
     imageZoom("expand-img","zoom-view");
     
+
+    var purchaseModalOpen = document.querySelector(".purchase-btn input");
+    var purchaseModal = document.querySelector(".unable-purchase-modalbg");
+    var purchaseModalCls = document.querySelector(".modal-btn");
+
+    purchaseModalOpen.addEventListener("click", function(){
+        purchaseModal.style.display = "block";
+    })
+    purchaseModalCls.addEventListener("click", function(){
+        purchaseModal.style.display = "none";
+    })
+    window.addEventListener("click", function(e){
+    if(e.target == purchaseModal){
+        purchaseModal.style.display = "none";
+    }
+})
 </script>
 </html>
