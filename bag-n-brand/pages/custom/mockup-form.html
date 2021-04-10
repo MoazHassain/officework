@@ -78,7 +78,7 @@
         color: black;
     }
     .two .form input,
-    /* .two .form select, */
+    .two .form select,
     .two .form textarea
     {
         width: 100%;
@@ -88,8 +88,13 @@
         border: none;
         border-radius: 2px;
     }
+    .two .form select
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
     .two .form input:focus,
-    /* .two .form select, */
+    .two .form select:focus,
     .two .form textarea:focus
     {
         outline-color: white;
@@ -98,6 +103,25 @@
         outline-offset: 4px;
 
     }
+    .two .form select
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    .two .form .select-field
+    {
+        position: relative;
+    }
+    .two .form .select-field i
+    {
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-40%);
+    } 
     .form .submit-btn
     {
         text-align: center;
@@ -352,13 +376,16 @@
                     </div>
                     <legend class="title required">PRODUCT TYPE *</legend>
                     <legend class="describe required">Select the desired surface of file type.</legend>
-                    <select name="product-type" id="product-type">
-                        <option value="0"></option>
-                        <option value="1">Stand Up Pouch Bag</option>
-                        <option value="2">Box</option>
-                        <option value="3">T-Shirts/Clothing Merch</option>
-                        <option value="4">Logo Design/ Graphic Creation .psd/.png</option>
-                    </select>
+                    <div class="select-field">
+                        <i class="fas fa-chevron-down"></i>
+                        <select name="product-type" id="product-type">
+                            <option value="0"></option>
+                            <option value="1">Stand Up Pouch Bag</option>
+                            <option value="2">Box</option>
+                            <option value="3">T-Shirts/Clothing Merch</option>
+                            <option value="4">Logo Design/ Graphic Creation .psd/.png</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="bg-color-field">
