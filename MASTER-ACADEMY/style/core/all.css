@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: gothamBold;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: gothamBold;
+  font-size: 26px;
+}
+
+h3 {
+  font-family: gothamMedium;
+  font-size: 22px;
+}
+
+h4 {
+  font-family: gothamMedium;
+  font-size: 20px;
+}
+
+p {
+  font-family: gothamRegular;
+  font-size: 20px;
+}
+
+a {
+  font-family: gothamRegular;
+  font-size: 20px;
+}
+
+small {
+  font-family: gothamRegular;
+  font-size: 18px;
+}
+/*# sourceMappingURL=all.css.map */
