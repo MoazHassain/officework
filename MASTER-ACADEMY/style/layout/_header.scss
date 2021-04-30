@@ -1,11 +1,14 @@
 header
 {
-    background: $primaryBlackClr;
+    position: sticky;
+    top: 0;
+    background: $secondaryBlackclr;
     color: $primaryWhiteClr;
     padding: 5px 50px;
     display: grid;
     grid-template-columns: auto 30% auto;
     grid-gap: 10px;
+    z-index: 999;
 
     a
     {
@@ -64,6 +67,10 @@ header
         {
             margin: 0 10px;
             
+        }
+        button
+        {
+            @include gradBorderBtn(#fff, 2px 1000px 1px $secondaryBlackclr inset)
         }  
     }
 }

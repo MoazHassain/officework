@@ -28,15 +28,15 @@ button.grad-bg-btn
     }
 }
 
-button.grad-border-btn
-{
-    color: $primaryWhiteClr;
+@mixin gradBorderBtn($color, $box-shadow) {
+    color: $color;
     border: 3px solid transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $hoverGradClr;
     background-size: 200% auto;
     background-origin: border-box;
     background-clip: content-box, border-box;
-    box-shadow: 2px 1000px 1px $secondaryBlackclr inset;
+    // box-shadow: 2px 1000px 1px $secondaryBlackclr inset;
+    box-shadow: $box-shadow;
 
     &:hover
     {
@@ -64,12 +64,3 @@ button.solid-bg-btn
     }
 }
 
-input
-{
-    font-family: gothamRegular;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    border-radius: 6px;
-    padding: 10px 15px;
-}

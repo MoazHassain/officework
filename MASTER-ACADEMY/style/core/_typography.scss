@@ -2,6 +2,7 @@ h1
 {
     font-family: gothamBold;
     font-size: 36px;
+    letter-spacing: -0.04em;
 }
 h2
 {
@@ -33,4 +34,12 @@ small
 {
     font-family: gothamRegular;
     font-size: 18px;
+}
+
+hr.black-hr
+{
+    height: 0.3px;
+    background: rgba($color: #707070, $alpha: 0.5);
+    border: none;
+    margin: 20px 0;
 }

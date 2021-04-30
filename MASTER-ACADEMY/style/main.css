@@ -13,6 +13,7 @@ a {
 h1 {
   font-family: gothamBold;
   font-size: 36px;
+  letter-spacing: -0.04em;
 }
 
 h2 {
@@ -45,6 +46,13 @@ small {
   font-size: 18px;
 }
 
+hr.black-hr {
+  height: 0.3px;
+  background: rgba(112, 112, 112, 0.5);
+  border: none;
+  margin: 20px 0;
+}
+
 button {
   font-family: gothamMedium;
   font-size: 20px;
@@ -58,7 +66,7 @@ button {
 }
 
 button.grad-bg-btn {
-  color: white;
+  color: #fff;
   border: 3px solid transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
@@ -70,33 +78,14 @@ button.grad-bg-btn {
 }
 
 button.grad-bg-btn:hover {
-  color: white;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-position: right center;
-}
-
-button.grad-border-btn {
-  color: white;
-  border: 3px solid transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
-  background-size: 200% auto;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: 2px 1000px 1px #262626 inset;
-          box-shadow: 2px 1000px 1px #262626 inset;
-}
-
-button.grad-border-btn:hover {
-  color: white;
+  color: #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-position: right center;
 }
 
 button.solid-bg-btn {
-  color: white;
+  color: #fff;
   border: 3px solid transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#1BB899), color-stop(15%, #1BB899), to(#1B9CB8));
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
@@ -108,13 +97,13 @@ button.solid-bg-btn {
 }
 
 button.solid-bg-btn:hover {
-  color: white;
+  color: #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-position: right center;
 }
 
-input {
+.input-style-one {
   font-family: gothamRegular;
   font-size: 20px;
   outline: none;
@@ -123,19 +112,103 @@ input {
   padding: 10px 15px;
 }
 
+.input-style-two {
+  font-family: gothamRegular;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.4) inset;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+label {
+  font-family: gothamRegular;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+section.offer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#CC2B5E), to(#F48400));
+  background: linear-gradient(to right, #CC2B5E 0%, #F48400 100%);
+  padding: 5px 80px;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+section.offer .title {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+section.offer .countdown {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+section.offer .countdown span {
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: rgba(43, 43, 43, 0.25);
+}
+
+section.offer .btn {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+section.offer .cls-btn {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+section.offer .cls-btn button {
+  border-radius: 50%;
+  padding: 6px;
+  border: none;
+  background: rgba(43, 43, 43, 0.25);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+section.offer small {
+  font-family: gothamMedium;
+}
+
 header {
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #262626;
+  color: #fff;
   padding: 5px 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 30% auto;
       grid-template-columns: auto 30% auto;
   grid-gap: 10px;
+  z-index: 999;
 }
 
 header a {
-  color: white;
+  color: #fff;
 }
 
 header > * {
@@ -196,5 +269,134 @@ header .nav-menu {
 
 header .nav-menu > * {
   margin: 0 10px;
+}
+
+header .nav-menu button {
+  color: #fff;
+  border: 3px solid transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
+  background-size: 200% auto;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  -webkit-box-shadow: 2px 1000px 1px #262626 inset;
+          box-shadow: 2px 1000px 1px #262626 inset;
+}
+
+header .nav-menu button:hover {
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-position: right center;
+}
+
+footer .upper-part {
+  background: #262626;
+  color: #fff;
+  padding: 40px 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+footer .upper-part .join-part {
+  text-align: center;
+}
+
+footer .upper-part .join-part > * {
+  margin: 15px 0;
+}
+
+footer .upper-part .join-part .logo img {
+  width: 65px;
+  height: 65px;
+}
+
+footer .upper-part .join-part .logo .logo-text h2 {
+  font-family: gothamBlack;
+}
+
+footer .upper-part .join-part h3 {
+  font-family: gothamRegular;
+}
+
+footer .upper-part .join-part .signup-field label {
+  margin-bottom: 10px;
+}
+
+footer .upper-part .join-part .signup-field .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  margin: 5px 30px;
+}
+
+footer .upper-part .join-part .signup-field .wrapper input {
+  border-radius: 4px 0 0 4px;
+}
+
+footer .upper-part .join-part .signup-field .wrapper button {
+  border-radius: 0 4px 4px 0;
+}
+
+footer .upper-part .pages-part {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+  justify-items: center;
+}
+
+footer .upper-part .pages-part .title {
+  margin-bottom: 15px;
+}
+
+footer .upper-part .pages-part .title p {
+  font-family: gothamBold;
+}
+
+footer .upper-part .pages-part .pages {
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .upper-part .pages-part .pages small {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+footer .lower-part {
+  background: #111111;
+  color: #fff;
+  padding: 20px 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .lower-part small {
+  font-size: 14px;
+}
+
+footer .lower-part .terms-privacy {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+footer .lower-part .logos {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+footer .lower-part .logos img {
+  margin: 0 5px;
 }
 /*# sourceMappingURL=main.css.map */

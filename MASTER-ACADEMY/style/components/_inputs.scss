@@ -1,0 +1,28 @@
+.input-style-one
+{
+    font-family: gothamRegular;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+}
+
+.input-style-two
+{
+    font-family: gothamRegular;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.40) inset;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+label
+{
+    font-family: gothamRegular;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}

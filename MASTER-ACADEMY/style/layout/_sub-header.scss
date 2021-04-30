@@ -1,0 +1,42 @@
+section.sub-header
+{
+    @include primarySectionPadding();
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    
+    box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
+
+    .nav-menu
+    {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+        a 
+        {
+            padding: 6px 18px;
+            border-radius: 100px;
+            transition: 0.3s ease-in-out;
+
+            &:hover
+            {
+                background: rgba($color: #F1F1F1, $alpha: 1.0);
+            }
+        }
+        
+    }
+
+    .hamburger-menu
+    {
+        justify-self: end;
+        button 
+        {
+            padding: 5px;
+            border-radius: 50%;
+            display: grid;
+            align-items: center;
+
+            
+        }
+    }
+}
