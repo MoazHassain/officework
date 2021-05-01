@@ -1,0 +1,75 @@
+button
+{
+    font-family: gothamMedium;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px ;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+button.grad-bg-btn
+{
+    color: $primaryWhiteClr;
+    border: 3px solid transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $hoverGradClr;
+    background-size: 200% auto;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px transparent inset;
+
+    &:hover
+    {
+        color: $primaryWhiteClr;
+        box-shadow: none;
+        background-position: right center;
+    }
+}
+
+@mixin gradBorderBtn($color, $box-shadow) {
+    color: $color;
+    border: 3px solid transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $hoverGradClr;
+    background-size: 200% auto;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    // box-shadow: 2px 1000px 1px $secondaryBlackclr inset;
+    box-shadow: $box-shadow;
+
+    &:hover
+    {
+        color: $primaryWhiteClr;
+        box-shadow: none;
+        background-position: right center;
+    }
+}
+
+button.solid-bg-btn
+{
+    color: $primaryWhiteClr;
+    border: 3px solid transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $hoverSolidClr;
+    background-size: 200% auto;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px transparent inset;
+
+    &:hover
+    {
+        color: $primaryWhiteClr;
+        box-shadow: none;
+        background-position: right center;
+    }
+}
+
+button.rounded-btn
+{
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    @include gridCenter();
+}
