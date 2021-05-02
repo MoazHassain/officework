@@ -1,0 +1,82 @@
+{{block "link-style" .}}
+<link rel="stylesheet" href="resources/style/signing.css">
+{{end}}
+{{block "offer" .}}
+<div></div>
+{{end}}
+{{block "container" .}}
+    <div class="container signup-container">
+        <div class="grid-wrapper">
+            <div class="form-part">
+                <div class="title-wrap">
+                    <div class="title">
+                        <h1>Create Your Account</h1>
+                    </div>
+                    <div class="sub-title">
+                        <h4>Build skills for today, tomorrow, and beyond.</h4>
+                        <h4>Join with us for eternal.</h4>
+                    </div>
+                </div>
+                <form action="" class="sign-up-form">
+                    <div class="username-field">
+                        <label for="name">User Name</label>
+                        <input type="text" name="name" id="name" class="input-style-two">
+                    </div>
+                    <div class="email-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="input-style-two">
+                    </div>
+                    <div class="set-pass-field">
+                        <label for="set-password">Set Password</label>
+                        <input type="password" name="set-password" id="set-password" class="input-style-two">
+                        
+                    </div>
+                    <div class="confirm-pass-field">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" name="confirm-password" id="confirm-password" class="input-style-two">
+                    </div>
+                    <div class="checkbox-field">
+                        
+                        <!-- <label for="check-term" class="checkbox-container">By Clicking here, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+                            <input type="checkbox" name="check-term" id="chec-term">
+                            <span class="checkmark"></span>
+                            
+                        </label> -->
+                        <label class="checkbox-container" for="terms">By Clicking here, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+                            <input type="checkbox" name="terms" id="terms">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">SIGN UP</button>
+                    </div>
+                </form>
+                <div class="using-social-media">
+                    <p>Or create an account using</p>
+                    <div class="social-logo">
+                        <a href="#"><img src="resources/svg/circle-linkedin.svg" alt=""></a>
+                        <a href="#"><img src="resources/svg/circle-facebook.svg" alt=""></a>
+                        <a href="#"><img src="resources/svg/circle-google.svg" alt=""></a>
+                        <a href="#"><img src="resources/svg/circle-github.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="description-part">
+                <div class="title-wrap">
+                    <div class="title">
+                        <h1>Start the journey of your life.</h1>
+                    </div>
+                    <div class="sub-title">
+                        <h4>Join with MASTER-ACADEMY for the best possible way you can upgrade yourself.</h4>
+                    </div>
+                </div>
+                <div class="goto">
+                    <p>Already have an account?</p>
+                    <div class="btn">
+                        <button>SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}

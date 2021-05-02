@@ -1,0 +1,295 @@
+header
+{
+    background: $secondaryWhiteClr;
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.40);
+
+    a
+    {
+        color: $primaryBlackClr;
+    }
+    .search-bar
+    {
+        input
+        {
+            box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.40);
+        }
+        button 
+        {
+            align-self: center;
+            height: 44.2px;
+        }
+    }
+    .nav-menu
+    {
+        button
+        {
+            @include gradBorderBtn($primaryBlackClr, 2px 1000px 1px $secondaryWhiteClr inset)
+        } 
+    }
+}
+.container
+{
+    button 
+    {
+        background-color: #fff12a;
+
+        &:hover 
+        {
+            background-color: #ffd82b;
+        }
+    }
+
+    .grid-wrapper
+    {
+        @include gridCenter();
+        grid-template-columns: 40% 60%;
+
+        .form-part
+        {
+            padding: 20px 70px;
+            box-shadow: 2px 0 4px rgba($color: #000000, $alpha: 0.30);
+
+            >*
+            {
+                padding-top: 20px;
+            }
+            .title-wrap, .using-social-media
+            {
+                text-align: center;
+                
+                h1 
+                {
+                    margin-bottom: 15px;
+                }
+                h4 
+                {
+                    margin-bottom: 10px;
+                    
+                }
+            }
+            form 
+            {
+                padding: 20px 30px 0;
+
+                input, button 
+                {
+                    width: 100%;
+                }
+                .checkbox-field
+                {
+                    display: flex;
+                    grid-gap: 10px;
+
+                    
+                    label.checkbox-container
+                    {
+                        font-size: 14px;
+                        // display: block;
+                        // position: relative;
+                        // padding-left: 25px;
+                        // /* margin-bottom: 12px; */
+                        // cursor: pointer;
+                        // /* font-size: 22px; */
+                        // -webkit-user-select: none;
+                        // -moz-user-select: none;
+                        // -ms-user-select: none;
+                        // user-select: none;
+
+                        // input 
+                        // {
+                        //     position: absolute;
+                        //     opacity: 0;
+                        //     cursor: pointer;
+                        //     height: 0;
+                        //     width: 0;
+                        // }
+                        // .checkmark 
+                        // {
+                        //     position: absolute;
+                        //     top: 0;
+                        //     left: 0;
+                        //     height: 15px;
+                        //     width: 15px;
+                        //     background-color: $secondaryWhiteClr;
+                        //     border: 1px solid $primaryBlackClr;
+                        //     border-radius: 3px;
+                        //     transition: 0.3s;
+                        // }
+                        // input:checked ~ .checkmark {
+                        //     background-color: black;
+                        // }
+                        // .checkmark:after 
+                        // {
+                        //     content: "";
+                        //     position: absolute;
+                        //     // display: none;
+                            
+                        // }
+                        // input:checked ~ .checkmark:after 
+                        // {
+                        //     display: block;
+                            
+                        // }
+                        // .checkmark:after {
+                        //     left: 4px;
+                        //     top: 0px;
+                        //     width: 4px;
+                        //     height: 8px;
+                        //     border: solid black;
+                        //     /* border-radius: 3px; */
+                        //     border-width: 0 2px 2px 0;
+                        //     -webkit-transform: rotate(45deg);
+                        //     -ms-transform: rotate(45deg);
+                        //     transform: rotate(45deg);
+                        // }
+                        
+                        a 
+                        {
+                            font-family: gothamMedium;
+                            font-size: 14px;
+
+                            &:hover
+                            {
+                                color: $thridBlackClr;
+                            }
+                        }
+
+
+                    }
+                    
+
+                }
+                > *
+                {
+                    margin-bottom: 15px;
+                }
+            }
+            .using-social-media
+            {
+                .social-logo
+                {
+                    img
+                    {
+                        padding: 15px;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover
+                        {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+        .description-part
+        {
+            align-self: flex-start;
+            text-align: center;
+            padding: 100px;
+            
+            .title-wrap
+            {
+                margin-bottom: 5em;
+
+                h1 
+                {
+                    margin-bottom: 15px;
+                }
+
+            }
+            .goto
+            {
+                p 
+                {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.signin-container
+{
+    .grid-wrapper
+    {
+        grid-template-columns: 60% 40%;
+
+        .form-part
+        {
+            box-shadow: -2px 0 4px rgba($color: #000000, $alpha: 0.30);
+
+            .forget-pass
+            {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    /* margin-bottom: 12px; */
+    cursor: pointer;
+    /* font-size: 22px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $primaryWhiteClr;
+    border: 1px solid $primaryBlackClr;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: $secondaryWhiteClr;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid $primarySolidClr;
+    /* border-radius: 3px; */
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
