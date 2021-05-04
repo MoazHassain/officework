@@ -100,13 +100,17 @@ section.sub-header
         z-index: 99;
         a 
         {
-            padding: 6px 18px;
-            border-radius: 100px;
-            transition: 0.3s ease-in-out;
-
-            &:hover
+            h4
             {
-                background: rgba($color: #F1F1F1, $alpha: 1.0);
+                width: fit-content;
+                padding: 6px 18px;
+                border-radius: 100px;
+                transition: 0.3s ease-in-out;
+
+                &:hover
+                {
+                    background: rgba($color: #F1F1F1, $alpha: 1.0);
+                }
             }
         }
         

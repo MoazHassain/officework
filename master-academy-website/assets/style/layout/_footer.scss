@@ -23,14 +23,7 @@ footer
                     width: 65px;
                     height: 65px;
                 }
-                .logo-text 
-                {
-                    h2 
-                    {
-                        font-family: gothamBlack;
-
-                    }
-                }
+                
             }
             h3
             {
@@ -79,8 +72,9 @@ footer
             {
                 display: grid;
 
-                small
+                p 
                 {
+                    
                     margin-bottom: 5px;
                     cursor: pointer;
                 }
@@ -96,7 +90,7 @@ footer
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
 
-        small
+        p
         {
             font-size: 14px;
         }

@@ -5,9 +5,9 @@ section.hero
     {
         @include secondarySectionPadding();
         @include bgImg();
-        height: 62em;
+        height: 63.5em;
         background-image: url(/resources/img/hero-bgImg2.png);
-        background-position: left;
+        background-position: center;
         
 
         .grid-wrapper
@@ -158,7 +158,7 @@ section.vision
         @include secondarySectionPadding();
         @include bgImg();
         background: url(/resources/img/vision-bgImg.png);
-        // background-position: center;
+        background-position: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: flex-start;
@@ -176,11 +176,7 @@ section.vision
             {
                 color: $primarySolidClr;
             }
-            h4 
-            {
-                font-family: gothamRegular;
-                color: $thridBlackClr;
-            }
+            
         }
         .video-part
         {
@@ -278,11 +274,6 @@ section.explore-course
                         border-radius: 6px;
                         background: $primaryGradClr;
                         color: $primaryWhiteClr;
-
-                        h4 
-                        {
-                            font-family: gothamRegular;
-                        }
                     }
                 }
 
@@ -304,6 +295,11 @@ section.explore-course
                     .instructor
                     {
                         margin-bottom: 25px;
+
+                        h4
+                        {
+                            font-size: 14px;
+                        }
                     }
                     .card-detail
                     {
@@ -342,16 +338,15 @@ section.explore-course
                     color: $primaryWhiteClr;
                     transition: 0.3s;
 
-                    >*
+                    > *
                     {
-                        margin: 15px 10px;
+                        margin: 25px 10px !important;
+                        
                     }
                     .italic-title
                     {
                         p 
                         {
-                            font-family: gothamRegular;
-                            font-size: 16px;
                             font-style: italic;
                         }
                     }
@@ -453,7 +448,7 @@ section.catagories
         .card 
         {
             text-align: center;
-            padding: 30px;
+            padding: 25px 30px 15px;
             border-radius: 6px;
             box-shadow: 0 0px 4px rgba($color: #000000, $alpha: 0.25);
             cursor: pointer;
@@ -499,14 +494,14 @@ section.career
                 {
                     margin: 20px 0;
                 }
-                h2
+                h1
                 {
                     color: $primarySolidClr;
                 }
                 p
                 {
                     color: $thridBlackClr;
-                    font-family: gothamRegular;
+                    // font-family: gothamRegular;
                 }
             }
         }
@@ -603,7 +598,7 @@ section.review
                 height: 48px;
                 border-radius: 50%;
                 background: $primaryWhiteClr;
-                transform: translate(15%, -25%);
+                transform: translate(20%, -35%);
                 // background: chartreuse;
                 &::after
                 {
@@ -618,7 +613,7 @@ section.review
                 height: 48px;
                 border-radius: 50%;
                 background: $primaryWhiteClr;
-                transform: translate(-15%, -25%);
+                transform: translate(-20%, -35%);
 
                 &::after
                 {
@@ -640,10 +635,7 @@ section.consultation
     .title
     {
         
-        p 
-        {
-            font-family: gothamMedium;
-        }
+        
         h1
         {
             color: $primarySolidClr;

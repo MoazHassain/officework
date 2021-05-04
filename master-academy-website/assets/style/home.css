@@ -10,44 +10,6 @@ a {
   color: black;
 }
 
-h1 {
-  font-family: gothamBold;
-  font-size: 36px;
-  letter-spacing: -0.04em;
-}
-
-h2 {
-  font-family: gothamBold;
-  font-size: 26px;
-}
-
-h3 {
-  font-family: gothamMedium;
-  font-size: 22px;
-}
-
-h4 {
-  font-family: gothamRegular;
-  font-size: 20px;
-}
-
-p {
-  font-family: gothamRegular;
-  font-size: 20px;
-}
-
-a {
-  font-family: gothamRegular;
-  font-size: 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-small {
-  font-family: gothamRegular;
-  font-size: 18px;
-}
-
 hr.black-hr {
   height: 0.3px;
   background: rgba(112, 112, 112, 0.5);
@@ -55,9 +17,180 @@ hr.black-hr {
   margin: 20px 0;
 }
 
-button {
+h1.black {
+  font-family: gothamBlack;
+  font-size: 36px;
+  line-height: 1em;
+}
+
+h1.bold {
+  font-family: gothamBold;
+  font-size: 36px;
+  line-height: 1em;
+  letter-spacing: -0.03em;
+}
+
+h1.medium {
+  font-family: gothamMedium;
+  font-size: 36px;
+}
+
+h1.regular {
+  font-family: gothamRegular;
+  font-size: 36px;
+}
+
+h2.black {
+  font-family: gothamBlack;
+  font-size: 26px !important;
+  line-height: 1em;
+}
+
+h2.bold {
+  font-family: gothamBold;
+  font-size: 26px;
+  line-height: 1em;
+}
+
+h2.medium {
+  font-family: gothamMedium;
+  font-size: 26px;
+}
+
+h2.regular {
+  font-family: gothamRegular;
+  font-size: 26px;
+}
+
+h3.black {
+  font-family: gothamBlack;
+  font-size: 22px;
+  line-height: 1.2em;
+}
+
+h3.bold {
+  font-family: gothamBold;
+  font-size: 22px;
+  line-height: 1.2em;
+}
+
+h3.medium {
+  font-family: gothamMedium;
+  font-size: 22px;
+}
+
+h3.regular {
+  font-family: gothamRegular;
+  font-size: 22px;
+}
+
+h4.black {
+  font-family: gothamBlack;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+h4.bold {
+  font-family: gothamBold;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: -0.03em;
+}
+
+h4.medium {
   font-family: gothamMedium;
   font-size: 20px;
+  line-height: 1.5em;
+}
+
+h4.regular {
+  font-family: gothamRegular;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+h4.light {
+  font-family: gothamLight;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: -0.01em;
+}
+
+h4.black-small {
+  font-family: gothamBlack;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h4.bold-small {
+  font-family: gothamBold;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: -0.03em;
+}
+
+h4.medium-small {
+  font-family: gothamMedium;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h4.regular-small {
+  font-family: gothamRegular;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h4.light-small {
+  font-family: gothamLight;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: -0.01em;
+}
+
+p.bold {
+  font-family: gothamBold;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+p.medium {
+  font-family: gothamMedium;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+p.regular {
+  font-family: gothamRegular;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+p.black-small {
+  font-family: gothamBlack;
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+p.bold-small {
+  font-family: gothamBold;
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+p.medium-small {
+  font-family: gothamMedium;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+p.regular-small {
+  font-family: gothamRegular;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+button {
   outline: none;
   border: none;
   border-radius: 4px;
@@ -228,10 +361,6 @@ section.offer .cls-btn button {
   justify-items: center;
 }
 
-section.offer small {
-  font-family: gothamMedium;
-}
-
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -276,10 +405,6 @@ header .logo > * {
 header .logo > * img {
   width: 65px;
   height: 65px;
-}
-
-header .logo > * h2 {
-  font-family: gothamBlack;
 }
 
 header .search-bar {
@@ -517,16 +642,8 @@ header .nav-menu button:hover {
   border-radius: 6px;
 }
 
-.offer-modal .countdown-part .wrap .countdown h2 {
-  font-family: gothamMedium;
-}
-
 .offer-modal .countdown-part > .text-content {
   margin: 20px;
-}
-
-.offer-modal .countdown-part > .text-content p {
-  font-size: 18px;
 }
 
 .offer-modal .avail-part {
@@ -599,10 +716,6 @@ footer .upper-part .join-part .logo img {
   height: 65px;
 }
 
-footer .upper-part .join-part .logo .logo-text h2 {
-  font-family: gothamBlack;
-}
-
 footer .upper-part .join-part h3 {
   font-family: gothamRegular;
 }
@@ -650,7 +763,7 @@ footer .upper-part .pages-part .pages {
   display: grid;
 }
 
-footer .upper-part .pages-part .pages small {
+footer .upper-part .pages-part .pages p {
   margin-bottom: 5px;
   cursor: pointer;
 }
@@ -668,7 +781,7 @@ footer .lower-part {
           align-items: center;
 }
 
-footer .lower-part small {
+footer .lower-part p {
   font-size: 14px;
 }
 
@@ -802,14 +915,17 @@ section.sub-header .nav-menu {
   z-index: 99;
 }
 
-section.sub-header .nav-menu a {
+section.sub-header .nav-menu a h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 6px 18px;
   border-radius: 100px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-section.sub-header .nav-menu a:hover {
+section.sub-header .nav-menu a h4:hover {
   background: #f1f1f1;
 }
 
@@ -834,9 +950,9 @@ section.hero .bg-img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 62em;
+  height: 63.5em;
   background-image: url(/resources/img/hero-bgImg2.png);
-  background-position: left;
+  background-position: center;
 }
 
 section.hero .bg-img .grid-wrapper {
@@ -1005,6 +1121,7 @@ section.vision .bg-img {
   background-repeat: no-repeat;
   background-size: cover;
   background: url(/resources/img/vision-bgImg.png);
+  background-position: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -1025,11 +1142,6 @@ section.vision .bg-img .text-part > * {
 
 section.vision .bg-img .text-part h1 {
   color: #1BB899;
-}
-
-section.vision .bg-img .text-part h4 {
-  font-family: gothamRegular;
-  color: #404040;
 }
 
 section.vision .bg-img .video-part {
@@ -1119,10 +1231,6 @@ section.explore-course .tabcontent .swiper-container .card .img .img-ribbon {
   color: #fff;
 }
 
-section.explore-course .tabcontent .swiper-container .card .img .img-ribbon h4 {
-  font-family: gothamRegular;
-}
-
 section.explore-course .tabcontent .swiper-container .card .description {
   padding: 10px 30px;
 }
@@ -1137,6 +1245,10 @@ section.explore-course .tabcontent .swiper-container .card .description .rating 
 
 section.explore-course .tabcontent .swiper-container .card .description .instructor {
   margin-bottom: 25px;
+}
+
+section.explore-course .tabcontent .swiper-container .card .description .instructor h4 {
+  font-size: 14px;
 }
 
 section.explore-course .tabcontent .swiper-container .card .description .card-detail {
@@ -1184,12 +1296,10 @@ section.explore-course .tabcontent .swiper-container .card .card-hidden-area {
 }
 
 section.explore-course .tabcontent .swiper-container .card .card-hidden-area > * {
-  margin: 15px 10px;
+  margin: 25px 10px !important;
 }
 
 section.explore-course .tabcontent .swiper-container .card .card-hidden-area .italic-title p {
-  font-family: gothamRegular;
-  font-size: 16px;
   font-style: italic;
 }
 
@@ -1286,7 +1396,7 @@ section.catagories .card-wrapper {
 
 section.catagories .card-wrapper .card {
   text-align: center;
-  padding: 30px;
+  padding: 25px 30px 15px;
   border-radius: 6px;
   -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0px 4px rgba(0, 0, 0, 0.25);
@@ -1338,13 +1448,12 @@ section.career .become-instructor .bg-img .detail > * {
   margin: 20px 0;
 }
 
-section.career .become-instructor .bg-img .detail h2 {
+section.career .become-instructor .bg-img .detail h1 {
   color: #1BB899;
 }
 
 section.career .become-instructor .bg-img .detail p {
   color: #404040;
-  font-family: gothamRegular;
 }
 
 section.career .build-career {
@@ -1437,8 +1546,8 @@ section.review .swiper-container .swiper-button-next {
   height: 48px;
   border-radius: 50%;
   background: #fff;
-  -webkit-transform: translate(15%, -25%);
-          transform: translate(15%, -25%);
+  -webkit-transform: translate(20%, -35%);
+          transform: translate(20%, -35%);
 }
 
 section.review .swiper-container .swiper-button-next::after {
@@ -1450,8 +1559,8 @@ section.review .swiper-container .swiper-button-prev {
   height: 48px;
   border-radius: 50%;
   background: #fff;
-  -webkit-transform: translate(-15%, -25%);
-          transform: translate(-15%, -25%);
+  -webkit-transform: translate(-20%, -35%);
+          transform: translate(-20%, -35%);
 }
 
 section.review .swiper-container .swiper-button-prev::after {
@@ -1469,10 +1578,6 @@ section.consultation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-section.consultation .title p {
-  font-family: gothamMedium;
 }
 
 section.consultation .title h1 {
