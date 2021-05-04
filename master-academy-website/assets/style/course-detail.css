@@ -267,6 +267,26 @@ button.solid-bg-btn:hover {
   background-position: right center;
 }
 
+button.neomor-btn {
+  background-color: #f3f3f3;
+  color: #404040;
+  -webkit-box-shadow: -3px -3px 5px white, 3px 3px 5px #c8c8c8;
+          box-shadow: -3px -3px 5px white, 3px 3px 5px #c8c8c8;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+button.neomor-btn:hover {
+  -webkit-box-shadow: -7px -7px 10px white, 5px 5px 10px 1px #c8c8c8;
+          box-shadow: -7px -7px 10px white, 5px 5px 10px 1px #c8c8c8;
+  color: #262626;
+}
+
+button.neomor-btn:active {
+  -webkit-box-shadow: -2px -2px 2px white, 2px 2px 2px #c8c8c8;
+          box-shadow: -2px -2px 2px white, 2px 2px 2px #c8c8c8;
+}
+
 button.rounded-btn {
   border-radius: 50%;
   padding: 10px;
