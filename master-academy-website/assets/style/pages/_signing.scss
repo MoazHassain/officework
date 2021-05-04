@@ -29,15 +29,15 @@ header
 }
 .container
 {
-    button 
-    {
-        background-color: #fff12a;
+    // button 
+    // {
+    //     background: $soli;
 
-        &:hover 
-        {
-            background-color: #ffd82b;
-        }
-    }
+    //     &:hover 
+    //     {
+    //         background-color: #ffd82b;
+    //     }
+    // }
 
     .grid-wrapper
     {
@@ -57,19 +57,36 @@ header
             {
                 text-align: center;
                 
-                h1 
+                h1.bold 
                 {
-                    margin-bottom: 15px;
+                    font-family: "montserrat", sans-serif;
+                    margin-bottom: 10px;
+                    color: $thridBlackClr;
+                }
+                h4 
+                {
+                    color: $thridBlackClr;
                 }
                 
             }
             form 
             {
-                padding: 20px 30px 0;
+                padding: 20px 10px 0;
 
                 input, button 
                 {
                     width: 100%;
+                }
+                label 
+                {
+                    color: $thridBlackClr;
+
+                    
+                }
+                .password-field
+                {
+                    display: flex;
+                    grid-gap: 15px;
                 }
                 .checkbox-field
                 {
@@ -143,10 +160,11 @@ header
                         {
                             font-family: gothamMedium;
                             font-size: 14px;
+                            color: $thridBlackClr;
 
                             &:hover
                             {
-                                color: $thridBlackClr;
+                                color: $secondaryBlackclr;
                             }
                         }
 
@@ -179,17 +197,25 @@ header
         }
         .description-part
         {
+            background-color: $secondaryWhiteClr;
+            height: 100%;
             align-self: flex-start;
             text-align: center;
             padding: 100px;
-            
+            z-index: -1;
             .title-wrap
             {
                 margin-bottom: 5em;
 
                 h1 
                 {
+                    font-family: "montserrat", sans-serif;
                     margin-bottom: 15px;
+                    color: $thridBlackClr;
+                }
+                h4 
+                {
+                    color: $thridBlackClr;
                 }
 
             }

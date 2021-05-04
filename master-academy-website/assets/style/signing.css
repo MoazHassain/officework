@@ -18,174 +18,203 @@ hr.black-hr {
 }
 
 h1.black {
-  font-family: gothamBlack;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
   font-size: 36px;
   line-height: 1em;
 }
 
 h1.bold {
-  font-family: gothamBold;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1em;
   letter-spacing: -0.03em;
 }
 
 h1.medium {
-  font-family: gothamMedium;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
   font-size: 36px;
 }
 
 h1.regular {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
   font-size: 36px;
 }
 
 h2.black {
-  font-family: gothamBlack;
-  font-size: 26px !important;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 24px !important;
   line-height: 1em;
 }
 
 h2.bold {
-  font-family: gothamBold;
-  font-size: 26px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
   line-height: 1em;
 }
 
 h2.medium {
-  font-family: gothamMedium;
-  font-size: 26px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 h2.regular {
-  font-family: gothamRegular;
-  font-size: 26px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 h3.black {
-  font-family: gothamBlack;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
   font-size: 22px;
   line-height: 1.2em;
 }
 
 h3.bold {
-  font-family: gothamBold;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
   font-size: 22px;
   line-height: 1.2em;
 }
 
 h3.medium {
-  font-family: gothamMedium;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
   font-size: 22px;
 }
 
 h3.regular {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
   font-size: 22px;
 }
 
 h4.black {
-  font-family: gothamBlack;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
   font-size: 20px;
   line-height: 1.5em;
 }
 
 h4.bold {
-  font-family: gothamBold;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.5em;
   letter-spacing: -0.03em;
 }
 
 h4.medium {
-  font-family: gothamMedium;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.5em;
 }
 
 h4.regular {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.5em;
 }
 
 h4.light {
-  font-family: gothamLight;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.5em;
   letter-spacing: -0.01em;
 }
 
 h4.black-small {
-  font-family: gothamBlack;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
   font-size: 16px;
   line-height: 1.5em;
 }
 
 h4.bold-small {
-  font-family: gothamBold;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: -0.03em;
 }
 
 h4.medium-small {
-  font-family: gothamMedium;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.5em;
 }
 
 h4.regular-small {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5em;
 }
 
 h4.light-small {
-  font-family: gothamLight;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: -0.01em;
 }
 
 p.bold {
-  font-family: gothamBold;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.5em;
 }
 
 p.medium {
-  font-family: gothamMedium;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
   font-size: 20px;
   line-height: 1.5em;
 }
 
 p.regular {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.5em;
 }
 
 p.black-small {
-  font-family: gothamBlack;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
   font-size: 16px;
   line-height: 1.2em;
 }
 
 p.bold-small {
-  font-family: gothamBold;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.2em;
 }
 
 p.medium-small {
-  font-family: gothamMedium;
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.5em;
 }
 
 p.regular-small {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -252,7 +281,7 @@ button.rounded-btn {
 
 input,
 textarea {
-  font-family: gothamRegular;
+  font-family: "montserrat", sans-serif;
   font-size: 20px;
   outline: none;
   border: 0.5px solid transparent;
@@ -296,8 +325,9 @@ textarea {
 }
 
 label {
-  font-family: gothamRegular;
-  font-size: 20px;
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   display: block;
   margin-bottom: 5px;
 }
@@ -840,14 +870,6 @@ header .nav-menu button:hover {
   background-position: right center;
 }
 
-.container button {
-  background-color: #fff12a;
-}
-
-.container button:hover {
-  background-color: #ffd82b;
-}
-
 .container .grid-wrapper {
   display: -ms-grid;
   display: grid;
@@ -873,16 +895,33 @@ header .nav-menu button:hover {
   text-align: center;
 }
 
-.container .grid-wrapper .form-part .title-wrap h1, .container .grid-wrapper .form-part .using-social-media h1 {
-  margin-bottom: 15px;
+.container .grid-wrapper .form-part .title-wrap h1.bold, .container .grid-wrapper .form-part .using-social-media h1.bold {
+  font-family: "montserrat", sans-serif;
+  margin-bottom: 10px;
+  color: #404040;
+}
+
+.container .grid-wrapper .form-part .title-wrap h4, .container .grid-wrapper .form-part .using-social-media h4 {
+  color: #404040;
 }
 
 .container .grid-wrapper .form-part form {
-  padding: 20px 30px 0;
+  padding: 20px 10px 0;
 }
 
 .container .grid-wrapper .form-part form input, .container .grid-wrapper .form-part form button {
   width: 100%;
+}
+
+.container .grid-wrapper .form-part form label {
+  color: #404040;
+}
+
+.container .grid-wrapper .form-part form .password-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 15px;
 }
 
 .container .grid-wrapper .form-part form .checkbox-field {
@@ -899,10 +938,11 @@ header .nav-menu button:hover {
 .container .grid-wrapper .form-part form .checkbox-field label.checkbox-container a {
   font-family: gothamMedium;
   font-size: 14px;
+  color: #404040;
 }
 
 .container .grid-wrapper .form-part form .checkbox-field label.checkbox-container a:hover {
-  color: #404040;
+  color: #262626;
 }
 
 .container .grid-wrapper .form-part form > * {
@@ -921,10 +961,13 @@ header .nav-menu button:hover {
 }
 
 .container .grid-wrapper .description-part {
+  background-color: #FAFAFA;
+  height: 100%;
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-align: center;
   padding: 100px;
+  z-index: -1;
 }
 
 .container .grid-wrapper .description-part .title-wrap {
@@ -932,7 +975,13 @@ header .nav-menu button:hover {
 }
 
 .container .grid-wrapper .description-part .title-wrap h1 {
+  font-family: "montserrat", sans-serif;
   margin-bottom: 15px;
+  color: #404040;
+}
+
+.container .grid-wrapper .description-part .title-wrap h4 {
+  color: #404040;
 }
 
 .container .grid-wrapper .description-part .goto h4.regular-small {
