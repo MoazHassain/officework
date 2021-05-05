@@ -1055,12 +1055,20 @@ footer .lower-part .logos img {
   margin: 10px 0;
 }
 
+.container .tabcontent .content .card-wrap {
+  position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
 .container .tabcontent .content .card-wrap .card {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.8fr 1fr 1fr;
       grid-template-columns: 0.8fr 1fr 1fr;
   grid-gap: 40px;
+  border-bottom: 1px solid #cacaca;
+  padding-top: 5px;
 }
 
 .container .tabcontent .content .card-wrap .card > * {
@@ -1075,6 +1083,10 @@ footer .lower-part .logos img {
 .container .tabcontent .content .card-wrap .card .card-detail {
   display: -ms-grid;
   display: grid;
+}
+
+.container .tabcontent .content .card-wrap .card .card-detail h2 {
+  color: #262626;
 }
 
 .container .tabcontent .content .card-wrap .card .card-detail .icon-text {
@@ -1108,6 +1120,124 @@ footer .lower-part .logos img {
 
 .container .tabcontent .content .card-wrap .card .card-rating {
   justify-self: flex-end;
+  display: -ms-grid;
+  display: grid;
+  justify-items: end;
+  padding-right: 10px;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .rating i {
+  color: #FFB800;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .review-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .review-wrap > * {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  padding: 0 20px;
+  margin: 25px 0;
+  color: #262626;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .review-wrap .class, .container .tabcontent .content .card-wrap .card .card-rating .review-wrap .hour {
+  border-right: 0.5px solid #cacaca;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .review-wrap .learner {
+  padding-right: 0;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .btn-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 30px;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .btn-wrap .fav-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .tabcontent .content .card-wrap .card .card-rating .btn-wrap .fav-btn button {
+  height: 45px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.container .tabcontent .content .card-wrap .hover-content {
+  background-color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 30px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translate(80%, -50%);
+          transform: translate(80%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.container .tabcontent .content .card-wrap .hover-content h4 {
+  display: block;
+}
+
+.container .tabcontent .content .card-wrap:hover {
+  background-color: #eeeeee;
+  -webkit-transform: translateX(1.5%);
+          transform: translateX(1.5%);
+}
+
+.container .tabcontent .content .card-wrap:hover .hover-content {
+  -webkit-transform: translate(105%, -50%);
+          transform: translate(105%, -50%);
+  opacity: 1;
+}
+
+.container .tabcontent .content .show-more-btn button {
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f3f3f3;
+}
+
+.container .tabcontent .content .show-more-btn button h4 {
+  color: #1BB899;
+  margin-right: 10px;
+}
+
+.container .tabcontent .content .hidden-card {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.container .tabcontent .content .hidden-card.active {
+  overflow: visible;
+  height: auto;
+  opacity: 1;
 }
 
 .container .tabcontent.active {

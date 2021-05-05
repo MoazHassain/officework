@@ -2,7 +2,7 @@
 {
     h4
     {
-        display: inline
+        display: inline;
     }
     .subheader
     {
@@ -57,6 +57,7 @@
             margin: 50px 0;
             width: 80%;
             position: relative;
+            
 
             .title-wrap
             {
@@ -204,11 +205,16 @@
 
             .card-wrap 
             {
+                position: relative;
+                transition: 0.3s ease-in-out;
+
                 .card 
                 {
                     display: grid;
                     grid-template-columns: 0.8fr 1fr 1fr;
                     grid-gap: 40px;
+                    border-bottom: 1px solid $thirdWhiteClr;
+                    padding-top: 5px;
 
                     > *
                     {
@@ -226,6 +232,11 @@
                     .card-detail
                     {
                         display: grid;
+
+                        h2
+                        {
+                            color: $secondaryBlackclr;
+                        }
                         .icon-text 
                         {
                             display: flex;
@@ -254,9 +265,117 @@
                     .card-rating
                     {
                         justify-self: flex-end;
+                        display: grid;
+                        justify-items: end;
+                        padding-right: 10px;
+
+                        .rating i
+                        {
+                            color: #FFB800;
+                        }
+                        .review-wrap
+                        {
+                            display: flex;
+                            
+
+                            >*
+                            {
+                                @include gridCenter();
+                                padding: 0 20px;
+                                margin: 25px 0;
+                                color: $secondaryBlackclr;
+                            }
+                            .class, .hour
+                            {
+                                border-right: 0.5px solid $thirdWhiteClr;
+                                
+                            }
+                            .learner
+                            {
+                                padding-right: 0;
+                            }
+                        }
+                        .btn-wrap
+                        {
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            grid-gap: 30px;
+
+                            .fav-btn
+                            {
+                                align-self: center;
+                                button
+                                {
+                                    height: 45px;
+                                    padding: 10px;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hover-content
+                {
+                    background-color: $primaryWhiteClr;
+                    width: fit-content;
+                    padding: 15px 30px;
+                    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
+                    position: absolute;
+                    top: 50%;
+                    right: 0%;
+                    transform: translate(80%, -50%);
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
+                    
+                    h4 
+                    {
+                        display: block;
+                    }
+                }
+                &:hover 
+                {
+                    background-color: #eeeeee;
+                    transform: translateX(1.5%);
+                }
+                &:hover .hover-content
+                {
+                    transform: translate(105%, -50%);
+                    opacity: 1;
+                }
+            }
+
+            .show-more-btn
+            {
+                button 
+                {
+                    margin: 20px auto;
+                    display: flex;
+                    align-items: center;
+                    background-color: $forthWhiteClr;
+
+                    h4 
+                    {
+                        color: $primarySolidClr;
+                        margin-right: 10px;
                     }
                 }
             }
+            .hidden-card
+            {
+                
+                overflow: hidden;  
+                height: 0;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+
+            }
+            .hidden-card.active
+            {
+                overflow: visible;
+                height: auto; 
+                opacity: 1;
+            }
+
         }
 
     }
