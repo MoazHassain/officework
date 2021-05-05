@@ -1187,8 +1187,8 @@ footer .lower-part .logos img {
   position: absolute;
   top: 50%;
   right: 0%;
-  -webkit-transform: translate(80%, -50%);
-          transform: translate(80%, -50%);
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
