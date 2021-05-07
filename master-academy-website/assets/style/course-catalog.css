@@ -1243,4 +1243,63 @@ footer .lower-part .logos img {
 .container .tabcontent.active {
   display: block;
 }
+
+.container .catagories {
+  padding: 5px 150px;
+  background-color: #f3f3f3;
+  padding-bottom: 40px;
+}
+
+.container .catagories .title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #262626;
+  border-bottom: 3px solid #1BB899;
+}
+
+.container .catagories .wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.container .catagories .wrap .content {
+  cursor: pointer;
+}
+
+.container .catagories .wrap .content .bg-img {
+  height: 200px;
+  background-image: url(/resources/img/pietro-jeng-n6B49lTx7NM-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.container .catagories .wrap .content .bg-img .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 40px;
+}
+
+.container .catagories .wrap .content .bg-img .overlay h2 {
+  color: #fff;
+}
+
+.container .catagories .wrap .content:hover .bg-img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
 /*# sourceMappingURL=course-catalog.css.map */

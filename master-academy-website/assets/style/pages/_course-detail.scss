@@ -1,0 +1,337 @@
+.container
+{
+    .wrap-course-title 
+    {
+        background-color: #161616;
+        color: $primaryWhiteClr;
+        @include secondarySectionPadding();
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        grid-template-areas:  
+        "course ." ;
+
+        .course-title 
+        {
+            
+            grid-area: course;
+
+
+            > * 
+            {
+                margin: 12px 0;
+            }
+
+            .rating-wrap 
+            {
+                display: flex;
+                align-items: center;
+
+                >* 
+                {
+                    padding-right: 20px;
+                }
+                .text 
+                {
+                    h4 
+                    {
+                        padding: 5px 10px;
+                        background: $primaryGradClr;
+                        border-radius: 6px;
+                    }
+                }
+                .rating 
+                {
+                    i 
+                    {
+                        color: $ratingClr;
+                    }
+                }
+                .student-wrap
+                {
+                    display: flex;
+                    align-items: center;
+                    >*
+                    {
+                        padding-right: 10px;
+                    }
+                }
+            }
+            .detail
+            {
+                display: flex;
+
+                >* 
+                {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 20px;
+
+                    >* 
+                    {
+                        padding-right: 5px;
+                    }
+                }
+                .subtitle 
+                {
+                    i 
+                    {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .btns 
+            {
+                display: flex;
+                >* 
+                {
+                    
+                    padding-right: 20px;
+
+                    button 
+                    {
+                        @include gradBorderBtn($primaryWhiteClr, 2px 1000px 1px #161616 inset);
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .wrap-course-price
+    {
+        .course-price
+        {
+            display: grid;
+            position: absolute;
+            top: 170px;
+            right: 10%;
+            width: 400px;
+
+            .price-detail
+            {
+                background-color: $primaryWhiteClr;
+                padding: 20px 40px;
+                box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+                border-radius: 0 0 6px 6px;
+
+                > *
+                {
+                    margin: 10px 0;
+                }
+                .price 
+                {
+                    h1 
+                    {
+                        color: $secondaryBlackclr;
+                        display: flex;
+                        align-items: center;
+                        span 
+                        {
+                            font-size: 18px;
+                            color: $thridBlackClr;
+                        }
+                    }
+                }
+                .time 
+                {
+                    display: flex;
+                    align-items: center;
+                    > *
+                    {
+                        margin-right: 10px;
+                    }
+                }
+                button 
+                {
+                    width: 100%;
+                }
+                .grad-border-btn
+                {
+                    @include gradBorderBtn($primaryBlackClr, 2px 1000px 1px $primaryWhiteClr inset)
+                }
+                .money-back
+                {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .wrap-course-reason
+    {
+        @include secondarySectionPadding();
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        grid-template-areas:  
+        "reason ." ;
+
+        .course-reason
+        {
+            grid-area: reason;
+            box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+            border-radius: 6px;
+            padding: 15px 30px;
+
+            > * 
+            {
+                margin-bottom: 10px;
+            }
+            
+            .reason 
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                grid-gap: 20px;
+            }
+        }
+    }
+    .tab-header 
+    {
+        @include secondarySectionPadding();
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        background-color: $primaryWhiteClr;
+        // box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+        
+
+        .tab 
+        {
+            display: flex;
+            
+            .tablink 
+            {
+                @include tablink();
+                margin-right: 25px;
+            }
+            .tablink.active 
+            {
+                @include activeTablink();
+            }
+
+        }
+        .btn
+        {
+            justify-self: end;
+
+            button 
+            {
+                padding: 5px 15px;
+            }
+        }
+    }
+    .tabcontent
+    {
+        // display: none;
+        position: relative;
+    }
+    #batch
+    {
+        background-color: #161616;
+        @include secondarySectionPadding();
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .title 
+        {
+            color: $primaryWhiteClr;
+            margin-bottom: 20px;
+        }
+        .batch-info
+        {
+            background-color: $secondaryWhiteClr;
+            border-radius: 6px;
+            padding: 30px 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap:30px;
+
+            .date-wrap
+            {
+                display: grid;
+
+                .date 
+                {
+                    // display: grid;
+                    @include gridCenter();
+                    grid-template-columns: 1fr 2fr 2.8fr;
+                    border: 1px solid $thirdWhiteClr;
+
+                    // .month
+                    // {
+
+                        
+                    // }
+                    .week
+                    {
+                        justify-self: flex-start;
+                        padding-left: 20px;
+                        border-left: 1px solid $thirdWhiteClr;
+                    }
+                }
+                .date.disable
+                {
+                    background-color: $forthWhiteClr;
+                }
+            }
+            .price-wrap
+            {
+                padding: 20px 30px 0;
+                border-radius: 6px;
+                box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+                
+                >* 
+                {
+                    margin-bottom: 10px;
+                }
+                .price
+                {
+                    h1 
+                    {
+                        color: $secondaryBlackclr;
+                        display: flex;
+                        align-items: center;
+                        span 
+                        {
+                            font-size: 18px;
+                            color: $thridBlackClr;
+                        }
+                    }
+                }
+                .time 
+                {
+                    display: flex;
+                    align-items: center;
+                    
+                    >* 
+                    {
+                        margin-right: 10px;
+                    }
+                }
+                .btn 
+                {
+                    button 
+                    {
+                        width: 100%;
+                    }
+                }
+                .paypal-info
+                {
+                    
+                    display: flex;
+                    align-items: center;
+
+                    > * 
+                    {
+                        margin-right: 10px;
+                    }
+                }
+            
+            }
+        }
+    }
+}

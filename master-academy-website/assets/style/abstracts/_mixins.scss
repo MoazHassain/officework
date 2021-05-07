@@ -14,3 +14,22 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@mixin tablink() {
+    color: $thridBlackClr;
+    padding-bottom: 10px;
+    margin-right: 40px;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+
+    &:hover
+    {
+        color: $primaryBlackClr;
+    }
+}
+@mixin activeTablink() {
+    color: $primaryBlackClr;
+    border-bottom: 3px solid;
+    border-color: $primarySolidClr;
+}
