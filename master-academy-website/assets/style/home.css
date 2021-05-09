@@ -1347,7 +1347,7 @@ section.explore-course .tabcontent .swiper-container .card .card-hidden-area {
 }
 
 section.explore-course .tabcontent .swiper-container .card .card-hidden-area > * {
-  margin: 25px 10px !important;
+  margin: 25px 10px;
 }
 
 section.explore-course .tabcontent .swiper-container .card .card-hidden-area .italic-title p {
@@ -1358,7 +1358,12 @@ section.explore-course .tabcontent .swiper-container .card .card-hidden-area ul 
   margin: 5px 20px;
 }
 
-section.explore-course .tabcontent .swiper-container .card .card-hidden-area button {
+section.explore-course .tabcontent .swiper-container .card .card-hidden-area a {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+section.explore-course .tabcontent .swiper-container .card .card-hidden-area a button {
   color: #fff;
   border: 3px solid transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
@@ -1371,7 +1376,7 @@ section.explore-course .tabcontent .swiper-container .card .card-hidden-area but
   width: 100%;
 }
 
-section.explore-course .tabcontent .swiper-container .card .card-hidden-area button:hover {
+section.explore-course .tabcontent .swiper-container .card .card-hidden-area a button:hover {
   color: #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1384,7 +1389,12 @@ section.explore-course .tabcontent .swiper-container .card:hover .card-hidden-ar
   opacity: 1;
 }
 
-section.explore-course .tabcontent .swiper-container .card-hidden-area.second-design button {
+section.explore-course .tabcontent .swiper-container .card-hidden-area.second-design a {
+  margin: 0;
+  padding: 0;
+}
+
+section.explore-course .tabcontent .swiper-container .card-hidden-area.second-design a button {
   border: 2px solid #fff;
   background: #262626;
   color: #fff;
