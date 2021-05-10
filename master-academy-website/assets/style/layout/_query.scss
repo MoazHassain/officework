@@ -1,0 +1,119 @@
+.query 
+{
+    z-index: 1;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    transition: 0.3s ease-in-out;
+    // height: fit-content;
+    // transform: translateX(90%);
+
+    // &:hover
+    // {
+    //     transform: translateX(0%);
+    // }
+    .visible-content
+    {
+        height: fit-content;
+        padding: 15px;
+        background-color: $primarySolidClr;
+        border-radius: 10px 0 0 10px;
+
+        img 
+        {
+            height: 30px;
+            width: 30px;
+        }
+    }
+    .hidden-content 
+    {
+        background-color: $primaryWhiteClr;
+        box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+        max-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 0.3s ease-in-out;
+
+        .wrap
+        {
+            background-color: $forthWhiteClr;
+            box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25);
+        }
+        .head 
+        {
+            text-align: center;
+            
+            padding: 5px;
+        }
+        .contact-info 
+        {
+            
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+
+            .icon 
+            {
+                font-size: 50px;
+                margin-right: 20px;
+                color: $primarySolidClr;
+            }
+        }
+        .form
+        {
+            padding: 20px 30px;
+
+            > * 
+            {
+                margin: 15px;
+                position: relative;
+            }
+            label 
+            {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                color: $thridBlackClr;
+                pointer-events: none;
+                transition: 0.3s ease-in-out;
+            }
+            input::placeholder,
+            textarea::placeholder
+            {
+                color: transparent !important;
+            }
+            
+            input:focus + label,
+            input:not(:placeholder-shown) + label,
+            textarea:focus + label,
+            textarea:not(:placeholder-shown) + label
+            {
+                background-color: $primaryWhiteClr;
+                left: 15px;
+                transform: translateY(-120%) translateX(-15%) scale(0.7);
+            }
+            input,textarea,button 
+            {
+                width: 100%;
+            }
+            input,textarea  
+            {
+                padding-top: 20px;
+                padding-bottom: 6px;
+                font-size: 18px;
+            }
+            button 
+            {
+                padding: 5px 10px;
+            }
+        }
+    }
+    .active-query
+    {
+        max-width: 40em;
+    }
+}
