@@ -303,6 +303,7 @@ input,
 textarea {
   font-family: "montserrat", sans-serif;
   font-size: 20px;
+  font-weight: 400;
   outline: none;
   border: 0.5px solid transparent;
   padding: 10px 15px;
@@ -1031,18 +1032,16 @@ header .nav-menu button:hover {
 .container .grid-wrapper {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
 }
 
 .container .grid-wrapper .form-part {
-  padding: 20px 70px;
-  -webkit-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+  width: 35%;
+  margin: 70px 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 0 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .container .grid-wrapper .form-part > * {
@@ -1053,7 +1052,7 @@ header .nav-menu button:hover {
   text-align: center;
 }
 
-.container .grid-wrapper .form-part .title-wrap h1.bold, .container .grid-wrapper .form-part .using-social-media h1.bold {
+.container .grid-wrapper .form-part .title-wrap h2.bold, .container .grid-wrapper .form-part .using-social-media h2.bold {
   font-family: "montserrat", sans-serif;
   margin-bottom: 10px;
   color: #404040;
@@ -1063,8 +1062,18 @@ header .nav-menu button:hover {
   color: #404040;
 }
 
+.container .grid-wrapper .form-part .title-wrap {
+  background: #fff;
+  border-radius: 6px 6px 0 0;
+  color: #fff;
+  padding: 30px 40px;
+}
+
 .container .grid-wrapper .form-part form {
-  padding: 20px 10px 0;
+  background-color: #FAFAFA;
+  padding: 30px 50px;
+  -webkit-box-shadow: 0 3px 4px -4px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 0 3px 4px -4px rgba(0, 0, 0, 0.25) inset;
 }
 
 .container .grid-wrapper .form-part form input, .container .grid-wrapper .form-part form button {
@@ -1073,6 +1082,145 @@ header .nav-menu button:hover {
 
 .container .grid-wrapper .form-part form label {
   color: #404040;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px auto;
+      grid-template-columns: 70px auto;
+      grid-template-areas: "btn input" "countryCode countryCode";
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: btn;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px 0 0 6px;
+  border-right: 1px solid #cacaca;
+  background-color: #fff;
+  outline: none;
+  padding: 10px 0;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-content h4 {
+  margin-right: 5px;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap input[type="tel"] {
+  margin: unset;
+  width: 100%;
+  padding: 10px 16px 10px 16px;
+  border-radius: 0 5px 5px 0;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .input-wrap {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: input;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  border-radius: 0 6px 6px 0;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .input-wrap .input-text {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background-color: white;
+  color: black;
+  height: 100%;
+  padding: 10px 12px;
+  text-align: center;
+  border-right: 1px solid #cacaca;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: countryCode;
+  position: relative;
+  color: black;
+  display: none;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code {
+  background-color: white;
+  position: absolute;
+  /* display: none; */
+  /* width:21.8vw; */
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  margin-top: 5px;
+  /* overflow: hidden;
+                            
+                            overflow-y: scroll;
+                            overflow: hidden;
+                            overflow-x: hidden; */
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code .searchbar-container {
+  width: 100%;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code .searchbar-container .search-bar i {
+  position: absolute;
+  font-size: 20px;
+  padding: 14px;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code .searchbar-container .search-bar input {
+  width: 100%;
+  margin: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  border-radius: 6px;
+  padding-left: 45px;
+  background-color: #FAFAFA;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code .country-list {
+  height: 120px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code .country-list ul {
+  padding: 8px 5px;
+  list-style-type: none;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .country-code-container .country-number-code .country-list li {
+  padding: 8px 0px;
+}
+
+.container .grid-wrapper .form-part form .number-input-wrap .toggle-country-code {
+  display: block;
 }
 
 .container .grid-wrapper .form-part form .password-field {
@@ -1097,14 +1245,21 @@ header .nav-menu button:hover {
   font-family: gothamMedium;
   font-size: 14px;
   color: #404040;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .container .grid-wrapper .form-part form .checkbox-field label.checkbox-container a:hover {
-  color: #262626;
+  color: #1BB899;
 }
 
 .container .grid-wrapper .form-part form > * {
   margin-bottom: 15px;
+}
+
+.container .grid-wrapper .form-part .using-social-media {
+  padding-top: 0px;
+  background-color: #FAFAFA;
 }
 
 .container .grid-wrapper .form-part .using-social-media .social-logo img {
@@ -1191,14 +1346,15 @@ header .nav-menu button:hover {
   height: 16px;
   width: 16px;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #404040;
   border-radius: 3px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #FAFAFA;
+  background-color: #1BB899;
+  border: 1px solid #1BB899;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -1216,10 +1372,10 @@ header .nav-menu button:hover {
 /* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
   left: 4px;
-  top: 0px;
+  top: -1px;
   width: 4px;
   height: 8px;
-  border: solid #1BB899;
+  border: solid #fff;
   /* border-radius: 3px; */
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);

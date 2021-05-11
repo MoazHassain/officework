@@ -41,13 +41,17 @@ header
 
     .grid-wrapper
     {
-        @include gridCenter();
-        grid-template-columns: 40% 60%;
+        display: grid;
+        
 
         .form-part
         {
-            padding: 20px 70px;
-            box-shadow: 2px 0 4px rgba($color: #000000, $alpha: 0.30);
+            width: 35%;
+            margin: 70px 0;
+            justify-self: center;
+            // padding: 20px 50px;
+            border-radius: 6px;
+            box-shadow: 0px 0 2px rgba($color: #000000, $alpha: 0.30);
 
             >*
             {
@@ -57,21 +61,32 @@ header
             {
                 text-align: center;
                 
-                h1.bold 
+                h2.bold 
                 {
                     font-family: "montserrat", sans-serif;
                     margin-bottom: 10px;
                     color: $thridBlackClr;
                 }
-                h4 
+                h4
                 {
                     color: $thridBlackClr;
                 }
                 
+                
+            }
+            .title-wrap
+            {
+                background: $primaryWhiteClr;
+                border-radius: 6px 6px 0 0;
+                color: $primaryWhiteClr;
+                padding: 30px 40px;
+                
             }
             form 
             {
-                padding: 20px 10px 0;
+                background-color: $secondaryWhiteClr;   
+                padding: 30px 50px;
+                box-shadow: 0 3px 4px -4px rgba($color: #000000, $alpha: 0.25) inset;
 
                 input, button 
                 {
@@ -80,8 +95,140 @@ header
                 label 
                 {
                     color: $thridBlackClr;
+                }
+                .number-input-wrap
+                {
+                    display: grid;
+                    grid-template-columns: 70px auto;
+                    grid-template-areas: 
+                    "btn input"
+                    "countryCode countryCode";
+                    border-radius: 6px;
+                    box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
 
-                    
+                    .country-content
+                    {
+                        grid-area: btn;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 6px 0 0 6px;
+                        border-right: 1px solid $thirdWhiteClr;
+                        background-color: $primaryWhiteClr;
+                        outline: none;
+                        padding: 10px 0;
+
+                        h4 
+                        {
+                            margin-right: 5px;
+                        }
+                    }
+                    input[type="tel"]
+                    {
+                        margin: unset;
+                        width: 100%;
+                        padding: 10px 16px 10px 16px;
+                        border-radius: 0 5px 5px 0;
+                    }
+                    .input-wrap 
+                    {
+                        grid-area: input;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        border-radius: 0 6px 6px 0;
+                        
+
+                        .input-text 
+                        {
+                            @include gridCenter();
+                            background-color: white;
+                            color: black;
+                            height: 100%;
+                            padding: 10px 12px;
+                            text-align: center;
+                            border-right: 1px solid $thirdWhiteClr;
+                            
+                            
+                        }
+                    }
+                    .country-code-container
+                    {
+                        grid-area: countryCode;
+                        position: relative;
+                        color: black;
+                        display: none;
+                        
+
+                        .country-number-code
+                        {
+                            
+                            background-color: white;
+                            position: absolute;
+                            /* display: none; */
+                            /* width:21.8vw; */
+                            width: 100%;
+                            padding: 8px;
+                            border-radius: 4px;
+                            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.25);
+                            margin-top: 5px;
+                            
+                            /* overflow: hidden;
+                            
+                            overflow-y: scroll;
+                            overflow: hidden;
+                            overflow-x: hidden; */
+
+                            .searchbar-container
+                            {
+                                width: 100%;
+
+                                .search-bar 
+                                {
+                                    i 
+                                    {
+                                        position: absolute;
+                                        font-size: 20px;
+                                        padding: 14px;
+                                        font-weight: 400;
+                                        pointer-events: none;
+                                    }
+                                    input 
+                                    {
+                                        width: 100%;
+                                        margin: unset;
+                                        box-shadow: unset;
+                                        border-radius: 6px;
+                                        padding-left: 45px;
+                                        background-color: $secondaryWhiteClr;
+                                        box-shadow: 0 0 1px rgba($color: #000000, $alpha: 0.25) inset;
+                                    }
+                                    
+                                }
+                            }
+
+                            .country-list 
+                            {
+                                height: 120px;
+                                overflow-y: scroll;
+                                overflow-x: hidden;
+
+                                ul 
+                                {
+                                    padding: 8px 5px;
+                                    list-style-type: none;
+                                }
+                                li 
+                                {
+                                    padding: 8px 0px;
+                                }
+                            }
+                        }
+                    }
+                    .toggle-country-code
+                    {
+                        display: block;
+                    }
+
                 }
                 .password-field
                 {
@@ -97,74 +244,18 @@ header
                     label.checkbox-container
                     {
                         font-size: 14px;
-                        // display: block;
-                        // position: relative;
-                        // padding-left: 25px;
-                        // /* margin-bottom: 12px; */
-                        // cursor: pointer;
-                        // /* font-size: 22px; */
-                        // -webkit-user-select: none;
-                        // -moz-user-select: none;
-                        // -ms-user-select: none;
-                        // user-select: none;
 
-                        // input 
-                        // {
-                        //     position: absolute;
-                        //     opacity: 0;
-                        //     cursor: pointer;
-                        //     height: 0;
-                        //     width: 0;
-                        // }
-                        // .checkmark 
-                        // {
-                        //     position: absolute;
-                        //     top: 0;
-                        //     left: 0;
-                        //     height: 15px;
-                        //     width: 15px;
-                        //     background-color: $secondaryWhiteClr;
-                        //     border: 1px solid $primaryBlackClr;
-                        //     border-radius: 3px;
-                        //     transition: 0.3s;
-                        // }
-                        // input:checked ~ .checkmark {
-                        //     background-color: black;
-                        // }
-                        // .checkmark:after 
-                        // {
-                        //     content: "";
-                        //     position: absolute;
-                        //     // display: none;
-                            
-                        // }
-                        // input:checked ~ .checkmark:after 
-                        // {
-                        //     display: block;
-                            
-                        // }
-                        // .checkmark:after {
-                        //     left: 4px;
-                        //     top: 0px;
-                        //     width: 4px;
-                        //     height: 8px;
-                        //     border: solid black;
-                        //     /* border-radius: 3px; */
-                        //     border-width: 0 2px 2px 0;
-                        //     -webkit-transform: rotate(45deg);
-                        //     -ms-transform: rotate(45deg);
-                        //     transform: rotate(45deg);
-                        // }
                         
                         a 
                         {
                             font-family: gothamMedium;
                             font-size: 14px;
                             color: $thridBlackClr;
+                            transition: 0.2s ease-in-out;
 
                             &:hover
                             {
-                                color: $secondaryBlackclr;
+                                color: $primarySolidClr;
                             }
                         }
 
@@ -180,6 +271,8 @@ header
             }
             .using-social-media
             {
+                padding-top: 0px;
+                background-color: $secondaryWhiteClr;
                 .social-logo
                 {
                     img
@@ -279,13 +372,14 @@ header
     height: 16px;
     width: 16px;
     background-color: $primaryWhiteClr;
-    border: 1px solid $primaryBlackClr;
+    border: 1px solid $thridBlackClr;
     border-radius: 3px;
     transition: 0.3s;
 }
 
 .checkbox-container input:checked ~ .checkmark {
-    background-color: $secondaryWhiteClr;
+    background-color: $primarySolidClr;
+    border: 1px solid $primarySolidClr;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -305,10 +399,10 @@ header
 /* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
     left: 4px;
-    top: 0px;
+    top: -1px;
     width: 4px;
     height: 8px;
-    border: solid $primarySolidClr;
+    border: solid $primaryWhiteClr;
     /* border-radius: 3px; */
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);

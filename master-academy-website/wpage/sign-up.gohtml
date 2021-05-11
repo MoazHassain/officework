@@ -10,16 +10,50 @@
             <div class="form-part">
                 <div class="title-wrap">
                     <div class="title">
-                        <h1 class="bold">Create Your Account</h1>
+                        <h2 class="bold">Sign Up to MASTER-ACADEMY</h2>
                     </div>
                     <div class="sub-title">
-                        <h4 class="regular" style="font-family: 'montserrat', sans-serif; font-weight: 500;">Build skills for today, tomorrow, and beyond.</h4>
+                        <h4 class="light" style="font-family: 'montserrat', sans-serif; font-weight: 500;">Build skills for today, tomorrow, and beyond.</h4>
                     </div>
                 </div>
-                <form action="" class="sign-up-form">
+                <form class="sign-up-form">
                     <div class="username-field">
                         <label for="name">Full Name</label>
                         <input type="text" name="name" id="name" class="input-style-two">
+                    </div>
+                    <div class="number-field">
+                        <label>Phone Number</label>
+                        <div class="number-input-wrap">
+                            
+                            <div class="country-content"><h4 class="medium" style="display: inline;">US </h4><i class="fas fa-caret-down"></i></div>
+                            <div class="input-wrap">
+                                <div class="input-text"><h4 class="light">+1</h4></div>
+                                <input type="tel" name="number" id="number">
+                            </div>
+                            <div class="country-code-container">
+                                <div class="country-number-code">
+                                    <div class="searchbar-container">
+                                        <div class="search-bar">
+                                            <i class="fas fa-search"></i>
+                                            <input type="search" name="search" id="search" placeholder="Enter country">
+            
+                                        </div>
+                                    </div>
+                                    <div class="country-list">
+                                        <ul>
+                                            <li><h4 class="light-small"><Strong>AD &nbsp; Andorra</Strong> &nbsp; +371</h4></li>
+                                            <li><h4 class="light-small"><Strong>AE &nbsp; United Arab Emirates</Strong> &nbsp; +971</h4></li>
+                                            <li><h4 class="light-small"><Strong>BG &nbsp; Bulgeria</Strong> &nbsp; +371</h4></li>
+                                            <li><h4 class="light-small"><Strong>DK &nbsp; Denmark</Strong> &nbsp; +371</h4></li>
+                                            <li><h4 class="light-small"><Strong>EG &nbsp; Egypt</Strong> &nbsp; +371</h4></li>
+                                            <li><h4 class="light-small"><Strong>HT &nbsp; Haiti</Strong> &nbsp; +371</h4></li>
+                                            <li><h4 class="light-small"><Strong>IE &nbsp; Ireland</Strong> &nbsp; +371</h4></li>
+                                            <li><h4 class="light-small"><Strong>JP &nbsp; Japan</Strong> &nbsp; +371</h4></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="email-field">
                         <label for="email">Email Address</label>
@@ -58,7 +92,7 @@
                     </div>
                     
                     <div class="btn">
-                        <button class="solid-bg-btn" type="submit"><h4 class="bold">SIGN UP</h4></button>
+                        <button class="grad-bg-btn" type="submit"><h4 class="bold">SIGN UP</h4></button>
                     </div>
                 </form>
                 <div class="using-social-media">
@@ -71,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="description-part">
+            <!-- <div class="description-part">
                 <div class="title-wrap">
                     <div class="title">
                         <h1 class="bold">Start the journey of your life.</h1>
@@ -88,7 +122,25 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+
+
+
+{{end}}
+
+{{block "query" .}}
+<div class=""></div>
+{{end}}
+
+{{block "script" .}}
+<script>
+    var toggleBtn = document.querySelector(".country-content")
+    var countryContainer = document.querySelector(".country-code-container")
+
+    toggleBtn.addEventListener("click", function(){
+        countryContainer.classList.toggle("toggle-country-code");
+    })
+</script>
 {{end}}

@@ -3066,6 +3066,23 @@
                 </div>
             </section>
         </div>
+
+
+        <script>
+                var dropdownBtn = document.querySelector(".sub-header .hamburger-menu");
+                var dropdownMenu = document.querySelector(".sub-header .drop-down .menu-content");
+
+                dropdownBtn.addEventListener("click", function() {
+                    dropdownMenu.classList.toggle("active");
+                });
+
+                var queryBtn = document.querySelector(".query .visible-content");
+                var openQuery = document.querySelector(".query .hidden-content");
+
+                queryBtn.addEventListener("click", function() {
+                    openQuery.classList.toggle("active-query");
+                });
+        </script>
     {{end}}
 
     {{block "query" .}}
@@ -3302,19 +3319,7 @@
         openOfferModal.style.display = "none";
     });
 
-    var dropdownBtn = document.querySelector(".sub-header .hamburger-menu");
-    var dropdownMenu = document.querySelector(".sub-header .drop-down .menu-content");
 
-    dropdownBtn.addEventListener("click", function() {
-        dropdownMenu.classList.toggle("active");
-    });
-
-    var queryBtn = document.querySelector(".query .visible-content");
-    var openQuery = document.querySelector(".query .hidden-content");
-
-    queryBtn.addEventListener("click", function() {
-        openQuery.classList.toggle("active-query");
-    });
         
     </script>
 {{end}}
