@@ -1055,11 +1055,11 @@ header .nav-menu button:hover {
 .container .grid-wrapper .form-part .title-wrap h2.bold, .container .grid-wrapper .form-part .using-social-media h2.bold {
   font-family: "montserrat", sans-serif;
   margin-bottom: 10px;
-  color: #404040;
+  color: #262626;
 }
 
 .container .grid-wrapper .form-part .title-wrap h4, .container .grid-wrapper .form-part .using-social-media h4 {
-  color: #404040;
+  color: #262626;
 }
 
 .container .grid-wrapper .form-part .title-wrap {
@@ -1081,7 +1081,7 @@ header .nav-menu button:hover {
 }
 
 .container .grid-wrapper .form-part form label {
-  color: #404040;
+  color: #262626;
 }
 
 .container .grid-wrapper .form-part form .number-input-wrap {
@@ -1301,19 +1301,10 @@ header .nav-menu button:hover {
   margin-bottom: 20px;
 }
 
-.signin-container .grid-wrapper {
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
-}
-
-.signin-container .grid-wrapper .form-part {
-  -webkit-box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
-          box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
-}
-
 .signin-container .grid-wrapper .form-part .forget-pass {
+  background-color: #FAFAFA;
   text-align: center;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .checkbox-container {
