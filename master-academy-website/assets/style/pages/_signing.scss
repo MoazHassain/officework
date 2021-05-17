@@ -11,12 +11,12 @@ header
     {
         input
         {
-            box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.40);
+            border-color: $thirdWhiteClr;
         }
         button 
         {
             align-self: center;
-            height: 44.8px;
+            
         }
     }
     .nav-menu

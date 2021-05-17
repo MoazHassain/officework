@@ -421,6 +421,13 @@ p.regular // paragraph-text (white background)
     font-size: 20px;
     line-height: 1.5em;
 }
+p.light // paragraph-text (white background)
+{
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5em;
+}
 
 
 p.black-small

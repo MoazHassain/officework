@@ -4,7 +4,7 @@
     {
         display: inline;
     }
-    .subheader
+    .sub-header
     {
         @include secondarySectionPadding();
         @include gridCenter();
@@ -40,9 +40,60 @@
             }
             
         }
-        .hamburger
+        .drop-down 
         {
             justify-self: end;
+
+            .hamburger-menu
+            {
+                
+                z-index: 99;
+                button 
+                {
+                    padding: 5px;
+                    border-radius: 50%;
+                    display: grid;
+                    align-items: center;
+                }
+            }
+            .menu-content
+            {
+                padding: 20px 0;
+                background-color: $primaryWhiteClr;
+                margin-top: 0px;
+                // width: fit-content;
+                // height: 35em;
+                position: absolute;
+                right: 150px;
+                z-index: -1;
+                opacity: 0;
+                transform: translateY(-100%);
+                transition: 0.4s;
+                box-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.25);
+
+                .cata 
+                {
+                    h4 
+                    {
+                        display: block;
+                        padding: 5px 30px;
+
+                        &:hover 
+                        {
+                            background-color: $forthWhiteClr;
+                            // text-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.25);
+                        }
+                    }
+                }
+            }
+
+            .active
+            {
+                transform: translateY(0%);
+                opacity: 1;
+                
+                z-index: 1;
+            }
         }
         
     }

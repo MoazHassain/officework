@@ -218,11 +218,11 @@
 
                 <div class="tabcontent active" id="search-trending">
                     <div class="courses">
-                        <p>DevOps Certification Training</p>
-                        <p>Data Science Certification Training with Python</p>
-                        <p>Big Data Hadoop Certification Training</p>
-                        <p>Cloud Architecture Masters Program</p>
-                        <p>DevOps Engineering Masters Program</p>
+                        <p class="regular">DevOps Certification Training</p>
+                        <p class="regular">Data Science Certification Training with Python</p>
+                        <p class="regular">Big Data Hadoop Certification Training</p>
+                        <p class="regular">Cloud Architecture Masters Program</p>
+                        <p class="regular">DevOps Engineering Masters Program</p>
                     </div>
                     <div class="view-more">
                         <p>View All Courses</p>
@@ -231,11 +231,11 @@
 
                 <div class="tabcontent" id="search-newlaunch">
                     <div class="courses">
-                        <p>DevOps Certification Training</p>
-                        <p>Data Science Certification Training with Python</p>
-                        <p>Big Data Hadoop Certification Training</p>
-                        <p>Cloud Architecture Masters Program</p>
-                        <p>DevOps Engineering Masters Program</p>
+                        <p class="regular">DevOps Certification Training</p>
+                        <p class="regular">Data Science Certification Training with Python</p>
+                        <p class="regular">Big Data Hadoop Certification Training</p>
+                        <p class="regular">Cloud Architecture Masters Program</p>
+                        <p class="regular">DevOps Engineering Masters Program</p>
                     </div>
                     <div class="view-more">
                         <p>View All Courses</p>
@@ -244,11 +244,11 @@
 
                 <div class="tabcontent" id="search-masterprogram">
                     <div class="courses">
-                        <p>DevOps Certification Training</p>
-                        <p>Data Science Certification Training with Python</p>
-                        <p>Big Data Hadoop Certification Training</p>
-                        <p>Cloud Architecture Masters Program</p>
-                        <p>DevOps Engineering Masters Program</p>
+                        <p class="regular">DevOps Certification Training</p>
+                        <p class="regular">Data Science Certification Training with Python</p>
+                        <p class="regular">Big Data Hadoop Certification Training</p>
+                        <p class="regular">Cloud Architecture Masters Program</p>
+                        <p class="regular">DevOps Engineering Masters Program</p>
                     </div>
                     <div class="view-more">
                         <p>View All Courses</p>
@@ -257,11 +257,11 @@
 
                 <div class="tabcontent" id="search-devops">
                     <div class="courses">
-                        <p>DevOps Certification Training</p>
-                        <p>Data Science Certification Training with Python</p>
-                        <p>Big Data Hadoop Certification Training</p>
-                        <p>Cloud Architecture Masters Program</p>
-                        <p>DevOps Engineering Masters Program</p>
+                        <p class="regular">DevOps Certification Training</p>
+                        <p class="regular">Data Science Certification Training with Python</p>
+                        <p class="regular">Big Data Hadoop Certification Training</p>
+                        <p class="regular">Cloud Architecture Masters Program</p>
+                        <p class="regular">DevOps Engineering Masters Program</p>
                     </div>
                     <div class="view-more">
                         <p>View All Courses</p>
@@ -270,11 +270,11 @@
 
                 <div class="tabcontent" id="search-cloudcomputing">
                     <div class="courses">
-                        <p>DevOps Certification Training</p>
-                        <p>Data Science Certification Training with Python</p>
-                        <p>Big Data Hadoop Certification Training</p>
-                        <p>Cloud Architecture Masters Program</p>
-                        <p>DevOps Engineering Masters Program</p>
+                        <p class="regular">DevOps Certification Training</p>
+                        <p class="regular">Data Science Certification Training with Python</p>
+                        <p class="regular">Big Data Hadoop Certification Training</p>
+                        <p class="regular">Cloud Architecture Masters Program</p>
+                        <p class="regular">DevOps Engineering Masters Program</p>
                     </div>
                     <div class="view-more">
                         <p>View All Courses</p>
@@ -283,11 +283,11 @@
 
                 <div class="tabcontent" id="search-datascience">
                     <div class="courses">
-                        <p>DevOps Certification Training</p>
-                        <p>Data Science Certification Training with Python</p>
-                        <p>Big Data Hadoop Certification Training</p>
-                        <p>Cloud Architecture Masters Program</p>
-                        <p>DevOps Engineering Masters Program</p>
+                        <p class="regular">DevOps Certification Training</p>
+                        <p class="regular">Data Science Certification Training with Python</p>
+                        <p class="regular">Big Data Hadoop Certification Training</p>
+                        <p class="regular">Cloud Architecture Masters Program</p>
+                        <p class="regular">DevOps Engineering Masters Program</p>
                     </div>
                     <div class="view-more">
                         <p>View All Courses</p>
@@ -3045,15 +3045,15 @@
                     <form action="" class="form">
                         <div class="name-field">
                             <label for="name">Name</label>
-                            <input class="input-style-two" type="text" name="name" id="name" >
+                            <input class="input-style-two" type="text" name="name" id="name" required>
                         </div>
                         <div class="email-field">
                             <label for="email">Email</label>
-                            <input class="input-style-two" type="email" name="email" id="email" >
+                            <input class="input-style-two" type="email" name="email" id="email" required>
                         </div>
                         <div class="msg-field">
                             <label for="msg">Messege</label>
-                            <textarea class="input-style-two" name="msg" id="msg" cols="30" rows="3" ></textarea>
+                            <textarea class="input-style-two" name="msg" id="msg" cols="30" rows="3" required></textarea>
                         </div>
                         <div class="btn">
                             <button class="solid-bg-btn" type="submit"><h4 class="bold">Submit</h4></button>
@@ -3069,19 +3069,7 @@
 
 
         <script>
-                var dropdownBtn = document.querySelector(".sub-header .hamburger-menu");
-                var dropdownMenu = document.querySelector(".sub-header .drop-down .menu-content");
 
-                dropdownBtn.addEventListener("click", function() {
-                    dropdownMenu.classList.toggle("active");
-                });
-
-                var queryBtn = document.querySelector(".query .visible-content");
-                var openQuery = document.querySelector(".query .hidden-content");
-
-                queryBtn.addEventListener("click", function() {
-                    openQuery.classList.toggle("active-query");
-                });
         </script>
     {{end}}
 
@@ -3109,19 +3097,19 @@
                 </div>
                 <div class="form">
                     <div class="number-field">
-                        <input type="number" class="number input-style-two" placeholder="*">
+                        <input type="number" name="number" class="number input-style-two" placeholder="*" required>
                         <label>Phone Number</label>
                     </div>
                     <div class="email-field">
-                        <input type="email" class="email input-style-two" placeholder="*">
+                        <input type="email" name="email" class="email input-style-two" placeholder="*" required>
                         <label>Email Address</label>
                     </div>
                     <div class="text-field">
-                        <textarea rows="1" class="text input-style-two" placeholder="*"></textarea>
+                        <textarea rows="1" class="text input-style-two" placeholder="*" required></textarea>
                         <label>Enter Your Messege</label>
                     </div>
                     <div class="btn">
-                        <button class="solid-bg-btn">
+                        <button class="solid-bg-btn" type="submit" name="submit">
                             <h4 class="bold">Send</h4>
                         </button>
                     </div>
@@ -3320,8 +3308,22 @@
     });
 
 
+
+    var queryBtn = document.querySelector(".query .visible-content");
+    var openQuery = document.querySelector(".query .hidden-content");
+
+    queryBtn.addEventListener("click", function() {
+        openQuery.classList.toggle("active-query");
+    });
+
+    var dropdownBtn = document.querySelector(".sub-header .hamburger-menu");
+    var dropdownMenu = document.querySelector(".sub-header .drop-down .menu-content");
+
+    dropdownBtn.addEventListener("click", function() {
+        dropdownMenu.classList.toggle("active");
+    });
         
-    </script>
+</script>
 {{end}}
 
 </html>

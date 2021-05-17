@@ -191,6 +191,13 @@ p.regular {
   line-height: 1.5em;
 }
 
+p.light {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
 p.black-small {
   font-family: "montserrat", sans-serif;
   font-weight: 900;
@@ -523,7 +530,7 @@ header .search-bar input {
 
 header .search-bar button {
   width: 100%;
-  height: 43.2px;
+  height: 45.5px;
   border-radius: 0 4px 4px 0;
   border: none;
 }
@@ -1048,15 +1055,13 @@ header a {
 }
 
 header .search-bar input {
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  border-color: #cacaca;
 }
 
 header .search-bar button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 44.8px;
 }
 
 header .nav-menu button {

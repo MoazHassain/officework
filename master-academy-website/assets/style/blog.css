@@ -191,6 +191,13 @@ p.regular {
   line-height: 1.5em;
 }
 
+p.light {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
 p.black-small {
   font-family: "montserrat", sans-serif;
   font-weight: 900;
@@ -523,7 +530,7 @@ header .search-bar input {
 
 header .search-bar button {
   width: 100%;
-  height: 43.2px;
+  height: 45.5px;
   border-radius: 0 4px 4px 0;
   border: none;
 }
@@ -1297,6 +1304,10 @@ section.sub-header .drop-down .active {
   justify-items: center;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
+}
+
+.container .sub-header {
+  padding: 5px 60px;
 }
 
 .container .sub-header .nav-menu a {
