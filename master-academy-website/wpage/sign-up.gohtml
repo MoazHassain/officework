@@ -13,7 +13,7 @@
                         <h2 class="bold">Sign Up to MASTER-ACADEMY</h2>
                     </div>
                     <div class="sub-title">
-                        <h4 class="light" style="font-family: 'montserrat', sans-serif; font-weight: 500;">Build skills for today, tomorrow, and beyond.</h4>
+                        <h4 class="regular" >Build skills for today, tomorrow, and beyond.</h4>
                     </div>
                 </div>
                 <form class="sign-up-form">
@@ -104,6 +104,11 @@
                         <a href="#"><img src="resources/svg/circle-github.svg" alt=""></a>
                     </div>
                 </div>
+
+                <div class="goto">
+                    <h4 class="light-small">Already have a account?</h4>
+                    <a href="/sign-in"><h4 class="bold-small">Sign in here</h4></a>
+                </div>
             </div>
             <!-- <div class="description-part">
                 <div class="title-wrap">
@@ -141,6 +146,18 @@
 
     toggleBtn.addEventListener("click", function(){
         countryContainer.classList.toggle("toggle-country-code");
+    })
+
+    var openSearchModal = document.querySelector(".search-modal-bg");
+    var searchOpenBtn = document.querySelector("#head-search");
+    var searchClsBtn = document.querySelector("#search-cls-btn");
+
+    searchOpenBtn.addEventListener("click", function() {
+        openSearchModal.style.display = "block";
+    });
+
+    searchClsBtn.addEventListener("click", function() {
+        openSearchModal.style.display = "none";
     })
 </script>
 {{end}}

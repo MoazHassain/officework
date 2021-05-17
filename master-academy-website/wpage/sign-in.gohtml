@@ -31,8 +31,8 @@
                         <h2 class="bold">Log In to Your Account</h2>
                     </div>
                     <div class="sub-title">
-                        <h4 class="bold">Build skills for today, tomorrow, and beyond.</h4>
-                        <h4 class="bold">Join with us for eternal.</h4>
+                        <h4 class="regular">Build skills for today, tomorrow, and beyond.</h4>
+                        
                     </div>
                 </div>
                 <form action="" class="sign-in-form">
@@ -58,11 +58,11 @@
                         </label>
                     </div>
                     <div class="btn">
-                        <button class="solid-bg-btn" type="submit"><h4 class="bold">SIGN IN</h4></button>
+                        <button class="grad-bg-btn" type="submit"><h4 class="bold">SIGN IN</h4></button>
                     </div>
                 </form>
                 <div class="forget-pass">
-                    <a href="#"><h4 class="light-small">Forget Your Password?</h4></a>
+                    <a href="#"><p class="light-small">Forget Your Password?</p></a>
                 </div>
                 <div class="using-social-media">
                     <h4 class="light-small">Or Log in to your account using</h4>
@@ -73,8 +73,32 @@
                         <img src="resources/svg/circle-github.svg" alt="">
                     </div>
                 </div>
+                <div class="goto">
+                    <h4 class="light-small">Don't have an account?</h4>
+                    <a href="/sign-up"><h4 class="bold-small">Sign up here</h4></a>
+                </div>
             </div>
             
         </div>
     </div>
+{{end}}
+
+{{block "query" .}}
+<div class=""></div>
+{{end}}
+
+{{block "script" .}}
+<script>
+    var openSearchModal = document.querySelector(".search-modal-bg");
+    var searchOpenBtn = document.querySelector("#head-search");
+    var searchClsBtn = document.querySelector("#search-cls-btn");
+
+    searchOpenBtn.addEventListener("click", function() {
+        openSearchModal.style.display = "block";
+    });
+
+    searchClsBtn.addEventListener("click", function() {
+        openSearchModal.style.display = "none";
+    })
+</script>
 {{end}}
