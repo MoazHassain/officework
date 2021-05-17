@@ -9,3 +9,36 @@ a
     text-decoration: none;
     color: black;
 }
+// number field reset
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// autofill reset
+input:-webkit-autofill,
+input:-webkit-autofill:active
+{ 
+    transition: background-color 5000s ease-in-out 0s;
+    
+
+    background-color: #fafafa;
+    box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+
+    -webkit-text-fill-color: #000;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+{
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow:0 0 0 50px white inset;
+    -webkit-text-fill-color: #000;
+    border-color: rgba(0, 0, 0, 0.1);
+}

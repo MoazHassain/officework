@@ -10,6 +10,37 @@ a {
   color: black;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+          box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+  -webkit-text-fill-color: #000;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #000;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
 hr.black-hr {
   height: 0.3px;
   background: rgba(112, 112, 112, 0.5);
@@ -311,13 +342,44 @@ textarea {
   background-color: #fff;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+          box-shadow: 0px 0px 4px 1px #f0f0f0 inset;
+  -webkit-text-fill-color: #000;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #000;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
 .input-style-one {
   border-radius: 6px;
 }
 
 .input-style-two {
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2) inset;
   border-radius: 4px;
 }
 
