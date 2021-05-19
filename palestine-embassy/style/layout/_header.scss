@@ -1,0 +1,126 @@
+header
+{
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    color: $black;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px 80px;
+    box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+    align-items: center;
+    z-index: 999;
+
+
+    .logo
+    {
+        display: flex;
+        align-items: center;
+
+        .logo-img
+        {
+            img 
+            {
+                width: 50px;
+            }
+        }
+        .logo-text
+        {
+            // align-self: center;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+    }
+    .nav-bar
+    {
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        align-items: center;
+        justify-items: end;
+
+        
+        .nav
+        {
+            overflow: hidden;
+            padding: 10px;
+            text-transform: uppercase;
+
+            .animated-border
+            {
+                margin-top: 5px;
+                border-bottom: 2px solid $primaryclr;
+                transform: translateX(-150%);
+                // transition: 0.3s ease-in-out;
+
+                
+            }
+            &:hover .animated-border
+            {
+                transform: translateX(0%);
+            }
+        }
+        .home-nav .animated-border
+        {
+            border-bottom: 2px solid $primaryclr;
+            transform: translateX(0%);
+        }
+        .menu 
+        {
+            
+            position: relative;
+            i 
+            {
+                font-size: 14px;
+            }
+            .menu-content
+            {
+                position: absolute;
+                top: 129%;
+                left: 0;
+                padding: 20px 30px;
+                background: $white;
+                margin-top: 0px;
+                width: 200px;
+                
+                z-index: 9;
+                box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+                transform: translateX(-30%);
+                opacity: 0;
+
+                .wrap
+                {
+                    padding: 5px 10px 5px;
+                    background-color: $white;
+                    overflow: hidden;
+
+                    .animated-border
+                    {
+                        border-bottom: 3px solid $primaryclr;
+                        transform: translateX(-150%);
+                    }
+                    &:hover
+                    {
+                        background-color: $whiteTwo;
+                    }
+                    &:hover .animated-border
+                    {
+                        transform: translateX(0%);
+                    }
+                    &:hover .menu-content
+                    {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
+                }
+
+            }
+            
+        }
+        
+        
+    }
+    .search-nav
+    {
+        justify-self: end;
+    }
+}

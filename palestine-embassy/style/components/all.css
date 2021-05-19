@@ -1,0 +1,11 @@
+input, textarea {
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.4) inset;
+  resize: none;
+}
+/*# sourceMappingURL=all.css.map */

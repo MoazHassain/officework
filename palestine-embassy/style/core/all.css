@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h1, h3, h4, p, a {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+/*# sourceMappingURL=all.css.map */
