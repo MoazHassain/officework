@@ -162,7 +162,6 @@ header .nav-bar .menu {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  position: relative;
 }
 
 header .nav-bar .menu i {
@@ -210,12 +209,12 @@ header .nav-bar .menu .menu-content .wrap:hover .animated-border {
 
 header .nav-bar .menu .megamenu-content {
   position: absolute;
-  top: 129%;
-  left: 0;
+  top: 100%;
+  left: 30%;
   padding: 10px;
   background: #fff;
   margin-top: 0px;
-  width: 850px;
+  width: 70%;
   z-index: 9;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -243,7 +242,7 @@ header .nav-bar .menu .megamenu-content .title p {
 
 header .nav-bar .menu .megamenu-content .img {
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
 
 header .nav-bar .menu .megamenu-content .img img {
@@ -281,14 +280,22 @@ header .nav-bar .menu .megamenu-content .column-one, header .nav-bar .menu .mega
   border-right: 1px solid #dfdfdf;
 }
 
-header .nav-bar .menu .megamenu-content .column-two img {
-  -o-object-fit: contain;
-     object-fit: contain;
+header .nav-bar .menu .megamenu-content .column-two .img {
+  width: 100%;
+  height: 250px;
+}
+
+header .nav-bar .menu .megamenu-content .column-two .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header .nav-bar .menu .nav:hover .menu-content,
 header .nav-bar .menu .nav:hover .megamenu-content {
   visibility: visible;
+  height: auto;
   opacity: 1;
 }
 
@@ -348,8 +355,8 @@ footer .grid-content {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 footer .grid-content > * {
@@ -360,10 +367,12 @@ footer .grid-content > * .title {
   margin-bottom: 20px;
 }
 
-footer .grid-content > * ul li {
-  margin-left: 15px;
-  margin-bottom: 10px;
-  list-style-type: square;
+footer .grid-content .img-part .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 footer .grid-content .contact .pages p {
