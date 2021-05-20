@@ -1,3 +1,9 @@
+button, .btn {
+  padding: 10px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 input, textarea {
   font-size: 18px;
   padding: 10px 15px;
@@ -121,8 +127,7 @@ header .logo .logo-img img {
 }
 
 header .logo .logo-text {
-  margin-left: 10px;
-  text-transform: uppercase;
+  margin-left: 15px;
 }
 
 header .nav-bar {
@@ -139,10 +144,6 @@ header .nav-bar {
 header .nav-bar .nav {
   overflow: hidden;
   padding: 10px 10px;
-}
-
-header .nav-bar .nav > p {
-  text-transform: uppercase;
 }
 
 header .nav-bar .nav > .animated-border {

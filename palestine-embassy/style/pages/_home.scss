@@ -86,123 +86,293 @@ section.hero
     }
 }
 
-section.about
+// section.about
+// {
+//     @include secondarySectionPadding();
+//     // margin: 60px 0;
+
+//     .grid-content
+//     {
+//         @include gridCenter();
+//         grid-template-columns: repeat(2, 1fr);
+
+
+//         .img-part 
+//         {
+//             img 
+//             {
+//                 padding: 60px;
+//                 width: 100%;
+//                 height: 800px;
+//                 object-fit: cover;
+//                 object-position: bottom;
+//             }
+//         }
+//         .text-part
+//         {
+//             > *
+//             {
+//                 margin: 20px 30px;
+//             }
+//             .title
+//             {
+//                 > * 
+//                 {
+//                     margin: 10px 0;
+//                 }
+//                 p
+//                 {
+//                     width: fit-content;
+//                 }
+//                 .border
+//                 {
+//                     border-bottom: 2px solid $primaryclr;
+//                     width: 50px;
+//                     margin-top: 10px;
+//                 }
+//             }
+//             .block-text 
+//             {
+//                 > * 
+//                 {
+//                     margin: 10px 0;
+//                 }
+//                 p
+//                 {
+//                     line-height: 1.6em;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// section.mission
+// {
+//     @include secondarySectionPadding();
+//     // margin: 50px 0;
+
+//     .grid-content
+//     {
+//         @include gridCenter();
+//         grid-template-columns: repeat(2, 1fr);
+
+//         .img-part 
+//         {
+//             img 
+//             {
+//                 padding: 60px;
+//                 width: 100%;
+//                 height: 650px;
+//                 object-fit: cover;
+//                 object-position: bottom;
+//             }
+//         }
+//         .text-part
+//         {
+//             > *
+//             {
+//                 margin: 20px 30px;
+//             }
+//             .title
+//             {
+//                 > * 
+//                 {
+//                     margin: 10px 0;
+//                 }
+//                 p
+//                 {
+//                     width: fit-content;
+//                 }
+//                 .border
+//                 {
+//                     border-bottom: 2px solid $primaryclr;
+//                     width: 50px;
+//                     margin-top: 10px;
+//                 }
+//             }
+//             .block-text 
+//             {
+//                 > * 
+//                 {
+//                     margin: 10px 0;
+//                 }
+//                 p
+//                 {
+//                     line-height: 1.6em;
+//                     color: $blackTwo;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+section.info-wrap
 {
     @include secondarySectionPadding();
-    // margin: 60px 0;
+    margin: 50px 0;
+    @include gridCenter();
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+    text-align: center;
 
-    .grid-content
+    .card
     {
-        @include gridCenter();
-        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        width: 100%;
+        padding: 30px 30px;
+        background-color: $whiteTwo;
+        position: relative;
+        overflow-y: hidden;
 
-
-        .img-part 
+        .visible-content
         {
-            img 
+            .icon 
             {
-                padding: 60px;
-                width: 100%;
-                height: 800px;
-                object-fit: cover;
-                object-position: bottom;
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                background-color: $primaryclr;
+                @include gridCenter();
+                margin: 0 auto 10px;
+
+                i 
+                {
+                    color: $white;
+                    font-size: 22px;
+                }
+                img 
+                {
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
-        .text-part
+        .hover-content
         {
-            > *
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $blackThree;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            transform: translateY(-100%);
+            opacity: 0;
+
+            .title 
             {
-                margin: 20px 30px;
+                align-self: center;
+                color: $whiteTwo;
             }
-            .title
+            .btn
             {
-                > * 
+                width: fit-content;
+                margin: 0 auto;
+                background-color: $primaryclr;
+                
+                a 
                 {
-                    margin: 10px 0;
+                    color: $blackTwo;
                 }
-                p
+                &:hover 
                 {
-                    width: fit-content;
-                }
-                .border
-                {
-                    border-bottom: 2px solid $primaryclr;
-                    width: 50px;
-                    margin-top: 10px;
+                    opacity: 0.8;
                 }
             }
-            .block-text 
-            {
-                > * 
-                {
-                    margin: 10px 0;
-                }
-                p
-                {
-                    line-height: 1.6em;
-                }
-            }
+            
+        }
+        &:hover .hover-content 
+        {
+            transform: translateY(0%);
+            opacity: 1;
         }
     }
 }
 
-section.mission
+section.news
 {
-    @include secondarySectionPadding();
-    // margin: 50px 0;
-
+    
     .grid-content
     {
+        @include secondarySectionPadding();
+        margin-bottom: 50px;
         @include gridCenter();
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 60px;
 
-        .img-part 
+        .card 
         {
-            img 
+            border: 1px solid $whiteTwo;
+            background-color: $white;
+            border-radius: 2px;
+
+
+            .img 
             {
-                padding: 60px;
                 width: 100%;
-                height: 650px;
-                object-fit: cover;
-                object-position: bottom;
+                background-color: $primaryclr;
+                img
+                {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                }
+            }
+            .title,.date,.detail 
+            {
+                padding: 0px 20px;
+                margin: 20px 0;
+            }
+            .date
+            {
+                p 
+                {
+                    font-size: 16px;
+                }
+                a 
+                {
+                    color: #005C97;
+                    text-decoration: underline;
+                    &:hover 
+                    {
+                        color: $primaryclr;
+                    }
+                }
+            }
+            &:hover 
+            {
+                box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25) ;
             }
         }
-        .text-part
+    }
+    .collapsible 
+    {
+        margin: 20px auto;
+        width: fit-content;
+        padding: 10px 15px;
+        background-color: $primaryclr;
+        color: $black;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 2px;
+
+        &:before 
         {
-            > *
-            {
-                margin: 20px 30px;
-            }
-            .title
-            {
-                > * 
-                {
-                    margin: 10px 0;
-                }
-                p
-                {
-                    width: fit-content;
-                }
-                .border
-                {
-                    border-bottom: 2px solid $primaryclr;
-                    width: 50px;
-                    margin-top: 10px;
-                }
-            }
-            .block-text 
-            {
-                > * 
-                {
-                    margin: 10px 0;
-                }
-                p
-                {
-                    line-height: 1.6em;
-                    color: $blackTwo;
-                }
-            }
+            content: "Show More";
         }
+
+    }
+    .active:before
+    {
+        content: "Show Less";
+    }
+
+    .collapsible-content
+    {
+        max-height: 0;
+        overflow: hidden;
     }
 }
 
@@ -215,6 +385,7 @@ section.testimonial
     {
         @include gridCenter();
         grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
 
         .card 
         {
@@ -243,6 +414,11 @@ section.testimonial
                     color: $blackTwo;
                 }
 
+            }
+            &:hover 
+            {
+                background-color: $whiteTwo;
+                box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25);
             }
         }
     }
@@ -285,7 +461,7 @@ section.contact
                     a 
                     {
                         
-                        color: $white;
+                        color: #005C97;
                     }
                     &:hover 
                     {
