@@ -28,56 +28,123 @@
             </div>
         </div>
         <div class="nav-bar">
-            <div class="nav home-nav">
-                <p class="semibold">Home</p>
-                <div class="animated-border"></div>
+            <div class="menu">
+                <div class="nav home-nav">
+                    <p class="semibold">Our Relationship<i class="fas fa-chevron-down"></i></p>
+                    <div class="animated-border"></div>
+                    
+                    <div class="megamenu-content">
+                        <div class="img-part">
+                            <div class="img">
+                                <!-- <img src="./img/charles-deluvio-AT5vuPoi8vc-unsplash.jpg" alt=""> -->
+                                <img src="./img/chris-liverani-9cd8qOgeNIY-unsplash.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="column-one">
+                            <div class="title">
+                                <a href=""><p class="semibold">Mission</p></a>
+                            </div>
+
+                            <div class="wrap">
+                                <a href=""><p class="regular">Mission Statement</p></a>
+                                <div class="animated-border"></div>
+                            </div>
+                            <div class="wrap">
+                                <a href=""><p class="regular">Head of Mission</p></a>
+                                <div class="animated-border"></div>
+                            </div>
+                            <div class="wrap">
+                                <a href=""><p class="regular">Previous Heads of Mission</p></a>
+                                <div class="animated-border"></div>
+                            </div>
+                        </div>
+                        <div class="column-two">
+                            <div class="title">
+                                <a href=""><p class="semibold">Palestine & Bangladesh</p></a>
+                                
+                            </div>
+                            <div class="img">
+                                <img src="./img/unnamed.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="menu">
                 <div class="nav visa-nav">
-                    <p class="semibold">Visa <i class="fas fa-chevron-down"></i></p>
+                    <p class="semibold">About Palesine<i class="fas fa-chevron-down"></i></p>
                     <div class="animated-border"></div>
                     
+                
+                    <div class="menu-content">
+                        <div class="wrap">
+                            <a href=""><p class="regular">History</p></a>
+                            <div class="animated-border"></div>
+                        </div>
+                        <div class="wrap">
+                            <a href=""><p class="regular">Yeasir Arafat</p></a>
+                            <div class="animated-border"></div>
+                        </div>
+                        <div class="wrap">
+                            <a href=""><p class="regular">States of Palestine</p></a>
+                            <div class="animated-border"></div>
+                        </div>
+                        <div class="wrap">
+                            <a href=""><p class="regular">Gallery</p></a>
+                            <div class="animated-border"></div>
+                        </div>
+                        <div class="wrap">
+                            <a href=""><p class="regular">President of Palestine</p></a>
+                            <div class="animated-border"></div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="menu-content">
-                    <div class="wrap">
-                        <p class="regular">Study Visa</p>
-                        <div class="animated-border"></div>
+            </div>
+
+            <div class="menu">
+                <div class="nav about-nav">
+                    <p class="semibold">About the Embassy<i class="fas fa-chevron-down"></i></p>
+                    <div class="animated-border"></div>
+
+                    <div class="menu-content">
+                        <div class="wrap">
+                            <a href=""><p class="regular">Citizens Services</p></a>
+                            <div class="animated-border"></div>
+                        </div>
+                        <div class="wrap">
+                            <a href=""><p class="regular">Office & Holidays</p></a>
+                            <div class="animated-border"></div>
+                        </div>
                     </div>
-                    <div class="wrap">
-                        <p class="regular">Super Visa</p>
-                        <div class="animated-border"></div>
-                    </div>
-                    <div class="wrap">
-                        <p class="regular">Visitor Visa</p>
-                        <div class="animated-border"></div>
-                    </div>
-                    
-                    
                 </div>
+
             </div>
 
             <div class="nav news-nav">
-                <p class="semibold">News</p>
-                <div class="animated-border"></div>
-            </div>
-
-            <div class="nav about-nav">
-                <p class="semibold">About</p>
-                <div class="animated-border"></div>
-            </div>
-
-            <div class="nav blog-nav">
-                <p class="semibold">Blog</p>
+                <a href=""><p class="semibold">News</p></a>
                 <div class="animated-border"></div>
             </div>
 
             <div class="nav contact-nav">
-                <p class="semibold">Contact</p>
+               <a href=""> <p class="semibold">Contact</p></a>
                 <div class="animated-border"></div>
             </div>
-            <div class="search-nav">
-                <img src="/svg/search-line.svg" alt="">
+            
+            <div class="search-modal">
+                <div class="search-nav">
+                    <img src="/svg/search-line.svg" alt="">
+                </div>
+
+                <div class="modal">
+                    <div class="search-field">
+                        <input type="search" name="search" id="search" placeholder="Search here">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.6663 3.33301L3.33301 16.6663M16.6663 16.6663L3.33301 3.33301L16.6663 16.6663Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -349,15 +416,15 @@
                     
                     <div class="name-field">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" required>
                     </div>
                     <div class="email-field">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="message">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="2"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="2" required></textarea>
                     </div>
                 </form>
             </div>
@@ -400,5 +467,19 @@
             prevEl: '.swiper-button-prev',
         },
     });
+
+
+    var searchBtn = document.querySelector(".search-nav");
+    var searchModal = document.querySelector(".search-modal .modal");
+    var clsSearchModal = document.querySelector(".search-field svg");
+
+    searchBtn.addEventListener("click", function(){
+        searchModal.classList.toggle("active");
+    })
+    clsSearchModal.addEventListener("click", function(){
+        searchModal.classList.remove("active");
+    })
+
+
 </script>
 </html>
