@@ -17,219 +17,51 @@ hr.black-hr {
   margin: 20px 0;
 }
 
-h1.black {
+* {
   font-family: "montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 1em;
 }
 
-h1.bold {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1em;
-  letter-spacing: -0.03em;
+.small {
+  font-size: 16px;
 }
 
-h1.medium {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 36px;
+p {
+  font-size: 18px;
 }
 
-h1.regular {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 36px;
+h5 {
+  font-size: 20px;
 }
 
-h2.black {
-  font-family: "montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 24px !important;
-  line-height: 1em;
+h4 {
+  font-size: 22px;
 }
 
-h2.bold {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1em;
-}
-
-h2.medium {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
+h3 {
   font-size: 24px;
 }
 
-h2.regular {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
+h2 {
+  font-size: 28px;
 }
 
-h3.black {
-  font-family: "montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 1.2em;
+h1 {
+  font-size: 32px;
 }
 
-h3.bold {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.2em;
+.black {
+  font-weight: 800;
 }
 
-h3.medium {
-  font-family: "montserrat", sans-serif;
+.bold {
   font-weight: 600;
-  font-size: 22px;
 }
 
-h3.regular {
-  font-family: "montserrat", sans-serif;
+.medium {
   font-weight: 500;
-  font-size: 22px;
 }
 
-h4.black {
-  font-family: "montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-h4.bold {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5em;
-  letter-spacing: -0.03em;
-}
-
-h4.medium {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-h4.regular {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-h4.light {
-  font-family: "montserrat", sans-serif;
+.regular {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5em;
-  letter-spacing: -0.01em;
-}
-
-h4.black-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-h4.bold-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.5em;
-  letter-spacing: -0.03em;
-}
-
-h4.medium-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-h4.regular-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-h4.light-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5em;
-  letter-spacing: -0.01em;
-}
-
-p.bold {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-p.medium {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-p.regular {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-p.light {
-  font-family: "montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5em;
-}
-
-p.black-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.2em;
-}
-
-p.bold-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.2em;
-}
-
-p.medium-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-p.regular-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
-p.light-small {
-  font-family: "montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5em;
 }
 /*# sourceMappingURL=all.css.map */
