@@ -21,6 +21,13 @@ header
     }
     .nav-menu
     {
+        a
+        {
+            h5.regular 
+            {
+                font-weight: 500 ;
+            }
+        }
         button
         {
             @include gradBorderBtn($primaryBlackClr, 2px 1000px 1px $secondaryWhiteClr inset)
@@ -61,13 +68,13 @@ header
             {
                 text-align: center;
                 
-                h2.bold 
+                h3.bold 
                 {
                     font-family: "montserrat", sans-serif;
                     margin-bottom: 10px;
                     color: $secondaryBlackclr;
                 }
-                h4
+                h5
                 {
                     color: $secondaryBlackclr;
                 }
@@ -96,150 +103,7 @@ header
                 {
                     color: $secondaryBlackclr;
                 }
-                .number-input-wrap
-                {
-                    display: grid;
-                    grid-template-columns: 70px auto;
-                    grid-template-areas: 
-                    "btn input"
-                    "countryCode countryCode";
-                    border-radius: 6px;
-                    border: 1px solid $thirdWhiteClr;
-                    box-shadow: 0 1px 2px rgba($color: #000000, $alpha: 0.00);
-                    transition: 0.3s ease-in-out;
-
-                    &:hover,
-                    & ~ input:focus
-                    {
-                        box-shadow: 0 1px 2px rgba($color: #000000, $alpha: 0.20);
-                    }
-
-                    .country-content
-                    {
-                        grid-area: btn;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 6px 0 0 6px;
-                        border-right: 1px solid $thirdWhiteClr;
-                        background-color: $primaryWhiteClr;
-                        outline: none;
-                        padding: 10px 0;
-
-                        h4 
-                        {
-                            margin-right: 5px;
-                        }
-                    }
-                    input[type="number"]
-                    {
-                        margin: unset;
-                        width: 100%;
-                        padding: 10px 16px 10px 16px;
-                        border-radius: 0 5px 5px 0;
-
-                        
-                    }
-                    .input-wrap 
-                    {
-                        grid-area: input;
-                        display: grid;
-                        grid-template-columns: auto auto;
-                        border-radius: 0 6px 6px 0;
-                        
-
-                        .input-text 
-                        {
-                            @include gridCenter();
-                            background-color: white;
-                            color: black;
-                            height: 100%;
-                            padding: 10px 12px;
-                            text-align: center;
-                            border-right: 1px solid $thirdWhiteClr;
-                            
-                            
-                        }
-                    }
-                    .country-code-container
-                    {
-                        grid-area: countryCode;
-                        position: relative;
-                        color: black;
-                        display: none;
-                        
-
-                        .country-number-code
-                        {
-                            
-                            background-color: white;
-                            position: absolute;
-                            /* display: none; */
-                            /* width:21.8vw; */
-                            width: 100%;
-                            padding: 8px;
-                            border-radius: 4px;
-                            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.25);
-                            margin-top: 5px;
-                            
-                            /* overflow: hidden;
-                            
-                            overflow-y: scroll;
-                            overflow: hidden;
-                            overflow-x: hidden; */
-
-                            .searchbar-container
-                            {
-                                width: 100%;
-
-                                .search-bar 
-                                {
-                                    i 
-                                    {
-                                        position: absolute;
-                                        font-size: 20px;
-                                        padding: 14px;
-                                        font-weight: 400;
-                                        pointer-events: none;
-                                    }
-                                    input 
-                                    {
-                                        width: 100%;
-                                        margin: unset;
-                                        box-shadow: unset;
-                                        border-radius: 6px;
-                                        padding-left: 45px;
-                                        background-color: $secondaryWhiteClr;
-                                        box-shadow: 0 0 1px rgba($color: #000000, $alpha: 0.25) inset;
-                                    }
-                                    
-                                }
-                            }
-
-                            .country-list 
-                            {
-                                height: 120px;
-                                overflow-y: scroll;
-                                overflow-x: hidden;
-
-                                ul 
-                                {
-                                    padding: 8px 5px;
-                                    list-style-type: none;
-                                }
-                                li 
-                                {
-                                    padding: 8px 0px;
-                                }
-                            }
-                        }
-                    }
-                    .toggle-country-code
-                    {
-                        display: block;
-                    }
-
-                }
+                
                 .password-field
                 {
                     display: flex;
@@ -258,8 +122,9 @@ header
                         
                         a 
                         {
-                            font-family: gothamMedium;
+                            font-family: "montserrat", sans-serif;
                             font-size: 14px;
+                            font-weight: 600;
                             color: $primaryBlackClr;
                             transition: 0.2s ease-in-out;
 
@@ -370,7 +235,7 @@ header
             {
                 background-color: $secondaryWhiteClr;
                 text-align: center;
-                padding: 0 0 15px 0;
+                padding: 10px 0 10px 0;
                 
                 p 
                 {

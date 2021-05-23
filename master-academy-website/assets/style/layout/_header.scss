@@ -6,7 +6,7 @@ header
     color: $primaryWhiteClr;
     padding: 5px 50px;
     display: grid;
-    grid-template-columns: auto 30% auto;
+    grid-template-columns: auto auto auto;
     grid-gap: 10px;
     z-index: 999;
 
@@ -34,6 +34,10 @@ header
                 height: 65px;
             }
             
+        }
+        .logo-text 
+        {
+            white-space: nowrap;
         }
 
     }

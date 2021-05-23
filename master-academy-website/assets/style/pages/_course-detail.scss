@@ -234,6 +234,9 @@
     {
         // display: none;
         position: relative;
+        position: static;
+        top: 140px;
+        background-color: $primaryWhiteClr;
     }
     #batch
     {

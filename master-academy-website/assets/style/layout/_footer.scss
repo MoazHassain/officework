@@ -6,51 +6,46 @@ footer
         color: $primaryWhiteClr;
         padding: 40px 80px;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr 1fr;
 
         .join-part
         {
-            text-align: center;
+            // text-align: center;
+            padding-left: 20px;
 
             > *
             {
-                margin: 15px 0;
+                margin-bottom: 15px ;
             }
             .logo
             {
-                img 
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                
+                .logo-img
                 {
-                    width: 65px;
-                    height: 65px;
+                    margin-right: 10px;
+                    img 
+                    {
+                        width: 65px;
+                        height: 65px;
+                    }
                 }
                 
             }
-            h3
+            
+            table 
             {
-                font-family: gothamRegular;
-            }
-            .signup-field
-            {
-                label
+                
+                
+                // margin-left: -10%;
+                td 
                 {
-                    margin-bottom: 10px;
+                    padding-right: 10px;
+                    text-align: left;
                 }
-                .wrapper
-                {
-                    display: grid;
-                    grid-template-columns: 80% 20%;
-                    margin: 5px 30px;
-
-                    input 
-                    {
-                        border-radius: 4px 0 0 4px;
-                    }
-                    button
-                    {
-                        border-radius: 0 4px 4px 0;
-                    }
-                }
-
             }
         }
         .pages-part
@@ -63,10 +58,7 @@ footer
             .title
             {
                 margin-bottom: 15px;
-                p
-                {
-                    font-family: gothamBold;
-                }
+                
             }
             .pages 
             {

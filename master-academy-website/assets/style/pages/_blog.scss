@@ -4,7 +4,7 @@
     {
         > .title 
         {
-            h1 
+            h3 
             {
                 color: $primarySolidClr;
                 margin-bottom: 20px;
@@ -59,12 +59,9 @@
             }
             .instructor
             {
-                margin-bottom: 25px;
+                margin-bottom: 20px;
 
-                h4
-                {
-                    font-size: 14px;
-                }
+                
             }
             .card-detail
             {
@@ -109,11 +106,12 @@
                 i 
                 {
                     padding-right: 15px;
+                    font-weight: 400;
                 }
-                h4 
+                p 
                 {
                     border-radius: unset;
-                    padding: 5px 15px;
+                    padding: 5px 10px 5px 15px;
 
                     &:hover
                     {
@@ -199,7 +197,7 @@
                 }
                 .text 
                 {
-                    h4.light-small 
+                    p.small
                     {
                         color: $primarySolidClr;
                         margin-top: 10px;

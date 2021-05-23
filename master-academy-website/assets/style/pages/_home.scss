@@ -25,12 +25,12 @@ section.hero
                 
                 > *
                 {
-                    padding: 10px 10px 0px 10px;
+                    margin: 15px 0;
                 }
                 h1
                 {
-                    font-family: gothamBlack;
-                    font-size: 65px;
+                    letter-spacing: -0.03em;
+                    font-size: 55px;
                 }
                 h3
                 {
@@ -39,6 +39,7 @@ section.hero
                 .btn
                 {
                     display: inline;
+                    margin-right: 15px;
                     
                     button 
                     {
@@ -103,7 +104,7 @@ section.hero
             {
                 border-color: #CC2B5E;
 
-                h3 
+                h4
                 {
                     color: #CC2B5E;
                 }
@@ -112,7 +113,7 @@ section.hero
             {
                 border-color: #F04F3E;
 
-                h3 
+                h4 
                 {
                     color: #F04F3E;
                 }
@@ -121,7 +122,7 @@ section.hero
             {
                 border-color: rgba($color: #f48200, $alpha: 0.8);
 
-                h3 
+                h4 
                 {
                     color: rgba($color: #f48200, $alpha: 0.8);
                 }
@@ -210,7 +211,7 @@ section.explore-course
 
         .tablink 
         {
-            font-family: gothamRegular;
+            
             color: $thridBlackClr;
             padding-bottom: 10px;
             margin-right: 40px;
@@ -298,7 +299,7 @@ section.explore-course
 
                         h4
                         {
-                            font-size: 14px;
+                            font-size: 16px;
                         }
                     }
                     .card-detail
@@ -308,11 +309,7 @@ section.explore-course
                         align-items: center;
                         grid-gap: 10px;
 
-                        small
-                        {
-                            font-size: 16px;
-                            font-family: gothamMedium;
-                        }
+                        
                         
                         .time, .watched
                         {
@@ -639,7 +636,6 @@ section.consultation
 {
 
     padding: 50px 150px;
-    background: $secondaryWhiteClr;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 20px;
@@ -664,8 +660,7 @@ section.consultation
         }
         label
         {
-            font-family: gothamRegular;
-            font-size: 20px;
+            
             color: $secondaryBlackclr;
             display: block;
             margin-bottom: 5px;

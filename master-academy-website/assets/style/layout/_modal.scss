@@ -96,7 +96,7 @@
 
             .tablink 
             {
-                font-family: gothamRegular;
+                
                 margin-right: 40px;
                 transition: 0.3s ease-in-out;
                 color: $thirdWhiteClr;
@@ -145,10 +145,10 @@
         }
         .view-more
         {
-            p 
+            h5
             {
                 margin: 10px 0;
-                font-family: gothamMedium;
+                
                 color: $primarySolidClr;
             }
         }
@@ -191,7 +191,7 @@
             {
                 h3
                 {
-                    font-family: gothamMedium;
+                    // font-family: gothamMedium;
                     line-height: 1.3em;
                 }
 
@@ -246,13 +246,7 @@
                 width: 100%;
             }
         }
-        .text-content 
-        {
-            p 
-            {
-                font-size: 18px;
-            }
-        }
+        
         .cls-btn
         {
             position: absolute;
