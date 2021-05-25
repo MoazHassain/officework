@@ -1,0 +1,13 @@
+header 
+{
+    @include dashboardheader();
+}
+.subheader 
+{
+    @include dashboardsubhead();
+}
+
+footer 
+{
+    @include dashboardfooter();
+}

@@ -1,0 +1,73 @@
+{{block "link-style" .}}
+<link rel="stylesheet" href="resources/style/certification-training.css">
+{{end}}
+
+{{block "subheader" .}}
+    <section class="subheader">
+        <div class="col-1">
+            <div class="page-link">
+                <div class="goto-home">
+                    <a href=""><p class="regular" style="color: rgb(0, 54, 45);">Home <i class="fas fa-chevron-right"></i></p></a>
+                    
+                </div>
+    
+                <div class="goto-course-catalog">
+                    <a href=""><p class="regular" style="color: rgb(0, 54, 45);">My Courses <i class="fas fa-chevron-right"></i></p></a>
+                    
+                </div>
+                <div class="goto-mycourse">
+                    <a href="/"><p class="regular">DevOps Certification Training</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="justify-self: end;">
+            <div class="forum">
+                <a href="">
+                    <img src="/resources/svg/forum.svg" alt="">
+                    <p class="regular">Forum</p>
+                </a>
+            </div>
+            <div class="support">
+                <a href="">
+                    <img src="/resources/svg/support.svg" alt="">
+                    <p class="regular">Support</p>
+                </a>
+            </div>
+        </div>
+    </section>
+{{end}}
+
+{{block "container" .}}
+<div class="container">
+    <div class="course-title">
+        <div class="title">
+            <img src="/resources/img/devops.png" alt="">
+            <h4 class="bold">DevOps Certification Training</h4>
+        </div>
+        <div class="progression">
+            <div class="progress">
+                <div class="progress-bar">
+                    <div class="full-bar"></div>
+                    <div class="complete-bar"></div>
+                </div>
+                <div class="percentage">
+                    <p class="small regular">10%</p>
+                </div>
+            </div>
+
+            <div class="grade">
+                <div class="visible-content">
+                    <div class="block-text">
+                        <p class="small regular">Your Current Grade</p>
+                        <p class="small bold">Missed actions in LMS</p>
+                    </div>
+                    <div class="grade-rank">
+                        <h2 class="bold">A</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{{end}}
