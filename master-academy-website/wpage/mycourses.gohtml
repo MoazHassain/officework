@@ -1,0 +1,683 @@
+{{block "link-style" .}}
+<link rel="stylesheet" href="resources/style/mycourses.css">
+{{end}}
+
+{{block "offer" .}}
+<div></div>
+{{end}}
+
+{{block "header" .}}
+    <header>
+        <a href="/">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="./resources/img/master-logo2.png" alt="">
+                </div>
+                <div class="logo-text">
+                    <h3 class="black">MASTER-ACADEMY</h3>
+                </div>
+            </div>
+        </a>
+        <div class="search-bar">
+            <div class="input">
+                <input class="input-style-two" type="search" name="head-search" id="head-search">
+            </div>
+            <div class="btn">
+                <button class="solid-bg-btn">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.9796 3.08615C11.3034 3.08494 12.5977 3.47637 13.699 4.21093C14.8002 4.94548 15.6588 5.99016 16.1663 7.21279C16.6737 8.43543 16.8071 9.78109 16.5495 11.0795C16.292 12.378 15.6552 13.5709 14.7196 14.5074C13.784 15.4438 12.5917 16.0818 11.2934 16.3405C9.99522 16.5992 8.64944 16.467 7.42634 15.9607C6.20324 15.4544 5.15778 14.5967 4.42222 13.4961C3.68666 12.3956 3.29405 11.1016 3.29405 9.77782C3.30207 8.00661 4.00883 6.31014 5.2607 5.05712C6.51258 3.8041 8.2084 3.09579 9.9796 3.08615ZM9.9796 1.83337C8.40834 1.83337 6.87236 2.29931 5.56591 3.17225C4.25945 4.0452 3.24119 5.28595 2.63989 6.73761C2.0386 8.18927 1.88127 9.78663 2.18781 11.3277C2.49435 12.8688 3.25098 14.2843 4.36203 15.3954C5.47308 16.5064 6.88865 17.2631 8.42972 17.5696C9.97079 17.8762 11.5682 17.7188 13.0198 17.1175C14.4715 16.5162 15.7122 15.498 16.5852 14.1915C17.4581 12.8851 17.924 11.3491 17.924 9.77782C17.924 7.67082 17.087 5.65012 15.5972 4.16025C14.1073 2.67038 12.0866 1.83337 9.9796 1.83337Z" fill="white"/>
+                        <path d="M21.3892 20.3439L16.8854 15.8094L16.0176 16.6711L20.5215 21.2056C20.578 21.2625 20.6453 21.3078 20.7194 21.3388C20.7934 21.3698 20.8729 21.3859 20.9532 21.3862C21.0335 21.3865 21.1131 21.3709 21.1874 21.3405C21.2616 21.31 21.3292 21.2652 21.3862 21.2086C21.4432 21.152 21.4884 21.0848 21.5194 21.0107C21.5504 20.9366 21.5665 20.8572 21.5668 20.7769C21.5671 20.6966 21.5516 20.617 21.5211 20.5427C21.4906 20.4684 21.4458 20.4009 21.3892 20.3439Z" fill="white"/>
+                    </svg>
+                    <!-- <div class="bg-fill"></div> -->
+                    
+                </button>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <div class="nav-course">
+                <div class="dropdown">
+                    <a href="javascript:void(0)"><h5 class="medium">Course <i class="fas fa-chevron-down"></i></h5></a>
+                    <div class="animated-border"></div>
+                    <div class="dropdown-content">
+                        <div class="mycourse">
+                            <a href="#"><p class="regular">My Courses</p></a>
+                        </div>
+                        <div class="allcourse">
+                            <a href="#"><p class="regular">All Courses</p></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <div class="nav-Project">
+                <a href="#"><h5 class="medium">Project</h5></a>
+                <div class="animated-border"></div>
+            </div> -->
+            <div class="nav-Certificate">
+                <a href="#"><h5 class="medium">Certificate</h5></a>
+                <div class="animated-border"></div>
+            </div>
+            <div class="nav-Blog">
+                <a href="/blog"><h5 class="medium">Blog</h5></a>
+                <div class="animated-border"></div>
+            </div>
+            <div class="nav-notification">
+                <div class="dropdown">
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-bell"></i>
+                        <div class="notification-number"><p class="small regular">1</p></div>
+                    </a>
+                    <div class="dropdown-content">
+                        <div class="notification-header">
+                            <p class="medium">Notification</p>
+                            <p class="small regular" style="justify-self: flex-end;">You have <span class="">1</span> new notification</p>
+                        </div>
+                        <div class="notifications-wrap">
+                            <div class="notifications">
+                                <p class="small regular notification-title">
+                                    Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                </p>
+                                <p class="small regular receive-time">5 hours ago</p>
+                            </div>
+                            <div class="notifications">
+                                <p class="small regular notification-title">
+                                    Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                </p>
+                                <p class="small regular receive-time">5 hours ago</p>
+                            </div>
+                            <div class="notifications">
+                                <p class="small regular notification-title">
+                                    Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                </p>
+                                <p class="small regular receive-time">5 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="nav-profile">
+                <div class="dropdown">
+                    <a href="javascript:void(0)">
+                        <h5 class="medium user-name">Mostain</h5>
+                        <div class="img">
+                            <img src="resources/img/user-img.webp" alt="">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-content">
+                        <div class="profile">
+                            <a href="#"><p class="regular">My Profile</p></a>
+                        </div>
+                        <div class="orders">
+                            <a href="#"><p class="regular">My Orders</p></a>
+                        </div>
+                        <div class="activity">
+                            <a href="#"><p class="regular">Activity Stream</p></a>
+                        </div>
+                        <div class="profile">
+                            <a href="#"><p class="wallet">My Wallet</p></a>
+                        </div>
+                        <div class="wishlist">
+                            <a href="#"><p class="regular">My Wishlist</p></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+{{end}}
+
+{{block "container" .}}
+<div class="container">
+    <section class="subheader">
+        <div class="col-1">
+            <div class="page-link">
+                <div class="goto-home">
+                    <a href=""><p class="regular">Home <i class="fas fa-chevron-right"></i></p></a>
+                    
+                </div>
+    
+                <div class="goto-course-catalog">
+                    <a href=""><p class="regular">All Courses <i class="fas fa-chevron-right"></i></p></a>
+                    
+                </div>
+                <div class="goto-mycourse">
+                    <a href="/"><p class="regular">My Courses</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="justify-self: end;">
+            <div class="forum">
+                <a href="">
+                    <img src="/resources/svg/forum.svg" alt="">
+                    <p class="regular">Forum</p>
+                </a>
+            </div>
+            <div class="support">
+                <a href="">
+                    <img src="/resources/svg/support.svg" alt="">
+                    <p class="regular">Support</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid-content">
+        <section class="column-left">
+            <div class="courses">
+                <div class="collapsible-wrap">
+                    <div class="collapsible">
+                        <p class="medium">Live Courses</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="collapse-content">
+                        <p class="medium">DevOps Certification Training</p>
+                        
+                    </div>
+                </div>
+                <div class="collapsible-wrap">
+                    <div class="collapsible">
+                        <p class="medium">Recommended Courses</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="collapse-content">
+                        <p class="medium">DevOps Engineer</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="how-to">
+                <img src="/resources/svg/play-circle-filled.svg" alt="">
+                <p class="small medium">How to Use Master-Academy's LMS</p>
+            </div>
+    
+            <div class="upcoming-class">
+                <div class="title">
+                    <p class="small regular">Upcoming Classes</p>
+                </div>
+                <div class="classes">
+                    <div class="class-time">
+                        <div class="date">
+                            <i class="far fa-calendar-check"></i>
+                            <p class="medium">10 June</p>
+                        </div>
+                        <div class="time">
+                            <i class="far fa-clock"></i>
+                            <p class="medium">9:00 PM BDT</p>
+                        </div>
+    
+                    </div>
+                    <div class="join">
+                        <p class="bold">Join Now</p>
+                    </div>
+                </div>
+                <div class="classes">
+                    <div class="class-time">
+                        <div class="date">
+                            <i class="far fa-calendar-check"></i>
+                            <p class="medium">11 June</p>
+                        </div>
+                        <div class="time">
+                            <i class="far fa-clock"></i>
+                            <p class="medium">9:00 PM BDT</p>
+                        </div>
+    
+                    </div>
+                    <div class="join">
+                        <p class="bold">Join Now</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="create-resume">
+                <div class="block-text">
+                    <p class="small regular">
+                        Create a winning resume in 3 easy steps - select a template, choose your job profile and download the updated resume!
+                    </p>
+    
+                </div>
+                <div class="btn">
+                    <button class="solid-border-btn">
+                        <h5 class="bold">Create Your Resume</h5>
+                    </button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="column-right">
+            <div class="welcome">
+                <img src="/resources/svg/welcome-back.svg" alt="">
+                <p class="medium">Welcome back! Here’s wishing you a happy learning today!</p>
+            </div>
+    
+            <div class="ongoing">
+                <div class="title">
+                    <h4 class="bold">Ongoing</h4>
+                </div>
+                <div class="time-info">
+                    <div class="title">
+                        <h3 class="bold">
+                            DevOps Certification Training 
+                        </h3>
+                    </div>
+                    <div class="info">
+                        <p class="regular">
+                            Next Class on 29th May, 2021, Saturday 09:00 PM (BDT)
+                        </p>
+                        <div class="btn">
+                            <a href="" >
+                                <button class="solid-bg-btn"><h5 class="bold">Join Now</h5></button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="feedback">
+                    <div class="title">
+                        <h4 class="bold">Course Feedback</h4>
+                    </div>  
+                    <div class="rate-course">
+                        <p class="regular">How likely are you to recommend MASTER-ACADEMY to your friends?</p>
+                        <div class="rate">
+                            <p class="small regular">Most Likable</p>
+                            <div class="number"><p class="small regular">10</p></div>
+                            <div class="number"><p class="small regular">9</p></div>
+                            <div class="number"><p class="small regular">8</p></div>
+                            <div class="number"><p class="small regular">7</p></div>
+                            <div class="number"><p class="small regular">6</p></div>
+                            <div class="number"><p class="small regular">5</p></div>
+                            <div class="number"><p class="small regular">4</p></div>
+                            <div class="number"><p class="small regular">3</p></div>
+                            <div class="number"><p class="small regular">2</p></div>
+                            <div class="number"><p class="small regular">1</p></div>
+                            <div class="number"><p class="small regular">0</p></div>
+                            <p class="small regular">Not at all</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="btns">
+                    <div class="btn">
+                        <button class="solid-border-btn"><h5 class="bold">Go to Course</h5></button>
+                    </div>
+                    <!-- <div class="progress">
+                        <div class="progrss-bar">
+                            <div class="full-progress"></div>
+                            <div class="completed-progress"></div>
+                            <hr class="full-progress">
+                            <hr class="completed-progress">
+                        </div>
+                        <p class="regular">35%</p>
+                    </div> -->
+                    <div class="curriculam">
+                        <h5 class="bold">Curriculam</h5>
+                    </div>
+                </div>
+            </div>
+    
+            
+        </section>
+    </div>
+
+    <div class="recommend-course">
+        <div class="title">
+            <h3 class="bold">Mostain, Next courses you should enroll</h3>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                    <a href="/course-detail">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                
+                                <a href="javascript:void(0)">
+                                    <div class="img-ribbon">
+                                        <div class="icon">
+                                            <div class="before-select">
+                                                <i class="far fa-heart"></i>
+                                            </div>
+                                            <div class="after-select">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <div class="title">
+                                    <h4 class="bold">Google IT Support</h4>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt "></i>
+                                </div>
+                                <div class="instructor">
+                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                </div>
+                                
+                                <div class="learner">
+                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                </div>
+                                <div class="batch-info">
+                                    <p class="small regular">Next Batch Starting</p>
+                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
+                                </div>
+                                
+                            </div>
+        
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    
+                    <a href="/course-detail">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                
+                                <a href="javascript:void(0)">
+                                    <div class="img-ribbon">
+                                        <div class="icon">
+                                            <div class="before-select">
+                                                <i class="far fa-heart"></i>
+                                            </div>
+                                            <div class="after-select">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <div class="title">
+                                    <h4 class="bold">Google IT Support</h4>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt "></i>
+                                </div>
+                                <div class="instructor">
+                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                </div>
+                                
+                                <div class="learner">
+                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                </div>
+                                <div class="batch-info">
+                                    <p class="small regular">Next Batch Starting</p>
+                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
+                                </div>
+                                
+                            </div>
+        
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+
+                    <a href="/course-detail">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                
+                                <a href="javascript:void(0)">
+                                    <div class="img-ribbon">
+                                        <div class="icon">
+                                            <div class="before-select">
+                                                <i class="far fa-heart"></i>
+                                            </div>
+                                            <div class="after-select">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <div class="title">
+                                    <h4 class="bold">Google IT Support</h4>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt "></i>
+                                </div>
+                                <div class="instructor">
+                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                </div>
+                                
+                                <div class="learner">
+                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                </div>
+                                <div class="batch-info">
+                                    <p class="small regular">Next Batch Starting</p>
+                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
+                                </div>
+                                
+                            </div>
+        
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+
+                    <a href="/course-detail">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                
+                                <a href="javascript:void(0)">
+                                    <div class="img-ribbon">
+                                        <div class="icon">
+                                            <div class="before-select">
+                                                <i class="far fa-heart"></i>
+                                            </div>
+                                            <div class="after-select">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <div class="title">
+                                    <h4 class="bold">Google IT Support</h4>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt "></i>
+                                </div>
+                                <div class="instructor">
+                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                </div>
+                                
+                                <div class="learner">
+                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                </div>
+                                <div class="batch-info">
+                                    <p class="small regular">Next Batch Starting</p>
+                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
+                                </div>
+                                
+                            </div>
+        
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+
+                    <a href="/course-detail">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                
+                                <a href="javascript:void(0)">
+                                    <div class="img-ribbon">
+                                        <div class="icon">
+                                            <div class="before-select">
+                                                <i class="far fa-heart"></i>
+                                            </div>
+                                            <div class="after-select">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <div class="title">
+                                    <h4 class="bold">Google IT Support</h4>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt "></i>
+                                </div>
+                                <div class="instructor">
+                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                </div>
+                                
+                                <div class="learner">
+                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                </div>
+                                <div class="batch-info">
+                                    <p class="small regular">Next Batch Starting</p>
+                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
+                                </div>
+                                
+                            </div>
+        
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+
+                    <a href="/course-detail">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                
+                                <a href="javascript:void(0)">
+                                    <div class="img-ribbon">
+                                        <div class="icon">
+                                            <div class="before-select">
+                                                <i class="far fa-heart"></i>
+                                            </div>
+                                            <div class="after-select">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="description">
+                                <div class="title">
+                                    <h4 class="bold">Google IT Support</h4>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt "></i>
+                                </div>
+                                <div class="instructor">
+                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                </div>
+                                
+                                <div class="learner">
+                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                </div>
+                                <div class="batch-info">
+                                    <p class="small regular">Next Batch Starting</p>
+                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
+                                </div>
+                                
+                            </div>
+        
+                            
+                        </div>
+                    </a>
+                </div>
+                            
+            </div>
+            
+            <div class="swiper-pagination swiper-pagination6"></div>
+            
+            <div class="swiper-button-next"><img src="./resources/svg/circle-right.svg" alt=""></div>
+            <div class="swiper-button-prev"><img src="./resources/svg/circle-left.svg" alt=""></div>
+        </div>
+    </div>
+    
+</div>
+{{end}}
+
+{{block "query".}}
+<div></div>
+{{end}}
+
+{{block "script" .}}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+    }
+
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+</script>
+{{end}}

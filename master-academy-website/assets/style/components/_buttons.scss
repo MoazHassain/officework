@@ -10,7 +10,7 @@ button
 
 
 
-button.grad-bg-btn
+.grad-bg-btn
 {
     color: $primaryWhiteClr;
     border: 3px solid transparent;
@@ -46,7 +46,7 @@ button.grad-bg-btn
     }
 }
 
-button.solid-bg-btn
+.solid-bg-btn
 {
     color: $primaryWhiteClr;
     border: 3px solid transparent;
@@ -63,7 +63,19 @@ button.solid-bg-btn
         background-position: right center;
     }
 }
-button.neomor-btn
+.solid-border-btn
+{
+    color: $primarySolidClr;
+    border: 1px solid $primarySolidClr;
+    background-color: $primaryWhiteClr;
+
+    &:hover 
+    {
+        background-color: $primarySolidClr;
+        color: $primaryWhiteClr;
+    }
+}
+.neomor-btn
 {
     // color: $secondaryBlackclr;
     // border: 3px solid $primarySolidClr;
@@ -91,7 +103,7 @@ button.neomor-btn
     // }
 }
 
-button.rounded-btn
+.rounded-btn
 {
     border-radius: 50%;
     padding: 10px;
