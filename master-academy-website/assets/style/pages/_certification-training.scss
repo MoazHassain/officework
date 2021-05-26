@@ -11,3 +11,558 @@ footer
 {
     @include dashboardfooter();
 }
+
+.container
+{
+    
+    .course-title
+    {
+        @include secondarySectionPadding();
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        background: $forthWhiteClr;
+        border-bottom: 1px solid $thirdWhiteClr;
+        
+        
+
+        .title 
+        {
+            display: flex;
+            color: $secondaryBlackclr;
+            img 
+            {
+                width: 80px;
+                height: 35px;
+                object-fit: contain;
+                margin-right: 15px;
+            }
+        }
+        .progression
+        {
+            justify-self: end;
+
+            .progress
+            {
+                display: none;
+            }
+            .grade 
+            {
+                position: relative;
+                
+
+                .visible-content
+                {
+                    position: relative;
+                    
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    align-items: center;
+                    border-radius: 50px;
+                    background: $primarySolidClr;
+                    padding: 5px;
+                    margin: 0 5px;
+                    z-index: 10;
+
+                    .block-text
+                    {
+                        padding: 0 15px;
+                        p
+                        {
+                            color: $primaryWhiteClr;
+                            margin: 5px 0;
+                        }
+                        
+                    }
+                    .grade-rank
+                    {
+                        justify-self: end;
+                        padding: 5px;
+                        border-radius: 50px;
+                        background: $secondarySolidClr;
+                        
+
+                        h2 
+                        {
+                            @include gridCenter();
+                            width: 35px;
+                            height: 35px;
+                            color: $ratingClr;
+                        }
+                    }
+                }
+                .hidden-content
+                {
+                    position: absolute;
+                    top: -5px;
+                    box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+                    background: $primaryWhiteClr;
+                    padding: 25px;
+                    padding-top: 70px;
+                    border-radius: 35px;
+                    display: none;
+                    z-index: 10;
+
+                    > *
+                    {
+                        margin: 20px 0;
+                    }
+                    .grade-system
+                    {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        justify-items: center;
+                        align-items: center;
+
+                        .grading 
+                        {
+                            
+                            .grade-rank 
+                            {
+                                color: $primaryWhiteClr;
+                                p 
+                                {
+                                    @include gridCenter();
+                                    width: 25px;
+                                    height: 25px;
+                                    margin: 10px auto;
+                                    border-radius: 50px;
+                                    // padding: 10px;
+                                    background: $secondarySolidClr;
+                                }
+                            }
+                            .grade-number 
+                            {
+                                color: $secondarySolidClr;
+                            }
+                        }
+                    }
+                }
+                &:hover .hidden-content
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .grid-content
+    {
+        
+        margin: 0 auto;
+        @include secondarySectionPadding;
+        padding-top: 0px;
+        padding-bottom: 50px;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-gap: 20px;
+        background: $forthWhiteClr;
+        
+
+        .column-left
+        {
+            display: grid;
+            grid-template-columns: 30% 70%;
+
+            > .tab-head 
+            {
+                margin-top: 75px;
+                width: 100%;
+                .tab 
+                {
+                    .tablink 
+                    {
+                        padding: 20px;
+                        color: $secondarySolidClr;
+                        
+                    }
+                    .tablink.active
+                    {
+                        background: $primaryWhiteClr;
+                    }
+                }
+            }
+            .tabcontent-wrap 
+            {
+                .tabcontent 
+                {
+                          
+                    background: $primaryWhiteClr;
+                    >* 
+                    {
+                        color: $secondaryBlackclr;
+                        padding: 5px 40px;
+
+                        > * 
+                        {
+                            margin: 10px 0;
+                        }
+                        
+                    }
+                    .tab-title
+                    {
+                        padding: 20px 40px;
+                        
+                        color: $secondarySolidClr;
+                        border-bottom: 1px solid $forthWhiteClr;
+
+                        i 
+                        {
+                            color: $ratingClr;
+                        }
+                        h2 
+                        {
+                            margin: 0;
+                        }
+                    }
+                    .block-text
+                    {
+                        p.medium 
+                        {
+                            display: flex;
+                            align-items: center;
+                            color: $secondarySolidClr;
+
+                            
+                        }
+                    }
+                    i.far.fa-square
+                    {
+                        font-size: 10px;
+                        font-weight: 800px;
+                        margin-right: 10px;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                .tabcontent
+                {
+                    .tab-swiper
+                    {
+                        border-bottom: 1px solid $thirdWhiteClr;
+                        padding: 15px 40px;
+                        
+                        .swiper-container
+                        {
+                            width: 100%;
+                            
+                            
+                            // margin: ;
+                            
+
+                            .swiper-wrapper
+                            {
+                                
+                                .swiper-slide 
+                                {
+                                    
+                                    padding: 5px;
+                                    .swiper-tablink 
+                                    {
+                                        i 
+                                        {
+                                            transform: rotate(45deg);
+                                        }
+                                        p, i 
+                                        {
+                                            @include gridCenter();
+                                            width: 30px;
+                                            height: 30px;
+                                            padding: 5px;
+                                            margin: 0 auto;
+                                            background: $primarySolidClr;
+                                            border-radius: 50px;
+                                            color: $primaryWhiteClr;
+                                        }
+                                    }
+                                }
+                            }
+                            .swiper-button-next, .swiper-button-prev
+                            {
+                                // width: 15px;
+                                transform: translateX(65%);
+                                &::after
+                                {
+                                    font-size: 20px;
+                                    font-weight: 800;
+                                    color: $primarySolidClr;
+                                }
+                            }
+                            .swiper-button-prev
+                            {
+                                transform: translateX(-65%);
+                            }
+                        }
+                    }
+                    
+                    .swiper-tabcontent
+                    {
+                        
+                        > * 
+                        {
+                            margin: 15px 0;
+                        }
+                        i.fas.fa-stop-circle
+                        {
+                            transform: rotate(45deg);
+                        }
+                        .title
+                        {
+                            h4
+                            {
+                                span.bold, i 
+                                {
+                                    color: $primarySolidClr;
+                                    border-radius: 50px;
+                                }
+                            }
+                        }
+                        .file
+                        {
+                            padding: 10px 20px;
+                            box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+                            .block-text
+                            {
+                                > * 
+                                {
+                                    margin: 10px 0;
+                                }
+                                p.medium 
+                                {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    i 
+                                    {
+                                        margin-right: 15px;
+                                    }
+                                }
+                                .view 
+                                {
+                                    float: right;
+                                    margin: 0 0 0 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    
+                }
+
+
+                
+
+                
+                #tab-video, #class-record
+                {
+                    padding: 20px 0;
+                    > * 
+                    {
+                        padding: 20px 40px;
+                    }
+                    .tab-title
+                    {
+                        padding: 20px 40px;
+                    }
+                    .video-file
+                    {
+                        
+                        padding: 10px 20px;
+                        box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+                        margin: 20px 40px;
+                    }
+                }
+                #personal-library
+                {
+                    .tab-title 
+                    {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+
+                        .library
+                        {
+                            justify-self: end;
+                            
+                            i 
+                            {
+                                color: $primarySolidClr;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                    .img 
+                    {
+                        img
+                        {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                #my-lab 
+                {
+                    .give-info
+                    {
+                        text-align: center;
+                    }
+                    .devops-lab
+                    {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: flex-end;
+
+                        .col-1
+                        {
+                            > * 
+                            {
+                                margin-top: 15px;
+                            }
+                        }
+                        .col-2
+                        {
+                            justify-self: end;
+                            padding: 10px 20px;
+                            background: $secondaryWhiteClr;
+
+                            .lab-access
+                            {
+                                > * 
+                                {
+                                    margin: 10px 0;
+                                    text-align: center;
+                                }
+                                .days 
+                                {
+                                    color: $secondarySolidClr;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .column-right
+        {
+
+            > * 
+            {
+                background: $primaryWhiteClr;
+                
+            }
+            .how-to 
+            {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                margin: 20px 0;
+                box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.20);
+                white-space: nowrap;
+                img
+                {
+                    padding-right: 10px;
+                }
+                p.small 
+                {
+                    font-size: 13px;
+                }
+            }
+            .upcoming-class
+            {
+                margin: 20px 0;
+                box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.20);
+
+                .title
+                {
+                    padding: 10px 20px;
+                    border-bottom: 1px solid $forthWhiteClr;
+                }
+                .classes
+                {
+                    position: relative;
+                    .class-time 
+                    {
+                        display: grid;
+                        grid-template-columns: repeat(2, auto);
+                        align-items: center;
+                        padding: 10px 20px;
+
+                        > * 
+                        {
+                            display: flex;
+                            // grid-template-columns: repeat(2, auto);
+                            align-items: center;
+
+                            .time 
+                            {
+                                justify-content: end;
+                            }
+                            i 
+                            {
+                                color: $primarySolidClr;
+                                font-size: 18px;
+                                padding-right: 10px;
+                            }
+                            
+                        }
+                    }
+                    .join 
+                    {
+                        color: $primarySolidClr;
+                        background-color: $forthWhiteClr;
+                        padding: 10px 20px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0;
+                        text-align: center;
+                        transition: 0.3s;
+                    }
+                    &:hover .join
+                    {
+                        opacity: 1;
+                    }
+                }
+
+
+                
+            }
+
+            .preview-certificate
+            {
+                padding: 10px 20px;
+                box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+
+                .btn 
+                {
+                    margin-top: 10px;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+.tabcontent
+{
+    display: none;
+}
+.tabcontent.active
+{
+    display: block;
+}
+
+
+// .swiper-tabcontent 
+// {
+//     // display: none;
+// }
+.swiper-tabcontent.active 
+{
+    display: block;
+}
