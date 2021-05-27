@@ -958,18 +958,18 @@ footer .lower-part .logos img {
 .container .grid-content .side-nav .nav-head .wrap .nav-btn .bar-1,
 .container .grid-content .side-nav .nav-head .wrap .nav-btn .bar-2,
 .container .grid-content .side-nav .nav-head .wrap .nav-btn .bar-3 {
-  width: 30px;
-  height: 3px;
+  width: 25px;
+  height: 2px;
   background-color: #262626;
-  margin: 4px 0;
+  margin: 5px 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 .container .grid-content .side-nav .nav-head .wrap .nav-btn.change .bar-1 {
-  -webkit-transform: rotate(-45deg) translateX(-4px) translateY(5px);
-          transform: rotate(-45deg) translateX(-4px) translateY(5px);
+  -webkit-transform: rotate(-45deg) translateX(-5px) translateY(5px);
+          transform: rotate(-45deg) translateX(-5px) translateY(5px);
 }
 
 .container .grid-content .side-nav .nav-head .wrap .nav-btn.change .bar-2 {
@@ -978,13 +978,25 @@ footer .lower-part .logos img {
 }
 
 .container .grid-content .side-nav .nav-head .wrap .nav-btn.change .bar-3 {
-  -webkit-transform: rotate(45deg) translateX(-4px) translateY(-6px);
-          transform: rotate(45deg) translateX(-4px) translateY(-6px);
+  -webkit-transform: rotate(45deg) translateX(-5px) translateY(-5px);
+          transform: rotate(45deg) translateX(-5px) translateY(-5px);
 }
 
 .container .grid-content .side-nav .collapsible-wrap .collapsible {
   padding: 15px 30px;
   background: #f3f3f3;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible h5 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-columns: 30px auto auto;
+      grid-template-columns: 30px auto auto;
+  justify-items: baseline;
 }
 
 .container .grid-content .side-nav .collapsible-wrap .collapsible h5 i.fa-play-circle {
@@ -993,7 +1005,8 @@ footer .lower-part .logos img {
 }
 
 .container .grid-content .side-nav .collapsible-wrap .collapsible h5 i.fa-angle-down {
-  float: right;
+  -ms-grid-column-align: end;
+      justify-self: end;
   font-weight: 400;
 }
 
@@ -1006,8 +1019,14 @@ footer .lower-part .logos img {
   overflow-y: scroll;
 }
 
-.container .grid-content .side-nav .collapsible-wrap .collapsible-content a .lecture-title {
-  padding: 15px 30px;
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title {
+  margin-left: 25px;
+  list-style-type: none;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a {
+  position: relative;
+  padding: 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1016,14 +1035,44 @@ footer .lower-part .logos img {
           align-items: center;
 }
 
-.container .grid-content .side-nav .collapsible-wrap .collapsible-content a .lecture-title i {
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a i {
   font-size: 18px;
   margin-right: 10px;
-  color: #12856e;
+  color: #262626;
 }
 
-.container .grid-content .side-nav .collapsible-wrap .collapsible-content a .lecture-title p {
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a i.fas.fa-circle {
+  font-size: 12px;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a .line {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 2px;
+  height: 55px;
+  background-color: #262626;
+  z-index: -100;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a .line.last {
+  top: -50%;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a p {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title:hover p,
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title:hover i {
+  color: #12856e;
 }
 
 .container .grid-content .side-nav .library {

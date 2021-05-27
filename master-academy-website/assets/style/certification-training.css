@@ -1213,8 +1213,8 @@ footer .upper-part {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin: 10px auto;
   border-radius: 50px;
   background: #12856e;
@@ -1222,6 +1222,11 @@ footer .upper-part {
 
 .container .course-title .progression .grade .hidden-content .grade-system .grading .grade-number {
   color: #12856e;
+}
+
+.container .course-title .progression .grade .hidden-content .grade-system .grading .grade-number i {
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .container .course-title .progression .grade:hover .hidden-content {
@@ -1235,8 +1240,8 @@ footer .upper-part {
   padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 75% 25%;
-      grid-template-columns: 75% 25%;
+  -ms-grid-columns: 75% 23.5%;
+      grid-template-columns: 75% 23.5%;
   grid-gap: 20px;
   background: #f3f3f3;
 }
@@ -1244,18 +1249,32 @@ footer .upper-part {
 .container .grid-content .column-left {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 70%;
-      grid-template-columns: 30% 70%;
+  -ms-grid-columns: 25% 75%;
+      grid-template-columns: 25% 75%;
 }
 
 .container .grid-content .column-left > .tab-head {
-  margin-top: 75px;
+  margin-top: 80px;
   width: 100%;
 }
 
 .container .grid-content .column-left > .tab-head .tab .tablink {
   padding: 20px;
   color: #12856e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.container .grid-content .column-left > .tab-head .tab .tablink i {
+  font-size: 22px;
+}
+
+.container .grid-content .column-left > .tab-head .tab .tablink i::before {
+  margin-right: 10px;
 }
 
 .container .grid-content .column-left > .tab-head .tab .tablink.active {
@@ -1263,6 +1282,7 @@ footer .upper-part {
 }
 
 .container .grid-content .column-left .tabcontent-wrap .tabcontent {
+  min-height: 700px;
   background: #fff;
 }
 
@@ -1283,6 +1303,10 @@ footer .upper-part {
 
 .container .grid-content .column-left .tabcontent-wrap .tabcontent .tab-title i {
   color: #FFB800;
+}
+
+.container .grid-content .column-left .tabcontent-wrap .tabcontent .tab-title i::before {
+  margin-right: 5px;
 }
 
 .container .grid-content .column-left .tabcontent-wrap .tabcontent .tab-title h2 {
@@ -1439,8 +1463,13 @@ footer .upper-part {
 }
 
 .container .grid-content .column-left .tabcontent-wrap #personal-library .tab-title .library i {
+  font-size: 20px;
   color: #1BB899;
   margin: 0 10px;
+}
+
+.container .grid-content .column-left .tabcontent-wrap #personal-library .give-info {
+  text-align: center;
 }
 
 .container .grid-content .column-left .tabcontent-wrap #personal-library .img img {
@@ -1449,7 +1478,9 @@ footer .upper-part {
 }
 
 .container .grid-content .column-left .tabcontent-wrap #my-lab .give-info {
+  margin: 5px 40px;
   text-align: center;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 .container .grid-content .column-left .tabcontent-wrap #my-lab .devops-lab {
@@ -1460,16 +1491,28 @@ footer .upper-part {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 5px 40px;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 .container .grid-content .column-left .tabcontent-wrap #my-lab .devops-lab .col-1 > * {
   margin-top: 15px;
 }
 
+.container .grid-content .column-left .tabcontent-wrap #my-lab .devops-lab .col-1 a {
+  color: #12856e;
+}
+
+.container .grid-content .column-left .tabcontent-wrap #my-lab .devops-lab .col-1 a:hover {
+  text-decoration: underline;
+}
+
 .container .grid-content .column-left .tabcontent-wrap #my-lab .devops-lab .col-2 {
   -ms-grid-column-align: end;
       justify-self: end;
-  padding: 10px 20px;
+  padding: 5px 30px;
   background: #FAFAFA;
 }
 
@@ -1480,6 +1523,18 @@ footer .upper-part {
 
 .container .grid-content .column-left .tabcontent-wrap #my-lab .devops-lab .col-2 .lab-access .days {
   color: #12856e;
+}
+
+.container .grid-content .column-left .tabcontent-wrap #my-lab .support-ticket {
+  text-align: center;
+}
+
+.container .grid-content .column-left .tabcontent-wrap #my-lab .support-ticket a {
+  color: #12856e;
+}
+
+.container .grid-content .column-left .tabcontent-wrap #my-lab .support-ticket a:hover {
+  text-decoration: underline;
 }
 
 .container .grid-content .column-right > * {
@@ -1493,7 +1548,7 @@ footer .upper-part {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 20px 0;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
@@ -1505,7 +1560,7 @@ footer .upper-part {
 }
 
 .container .grid-content .column-right .how-to p.small {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .container .grid-content .column-right .upcoming-class {

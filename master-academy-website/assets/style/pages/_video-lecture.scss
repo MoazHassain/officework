@@ -37,10 +37,10 @@
                         .bar-2,
                         .bar-3
                         {
-                            width: 30px;
-                            height: 3px;
+                            width: 25px;
+                            height: 2px;
                             background-color: $secondaryBlackclr;
-                            margin: 4px 0;
+                            margin: 5px 0;
                             transition: 0.3s;
                             border-radius: 50px;
                         }
@@ -61,7 +61,7 @@
                     {
                         .bar-1
                         {
-                            transform: rotate(-45deg) translateX(-4px) translateY(5px);
+                            transform: rotate(-45deg) translateX(-5px) translateY(5px);
                         }
                         .bar-2
                         {
@@ -69,7 +69,7 @@
                         }
                         .bar-3
                         {
-                            transform: rotate(45deg) translateX(-4px) translateY(-6px);
+                            transform: rotate(45deg) translateX(-5px) translateY(-5px);
                         }
                     }
                 }
@@ -81,8 +81,13 @@
                 {
                     padding: 15px 30px;
                     background: $forthWhiteClr;
+                    
                     h5 
                     {
+                        @include gridCenter();
+                        grid-template-columns: 30px auto auto;
+                        justify-items: baseline;
+
                         i.fa-play-circle
                         {
                             color: $secondarySolidClr;
@@ -90,7 +95,7 @@
                         }
                         i.fa-angle-down
                         {
-                            float: right;
+                            justify-self: end;
                             font-weight: 400;
                             
                         }
@@ -103,26 +108,62 @@
                     transition: 0.3s ease-in-out;
                     height: 500px;
                     overflow-y: scroll;
-                    a 
-                    {
+                     
+                    
                         .lecture-title
                         {
-                            padding: 15px 30px;
-                            display: flex;
-                            align-items: center;
-
-                            i 
+                            
+                            margin-left: 25px;
+                            list-style-type: none;
+                            
+                            a
                             {
-                                font-size: 18px;
-                                margin-right: 10px;
+                                position: relative;
+                                padding: 20px 10px;
+                                display: flex;
+                                align-items: center;
+
+                                i 
+                                {
+                                    font-size: 18px;
+                                    margin-right: 10px;
+                                    color: $secondaryBlackclr;
+                                }
+                                i.fas.fa-circle
+                                {
+                                    font-size: 12px;
+                                    
+                                }
+                                .line 
+                                {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 15px;
+                                    width: 2px;
+                                    height: 55px;
+                                    background-color: $secondaryBlackclr;
+                                    z-index: -100;
+                                }
+                                .line.last
+                                {
+                                    top: -50%;
+                                    // display: none;
+                                }
+                                p 
+                                {
+                                    overflow: hidden;
+                                    display: flex;
+                                    align-items: center;
+                                    margin-left: 10px;
+                                }
+                            }
+                            &:hover p,
+                            &:hover i
+                            {
                                 color: $secondarySolidClr;
                             }
-                            p 
-                            {
-                                overflow: hidden;
-                            }
                         }
-                    }
+                    
                 }
             }
 
