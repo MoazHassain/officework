@@ -70,14 +70,14 @@
             <div class="nav-menu">
                 <div class="nav-course">
                     <div class="dropdown">
-                        <a href="javascript:void(0)"><p class="medium">Course <i class="fas fa-chevron-down"></i></p></a>
+                        <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn"><p class="medium" >Course <i class="fas fa-chevron-down"></i></p></a>
                         <div class="animated-border"></div>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content" style="z-index: 10;">
                             <div class="mycourse">
-                                <a href="#"><p class="regular">My Courses</p></a>
+                                <a href="#"><p class="regular small">My Courses</p></a>
                             </div>
                             <div class="allcourse">
-                                <a href="#"><p class="regular">All Courses</p></a>
+                                <a href="#"><p class="regular small">All Courses</p></a>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="nav-notification">
                     <div class="dropdown">
-                        <a href="javascript:void(0)">
+                        <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn">
                             <i class="fas fa-bell"></i>
                             <div class="notification-number"><p class="small regular">1</p></div>
                         </a>
@@ -133,7 +133,7 @@
                 </div>
                 <div class="nav-profile">
                     <div class="dropdown">
-                        <a href="javascript:void(0)">
+                        <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn">
                             <p class="medium user-name">Mostain</p>
                             <div class="img">
                                 <img src="resources/img/user-img.webp" alt="">
@@ -142,19 +142,19 @@
                         </a>
                         <div class="dropdown-content">
                             <div class="profile">
-                                <a href="#"><p class="regular">My Profile</p></a>
+                                <a href="#"><p class="regular small">My Profile</p></a>
                             </div>
                             <div class="orders">
-                                <a href="#"><p class="regular">My Orders</p></a>
+                                <a href="#"><p class="regular small">My Orders</p></a>
                             </div>
                             <div class="activity">
-                                <a href="#"><p class="regular">Activity Stream</p></a>
+                                <a href="#"><p class="regular small">Activity Stream</p></a>
                             </div>
                             <div class="profile">
-                                <a href="#"><p class="wallet">My Wallet</p></a>
+                                <a href="#"><p class="regular small">My Wallet</p></a>
                             </div>
                             <div class="wishlist">
-                                <a href="#"><p class="regular">My Wishlist</p></a>
+                                <a href="#"><p class="regular small">My Wishlist</p></a>
                             </div>
 
                         </div>
@@ -171,16 +171,16 @@
             <div class="col-1">
                 <div class="page-link">
                     <div class="goto-home">
-                        <a href=""><p class="regular" style="color: rgb(0, 54, 45);">Home <i class="fas fa-chevron-right"></i></p></a>
+                        <a href=""><p class="regular">Home <i class="fas fa-chevron-right"></i></p></a>
                         
                     </div>
         
                     <div class="goto-course-catalog">
-                        <a href=""><p class="regular" style="color: rgb(0, 54, 45);">All Courses <i class="fas fa-chevron-right"></i></p></a>
+                        <a href=""><p class="regular">All Courses <i class="fas fa-chevron-right"></i></p></a>
                         
                     </div>
                     <div class="goto-mycourse">
-                        <a href="/"><p class="regular">My Courses</p></a>
+                        <a href="/"><p class="bold">My Courses</p></a>
                     </div>
                 </div>
             </div>
@@ -795,6 +795,32 @@
 {{block "script" .}}
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+
+    // function showNav(a) {
+    //     a.parentNode.getElementsByClassName('dropdown-content')[0].classList.toggle("show");
+        
+    // }
+
+    var showNav = function(target) {
+        target.parentNode.querySelector('.dropdown-content').classList.toggle("show");
+    }
+
+    // window.onclick = function(event) {
+    // if (!event.target.matches('.dropbtn')) {
+
+    //     var dropdowns = document.getElementsByClassName("dropdown-content");
+    //     var i;
+    //     for (i = 0; i < dropdowns.length; i++) {
+    //     var openDropdown = dropdowns[i];
+    //     if (openDropdown.classList.contains('show')) {
+    //         openDropdown.classList.remove('show');
+    //     }
+    //     }
+    // }
+    // }
+
+
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 

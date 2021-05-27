@@ -875,13 +875,22 @@ header .nav-menu a {
   color: #262626;
 }
 
-header .nav-menu a h5 {
+header .nav-menu a p.medium {
   padding: 10px;
+}
+
+header .nav-menu .nav-course a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .nav-menu .nav-course a i {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 5px;
   line-height: 100%;
 }
@@ -906,7 +915,7 @@ header .nav-menu .nav-notification a .notification-number {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #262626;
+  background-color: #d82f2f;
   color: #fff;
   border-radius: 50px;
   position: absolute;
@@ -918,10 +927,9 @@ header .nav-menu .nav-notification a .notification-number {
 
 header .nav-menu .nav-notification .dropdown-content {
   white-space: normal !important;
-}
-
-header .nav-menu .nav-notification .dropdown-content > * {
-  width: 500px;
+  height: 350px;
+  overflow-y: scroll;
+  width: 400px !important;
 }
 
 header .nav-menu .nav-notification .dropdown-content .notification-header {
@@ -933,10 +941,15 @@ header .nav-menu .nav-notification .dropdown-content .notification-header {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 15px;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 header .nav-menu .nav-notification .dropdown-content .notifications {
-  padding: 10px 15px;
+  padding: 5px 25px;
+}
+
+header .nav-menu .nav-notification .dropdown-content .notifications:hover {
+  background-color: #f3f3f3;
 }
 
 header .nav-menu .nav-profile a {
@@ -945,8 +958,8 @@ header .nav-menu .nav-profile a {
   display: flex;
 }
 
-header .nav-menu .nav-profile a h5 {
-  margin-right: 15px;
+header .nav-menu .nav-profile a .user-name {
+  margin-right: 20px;
 }
 
 header .nav-menu .nav-profile a .img {
@@ -984,17 +997,29 @@ header .nav-menu .dropdown {
 header .nav-menu .dropdown .dropdown-content {
   display: none;
   position: absolute;
-  top: 145%;
+  top: 60px;
   right: 0;
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   white-space: nowrap;
+  width: 145px;
   max-width: 500px;
+  padding: 5px 0;
+  border: 1px solid #cacaca;
 }
 
 header .nav-menu .dropdown .dropdown-content a p {
-  padding: 10px 15px;
+  padding: 5px 25px 5px 15px;
+  width: 100%;
+}
+
+header .nav-menu .dropdown .dropdown-content a p:hover {
+  background-color: #f3f3f3;
+}
+
+header .nav-menu .dropdown .show {
+  display: block;
 }
 
 .subheader {
@@ -1066,10 +1091,11 @@ footer .upper-part {
 }
 
 .container .grid-content {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 70%;
-      grid-template-columns: 25% 70%;
+  -ms-grid-columns: 25% 72.5%;
+      grid-template-columns: 25% 72.5%;
   padding: 5px 150px;
   padding-top: 30px;
   grid-gap: 30px;
@@ -1253,7 +1279,9 @@ footer .upper-part {
 
 .container .grid-content .column-right .referral-join .img-part .img img {
   width: 100%;
-  height: 100%;
+  height: 290px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .container .grid-content .column-right .referral-join .text-part .cls-btn {
@@ -1446,7 +1474,6 @@ footer .upper-part {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 6px 6px 0 0;
 }
 
 .container .recommend-course .swiper-container .card .img .img-ribbon {
