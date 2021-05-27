@@ -968,8 +968,8 @@ footer .lower-part .logos img {
 }
 
 .container .grid-content .side-nav .nav-head .wrap .nav-btn.change .bar-1 {
-  -webkit-transform: rotate(-45deg) translateX(-6px) translateY(5px);
-          transform: rotate(-45deg) translateX(-6px) translateY(5px);
+  -webkit-transform: rotate(-45deg) translateX(-4px) translateY(5px);
+          transform: rotate(-45deg) translateX(-4px) translateY(5px);
 }
 
 .container .grid-content .side-nav .nav-head .wrap .nav-btn.change .bar-2 {
@@ -978,8 +978,8 @@ footer .lower-part .logos img {
 }
 
 .container .grid-content .side-nav .nav-head .wrap .nav-btn.change .bar-3 {
-  -webkit-transform: rotate(45deg) translateX(-6px) translateY(-6px);
-          transform: rotate(45deg) translateX(-6px) translateY(-6px);
+  -webkit-transform: rotate(45deg) translateX(-4px) translateY(-6px);
+          transform: rotate(45deg) translateX(-4px) translateY(-6px);
 }
 
 .container .grid-content .side-nav .collapsible-wrap .collapsible {

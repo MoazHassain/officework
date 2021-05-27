@@ -8,12 +8,37 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,regular,500,600,700" rel="stylesheet" />
     <link rel="stylesheet" href="resources/plugins/intl-tel-input/build/css/intlTelInput.css">
     {{block "link-style" .}}
     <link rel="stylesheet" href="resources/style/mycourses.css">
     {{end}}
 
 </head>
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a,
+    span 
+    {
+        
+        font-family: "hind madurai", sans-serif;
+        
+    }
+    .container p
+    
+    {
+        font-size: 15px;
+    }
+    .container h5
+    {
+        font-size: 18px;
+    }
+</style>
 <body>
     {{block "header" .}}
         <header>
@@ -45,7 +70,7 @@
             <div class="nav-menu">
                 <div class="nav-course">
                     <div class="dropdown">
-                        <a href="javascript:void(0)"><h5 class="medium">Course <i class="fas fa-chevron-down"></i></h5></a>
+                        <a href="javascript:void(0)"><p class="medium">Course <i class="fas fa-chevron-down"></i></p></a>
                         <div class="animated-border"></div>
                         <div class="dropdown-content">
                             <div class="mycourse">
@@ -59,15 +84,15 @@
                     
                 </div>
                 <!-- <div class="nav-Project">
-                    <a href="#"><h5 class="medium">Project</h5></a>
+                    <a href="#"><p class="medium">Project</p></a>
                     <div class="animated-border"></div>
                 </div> -->
                 <div class="nav-Certificate">
-                    <a href="#"><h5 class="medium">Certificate</h5></a>
+                    <a href="#"><p class="medium">Certificate</p></a>
                     <div class="animated-border"></div>
                 </div>
                 <div class="nav-Blog">
-                    <a href="/blog"><h5 class="medium">Blog</h5></a>
+                    <a href="/blog"><p class="medium">Blog</p></a>
                     <div class="animated-border"></div>
                 </div>
                 <div class="nav-notification">
@@ -109,7 +134,7 @@
                 <div class="nav-profile">
                     <div class="dropdown">
                         <a href="javascript:void(0)">
-                            <h5 class="medium user-name">Mostain</h5>
+                            <p class="medium user-name">Mostain</p>
                             <div class="img">
                                 <img src="resources/img/user-img.webp" alt="">
                                 <i class="fas fa-user-circle"></i>
@@ -206,7 +231,7 @@
             
                     <div class="how-to">
                         <img src="/resources/svg/play-circle-filled.svg" alt="">
-                        <p class="small medium">How to Use Master-Academy's LMS</p>
+                        <p class="small regular">How to Use Master-Academy's LMS</p>
                     </div>
             
                     <div class="upcoming-class">
@@ -256,7 +281,7 @@
                         </div>
                         <div class="btn">
                             <button class="solid-border-btn">
-                                <h5 class="bold">Create Your Resume</h5>
+                                <p class="medium">Create Your Resume</p>
                             </button>
                         </div>
                     </div>
@@ -290,18 +315,18 @@
                     </div>
                     <div class="welcome">
                         <img src="/resources/svg/welcome-back.svg" alt="">
-                        <p class="medium">Welcome back! Here’s wishing you a happy learning today!</p>
+                        <p class="regular">Welcome back! Here’s wishing you a happy learning today!</p>
                     </div>
             
                     <div class="ongoing">
                         <div class="title">
-                            <h4 class="bold">Ongoing</h4>
+                            <p class="regular">Ongoing</p>
                         </div>
                         <div class="time-info">
                             <div class="title">
-                                <h3 class="bold">
+                                <h4 class="medium">
                                     DevOps Certification Training 
-                                </h3>
+                                </h4>
                             </div>
                             <div class="info">
                                 <p class="regular">
@@ -309,7 +334,7 @@
                                 </p>
                                 <div class="btn">
                                     <a href="" >
-                                        <button class="solid-bg-btn"><h5 class="bold">Join Now</h5></button>
+                                        <button class="solid-bg-btn"><p class="medium">Join Now</p></button>
                                     </a>
                                 </div>
                             </div>
@@ -317,7 +342,7 @@
                         </div>
                         <div class="feedback">
                             <div class="title">
-                                <h4 class="bold">Course Feedback</h4>
+                                <h5 class="medium">Course Feedback</h5>
                             </div>  
                             <div class="rate-course">
                                 <p class="regular">How likely are you to recommend MASTER-ACADEMY to your friends?</p>
@@ -341,7 +366,7 @@
                         </div>
                         <div class="btns">
                             <div class="btn">
-                                <a href="/certification-training"><button class="solid-border-btn"><h5 class="bold">Go to Course</h5></button></a>
+                                <a href="/certification-training"><button class="solid-border-btn"><p class="medium">Go to Course</p></button></a>
                             </div>
                             <!-- <div class="progress">
                                 <div class="progrss-bar">
@@ -353,325 +378,326 @@
                                 <p class="regular">35%</p>
                             </div> -->
                             <div class="curriculam">
-                                <h5 class="bold">Curriculam</h5>
+                                <p class="medium">Curriculam</p>
                             </div>
                         </div>
                     </div>
-            
+                    
+                    <div class="recommend-course">
+                        <div class="title">
+                            <h4 class="bold">Mostain, Next courses you should enroll</h4>
+                        </div>
+        
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+        
+                                    <a href="/course-detail">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                                
+                                                <a href="javascript:void(0)">
+                                                    <div class="img-ribbon">
+                                                        <div class="icon">
+                                                            <div class="before-select">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                            <div class="after-select">
+                                                                <i class="fas fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="description">
+                                                <div class="title">
+                                                    <h4 class="bold">Google IT Support</h4>
+                                                </div>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt "></i>
+                                                </div>
+                                                <!-- <div class="instructor">
+                                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                                </div> -->
+                                                
+                                                <div class="learner">
+                                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                                </div>
+                                                <div class="batch-info">
+                                                    <p class="small regular">Next Batch Starting</p>
+                                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</p>
+                                                </div>
+                                                
+                                            </div>
+                        
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    
+                                    <a href="/course-detail">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                                
+                                                <a href="javascript:void(0)">
+                                                    <div class="img-ribbon">
+                                                        <div class="icon">
+                                                            <div class="before-select">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                            <div class="after-select">
+                                                                <i class="fas fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="description">
+                                                <div class="title">
+                                                    <h4 class="bold">Google IT Support</h4>
+                                                </div>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt "></i>
+                                                </div>
+                                                <!-- <div class="instructor">
+                                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                                </div> -->
+                                                
+                                                <div class="learner">
+                                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                                </div>
+                                                <div class="batch-info">
+                                                    <p class="small regular">Next Batch Starting</p>
+                                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</p>
+                                                </div>
+                                                
+                                            </div>
+                        
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+        
+                                    <a href="/course-detail">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                                
+                                                <a href="javascript:void(0)">
+                                                    <div class="img-ribbon">
+                                                        <div class="icon">
+                                                            <div class="before-select">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                            <div class="after-select">
+                                                                <i class="fas fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="description">
+                                                <div class="title">
+                                                    <h4 class="bold">Google IT Support</h4>
+                                                </div>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt "></i>
+                                                </div>
+                                                <!-- <div class="instructor">
+                                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                                </div> -->
+                                                
+                                                <div class="learner">
+                                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                                </div>
+                                                <div class="batch-info">
+                                                    <p class="small regular">Next Batch Starting</p>
+                                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</p>
+                                                </div>
+                                                
+                                            </div>
+                        
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+        
+                                    <a href="/course-detail">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                                
+                                                <a href="javascript:void(0)">
+                                                    <div class="img-ribbon">
+                                                        <div class="icon">
+                                                            <div class="before-select">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                            <div class="after-select">
+                                                                <i class="fas fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="description">
+                                                <div class="title">
+                                                    <h4 class="bold">Google IT Support</h4>
+                                                </div>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt "></i>
+                                                </div>
+                                                <!-- <div class="instructor">
+                                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                                </div> -->
+                                                
+                                                <div class="learner">
+                                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                                </div>
+                                                <div class="batch-info">
+                                                    <p class="small regular">Next Batch Starting</p>
+                                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</p>
+                                                </div>
+                                                
+                                            </div>
+                        
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+        
+                                    <a href="/course-detail">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                                
+                                                <a href="javascript:void(0)">
+                                                    <div class="img-ribbon">
+                                                        <div class="icon">
+                                                            <div class="before-select">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                            <div class="after-select">
+                                                                <i class="fas fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="description">
+                                                <div class="title">
+                                                    <h4 class="bold">Google IT Support</h4>
+                                                </div>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt "></i>
+                                                </div>
+                                                <!-- <div class="instructor">
+                                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                                </div> -->
+                                                
+                                                <div class="learner">
+                                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                                </div>
+                                                <div class="batch-info">
+                                                    <p class="small regular">Next Batch Starting</p>
+                                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</p>
+                                                </div>
+                                                
+                                            </div>
+                        
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+        
+                                    <a href="/course-detail">
+                                        <div class="card">
+                                            <div class="img">
+                                                <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
+                                                
+                                                <a href="javascript:void(0)">
+                                                    <div class="img-ribbon">
+                                                        <div class="icon">
+                                                            <div class="before-select">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                            <div class="after-select">
+                                                                <i class="fas fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="description">
+                                                <div class="title">
+                                                    <h4 class="bold">Google IT Support</h4>
+                                                </div>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt "></i>
+                                                </div>
+                                                <!-- <div class="instructor">
+                                                    <h4 class="medium small">By MASTER-ACADEMY</h4>
+                                                </div> -->
+                                                
+                                                <div class="learner">
+                                                    <p class="small medium">1.5k+ Satisfied Learners</p>
+                                                </div>
+                                                <div class="batch-info">
+                                                    <p class="small regular">Next Batch Starting</p>
+                                                    <p class="medium">Sunday, 10<sup>th</sup> June, 2021</p>
+                                                </div>
+                                                
+                                            </div>
+                        
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                            
+                            </div>
+                            
+                            <div class="swiper-pagination swiper-pagination6"></div>
+                            
+                            <div class="swiper-button-next"><img src="./resources/svg/circle-right.svg" alt=""></div>
+                            <div class="swiper-button-prev"><img src="./resources/svg/circle-left.svg" alt=""></div>
+                        </div>
+                    </div>
                     
                 </section>
             </div>
 
-            <div class="recommend-course">
-                <div class="title">
-                    <h3 class="bold">Mostain, Next courses you should enroll</h3>
-                </div>
-
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-
-                            <a href="/course-detail">
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
-                                        
-                                        <a href="javascript:void(0)">
-                                            <div class="img-ribbon">
-                                                <div class="icon">
-                                                    <div class="before-select">
-                                                        <i class="far fa-heart"></i>
-                                                    </div>
-                                                    <div class="after-select">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="description">
-                                        <div class="title">
-                                            <h4 class="bold">Google IT Support</h4>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt "></i>
-                                        </div>
-                                        <div class="instructor">
-                                            <h4 class="medium small">By MASTER-ACADEMY</h4>
-                                        </div>
-                                        
-                                        <div class="learner">
-                                            <p class="small medium">1.5k+ Satisfied Learners</p>
-                                        </div>
-                                        <div class="batch-info">
-                                            <p class="small regular">Next Batch Starting</p>
-                                            <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
-                                        </div>
-                                        
-                                    </div>
-                
-                                    
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            
-                            <a href="/course-detail">
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
-                                        
-                                        <a href="javascript:void(0)">
-                                            <div class="img-ribbon">
-                                                <div class="icon">
-                                                    <div class="before-select">
-                                                        <i class="far fa-heart"></i>
-                                                    </div>
-                                                    <div class="after-select">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="description">
-                                        <div class="title">
-                                            <h4 class="bold">Google IT Support</h4>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt "></i>
-                                        </div>
-                                        <div class="instructor">
-                                            <h4 class="medium small">By MASTER-ACADEMY</h4>
-                                        </div>
-                                        
-                                        <div class="learner">
-                                            <p class="small medium">1.5k+ Satisfied Learners</p>
-                                        </div>
-                                        <div class="batch-info">
-                                            <p class="small regular">Next Batch Starting</p>
-                                            <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
-                                        </div>
-                                        
-                                    </div>
-                
-                                    
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-
-                            <a href="/course-detail">
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
-                                        
-                                        <a href="javascript:void(0)">
-                                            <div class="img-ribbon">
-                                                <div class="icon">
-                                                    <div class="before-select">
-                                                        <i class="far fa-heart"></i>
-                                                    </div>
-                                                    <div class="after-select">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="description">
-                                        <div class="title">
-                                            <h4 class="bold">Google IT Support</h4>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt "></i>
-                                        </div>
-                                        <div class="instructor">
-                                            <h4 class="medium small">By MASTER-ACADEMY</h4>
-                                        </div>
-                                        
-                                        <div class="learner">
-                                            <p class="small medium">1.5k+ Satisfied Learners</p>
-                                        </div>
-                                        <div class="batch-info">
-                                            <p class="small regular">Next Batch Starting</p>
-                                            <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
-                                        </div>
-                                        
-                                    </div>
-                
-                                    
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-
-                            <a href="/course-detail">
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
-                                        
-                                        <a href="javascript:void(0)">
-                                            <div class="img-ribbon">
-                                                <div class="icon">
-                                                    <div class="before-select">
-                                                        <i class="far fa-heart"></i>
-                                                    </div>
-                                                    <div class="after-select">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="description">
-                                        <div class="title">
-                                            <h4 class="bold">Google IT Support</h4>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt "></i>
-                                        </div>
-                                        <div class="instructor">
-                                            <h4 class="medium small">By MASTER-ACADEMY</h4>
-                                        </div>
-                                        
-                                        <div class="learner">
-                                            <p class="small medium">1.5k+ Satisfied Learners</p>
-                                        </div>
-                                        <div class="batch-info">
-                                            <p class="small regular">Next Batch Starting</p>
-                                            <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
-                                        </div>
-                                        
-                                    </div>
-                
-                                    
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-
-                            <a href="/course-detail">
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
-                                        
-                                        <a href="javascript:void(0)">
-                                            <div class="img-ribbon">
-                                                <div class="icon">
-                                                    <div class="before-select">
-                                                        <i class="far fa-heart"></i>
-                                                    </div>
-                                                    <div class="after-select">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="description">
-                                        <div class="title">
-                                            <h4 class="bold">Google IT Support</h4>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt "></i>
-                                        </div>
-                                        <div class="instructor">
-                                            <h4 class="medium small">By MASTER-ACADEMY</h4>
-                                        </div>
-                                        
-                                        <div class="learner">
-                                            <p class="small medium">1.5k+ Satisfied Learners</p>
-                                        </div>
-                                        <div class="batch-info">
-                                            <p class="small regular">Next Batch Starting</p>
-                                            <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
-                                        </div>
-                                        
-                                    </div>
-                
-                                    
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-
-                            <a href="/course-detail">
-                                <div class="card">
-                                    <div class="img">
-                                        <img src="./resources/img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="" >
-                                        
-                                        <a href="javascript:void(0)">
-                                            <div class="img-ribbon">
-                                                <div class="icon">
-                                                    <div class="before-select">
-                                                        <i class="far fa-heart"></i>
-                                                    </div>
-                                                    <div class="after-select">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="description">
-                                        <div class="title">
-                                            <h4 class="bold">Google IT Support</h4>
-                                        </div>
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt "></i>
-                                        </div>
-                                        <div class="instructor">
-                                            <h4 class="medium small">By MASTER-ACADEMY</h4>
-                                        </div>
-                                        
-                                        <div class="learner">
-                                            <p class="small medium">1.5k+ Satisfied Learners</p>
-                                        </div>
-                                        <div class="batch-info">
-                                            <p class="small regular">Next Batch Starting</p>
-                                            <p class="medium">Sunday, 10<sup>th</sup> June, 2021</h5>
-                                        </div>
-                                        
-                                    </div>
-                
-                                    
-                                </div>
-                            </a>
-                        </div>
-                                    
-                    </div>
-                    
-                    <div class="swiper-pagination swiper-pagination6"></div>
-                    
-                    <div class="swiper-button-next"><img src="./resources/svg/circle-right.svg" alt=""></div>
-                    <div class="swiper-button-prev"><img src="./resources/svg/circle-left.svg" alt=""></div>
-                </div>
-            </div>
+            
             
         </div>
     {{end}}

@@ -59,7 +59,7 @@
                 </div>
                 <div class="collapsible-content">
                     <a href="">
-                        <div class="lecture-title tablink active" data-tab="video-1">
+                        <div class="lecture-title tablink " data-tab="video-1">
                             <i class="far fa-play-circle"></i>
                             <p class="regular hidden-part">1. Overview of DevOps</p>
                         </div>
@@ -135,7 +135,7 @@
             
         </div>
         <div class="tabcontent-wrap">
-            <div class="tabcontent active" id="video-1">
+            <div class="tabcontent " id="video-1">
                 <div class="content-title">
                     <div class="title">
                         <h5 class="medium self-pace">Self-paced Videos <i class="fas fa-angle-right"></i></h5>
@@ -221,7 +221,7 @@
 
     for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        this.classList.toggle("");
         var content = this.nextElementSibling;
         if (content.style.maxHeight === "0px"){
         content.style.maxHeight = "500px";

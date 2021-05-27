@@ -197,7 +197,7 @@
     grid-template-columns: repeat(2, 1fr);
     @include secondarySectionPadding();
     background-color: $primarySolidClr;
-
+    
     .col-1 
     {
         .page-link

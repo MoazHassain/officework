@@ -1382,6 +1382,10 @@ footer .upper-part {
   padding: 20px 40px;
 }
 
+.container .grid-content .column-left .tabcontent-wrap #tab-video a, .container .grid-content .column-left .tabcontent-wrap #class-record a {
+  padding: 0;
+}
+
 .container .grid-content .column-left .tabcontent-wrap #tab-video .tab-title, .container .grid-content .column-left .tabcontent-wrap #class-record .tab-title {
   padding: 20px 40px;
 }
@@ -1391,6 +1395,10 @@ footer .upper-part {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   margin: 20px 40px;
+}
+
+.container .grid-content .column-left .tabcontent-wrap #tab-video .video-file p, .container .grid-content .column-left .tabcontent-wrap #class-record .video-file p {
+  margin: 10px 0;
 }
 
 .container .grid-content .column-left .tabcontent-wrap #personal-library .tab-title {

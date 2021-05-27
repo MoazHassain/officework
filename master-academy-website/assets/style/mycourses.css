@@ -1061,17 +1061,22 @@ footer .upper-part {
   color: #262626;
 }
 
+.container {
+  background-color: #f3f3f3;
+}
+
 .container .grid-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  -ms-grid-columns: 25% 70%;
+      grid-template-columns: 25% 70%;
   padding: 5px 150px;
-  grid-gap: 50px;
-  margin: 30px 0;
+  padding-top: 30px;
+  grid-gap: 30px;
 }
 
 .container .grid-content .column-left .courses {
+  background-color: #fff;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
@@ -1084,13 +1089,13 @@ footer .upper-part {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #cacaca;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f3f3f3;
+  border-top: 1px solid #f3f3f3;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
   color: #1BB899;
-  background-color: #FAFAFA;
 }
 
 .container .grid-content .column-left .courses .collapsible-wrap .collapsible i {
@@ -1124,11 +1129,12 @@ footer .upper-part {
   overflow: hidden;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  background-color: #FAFAFA;
 }
 
 .container .grid-content .column-left .courses .collapsible-wrap .collapse-content p {
-  padding: 10px 20px;
-  color: #262626;
+  padding: 15px 20px;
+  color: #000;
 }
 
 .container .grid-content .column-left .how-to {
@@ -1138,8 +1144,9 @@ footer .upper-part {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 20px 0;
+  background-color: #fff !important;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
@@ -1156,8 +1163,9 @@ footer .upper-part {
 }
 
 .container .grid-content .column-left .upcoming-class .title {
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-bottom: 1px solid #f3f3f3;
+  background-color: #fff;
 }
 
 .container .grid-content .column-left .upcoming-class .classes {
@@ -1172,7 +1180,7 @@ footer .upper-part {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .container .grid-content .column-left .upcoming-class .classes .class-time > * {
@@ -1198,8 +1206,8 @@ footer .upper-part {
 
 .container .grid-content .column-left .upcoming-class .classes .join {
   color: #1BB899;
-  background-color: #f3f3f3;
-  padding: 10px 20px;
+  background-color: #fff;
+  padding: 15px 20px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1215,9 +1223,10 @@ footer .upper-part {
 }
 
 .container .grid-content .column-left .create-resume {
-  padding: 10px 20px;
+  padding: 15px 20px;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
 }
 
 .container .grid-content .column-left .create-resume .btn {
@@ -1289,6 +1298,7 @@ footer .upper-part {
           align-items: center;
   padding: 0px 20px;
   margin-bottom: 20px;
+  background-color: #fff;
 }
 
 .container .grid-content .column-right .welcome img {
@@ -1301,18 +1311,19 @@ footer .upper-part {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   margin: 20px 0;
+  background-color: #fff;
 }
 
 .container .grid-content .column-right .ongoing > .title {
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .container .grid-content .column-right .ongoing .time-info {
   background: -webkit-gradient(linear, left top, right top, from(#00417C), to(#1CB5E0));
   background: linear-gradient(to right, #00417C, #1CB5E0);
-  padding: 10px 20px;
+  padding: 15px 20px;
   color: #fff;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .container .grid-content .column-right .ongoing .time-info .info {
@@ -1334,8 +1345,8 @@ footer .upper-part {
 }
 
 .container .grid-content .column-right .ongoing .feedback {
-  margin: 0 10px;
-  padding: 10px 20px;
+  margin: 0 15px;
+  padding: 15px 20px;
   background-color: #FAFAFA;
 }
 
@@ -1383,7 +1394,7 @@ footer .upper-part {
 }
 
 .container .grid-content .column-right .ongoing .btns {
-  padding: 10px 20px;
+  padding: 15px 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 400px auto;
@@ -1412,27 +1423,22 @@ footer .upper-part {
   color: #fff;
 }
 
-.container .recommend-course {
-  padding: 5px 150px;
-}
-
 .container .recommend-course .title {
-  margin: 20px 25px;
+  margin: 20px 0;
 }
 
 .container .recommend-course .swiper-container {
   width: 100%;
   height: 100%;
-  padding: 0 25px;
   position: relative;
 }
 
 .container .recommend-course .swiper-container .card {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
   position: relative;
   margin: 0px 0 50px 0;
+  background-color: #fff;
 }
 
 .container .recommend-course .swiper-container .card .img img {
@@ -1447,7 +1453,7 @@ footer .upper-part {
   position: absolute;
   top: 15px;
   right: 20px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1527,8 +1533,8 @@ footer .upper-part {
   height: 48px;
   border-radius: 50%;
   background: #fff;
-  -webkit-transform: translateX(20%);
-          transform: translateX(20%);
+  -webkit-transform: translateX(20%) translateY(-100%);
+          transform: translateX(20%) translateY(-100%);
 }
 
 .container .recommend-course .swiper-container .swiper-button-next::after {
@@ -1540,8 +1546,8 @@ footer .upper-part {
   height: 48px;
   border-radius: 50%;
   background: #fff;
-  -webkit-transform: translateX(-20%);
-          transform: translateX(-20%);
+  -webkit-transform: translateX(-20%) translateY(-100%);
+          transform: translateX(-20%) translateY(-100%);
 }
 
 .container .recommend-course .swiper-container .swiper-button-prev::after {

@@ -361,6 +361,11 @@ footer
                     {
                         padding: 20px 40px;
                     }
+                    a 
+                    {
+                        padding: 0;
+                    }
+
                     .tab-title
                     {
                         padding: 20px 40px;
@@ -371,6 +376,11 @@ footer
                         padding: 10px 20px;
                         box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
                         margin: 20px 40px;
+
+                        p 
+                        {
+                            margin: 10px 0;
+                        }
                     }
                 }
                 #personal-library
