@@ -15,6 +15,7 @@ func main() {
 	http.HandleFunc("/blog", blog)
 	http.HandleFunc("/mycourses", mycourses)
 	http.HandleFunc("/certification-training", certificationTraining)
+	http.HandleFunc("/video-lecture", videoLecture)
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("./assets"))))
 	http.ListenAndServe(":8888", nil)
 }
@@ -129,6 +130,22 @@ func certificationTraining(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ptmp, err = ptmp.ParseFiles("wpage/certification-training.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp.Execute(w, nil)
+
+}
+
+func videoLecture(w http.ResponseWriter, r *http.Request) {
+
+	ptmp, err := template.ParseFiles("template/mycourses.gohtml")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	ptmp, err = ptmp.ParseFiles("wpage/video-lecture.gohtml")
 	if err != nil {
 		fmt.Println(err.Error())
 	}

@@ -1,0 +1,283 @@
+.subheader 
+{
+    @include dashboardsubhead();
+    padding: 5px 30px;
+}
+
+.container
+{
+    .grid-content
+    {
+        width: 100%;
+        // display: grid;
+        // grid-template-columns: auto auto; 
+        display: flex; 
+        
+        .side-nav
+        {
+            width: 300px;
+            white-space: nowrap;
+            border-right: 1px solid $thirdWhiteClr;
+            transition: 0.3s ease;
+
+            .nav-head
+            {
+                padding: 15px 30px;
+                box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.2) inset;
+                
+                .wrap 
+                {
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    .nav-btn
+                    {
+                        margin-right: 10px;
+                        .bar-1,
+                        .bar-2,
+                        .bar-3
+                        {
+                            width: 30px;
+                            height: 3px;
+                            background-color: $secondaryBlackclr;
+                            margin: 4px 0;
+                            transition: 0.3s;
+                            border-radius: 50px;
+                        }
+                        // &:hover .bar-1
+                        // {
+                        //     transform: rotate(-45deg) translateX(-6px) translateY(5px);
+                        // }
+                        // &:hover .bar-3
+                        // {
+                        //     transform: rotate(45deg) translateX(-6px) translateY(-5px);
+                        // }
+                        // &:hover .bar-2
+                        // {
+                        //     transform: scale(0);
+                        // }
+                    }
+                    .nav-btn.change 
+                    {
+                        .bar-1
+                        {
+                            transform: rotate(-45deg) translateX(-6px) translateY(5px);
+                        }
+                        .bar-2
+                        {
+                            transform: scale(0);
+                        }
+                        .bar-3
+                        {
+                            transform: rotate(45deg) translateX(-6px) translateY(-6px);
+                        }
+                    }
+                }
+            }
+
+            .collapsible-wrap
+            {
+                .collapsible
+                {
+                    padding: 15px 30px;
+                    background: $forthWhiteClr;
+                    h5 
+                    {
+                        i.fa-play-circle
+                        {
+                            color: $secondarySolidClr;
+                            font-size: 24px;
+                        }
+                        i.fa-angle-down
+                        {
+                            float: right;
+                            font-weight: 400;
+                            
+                        }
+                    }
+                }
+                .collapsible-content 
+                {
+                    max-height: 500px;
+                    overflow: hidden;
+                    transition: 0.3s ease-in-out;
+                    height: 500px;
+                    overflow-y: scroll;
+                    a 
+                    {
+                        .lecture-title
+                        {
+                            padding: 15px 30px;
+                            display: flex;
+                            align-items: center;
+
+                            i 
+                            {
+                                font-size: 18px;
+                                margin-right: 10px;
+                                color: $secondarySolidClr;
+                            }
+                            p 
+                            {
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .library
+            {
+                padding: 15px 30px;
+                display: flex;
+                align-items: center;
+
+                i 
+                {
+                    font-size: 18px;
+                    color: $secondarySolidClr;
+                    margin-right: 10px;
+                }
+                p 
+                {
+                    overflow: hidden;
+                }
+            }
+        }
+        .side-nav.shrink
+        {
+            width: 90px;
+            
+            .hidden-part
+            {
+                visibility: hidden;
+            }
+            .collapsible.hidden-part
+            {
+                display: none;
+            }
+        }
+
+        .tabcontent-wrap
+        {
+            width: 100%;
+            .tabcontent
+            {
+                // display: none;
+                .content-title
+                {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    padding: 15px 40px;
+                    background: $secondaryWhiteClr;
+                    box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.2)inset;
+
+                    .title
+                    {
+                        display: flex; 
+                        align-items: center;
+                        
+                        > * 
+                        {
+                            margin: 0 10px;
+                        }
+                        i 
+                        {
+                            font-weight: 500;
+                            margin-left: 5px;
+                        }
+                        .self-pace
+                        {
+                            color: $secondarySolidClr;
+                        }
+                    }
+                    .icons
+                    {
+                        justify-self: end;
+                        display: flex;
+                        align-items: center;
+                        > *
+                        {
+                            margin: 0 15px;
+                        }
+                        img 
+                        {
+                            width: 20px;
+                            height: 20px;
+                        }
+                        i 
+                        {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .content-video
+                {
+                    padding: 30px 50px;
+                    .video 
+                    {
+                        
+
+                        img 
+                        {
+                            width: 100%;
+                            height: 522px;
+                        }
+                    }
+                    .raise-query 
+                    {
+                        margin: 10px 0;
+                        text-align: right;
+                        color: $secondarySolidClr;
+                    }
+                }
+            }
+            #library
+            {
+                .content-title 
+                {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    color: $secondarySolidClr;
+
+                    .library
+                    {
+                        justify-self: end;
+                        
+                        i 
+                        {
+                            color: $primarySolidClr;
+                            margin: 0 10px;
+                        }
+                    }
+                }
+                .give-info
+                {
+                    padding: 30px 50px;
+                    text-align: center;
+
+                    > * 
+                    {
+                        margin-bottom: 10px;
+                    }
+                    .block-text
+                    {
+                        padding: 0 20px;
+                    }
+                }
+                .img 
+                {
+                    padding: 30px 50px;
+                    img
+                    {
+                        width: 100%;
+                        height: 422px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+        
+    }
+}
