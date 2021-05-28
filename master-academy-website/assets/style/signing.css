@@ -586,6 +586,8 @@ header .responsive-navbtn .btn {
   background-color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .responsive-content > * {
@@ -747,8 +749,8 @@ header .responsive-navbtn .btn {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: search;
-    -ms-grid-columns: 90% 10%;
-        grid-template-columns: 90% 10%;
+    -ms-grid-columns: 85% 15%;
+        grid-template-columns: 85% 15%;
   }
   header .nav-menu {
     display: none;
@@ -1739,5 +1741,47 @@ header .nav-menu button:hover {
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1100px) and (min-width: 801px) {
+  .container .grid-wrapper .form-part {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 501px) {
+  .container .grid-wrapper .form-part {
+    width: 70%;
+  }
+  .container .grid-wrapper .form-part .title-wrap {
+    padding: clamp(15px, 3.5vw, 30px) clamp(20px, 4.5vw, 40px);
+  }
+  .container .grid-wrapper .form-part form {
+    padding: clamp(15px, 3.5vw, 30px) clamp(25px, 5.5vw, 50px);
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 501px) {
+  .container .grid-wrapper .form-part form .password-field {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 270px) {
+  .container .grid-wrapper .form-part {
+    margin: 40px 0;
+    width: 80%;
+  }
+  .container .grid-wrapper .form-part .title-wrap {
+    padding: clamp(15px, 3.5vw, 30px) clamp(20px, 4.5vw, 40px);
+  }
+  .container .grid-wrapper .form-part form {
+    padding: clamp(15px, 3.5vw, 30px) clamp(25px, 5.5vw, 50px);
+  }
+  .container .grid-wrapper .form-part form .password-field {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 /*# sourceMappingURL=signing.css.map */

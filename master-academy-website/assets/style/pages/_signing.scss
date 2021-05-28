@@ -315,3 +315,90 @@ header
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+
+@media screen and (max-width:1100px) and (min-width: 801px)
+{
+    .container 
+    {
+        .grid-wrapper
+        {
+            .form-part
+            {
+                width: 60%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:800px) and (min-width: 501px)
+{
+    .container 
+    {
+        .grid-wrapper
+        {
+            .form-part
+            {
+                width: 70%;
+
+                .title-wrap
+                {
+                    padding: clamp(15px, 3.5vw, 30px) clamp(20px, 4.5vw, 40px);
+                }
+                form 
+                {
+                    padding: clamp(15px, 3.5vw, 30px) clamp(25px, 5.5vw, 50px);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) and (min-width: 501px)
+{
+    .container 
+    {
+        .grid-wrapper
+        {
+            .form-part
+            {
+                form 
+                {
+                    .password-field
+                    {
+                        display: grid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) and (min-width: 270px)
+{
+    .container 
+    {
+        .grid-wrapper
+        {
+            .form-part
+            {
+                margin: 40px 0;
+                width: 80%;
+
+                .title-wrap
+                {
+                    padding: clamp(15px, 3.5vw, 30px) clamp(20px, 4.5vw, 40px);
+                }
+                form 
+                {
+                    padding: clamp(15px, 3.5vw, 30px) clamp(25px, 5.5vw, 50px);
+                
+                    .password-field
+                    {
+                        display: grid;
+                    }
+                }
+            }
+        }
+    }
+}

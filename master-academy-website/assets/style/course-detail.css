@@ -587,6 +587,8 @@ header .responsive-navbtn .btn {
   background-color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .responsive-content > * {
@@ -748,8 +750,8 @@ header .responsive-navbtn .btn {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: search;
-    -ms-grid-columns: 90% 10%;
-        grid-template-columns: 90% 10%;
+    -ms-grid-columns: 85% 15%;
+        grid-template-columns: 85% 15%;
   }
   header .nav-menu {
     display: none;
