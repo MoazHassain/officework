@@ -108,7 +108,7 @@ section.sub-header
         .megamenu-active 
         {
             opacity: 1;
-            height: 35em;
+            height: 80vh;
             z-index: 99;
         }
     }
@@ -190,6 +190,35 @@ section.sub-header
             
             z-index: 999;
             background-color: $primaryWhiteClr;
+        }
+    }
+}
+
+@media screen and (max-width:800px) and (min-width: 501px)
+{
+    .sub-header 
+    {
+        .nav-menu
+        {
+            .nav-three, .nav-four
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:500px) and (min-width: 270px)
+{
+    .sub-header 
+    {
+        .nav-menu
+        {
+            .nav-three, .nav-four, .nav-two
+            {
+                display: none;
+            }
         }
     }
 }

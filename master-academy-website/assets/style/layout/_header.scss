@@ -74,4 +74,242 @@ header
             @include gradBorderBtn($primaryWhiteClr, 2px 1000px 1px $secondaryBlackclr inset)
         }  
     }
+    .responsive-navbtn
+    {
+        display: none;
+        .btn 
+        {
+            padding: 8px;
+            border-radius: 50px;
+            background: $thridBlackClr;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.responsive-content
+{
+    // display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    z-index: 9999;
+    // @include primarySectionPadding();
+    background-color: $primaryWhiteClr;
+    transition: 0.3s;
+
+    > *
+    {
+        padding: 10px 30px;
+    }
+    .head
+    {
+        padding: 15px 30px;
+        background-color: $forthWhiteClr;
+        border-bottom: 1px solid $thirdWhiteClr;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        .title
+        {
+            
+            width: fit-content;
+        }
+        .cls-btn 
+        {
+            justify-self: end;
+
+            button
+            {
+                background-color: $thirdWhiteClr;
+                padding: 5px;
+            }
+        }
+    }
+    .responsive-menu
+    {
+        button
+        {
+            width: 100%;
+        }
+        button.grad-border-btn
+        {
+            @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
+        }
+    }
+    
+}
+
+.responsive-content.show-navcontent
+{
+    width: 50vw;
+}
+
+@media screen and (max-width:1100px) and (min-width: 801px)
+{
+    // padding: 5px clamp(40px, 6vw, 60px);
+    header
+    {
+        padding: 10px clamp(25px, 3.5vw, 40px);
+
+        grid-template-columns: auto auto;
+        grid-template-areas:  
+        "logo nav"
+        "search search";
+        grid-gap: 5px;
+
+        .logo
+        {
+            grid-area: logo;
+            img
+            {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .search-bar
+        {
+            margin-left: 0;
+            grid-area: search;
+            grid-template-columns: 90% 10%;
+        }
+        .nav-menu
+        {
+            grid-area: nav;
+        }
+        
+    }
+}
+
+
+
+@media screen and (max-width:800px) and (min-width: 501px)
+{
+    header
+    {
+        padding: 10px clamp(25px, 3.5vw, 40px);
+
+        grid-template-columns: auto auto;
+        grid-template-areas:  
+        "logo nav"
+        "search search";
+        grid-gap: 5px;
+
+        .logo
+        {
+            grid-area: logo;
+            img
+            {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .search-bar
+        {
+            margin-left: 0;
+            grid-area: search;
+            grid-template-columns: 90% 10%;
+        }
+        .nav-menu
+        {
+            display: none;
+        }
+        .responsive-navbtn
+        {
+            display: block;
+            grid-area: nav;
+            justify-self: end;
+            align-self: center;
+        }
+    }
+}
+
+
+@media screen and (max-width:500px) and (min-width: 270px)
+{
+    header
+    {
+        padding: 10px clamp(25px, 3.5vw, 40px);
+
+        grid-template-columns: auto auto;
+        grid-template-areas:  
+        "logo nav"
+        "search search";
+        grid-gap: 5px;
+
+        .logo
+        {
+            grid-area: logo;
+            img
+            {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .search-bar
+        {
+            margin-left: 0;
+            grid-area: search;
+            grid-template-columns: 90% 10%;
+        }
+        .nav-menu
+        {
+            display: none;
+        }
+        .responsive-navbtn
+        {
+            display: block;
+            grid-area: nav;
+            justify-self: end;
+            align-self: center;
+        }
+    }
+    .responsive-content.show-navcontent
+    {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width:400px) and (min-width: 270px)
+{
+    header
+    {
+        padding: 10px clamp(25px, 3.5vw, 40px);
+
+        grid-template-columns: auto auto;
+        grid-template-areas:  
+        "logo nav"
+        "search search";
+        grid-gap: 5px;
+
+        .logo
+        {
+            grid-area: logo;
+            img
+            {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .search-bar
+        {
+            margin-left: 0;
+            grid-area: search;
+            grid-template-columns: 85% 15%;
+        }
+        .nav-menu
+        {
+            display: none;
+        }
+        .responsive-navbtn
+        {
+            display: block;
+            grid-area: nav;
+            justify-self: end;
+            align-self: center;
+        }
+    }
 }

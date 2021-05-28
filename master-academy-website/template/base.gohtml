@@ -42,14 +42,15 @@
     {{block "offer" .}}
     <section class="offer">
         <div class="title">
-            <p class="bold">Month End Offer - Flat 15% Off + 20% Cashback   |   OFFER ENDING IN : </h4>
+            <p class="bold">Month End Offer - Flat 15% Off + 20% Cashback  &nbsp;  |    </p>
         </div>
         <div class="countdown">
-            <p class="bold"><span>00</span> Day <span>12</span> Hour <span>03</span> Minute </h4>
+            <p class="bold">OFFER ENDING IN : <span>00</span> Day <span>12</span> Hour <span>03</span> Minute </p>
+            <div class="open-btn">
+                <p class="bold">GRAB NOW</small>
+            </div>
         </div>
-        <div class="open-btn">
-            <p class="bold">GRAB NOW</small>
-        </div>
+        
         <div class="cls-btn">
             <button class="close">
                 <img src="./resources/svg/cross.svg" alt="">
@@ -161,7 +162,68 @@
                     </div>
                 </a>
             </div>
+
+            <div class="responsive-navbtn">
+                <div class="btn">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50033 5C2.27931 5 2.06735 5.0878 1.91107 5.24408C1.75479 5.40036 1.66699 5.61232 1.66699 5.83333C1.66699 6.05435 1.75479 6.26631 1.91107 6.42259C2.06735 6.57887 2.27931 6.66667 2.50033 6.66667H22.5003C22.7213 6.66667 22.9333 6.57887 23.0896 6.42259C23.2459 6.26631 23.3337 6.05435 23.3337 5.83333C23.3337 5.61232 23.2459 5.40036 23.0896 5.24408C22.9333 5.0878 22.7213 5 22.5003 5H2.50033ZM1.66699 12.5C1.66699 12.279 1.75479 12.067 1.91107 11.9107C2.06735 11.7545 2.27931 11.6667 2.50033 11.6667H22.5003C22.7213 11.6667 22.9333 11.7545 23.0896 11.9107C23.2459 12.067 23.3337 12.279 23.3337 12.5C23.3337 12.721 23.2459 12.933 23.0896 13.0893C22.9333 13.2455 22.7213 13.3333 22.5003 13.3333H2.50033C2.27931 13.3333 2.06735 13.2455 1.91107 13.0893C1.75479 12.933 1.66699 12.721 1.66699 12.5ZM1.66699 19.1667C1.66699 18.9457 1.75479 18.7337 1.91107 18.5774C2.06735 18.4211 2.27931 18.3333 2.50033 18.3333H22.5003C22.7213 18.3333 22.9333 18.4211 23.0896 18.5774C23.2459 18.7337 23.3337 18.9457 23.3337 19.1667C23.3337 19.3877 23.2459 19.5996 23.0896 19.7559C22.9333 19.9122 22.7213 20 22.5003 20H2.50033C2.27931 20 2.06735 19.9122 1.91107 19.7559C1.75479 19.5996 1.66699 19.3877 1.66699 19.1667Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
         </header>
+
+        <div class="responsive-content">
+            <div class="head">
+                <div class="title">
+                    <h4 class="medium">Browse</h4>
+                </div>
+                <div class="cls-btn">
+                    <button class="rounded-btn nav-cls-btn">
+                        <img class="cross" src="./resources/svg/cross.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="responsive-menu">
+                <div class="nav-course">
+                    <a href="/course-catalog"><h5 class="medium">Course</h5></a>
+                </div>
+            </div>
+            <div class="responsive-menu">
+                <div class="nav-Project">
+                    <a href="#"><h5 class="medium">Project</h5></a>
+                </div>
+            </div>
+            <div class="responsive-menu">
+                <div class="nav-Certificate">
+                    <a href="#"><h5 class="medium">Certificate</h5></a>
+                </div>
+            </div>
+            <div class="responsive-menu">
+                <div class="nav-Blog">
+                    <a href="/blog"><h5 class="medium">Blog</h5></a>
+                </div>
+            </div>
+            <div class="responsive-menu">
+                <div class="nav-Sign-In">
+                    <a href="/sign-in">
+                        <div class="btn">
+                            <button class="grad-border-btn">
+                                <h5 class="medium">Sign In</h5>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="responsive-menu">
+                <a href="/sign-up">
+                    <div class="btn">
+                        <button class="grad-bg-btn">
+                            <h5 class="bold">Enroll Now</h5>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
 
         <div class="modal-bg search-modal-bg">
             <div class="modal search-modal">
@@ -560,8 +622,8 @@
                     <h5 class="medium tablink active" data-tab="computer-science">Computer Science</h5>
                     <h5 class="medium tablink" data-tab="business">Business</h5>
                     <h5 class="medium tablink" data-tab="data-science">Data Science</h5>
-                    <h5 class="medium tablink" data-tab="engineering">Engineering</h5>
-                    <h5 class="medium tablink" data-tab="design">Design</h5>
+                    <h5 class="medium tablink responsive-hide" data-tab="engineering">Engineering</h5>
+                    <h5 class="medium tablink responsive-hide" data-tab="design">Design</h5>
                 </div>
 
                 <div class="tabcontent active" id="computer-science">
@@ -4442,7 +4504,33 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+          270: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          800: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
     });
+
+    var showResponsiveBtn = document.querySelector(".responsive-navbtn");
+    var hideResponsiveBtn = document.querySelector(".cls-btn .nav-cls-btn");
+    var responsiveMenu =document.querySelector(".responsive-content");
+
+    showResponsiveBtn.addEventListener("click", function(){
+        responsiveMenu.classList.add("show-navcontent");
+    });
+    hideResponsiveBtn.addEventListener("click", function(){
+        responsiveMenu.classList.remove("show-navcontent");
+    })
+
 
 
     var offerSectionCls = document.querySelector(".offer .cls-btn");

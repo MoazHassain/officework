@@ -68,4 +68,76 @@ h1 {
 .light {
   font-weight: 300;
 }
+
+@media screen and (max-width: 1100px) and (min-width: 801px) {
+  .small {
+    font-size: 14px;
+  }
+  p {
+    font-size: 15px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 501px) {
+  .small {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 270px) {
+  .small {
+    font-size: 13px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
 /*# sourceMappingURL=all.css.map */
