@@ -92,6 +92,19 @@
 
 {{block "script" .}}
 <script>
+
+    
+    var showResponsiveBtn = document.querySelector(".responsive-navbtn");
+    var hideResponsiveBtn = document.querySelector(".cls-btn .nav-cls-btn");
+    var responsiveMenu =document.querySelector(".responsive-content");
+
+    showResponsiveBtn.addEventListener("click", function(){
+        responsiveMenu.classList.add("show-navcontent");
+    });
+    hideResponsiveBtn.addEventListener("click", function(){
+        responsiveMenu.classList.remove("show-navcontent");
+    })
+
     var openSearchModal = document.querySelector(".search-modal-bg");
     var searchOpenBtn = document.querySelector("#head-search");
     var searchClsBtn = document.querySelector("#search-cls-btn");
