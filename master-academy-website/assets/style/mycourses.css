@@ -18,7 +18,7 @@ hr.black-hr {
 }
 
 * {
-  font-family: "montserrat", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 .small {
@@ -54,11 +54,11 @@ h1 {
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .medium {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .regular {
