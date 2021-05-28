@@ -149,7 +149,7 @@
             {
                 margin: 10px 0;
                 
-                color: $primarySolidClr;
+                color: $secondarySolidClr;
             }
         }
     }
@@ -189,7 +189,7 @@
             }
             .title
             {
-                h3
+                h4
                 {
                     // font-family: gothamMedium;
                     line-height: 1.3em;
@@ -229,11 +229,9 @@
             display: flex;
             align-items: center;
             grid-gap: 15px;
-
-            h3 
-            {
-                color: $primarySolidClr
-            }
+            color: $secondarySolidClr;
+            display: flex;
+            align-items: center;
         }
         .form 
         {

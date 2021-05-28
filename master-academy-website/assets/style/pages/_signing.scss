@@ -70,9 +70,10 @@ header
                 
                 h3.bold 
                 {
-                    font-family: "montserrat", sans-serif;
+                    // font-family: "montserrat", sans-serif;
                     margin-bottom: 10px;
                     color: $secondaryBlackclr;
+                    font-weight: 600;
                 }
                 h5
                 {
@@ -176,7 +177,7 @@ header
                 }
                 a 
                 {
-                    color: $secondaryBlackclr;
+                    color: $primaryBlackClr;
                     transition: 0.2s ease-in-out;
 
                     &:hover 

@@ -29,8 +29,8 @@ section.hero
                 }
                 h1
                 {
-                    letter-spacing: -0.03em;
-                    font-size: 55px;
+                    // letter-spacing: -0.03em;
+                    font-size: 45px;
                 }
                 h3
                 {
@@ -104,7 +104,7 @@ section.hero
             {
                 border-color: #CC2B5E;
 
-                h4
+                h5
                 {
                     color: #CC2B5E;
                 }
@@ -113,7 +113,7 @@ section.hero
             {
                 border-color: #F04F3E;
 
-                h4 
+                h5 
                 {
                     color: #F04F3E;
                 }
@@ -122,7 +122,7 @@ section.hero
             {
                 border-color: rgba($color: #f48200, $alpha: 0.8);
 
-                h4 
+                h5 
                 {
                     color: rgba($color: #f48200, $alpha: 0.8);
                 }
@@ -135,7 +135,8 @@ section.hero
 
             h1 
             {
-                color: $primarySolidClr;
+                margin-top: 20px;
+                color: $secondarySolidClr;
             }
             .company-logos
             {
@@ -167,15 +168,15 @@ section.vision
 
         .text-part
         {
-            padding: 50px 40px 50px 0;
+            padding: 65px 40px 65px 0;
 
             >*
             {
                 padding: 10px 0;
             }
-            h1
+            h3
             {
-                color: $primarySolidClr;
+                color: $secondarySolidClr;
             }
             
         }
@@ -198,9 +199,9 @@ section.explore-course
 
     .title
     {
-        h1 
+        h3 
         {
-            color: $primarySolidClr;
+            color: $secondarySolidClr;
             margin-bottom: 20px;
         }
 
@@ -213,7 +214,7 @@ section.explore-course
         {
             
             color: $thridBlackClr;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
             margin-right: 40px;
             transition: 0.3s ease-in-out;
             border-bottom: 3px solid transparent;
@@ -270,7 +271,7 @@ section.explore-course
                         position: absolute;
                         top: 15px;
                         right: 20px;
-                        padding: 10px 20px;
+                        padding: 5px 10px;
                         width: fit-content;
                         border-radius: 6px;
                         background: $primaryGradClr;
@@ -285,6 +286,10 @@ section.explore-course
                     > *
                     {
                         margin: 10px 0;
+                    }
+                    .title
+                    {
+                        color: $secondarySolidClr;
                     }
                     .rating
                     {
@@ -443,10 +448,7 @@ section.catagories
     .title
     {
         margin: 0px 0 20px;
-        h1 
-        {
-            color: $primarySolidClr;
-        }
+        color: $secondarySolidClr;
     }
     .card-wrapper
     {
@@ -477,7 +479,7 @@ section.catagories
 section.career
 {
     background: $secondaryBlackclr;
-    padding: 50px 0;
+    padding: 50px 0 30px;
     margin: 50px 0;
     .become-instructor
     {
@@ -503,9 +505,9 @@ section.career
                 {
                     margin: 20px 0;
                 }
-                h1
+                h3
                 {
-                    color: $primarySolidClr;
+                    color: $secondarySolidClr;
                 }
                 p
                 {
@@ -517,7 +519,7 @@ section.career
     }
     .build-career
     {
-        padding-top: 40px;
+        padding-top: 30px;
         color: $primaryWhiteClr;
         text-align: center;
         width: 50%;
@@ -540,10 +542,7 @@ section.review
 
     .title
     {
-        h1
-        {
-            color: $primarySolidClr;
-        }
+        color: $secondarySolidClr;
     }
 
     .swiper-container
@@ -594,7 +593,7 @@ section.review
             {
                 p 
                 {
-                    font-size: 18px;
+                    font-size: 17px;
                     font-style: italic;
                     color: $thridBlackClr;
                 }
@@ -644,9 +643,9 @@ section.consultation
     {
         
         
-        h1
+        h3
         {
-            color: $primarySolidClr;
+            color: $secondarySolidClr;
             margin-bottom: 20px;
            
         }

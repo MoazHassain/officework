@@ -17,8 +17,9 @@
     // }
     .visible-content
     {
+        @include gridCenter();
         height: fit-content;
-        padding: 15px;
+        padding: 10px;
         background-color: $primarySolidClr;
         border-radius: 10px 0 0 10px;
 
@@ -46,11 +47,11 @@
         {
             text-align: center;
             color: $primaryWhiteClr;
-            padding: 5px;
+            padding: 13px;
         }
         .contact-info 
         {
-            color: $primaryWhiteClr;
+            color: $primarySolidClr;
             display: flex;
             justify-content: center;
             padding: 5px;
@@ -59,16 +60,16 @@
             {
                 font-size: 35px;
                 margin-right: 20px;
-                color: $primaryWhiteClr;
+                color: $primarySolidClr;
             }
         }
         .form
         {
-            padding: 20px 30px;
+            padding: 10px 15px;
 
             > * 
             {
-                margin: 15px;
+                margin: 6px;
                 position: relative;
             }
             
@@ -78,9 +79,18 @@
                 top: 50%;
                 left: 15px;
                 transform: translateY(-50%);
-                color: $thridBlackClr;
+                
                 pointer-events: none;
                 transition: 0.3s ease-in-out;
+
+                p 
+                {
+                    color: #777777;
+                }
+            }
+            .intTel-field input::placeholder
+            {
+                color: #777777;
             }
             input.email::placeholder,
             textarea.text-area::placeholder
@@ -89,13 +99,25 @@
             }
             
             input.email:focus + label,
-            input.email:not(:placeholder-shown) + label,
+            input.email:not(:placeholder-shown) + label
+            {
+                background-color: $primaryWhiteClr;
+                left: 15px;
+                transform: translateY(-110%) translateX(-15%) scale(0.7);
+            }
+            .text-field
+            {
+                label
+                {
+                    top: 25%;
+                }
+            }
             textarea.text-area:focus + label,
             textarea.text-area:not(:placeholder-shown) + label
             {
                 background-color: $primaryWhiteClr;
                 left: 15px;
-                transform: translateY(-120%) translateX(-15%) scale(0.7);
+                transform: translateY(-80%) translateX(-15%) scale(0.7);
             }
             input.email,textarea.text-area,button 
             {
