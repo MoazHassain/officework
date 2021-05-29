@@ -264,6 +264,36 @@
 
 @media screen and (max-width:1100px) and (min-width: 760px)
 {
+    .search-modal
+    {
+        .modal-header
+        {
+            .upper-part
+            {
+                grid-template-columns: repeat(3, auto);
+                .logo
+                {
+                    .logo-text
+                    {
+                        display: none;
+                    }
+                }
+            }
+            .lower-part
+            {
+                .tab 
+                {
+                    
+                    .tablink:nth-of-type(5),
+                    .tablink:nth-of-type(6)
+                    {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
     .offer-modal
     {
         top: 0;
@@ -298,6 +328,37 @@
 
 @media screen and (max-width:750px) and (min-width: 260px)
 {
+    .search-modal
+    {
+        .modal-header
+        {
+            .upper-part
+            {
+                grid-template-columns: repeat(3, auto);
+                .logo
+                {
+                    .logo-text
+                    {
+                        display: none;
+                    }
+                }
+            }
+            .lower-part
+            {
+                .tab 
+                {
+                    .tablink:nth-of-type(4),
+                    .tablink:nth-of-type(5),
+                    .tablink:nth-of-type(6)
+                    {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
     .offer-modal
     {
         top: 0%;
@@ -322,6 +383,45 @@
                 {
                     background-color: $thridBlackClr;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px) and (min-width: 270px)
+{
+    .search-modal
+    {
+        .modal-header
+        {
+            .upper-part
+            {
+                grid-template-columns: repeat(2, auto);
+                .logo
+                {
+                    display: none;
+                }
+            }
+            .lower-part
+            {
+                .tab 
+                {
+                    .tablink
+                    {
+                        margin-right: 10px;
+                    }
+                    .tablink:nth-of-type(3),
+                    .tablink:nth-of-type(4),
+                    .tablink:nth-of-type(5),
+                    .tablink:nth-of-type(6)
+                    {
+                        display: none;
+                    }
+                }
+                // .hamburger
+                // {
+                //     justify-self: center;
+                // }
             }
         }
     }

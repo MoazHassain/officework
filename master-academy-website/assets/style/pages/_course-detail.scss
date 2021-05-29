@@ -81,6 +81,51 @@
                     }
                 }
             }
+            .responsive-show
+            {
+                display: none;
+                > *
+                {
+                    margin: 10px 0;
+                }
+                .price 
+                {
+                    
+                    h1 
+                    {
+                        color: $primaryWhiteClr;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 500;
+                        span 
+                        {
+                            font-size: 18px;
+                            color: $secondaryWhiteClr;
+                        }
+                    }
+                }
+                .time 
+                {
+                    display: flex;
+                    align-items: center;
+                    > *
+                    {
+                        margin-right: 10px;
+                    }
+                }
+                button 
+                {
+                    width: 100%;
+                }
+                .grad-border-btn
+                {
+                    @include gradBorderBtn($primaryWhiteClr, 2px 1000px 1px #161616 inset)
+                }
+                .money-back
+                {
+                    text-align: center;
+                }
+            }
             .btns 
             {
                 display: flex;
@@ -127,6 +172,7 @@
                         color: $secondaryBlackclr;
                         display: flex;
                         align-items: center;
+                        font-weight: 600;
                         span 
                         {
                             font-size: 18px;
@@ -412,10 +458,12 @@
                 
                 position: relative;
 
-                .img
+                img
                 {
-                    height: 100%;
+                    // height: 100%;
                     width: 100%;
+                    height: 330px; 
+
                 }
                 .text-content
                 {
@@ -896,3 +944,829 @@
     }
 }
 
+
+@media screen and (max-width:1100px) and (min-width: 801px)
+{
+    .container
+    {
+        .wrap-course-title
+        {
+            
+            grid-template-columns: auto;
+            .course-title
+            {
+                width: 60%;
+                justify-self: center;
+
+                .detail 
+                {
+                    flex-direction: column;
+                    
+                    > * 
+                    {
+                        padding-bottom: 10px;
+                    }
+                }
+                .btns
+                {
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+
+                    .btn 
+                    {
+                        button
+                        {
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .responsive-show
+                {
+                    display: block;
+                }
+            }
+        }
+        .wrap-course-price
+        {
+            display: none;
+        }
+        .wrap-course-reason
+        {
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+
+            .course-reason
+            {
+                justify-self: center;
+                width: 60%;
+            }
+        }
+
+        .tab-header
+        {
+            display: none;
+        }
+        #batch 
+        {
+            margin-top: 30px;
+
+            .batch-info
+            {
+                grid-gap: clamp(10px, 1vw, 20px);
+                padding: clamp(10px ,1.5vw, 25px) clamp(15px, 2vw, 30px);
+            
+                .price-wrap
+                {
+                    padding: 20px clamp(15px, 2vw, 30px);
+                }
+            }
+        }
+        #detail
+        {
+            .free-content
+            {
+                grid-template-columns: 50% 50%;
+
+                .video-part
+                {
+                    img 
+                    {
+                        object-fit: cover;
+                        object-position: right;
+                    }
+                }
+                .text-content
+                {
+                    white-space: nowrap;
+                }
+            }
+        }
+        #certification 
+        {
+            .certificate-wrap
+            {
+                .text-part
+                {
+                    .company-logo
+                    {
+                        img 
+                        {
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                }
+                .img-part
+                {
+                    .img 
+                    {
+                        img 
+                        {
+                            height: clamp(250px, 30vw, 300px);
+                            width: clamp(300px, 35vw, 350px);
+                        }
+                    }
+                }
+            }
+        }
+        #review 
+        {
+            .comment-review
+            {
+                .swiper-container
+                {
+                    .card
+                    {
+                        padding: clamp(20px, 2.5vw, 25px) clamp(10px, 2vw, 30px);
+                        .user 
+                        {
+                            grid-gap: 5px;
+
+                            img 
+                            {
+                                width: 55px;
+                                height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+            .video-review
+            {
+                .swiper-container
+                {
+                    .card
+                    {
+                        
+                        .review-text
+                        {
+                            padding: clamp(20px, 2.5vw, 25px) clamp(10px, 2.5vw, 30px);
+                        }
+                    }
+                }
+            }
+        }
+        #feature 
+        {
+            .grid-content
+            {
+                .content
+                {
+                    padding: clamp(15px, 2vw, 25px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:800px) and (min-width: 501px)
+{
+    .container
+    {
+        .wrap-course-title
+        {
+            
+            grid-template-columns: auto;
+            .course-title
+            {
+                width: 70%;
+                justify-self: center;
+
+                .detail 
+                {
+                    flex-direction: column;
+                    
+                    > * 
+                    {
+                        padding-bottom: 10px;
+                    }
+                }
+                .btns
+                {
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+
+                    .btn 
+                    {
+                        button
+                        {
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .responsive-show
+                {
+                    display: block;
+                }
+            }
+        }
+        .wrap-course-price
+        {
+            display: none;
+        }
+        .wrap-course-reason
+        {
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+
+            .course-reason
+            {
+                justify-self: center;
+                width: 70%;
+            }
+        }
+
+        .tab-header
+        {
+            display: none;
+        }
+        #batch 
+        {
+            margin-top: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .batch-info
+            {
+                grid-template-columns: auto;
+                grid-gap: clamp(10px, 1vw, 20px);
+                padding: clamp(30px ,5.5vw, 40px) clamp(20px, 5vw, 50px);
+            
+                .price-wrap
+                {
+                    
+                    padding: 20px clamp(15px, 2vw, 30px);
+                }
+            }
+        }
+        #detail
+        {
+            .free-content
+            {
+                grid-template-columns: 50% 50%;
+
+                .video-part
+                {
+                    img 
+                    {
+                        object-fit: cover;
+                        object-position: right;
+                    }
+                }
+                .text-content
+                {
+                    white-space: nowrap;
+                }
+            }
+        }
+        #certification 
+        {
+            .certificate-wrap
+            {
+                .text-part
+                {
+                    .company-logo
+                    {
+                        img 
+                        {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+                .img-part
+                {
+                    .img 
+                    {
+                        img 
+                        {
+                            height: clamp(200px, 30vw, 250px);
+                            width: clamp(250px, 35vw, 300px);
+                        }
+                    }
+                }
+            }
+        }
+        #review 
+        {
+            .comment-review
+            {
+                .swiper-container
+                {
+                    .card
+                    {
+                        padding: clamp(20px, 2.5vw, 25px) clamp(10px, 2.5vw, 30px);
+                        .user 
+                        {
+                            grid-gap: 5px;
+
+                            img 
+                            {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+            .video-review
+            {
+                .swiper-container
+                {
+                    .card
+                    {
+                        
+                        .review-text
+                        {
+                            padding: clamp(20px, 2.5vw, 25px) clamp(10px, 2.5vw, 30px);
+                        }
+                    }
+                }
+            }
+        }
+        #feature 
+        {
+            .grid-content
+            {
+                grid-template-columns: 1fr;
+                .content
+                {
+                    padding: clamp(15px, 2vw, 25px);
+                }
+            }
+        }
+        .collapsible-wrap
+        {
+            .collapsible
+            {
+                padding: 15px clamp(15px, 2.5vw, 30px);
+                &::before
+                {
+                    padding-right: 5px;
+                }
+                .preview
+                {
+                    h3 
+                    {
+                        display: none;
+                    }
+                }
+            }
+            .content
+            {
+                .wrap 
+                {
+                    padding: 20px clamp(30px, 5.5vw, 50px);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) and (min-width: 501px)
+{
+    .container
+    {
+        .wrap-course-title
+        {
+            
+            grid-template-columns: auto;
+            .course-title
+            {
+                width: 80%;
+                justify-self: center;
+
+                .rating-wrap
+                {
+                    > * 
+                    {
+                        padding-right: 10px;
+                    }
+                }
+                .detail 
+                {
+                    flex-direction: column;
+                    
+                    > * 
+                    {
+                        padding-bottom: 10px;
+                    }
+                }
+                .btns
+                {
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+
+                    .btn 
+                    {
+                        button
+                        {
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .responsive-show
+                {
+                    display: block;
+                }
+            }
+        }
+        .wrap-course-reason
+        {
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+
+            .course-reason
+            {
+                justify-self: center;
+                width: 80%;
+            }
+        }
+        #detail
+        {
+            .free-content
+            {
+                grid-template-columns: 1fr;
+
+                .video-part
+                {
+                    img 
+                    {
+                        object-fit: cover;
+                        object-position: center;
+                        height: 100%;
+                    }
+                }
+                .text-content
+                {
+                    white-space: nowrap;
+                }
+            }
+        }
+        #certification 
+        {
+            .certificate-wrap
+            {
+                grid-template-columns: 1fr;
+                .text-part
+                {
+                    padding: 0 clamp(20px, 3vw, 40px);
+                    .company-logo
+                    {
+                        img 
+                        {
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+                .img-part
+                {
+                    .img 
+                    {
+                        img 
+                        {
+                            height: clamp(250px, 30vw, 300px);
+                            width: clamp(300px, 35vw, 350px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) and (min-width: 270px)
+{
+    section.offer 
+    {
+        display: none;
+    }
+    .query 
+    {
+        display: none;
+    }
+    .container
+    {
+        .wrap-course-title
+        {
+            
+            grid-template-columns: auto;
+            .course-title
+            {
+                width: 90%;
+                justify-self: center;
+
+                .rating-wrap
+                {
+                    > * 
+                    {
+                        padding-right: 10px;
+                    }
+                }
+                .detail 
+                {
+                    flex-direction: column;
+                    
+                    > * 
+                    {
+                        padding-bottom: 10px;
+                    }
+                }
+                .btns
+                {
+                    display: grid;
+                    grid-template-columns: repeat(1, auto);
+
+                    .btn 
+                    {
+                        padding: 5px 0;
+                        button
+                        {
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .responsive-show
+                {
+                    display: block;
+                }
+            }
+        }
+        .wrap-course-price
+        {
+            display: none;
+        }
+        .wrap-course-reason
+        {
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+
+            .course-reason
+            {
+                justify-self: center;
+                width: 90%;
+                padding: 15px clamp(10px, 3vw, 20px);
+            }
+        }
+
+        .tab-header
+        {
+            display: none;
+        }
+        #batch 
+        {
+            margin-top: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .batch-info
+            {
+                grid-template-columns: auto;
+                grid-gap: clamp(10px, 1vw, 20px);
+                padding: clamp(30px ,5.5vw, 40px) clamp(20px, 5vw, 50px);
+            
+                .price-wrap
+                {
+                    
+                    padding: 20px clamp(15px, 2vw, 30px);
+                }
+            }
+        }
+        
+        #detail
+        {
+            .free-content
+            {
+                grid-template-columns: 1fr;
+
+                .video-part
+                {
+                    img 
+                    {
+                        object-fit: cover;
+                        object-position: center;
+                        height: 100%;
+                    }
+                }
+                .text-content
+                {
+                    white-space: nowrap;
+                }
+            }
+        }
+        #certification 
+        {
+            .certificate-wrap
+            {
+                grid-template-columns: 1fr;
+                .text-part
+                {
+                    padding: 0 clamp(20px, 3vw, 40px);
+                    .company-logo
+                    {
+                        img 
+                        {
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+                .img-part
+                {
+                    .img 
+                    {
+                        img 
+                        {
+                            height: clamp(250px, 30vw, 300px);
+                            width: clamp(300px, 35vw, 350px);
+                        }
+                    }
+                }
+            }
+        }
+        #review 
+        {
+            .comment-review
+            {
+                .swiper-container
+                {
+                    .card
+                    {
+                        padding: clamp(20px, 2.5vw, 25px) clamp(15px, 2.5vw, 25px);
+                        .user 
+                        {
+                            grid-gap: 5px;
+
+                            img 
+                            {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+            .video-review
+            {
+                .swiper-container
+                {
+                    .card
+                    {
+                        
+                        .review-text
+                        {
+                            padding: clamp(20px, 2.5vw, 25px) clamp(15px, 2.5vw, 25px);
+                        }
+                    }
+                }
+            }
+        }
+        #feature 
+        {
+            .grid-content
+            {
+                grid-template-columns: 1fr;
+                .content
+                {
+                    padding: clamp(15px, 2vw, 25px);
+                }
+            }
+        }
+        .collapsible-wrap
+        {
+            .collapsible
+            {
+                padding: 15px clamp(15px, 2.5vw, 30px);
+                &::before
+                {
+                    padding-right: 5px;
+                }
+                .preview
+                {
+                    h3 
+                    {
+                        display: none;
+                    }
+                }
+            }
+            .content
+            {
+                .wrap 
+                {
+                    padding: 20px clamp(30px, 5.5vw, 50px);
+                }
+            }
+        }
+        .related-course
+        {
+            .course-wrap
+            {
+                .course
+                {
+                    p 
+                    {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .course-wrap:nth-of-type(2)
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:415px) and (min-width: 270px)
+{
+    .container
+    {
+        .wrap-course-title
+        {
+            
+            grid-template-columns: auto;
+            .course-title
+            {
+                width: 90%;
+                justify-self: center;
+
+                .rating-wrap
+                {
+
+                    display: grid;
+                    width: fit-content;
+                    margin: 5px 0;
+                    > * 
+                    {
+                        padding: 0;
+                        margin: 5px 0;
+                    }
+                }
+                .detail 
+                {
+                    flex-direction: column;
+                    
+                    > * 
+                    {
+                        padding-bottom: 10px;
+                    }
+                }
+                .btns
+                {
+                    display: grid;
+                    grid-template-columns: repeat(1, auto);
+
+                    .btn 
+                    {
+                        padding: 5px 0;
+                        button
+                        {
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .responsive-show
+                {
+                    display: block;
+                }
+            }
+        }
+        #certification 
+        {
+            .certificate-wrap
+            {
+                grid-template-columns: 1fr;
+                .text-part
+                {
+                    padding: 0 clamp(10px, 3vw, 40px);
+                    .company-logo
+                    {
+                        img 
+                        {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+                .img-part
+                {
+                    padding: 10px;
+                    .img 
+                    {
+                        img 
+                        {
+                            height: clamp(150px, 30vw, 250px);
+                            width: clamp(200px, 35vw, 300px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
