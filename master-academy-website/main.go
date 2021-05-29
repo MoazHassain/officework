@@ -17,7 +17,7 @@ func main() {
 	http.HandleFunc("/certification-training", certificationTraining)
 	http.HandleFunc("/video-lecture", videoLecture)
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("./assets"))))
-	http.ListenAndServe(":8888", nil)
+	http.ListenAndServe(":8086", nil) //
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
