@@ -2,17 +2,18 @@ header
 {
     position: sticky;
     top: 0;
-    background: $secondaryBlackclr;
-    color: $primaryWhiteClr;
+    background: $primaryWhiteClr;
+    color: $primaryBlackClr;
     padding: 5px 50px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: min-content auto auto;
     grid-gap: 10px;
+    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25);
     z-index: 999;
 
     a
     {
-        color: $primaryWhiteClr;
+        color: $primaryBlackClr;
     }
     > *
     {
@@ -45,19 +46,31 @@ header
     .search-bar
     {
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 85% 15%;
         margin-left: 15px;
         input 
         {
             width: 100%;
             border-radius: 4px 0 0 4px;
+            border-right: 1px solid transparent;
+
+            &:hover, &:focus 
+            {
+                box-shadow: unset;
+            }
         }
         button 
         {
             width: 100%;
             height: 40.8px;
             border-radius: 0 4px 4px 0;
-            border: none;
+            border: 1px solid $thirdWhiteClr;
+            background-color: $forthWhiteClr;
+
+            &:hover 
+            {
+                background-color: $thirdWhiteClr;
+            }
         }
     }
     .nav-menu
@@ -69,10 +82,7 @@ header
             margin: 0 10px;
             
         }
-        button
-        {
-            @include gradBorderBtn($primaryWhiteClr, 2px 1000px 1px $secondaryBlackclr inset)
-        }  
+        
     }
     .responsive-navbtn
     {
@@ -136,10 +146,7 @@ header
         {
             width: 100%;
         }
-        button.grad-border-btn
-        {
-            @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
-        }
+        
     }
     
 }
@@ -300,6 +307,8 @@ header
             margin-left: 0;
             grid-area: search;
             grid-template-columns: 85% 15%;
+            
+            
         }
         .nav-menu
         {

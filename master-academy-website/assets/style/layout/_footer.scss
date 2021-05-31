@@ -136,10 +136,12 @@ footer
             }
             .terms-privacy
             {
+                grid-area: policy;
                 justify-self: start;
             }
             .logos
             {
+                grid-area: logo;
                 justify-self: end;
 
                 

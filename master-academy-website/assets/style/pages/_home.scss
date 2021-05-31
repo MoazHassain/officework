@@ -1,36 +1,54 @@
+// header
+// {
+//     background-color: $primaryWhiteClr;
+//     color: $primaryBlackClr;
+//     .logo 
+//     {
+//         .logo-text
+//         {
+
+//         }
+//     }
+// }
 section.hero
 {
     
     .bg-img
     {
         @include secondarySectionPadding();
-        @include bgImg();
-        height: 63.5em;
-        background-image: url(/resources/img/hero-bgImg2.png);
-        background-position: center;
+        // @include bgImg();
+        // height: 570px;
+        // width: 100%;
+        // background-image: url(/resources/img/hero-bgImg2.png);
+        // background-position: center;
         
 
         .grid-wrapper
         {
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
             align-items: center;
             justify-items: center;
-            height: 35em;
+            height: 80vh;
 
             
             .text-part
             {
-                transform: translateY(-20%);
-                
+                transform: translateY(-15%);
+                // padding-right: 50px;
                 > *
                 {
                     margin: 15px 0;
+                    color: $thridBlackClr;
                 }
                 h1
                 {
-                    // letter-spacing: -0.03em;
-                    font-size: 45px;
+                    
+                    font-size: 65px;
+                    letter-spacing: -0.03em;
+                    line-height: 1.2em;
+                    
                 }
                 h3
                 {
@@ -44,33 +62,62 @@ section.hero
                     button 
                     {
                         margin-top: 10px;
+                        padding: 15px 40px;
                     }
-                    button.grad-border-btn
-                    {
-                        @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
-                    }
+                    // button.grad-border-btn
+                    // {
+                    //     @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
+                    // }
                 }
             }
             .img-part
             {
-                align-self: start;
+                align-self: center;
                  
                 .img
                 {
                     // padding: 50px;
-                    transform: translateY(20%);
+                    // transform: translateY(30%);
 
                     img 
                     {
-                        width: 400px;
+                        width: 100%;
                         height: 100%;
                     }
                 }
             }
         }
-        .card-wrapper
+        
+        // .partner
+        // {
+        //     text-align: center;
+        //     padding-top: 30px;
+
+        //     h1 
+        //     {
+        //         margin-top: 20px;
+        //         color: $primarySolidClr;
+        //     }
+        //     .company-logos
+        //     {
+        //         @include gridCenter();
+        //         grid-template-columns: auto auto auto auto;
+        //         padding-top: 10px;
+        //         img
+        //         {
+        //             width: 100px;
+        //             height: 100px;
+        //         }
+        //     }
+        // }
+    }
+}
+
+.cards-content
+{
+    .card-wrapper
         {
-            
+            @include secondarySectionPadding();
             display: grid;
             grid-template-columns: auto auto auto;
             grid-gap: 30px;
@@ -85,10 +132,7 @@ section.hero
                 padding: 20px 40px;
                 text-align: center;
                 border-radius: 12px;
-                border: 1px solid;
-                border-width: 3px 1px 1px 1px;
-                // border-color: black;
-                // box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.25);
+                box-shadow: 0 0 2px 0 rgba($color: #000000, $alpha: 0.40);
 
                 > *
                 {
@@ -98,77 +142,37 @@ section.hero
                 {
                     color: $thridBlackClr;
                 }
-            }
-
-            .card-one
-            {
-                border-color: #CC2B5E;
-
-                h5
-                {
-                    color: #CC2B5E;
-                }
-            }
-            .card-two
-            {
-                border-color: #F04F3E;
-
                 h5 
                 {
-                    color: #F04F3E;
+                    color: $primarySolidClr;
                 }
             }
-            .card-three
-            {
-                border-color: rgba($color: #f48200, $alpha: 0.8);
 
-                h5 
-                {
-                    color: rgba($color: #f48200, $alpha: 0.8);
-                }
-            }
+            
         }
-        .partner
-        {
-            text-align: center;
-            padding-top: 30px;
-
-            h1 
-            {
-                margin-top: 20px;
-                color: $secondarySolidClr;
-            }
-            .company-logos
-            {
-                @include gridCenter();
-                grid-template-columns: auto auto auto auto;
-                padding-top: 10px;
-                img
-                {
-                    width: 100px;
-                    height: 100px;
-                }
-            }
-        }
-    }
 }
 
 section.vision
 {
     .bg-img
     {
+        margin: 50px 0;
         @include secondarySectionPadding();
-        @include bgImg();
-        background: url(/resources/img/vision-bgImg.png);
-        background-position: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        // @include bgImg();
+        // background: url(/resources/img/vision-bgImg.png);
+        // background-position: center;
+        background-color: #f8f8f8;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        align-items: flex-start;
+        align-items: center;
         grid-gap: 50px;
+        
 
         .text-part
         {
-            padding: 65px 40px 65px 0;
+            // padding: 65px 40px 65px 0;
 
             >*
             {
@@ -176,17 +180,62 @@ section.vision
             }
             h3
             {
-                color: $secondarySolidClr;
+                color: $secondaryBlackclr;
+            }
+            .text-content 
+            {
+                
+                h5.regular
+                {
+                    line-height: 1.8em;
+                    letter-spacing: 0.03em;
+                    color: $forthBlackClr;
+                }
+            }
+            .btn
+            {
+                button 
+                {
+                    border-color: #46C5D7;
+                    color: #46C5D7;
+
+                    &:hover 
+                    {
+                        background-color: #46C5D7;
+                        color: $secondaryBlackclr;
+                    }
+                }
             }
             
         }
         .video-part
         {
-            padding: 50px 20px;
-
-            img 
+            position: relative;
+            // padding: 30px 20px;
+            span.bg-border
             {
-                width: 100%;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 338px;
+                height: 270px;
+                background-color: #46C5D7;
+                
+            }
+
+            .video 
+            {
+                z-index: 9;
+                padding-top: 30px;
+                padding-right: 30px;
+                position: relative;
+                img 
+                {
+                    // height: 300px;
+                    width: 100%;
+                    
+                }
             }
             
         }
@@ -201,7 +250,7 @@ section.explore-course
     {
         h3 
         {
-            color: $secondarySolidClr;
+            color: $secondaryBlackclr;
             margin-bottom: 20px;
         }
 
@@ -289,7 +338,7 @@ section.explore-course
                     }
                     .title
                     {
-                        color: $secondarySolidClr;
+                        color: $primarySolidClr;
                     }
                     .rating
                     {
@@ -448,7 +497,7 @@ section.catagories
     .title
     {
         margin: 0px 0 20px;
-        color: $secondarySolidClr;
+        color: $secondaryBlackclr;
     }
     .card-wrapper
     {
@@ -486,20 +535,34 @@ section.career
         
         .bg-img
         {
-            height: 320px;
-            background: url(/resources/img/instructor-bg.png);
-            @include bgImg();
-            background-position: bottom;
+            // height: 320px;
+            // background: url(/resources/img/instructor-bg.png);
+            @include secondarySectionPadding();
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: $secondaryWhiteClr;
             display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-areas:  
-            ". content";
+            grid-template-columns: repeat(2, 1fr);
+            
             align-items: center;
-
+            .img-part
+            {
+                
+                width: clamp(250px, 40vw, 450px);
+                img 
+                {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transform: scaleX(-1) ;
+                    
+                }
+            }
             .detail 
             {
-                padding-right: 200px;
-                grid-area: content;
+                padding-right: 150px;
+                // grid-area: content;
 
                 >*
                 {
@@ -507,11 +570,13 @@ section.career
                 }
                 h3
                 {
-                    color: $secondarySolidClr;
+                    color: $secondaryBlackclr;
                 }
-                p
+                h5
                 {
-                    color: $thridBlackClr;
+                    // color: $thridBlackClr;
+                    line-height: 1.6em;
+                    letter-spacing: 0.03em;
                     // font-family: gothamRegular;
                 }
             }
@@ -542,7 +607,7 @@ section.review
 
     .title
     {
-        color: $secondarySolidClr;
+        color: $secondaryBlackclr;
     }
 
     .swiper-container
@@ -647,7 +712,7 @@ section.consultation
         
         h3
         {
-            color: $secondarySolidClr;
+            color: $secondaryBlackclr;
             margin-bottom: 20px;
            
         }
@@ -685,28 +750,38 @@ section.consultation
 
 @media screen and (max-width:1100px) and (min-width: 801px)
 {
-    section.hero
+    
+    .cards-content 
+    {
+        // display: none;
+        .card-wrapper
+        {
+            grid-gap: 20px;
+
+            .banner-card
+            {
+                margin: 0;
+                padding: clamp(10px, 1vw, 20px) clamp(15px, 2.5vw, 30px);
+            }
+        }
+    }
+    section.vision 
     {
         .bg-img
         {
-            .grid-wrapper
-            {
-                grid-template-columns: 55% 45%;
-            }
+            padding-top: 30px;
+            padding-bottom: 30px;
 
-            .card-wrapper
+            .video-part
             {
-                grid-gap: 20px;
-
-                > div
+                span.bg-border
                 {
-                    margin: 0;
-                    padding: clamp(10px, 1vw, 20px) clamp(15px, 2.5vw, 30px);
+                    width: clamp(270px, 15vw, 330px);
+                    height: clamp(180px, 13vw, 270px);
                 }
             }
         }
     }
-
     section.catagories
     {
         .card-wrapper
@@ -721,6 +796,14 @@ section.consultation
         {
             .bg-img
             {
+                grid-template-columns: 50% 50%;
+                // .img-part
+                // {
+                //     img 
+                //     {
+                //         // transform: unset;
+                //     }
+                // }
                 .detail 
                 {
                     padding-right: clamp(100px, 15vw, 150px);
@@ -788,20 +871,24 @@ section.consultation
         {
             .grid-wrapper
             {
-                grid-template-columns: 70% 30%;
-                .img-part
+                grid-template-columns: 1fr;
+
+                .text-part
                 {
-                    .img
-                    {
-                        display: none;
-                    }
+                    transform: unset;
+                    
                 }
+                
             }
 
             
         }
     }
-
+    .cards-content
+    {
+        display: none;
+    }
+    
 
     section.catagories
     {
@@ -861,31 +948,40 @@ section.consultation
         {
             .grid-wrapper
             {
-                grid-template-columns: 70% 30%;
-                .img-part
+                grid-template-columns: 1fr;
+
+                .text-part
                 {
-                    .img
-                    {
-                        display: none;
-                    }
+                    transform: unset;
+                    align-self: center;
                 }
+                
             }
 
-            .card-wrapper
-            {
-                grid-gap: clamp(10px, 1vw, 20px);
+            
+        }
+    }
+    section.vision 
+    {
+        .bg-img
+        {
+            padding-top: 30px;
+            padding-bottom: 30px;
 
-                > div
+            .video-part
+            {
+                span.bg-border
                 {
-                    margin: 0;
-                    padding: clamp(10px, 1vw, 20px) ;
+                    width: clamp(220px, 13vw, 330px);
+                    height: clamp(120px, 10vw, 270px);
                 }
-                // .card-three
-                // {
-                //     display: none;
-                // }
             }
         }
+    }
+    .cards-content 
+    {
+        display: none;
+        
     }
 
     section.vision 
@@ -913,6 +1009,59 @@ section.consultation
         }
     }
 
+    section.explore-course 
+    {
+        
+        .tab 
+        {
+            .tablink 
+            {
+                margin-right: 20px !important;
+            }
+            
+            .tablink[data-tab="design"],
+            .tablink[data-tab="data-science"]
+            {
+                display: none;
+            }
+            
+        }
+        .swiper-container
+        {
+            .card 
+            {
+                .description
+                {
+                    padding: 10px 15px !important;
+
+                    .card-detail
+                    {
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-areas:  
+                        "date date"
+                        "hour view";
+                        grid-gap: 5px;
+
+                        .published
+                        {
+                            grid-area: date;
+                        }
+                        .time 
+                        {
+                            grid-area: hour;
+
+                        }
+                        .watched
+                        {
+                            grid-area: view;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+
     section.catagories
     {
         .card-wrapper
@@ -925,6 +1074,7 @@ section.consultation
             }
         }
     }
+
 
     section.career
     {
@@ -979,15 +1129,39 @@ section.consultation
 }
 @media screen and (max-width:600px) and (min-width: 501px)
 {
-    section.hero
+    .cards-content 
+    {
+        display: none;
+        
+    }
+
+    section.vision 
     {
         .bg-img
         {
-            .card-wrapper
+            grid-template-columns: 1fr;
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            .video-part
             {
-                .card-three
+                span.bg-border
                 {
-                    display: none;
+                    width: clamp(250px, 50vw, 300px);
+                    height: clamp(200px, 40vw, 250px);
+                }
+            }
+        }
+    }
+    section.career
+    {
+        .become-instructor
+        {
+            .bg-img
+            {
+                .detail
+                {
+                    padding-right: 0;
                 }
             }
         }
@@ -996,75 +1170,51 @@ section.consultation
 
 @media screen and (max-width:500px) and (min-width: 270px)
 {
+    section.offer 
+    {
+        display: none;
+    }
     section.hero
     {
         .bg-img
         {
             .grid-wrapper
             {
-                grid-template-columns: 70% 30%;
-                .img-part
+                grid-template-columns: 1fr;
+
+                .text-part
                 {
-                    .img
-                    {
-                        display: none;
-                    }
+                    transform: unset;
+                    align-self: center;
                 }
+                
             }
 
-            .card-wrapper
-            {
-                grid-gap: clamp(10px, 1vw, 20px);
-
-                > div
-                {
-                    margin: 0;
-                    padding: clamp(10px, 1vw, 20px) ;
-                }
-                .card-three
-                {
-                    display: none;
-                }
-            }
-
-            .partner
-            {
-                .company-logos
-                {
-                    width: 100%;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    grid-gap: 20px;
-                    img 
-                    {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
+            
         }
+    }
+
+    .cards-content 
+    {
+        display: none;
+        
     }
 
     section.vision 
     {
-        margin: 30px 0;
         .bg-img
         {
-            background-position: 65%;
-            grid-gap: 20px;
-            align-items: center;
+            grid-template-columns: 1fr;
+            padding-top: 30px;
+            padding-bottom: 30px;
 
-            .text-part
-            {
-                padding: 0;
-                >* 
-                {
-                    padding: 0;
-                    margin: 10px;
-                }
-            }
             .video-part
             {
-                padding: 0;
+                span.bg-border
+                {
+                    width: clamp(200px, 50vw, 280px);
+                    height: clamp(150px, 40vw, 220px);
+                }
             }
         }
     }
@@ -1112,6 +1262,12 @@ section.consultation
             .bg-img
             {
                 background-position: 40%;
+                grid-template-columns: 1fr;
+
+                .img-part
+                {
+                    display: none;
+                }
                 .detail 
                 {
                     padding-right: clamp(0px, 2vw, 100px);
@@ -1164,82 +1320,32 @@ section.consultation
 
 @media screen and (max-width:400px) and (min-width: 270px)
 {
-    section.hero
+    
+
+    .cards-content 
     {
-        .bg-img
-        {
-            .grid-wrapper
-            {
-                grid-template-columns: 70% 30%;
-                .img-part
-                {
-                    .img
-                    {
-                        display: none;
-                    }
-                }
-                .logo-text 
-                {
-                    font-weight: 500;
-                }
-            }
-
-            .card-wrapper
-            {
-                grid-gap: clamp(10px, 1vw, 20px);
-
-                > div
-                {
-                    margin: 0;
-                    padding: clamp(10px, 1vw, 20px) ;
-                }
-                .card-three, .card-two
-                {
-                    display: none;
-                }
-            }
-
-            .partner
-            {
-                .company-logos
-                {
-                    width: 100%;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    grid-gap: 20px;
-                    img 
-                    {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
+        display: none;
+        
     }
     section.vision 
     {
-        margin: 30px 0;
         .bg-img
         {
-            background-position: 65%;
             grid-template-columns: 1fr;
-            grid-gap: 20px;
-            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
 
-            .text-part
-            {
-                padding: 0 clamp(15px, 3vw, 40px);
-                >* 
-                {
-                    padding: 0;
-                    margin: 10px;
-                }
-            }
             .video-part
             {
-                padding: 0 clamp(15px, 3vw, 40px);
+                span.bg-border
+                {
+                    width: clamp(200px, 50vw, 280px);
+                    height: clamp(150px, 40vw, 220px);
+                }
             }
         }
     }
+
 
     section.explore-course 
     {
@@ -1256,10 +1362,22 @@ section.consultation
             {
                 display: none;
             }
-            // .responsive-hide
-            // {
-            //     display: none;
-            // }
+            
+        }
+        .swiper-container
+        {
+            .card 
+            {
+                .description
+                {
+                    padding: 10px 15px !important;
+
+                    .card-detail
+                    {
+                        grid-gap: 5px;
+                    }
+                }
+            }
         }
        
     }
@@ -1297,8 +1415,8 @@ section.consultation
         }
         .build-career
         {
-            padding-top: 10px;
-            
+            padding: 20px;
+            width: unset;
 
             >*
             {

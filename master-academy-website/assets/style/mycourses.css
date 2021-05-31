@@ -145,33 +145,37 @@ button {
   outline: none;
   border: none;
   border-radius: 4px;
-  padding: 5px 10px;
+  padding: 7px 12px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   cursor: pointer;
 }
 
 .grad-bg-btn {
-  color: #fff;
-  border: 3px solid transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
-  background-size: 200% auto;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: 2px 1000px 1px transparent inset;
-          box-shadow: 2px 1000px 1px transparent inset;
+  color: #ffffff;
+  background: #606060;
+  border: 2px solid transparent;
 }
 
 .grad-bg-btn:hover {
-  color: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-position: right center;
+  color: #ffffff;
+  background: #404040;
+}
+
+.grad-border-btn {
+  color: #404040;
+  background: transparent;
+  border: 2px solid #606060;
+}
+
+.grad-border-btn:hover {
+  border: 2px solid #404040;
+  background-color: #404040;
+  color: #ffffff;
 }
 
 .solid-bg-btn {
-  color: #fff;
+  color: #ffffff;
   border: 3px solid transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#1BB899), color-stop(15%, #1BB899), to(#1B9CB8));
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #1BB899 0%, #1BB899 15%, #1B9CB8 100%);
@@ -183,7 +187,7 @@ button {
 }
 
 .solid-bg-btn:hover {
-  color: #fff;
+  color: #ffffff;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-position: right center;
@@ -192,17 +196,17 @@ button {
 .solid-border-btn {
   color: #1BB899;
   border: 1px solid #1BB899;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .solid-border-btn:hover {
   background-color: #1BB899;
-  color: #fff;
+  color: #ffffff;
 }
 
 .neomor-btn {
   background-color: #1BB899;
-  color: #fff;
+  color: #ffffff;
 }
 
 .rounded-btn {
@@ -226,7 +230,7 @@ textarea {
   border: 0.5px solid transparent;
   padding: 10px 15px;
   resize: none;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 input::-webkit-outer-spin-button,
@@ -323,7 +327,7 @@ section.offer {
   padding: 5px 80px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #fff;
+  color: #ffffff;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
@@ -466,19 +470,22 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: #262626;
-  color: #fff;
+  background: #ffffff;
+  color: #000;
   padding: 5px 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: min-content auto auto;
+      grid-template-columns: -webkit-min-content auto auto;
+      grid-template-columns: min-content auto auto;
   grid-gap: 10px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   z-index: 999;
 }
 
 header a {
-  color: #fff;
+  color: #000;
 }
 
 header > * {
@@ -515,21 +522,32 @@ header .logo .logo-text {
 header .search-bar {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
+  -ms-grid-columns: 85% 15%;
+      grid-template-columns: 85% 15%;
   margin-left: 15px;
 }
 
 header .search-bar input {
   width: 100%;
   border-radius: 4px 0 0 4px;
+  border-right: 1px solid transparent;
+}
+
+header .search-bar input:hover, header .search-bar input:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
 }
 
 header .search-bar button {
   width: 100%;
   height: 40.8px;
   border-radius: 0 4px 4px 0;
-  border: none;
+  border: 1px solid #cacaca;
+  background-color: #f3f3f3;
+}
+
+header .search-bar button:hover {
+  background-color: #cacaca;
 }
 
 header .nav-menu {
@@ -539,25 +557,6 @@ header .nav-menu {
 
 header .nav-menu > * {
   margin: 0 10px;
-}
-
-header .nav-menu button {
-  color: #fff;
-  border: 3px solid transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
-  background-size: 200% auto;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: 2px 1000px 1px #262626 inset;
-          box-shadow: 2px 1000px 1px #262626 inset;
-}
-
-header .nav-menu button:hover {
-  color: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-position: right center;
 }
 
 header .responsive-navbtn {
@@ -583,7 +582,7 @@ header .responsive-navbtn .btn {
   width: 0;
   height: 100%;
   z-index: 9999;
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
@@ -626,25 +625,6 @@ header .responsive-navbtn .btn {
 
 .responsive-content .responsive-menu button {
   width: 100%;
-}
-
-.responsive-content .responsive-menu button.grad-border-btn {
-  color: #000000;
-  border: 3px solid transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, right top, from(#CC2B5E), color-stop(50%, #F48400), to(#CC2B5E));
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right, #CC2B5E 0%, #F48400 50%, #CC2B5E 100%);
-  background-size: 200% auto;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  -webkit-box-shadow: 2px 1000px 1px #fff inset;
-          box-shadow: 2px 1000px 1px #fff inset;
-}
-
-.responsive-content .responsive-menu button.grad-border-btn:hover {
-  color: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-position: right center;
 }
 
 .responsive-content.show-navcontent {
@@ -825,7 +805,7 @@ header .responsive-navbtn .btn {
 }
 
 .modal {
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
 }
 
@@ -839,7 +819,7 @@ header .responsive-navbtn .btn {
   padding-bottom: 0;
   background: -webkit-gradient(linear, left top, right top, from(#24243E), color-stop(50%, #302B63), to(#24243E));
   background: linear-gradient(to right, #24243E 0%, #302B63 50%, #24243E 100%);
-  color: #fff;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 801px) {
@@ -937,13 +917,13 @@ header .responsive-navbtn .btn {
 }
 
 .modal-header .lower-part .tab .tablink:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .modal-header .lower-part .tab .tablink.active {
-  color: #fff;
+  color: #ffffff;
   border-bottom: 3px solid;
-  border-color: #fff;
+  border-color: #ffffff;
 }
 
 .modal-header .lower-part .hamburger {
@@ -1009,7 +989,7 @@ header .responsive-navbtn .btn {
   padding: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#001646), to(#16608b));
   background: linear-gradient(to right, #001646 0%, #16608b 100%);
-  color: #fff;
+  color: #ffffff;
 }
 
 .offer-modal .countdown-part .wrap {
@@ -1199,7 +1179,7 @@ header .responsive-navbtn .btn {
 }
 
 .query .hidden-content {
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   max-width: 0;
@@ -1215,7 +1195,7 @@ header .responsive-navbtn .btn {
 
 .query .hidden-content .head {
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   padding: 13px;
 }
 
@@ -1298,7 +1278,7 @@ header .responsive-navbtn .btn {
 
 .query .hidden-content .form input.email:focus + label,
 .query .hidden-content .form input.email:not(:placeholder-shown) + label {
-  background-color: #fff;
+  background-color: #ffffff;
   left: 15px;
   -webkit-transform: translateY(-110%) translateX(-15%) scale(0.7);
           transform: translateY(-110%) translateX(-15%) scale(0.7);
@@ -1310,7 +1290,7 @@ header .responsive-navbtn .btn {
 
 .query .hidden-content .form textarea.text-area:focus + label,
 .query .hidden-content .form textarea.text-area:not(:placeholder-shown) + label {
-  background-color: #fff;
+  background-color: #ffffff;
   left: 15px;
   -webkit-transform: translateY(-80%) translateX(-15%) scale(0.7);
           transform: translateY(-80%) translateX(-15%) scale(0.7);
@@ -1336,7 +1316,7 @@ header .responsive-navbtn .btn {
 
 footer .upper-part {
   background: #262626;
-  color: #fff;
+  color: #ffffff;
   padding: 5px 80px;
   padding-top: 30px !important;
   padding-bottom: 30px !important;
@@ -1422,7 +1402,7 @@ footer .upper-part .pages-part .pages p {
 
 footer .lower-part {
   background: #111111;
-  color: #fff;
+  color: #ffffff;
   padding: 5px 150px;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
@@ -1497,10 +1477,16 @@ footer .lower-part .logos img {
     text-align: center;
   }
   footer .lower-part .terms-privacy {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: policy;
     -ms-grid-column-align: start;
         justify-self: start;
   }
   footer .lower-part .logos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: logo;
     -ms-grid-column-align: end;
         justify-self: end;
   }
@@ -1532,7 +1518,7 @@ footer .lower-part .logos img {
 }
 
 header {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #262626;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
@@ -1587,7 +1573,7 @@ header .nav-menu .nav-notification a .notification-number {
           align-items: center;
   text-align: center;
   background-color: #d82f2f;
-  color: #fff;
+  color: #ffffff;
   border-radius: 50px;
   position: absolute;
   top: -50%;
@@ -1670,7 +1656,7 @@ header .nav-menu .dropdown .dropdown-content {
   position: absolute;
   top: 60px;
   right: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   white-space: nowrap;
@@ -1731,7 +1717,7 @@ header .nav-menu .dropdown .show {
 }
 
 .subheader .col-1 .page-link a {
-  color: #fff;
+  color: #ffffff;
 }
 
 .subheader .col-1 .page-link a i {
@@ -1752,7 +1738,7 @@ header .nav-menu .dropdown .show {
 }
 
 .subheader .col-2 a {
-  color: #fff;
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1809,7 +1795,7 @@ footer .upper-part {
 }
 
 .container .grid-content .column-left .courses {
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
@@ -1879,7 +1865,7 @@ footer .upper-part {
           align-items: center;
   padding: 10px 15px;
   margin: 20px 0;
-  background-color: #fff !important;
+  background-color: #ffffff !important;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
@@ -1898,7 +1884,7 @@ footer .upper-part {
 .container .grid-content .column-left .upcoming-class .title {
   padding: 15px 20px;
   border-bottom: 1px solid #f3f3f3;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .container .grid-content .column-left .upcoming-class .classes {
@@ -1939,7 +1925,7 @@ footer .upper-part {
 
 .container .grid-content .column-left .upcoming-class .classes .join {
   color: #1BB899;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 15px 20px;
   position: absolute;
   top: 0;
@@ -1959,7 +1945,7 @@ footer .upper-part {
   padding: 15px 20px;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .container .grid-content .column-left .create-resume .btn {
@@ -1980,7 +1966,7 @@ footer .upper-part {
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
   background: -webkit-gradient(linear, left top, right top, from(#00417C), to(#1CB5E0));
   background: linear-gradient(to right, #00417C, #1CB5E0);
-  color: #fff;
+  color: #ffffff;
   position: relative;
 }
 
@@ -2033,7 +2019,7 @@ footer .upper-part {
           align-items: center;
   padding: 0px 20px;
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .container .grid-content .column-right .welcome img {
@@ -2046,7 +2032,7 @@ footer .upper-part {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   margin: 20px 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .container .grid-content .column-right .ongoing > .title {
@@ -2057,7 +2043,7 @@ footer .upper-part {
   background: -webkit-gradient(linear, left top, right top, from(#00417C), to(#1CB5E0));
   background: linear-gradient(to right, #00417C, #1CB5E0);
   padding: 15px 20px;
-  color: #fff;
+  color: #ffffff;
   margin: 0 15px;
 }
 
@@ -2108,7 +2094,7 @@ footer .upper-part {
   padding: 7px;
   border-radius: 50px;
   background-color: #1BB899;
-  color: #fff;
+  color: #ffffff;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -2155,7 +2141,7 @@ footer .upper-part {
 
 .container .grid-content .column-right .ongoing .btns .curriculam:hover {
   background: #1BB899;
-  color: #fff;
+  color: #ffffff;
 }
 
 .container .recommend-course .title {
@@ -2173,7 +2159,7 @@ footer .upper-part {
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   position: relative;
   margin: 0px 0 50px 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .container .recommend-course .swiper-container .card .img img {
@@ -2193,7 +2179,7 @@ footer .upper-part {
   width: fit-content;
   border-radius: 6px;
   background: #1BB899;
-  color: #fff;
+  color: #ffffff;
   pointer-events: none;
 }
 
@@ -2266,7 +2252,7 @@ footer .upper-part {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #fff;
+  background: #ffffff;
   -webkit-transform: translateX(20%) translateY(-100%);
           transform: translateX(20%) translateY(-100%);
 }
@@ -2279,7 +2265,7 @@ footer .upper-part {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #fff;
+  background: #ffffff;
   -webkit-transform: translateX(-20%) translateY(-100%);
           transform: translateX(-20%) translateY(-100%);
 }
