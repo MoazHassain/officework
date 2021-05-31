@@ -30,7 +30,7 @@
 
 .modal-header
 {
-    @include primarySectionPadding();
+    @include secondarySectionPadding();
     padding-bottom: 0;
     background: $secondaryGradClr;
     color: $primaryWhiteClr;
@@ -38,7 +38,11 @@
     .upper-part
     {
         display: grid;
-        grid-template-columns: 1fr 1.8fr 1fr;
+        grid-template-columns: 65px 1.8fr 1fr;
+        grid-template-areas:  
+        "logo search cls"
+        ". tabs tabs";
+        
         // grid-template-columns: auto auto auto;
         align-items: center;
         grid-gap: 40px;
@@ -46,6 +50,7 @@
 
         .logo
         {
+            grid-area: logo;
             display: flex;
             grid-gap: 10px;
             align-items: center;
@@ -68,6 +73,8 @@
         }
         .search-field
         {
+
+            grid-area: search;
             position: relative;
             svg
             {
@@ -79,19 +86,19 @@
         }
         .cls-btn
         {
+            grid-area: cls;
             justify-self: end;
             
+            button 
+            {
+                background-color: transparent;
+                border: 2px solid $primaryWhiteClr;
+                padding: 5px;
+            }
         }
-    }
-    .lower-part
-    {
-        // @include primarySectionPadding();
-        padding: 20px 0 0 0;
-        display: grid;
-        grid-template-columns: auto auto;
-        align-items: center;
         .tab
         {
+            grid-area: tabs;
             display: flex;
 
             .tablink 
@@ -100,9 +107,9 @@
                 margin-right: 40px;
                 transition: 0.3s ease-in-out;
                 color: $thirdWhiteClr;
-                padding-bottom: 10px;
+                padding-bottom: 5px;
                 border-bottom: 3px solid transparent;
-                transform: translateY(7px);
+                
                 cursor: pointer;
 
                 &:hover
@@ -118,44 +125,63 @@
                 border-color: $primaryWhiteClr;
             }
         }
-        .hamburger
-        {
-            padding-bottom: 10px;
-            justify-self: end;
-            align-self: start;
-        }
+    }
+    // .lower-part
+    // {
+    //     // @include primarySectionPadding();
+    //     padding: 20px 0 0 0;
+    //     display: grid;
+    //     grid-template-columns: auto auto;
+    //     align-items: center;
+        
+    //     .hamburger
+    //     {
+    //         padding-bottom: 10px;
+    //         justify-self: end;
+    //         align-self: start;
+    //     }
 
         
-    }
+    // }
 
 
 }
 
 .search-modal
 {
-    .tabcontent
+    .tabcontent-wrap
     {
-        @include primarySectionPadding();
-        display: none;
+        @include secondarySectionPadding();
+        display: grid;
+        grid-template-columns: 65px auto;
+        grid-gap: 40px;
+        grid-template-areas: ". tabcontent";
+        .tabcontent
+        {
+            grid-area: tabcontent;
+            background-color: $primaryWhiteClr;
+            // 
+            display: none;
 
-        p
-        {
-            margin: 5px 0;
-            line-height: 1.2em;
-        }
-        .view-more
-        {
-            h5
+            p
             {
-                margin: 10px 0;
-                
-                color: $secondarySolidClr;
+                margin: 15px 0;
+                line-height: 1.2em;
+            }
+            .view-more
+            {
+                h5
+                {
+                    margin: 20px 0;
+                    
+                    color: $secondarySolidClr;
+                }
             }
         }
-    }
-    .tabcontent.active 
-    {
-        display: block;
+        .tabcontent.active 
+        {
+            display: block;
+        }
     }
 }
 
@@ -270,7 +296,7 @@
         {
             .upper-part
             {
-                grid-template-columns: repeat(3, auto);
+                // grid-template-columns: repeat(3, auto);
                 .logo
                 {
                     .logo-text
@@ -278,9 +304,7 @@
                         display: none;
                     }
                 }
-            }
-            .lower-part
-            {
+            
                 .tab 
                 {
                     
@@ -342,9 +366,7 @@
                         display: none;
                     }
                 }
-            }
-            .lower-part
-            {
+            
                 .tab 
                 {
                     .tablink:nth-of-type(4),
@@ -401,9 +423,7 @@
                 {
                     display: none;
                 }
-            }
-            .lower-part
-            {
+            
                 .tab 
                 {
                     .tablink
@@ -422,6 +442,16 @@
                 // {
                 //     justify-self: center;
                 // }
+            }
+        }
+        .tabcontent-wrap
+        {
+            grid-template-columns: auto;
+            grid-template-areas: "tabcontent";
+
+            .tabcontent
+            {
+                padding: 0 0 0 40px;
             }
         }
     }
