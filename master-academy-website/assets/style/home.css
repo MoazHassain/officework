@@ -1755,7 +1755,7 @@ section.hero .bg-img .grid-wrapper .text-part > * {
 }
 
 section.hero .bg-img .grid-wrapper .text-part h1 {
-  font-size: 65px;
+  font-size: clamp(45px, 6vw, 65px);
   letter-spacing: -0.03em;
   line-height: 1.2em;
 }
@@ -2598,6 +2598,9 @@ section.consultation .img-part img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  section.hero .bg-img .grid-wrapper .img-part {
+    padding: 0 clamp(40px, 9vw, 80px);
   }
   section.vision .bg-img {
     padding-top: 30px;
