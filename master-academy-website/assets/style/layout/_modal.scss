@@ -45,18 +45,20 @@
         
         // grid-template-columns: auto auto auto;
         align-items: center;
-        grid-gap: 40px;
+        grid-gap: 30px;
 
 
         .logo
         {
             grid-area: logo;
-            display: flex;
+            display: grid;
+            justify-content: end;
             grid-gap: 10px;
-            align-items: center;
-
+            align-content: center;
+            
             .logo-img 
             {
+                
                 img 
                 {
                     width: 65px;
@@ -154,7 +156,7 @@
         @include secondarySectionPadding();
         display: grid;
         grid-template-columns: 65px auto;
-        grid-gap: 40px;
+        grid-gap: 30px;
         grid-template-areas: ". tabcontent";
         .tabcontent
         {
@@ -276,12 +278,18 @@
             position: absolute;
             top: 30px;
             right: 10px;
+            
             transform: translate(-50%, -50%);
 
-            button 
+            button.rounded-btn 
             {
                 background-color: $thirdWhiteClr;
-                
+                padding: 5px !important;
+
+                &:hover 
+                {
+                    background-color: $forthBlackClr;
+                }
             }
         }
     }

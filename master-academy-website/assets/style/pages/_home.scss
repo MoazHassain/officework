@@ -68,6 +68,7 @@ section.hero
                     {
                         margin-top: 10px;
                         padding: 15px 40px;
+                        
                     }
                     // button.grad-border-btn
                     // {
@@ -178,10 +179,7 @@ section.hero
                 box-shadow: 0 0 2px 0 rgba($color: #000000, $alpha: 0.40);
                 transition: 0.3s ease-in-out;
 
-                &:hover
-                {
-                    box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.40);
-                }
+                
 
                 > *
                 {
@@ -194,6 +192,18 @@ section.hero
                 h5 
                 {
                     color: $primarySolidClr;
+                }
+
+                &:hover
+                {
+                    border: 1px solid $primarySolidClr;
+                    box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.40);
+                }
+                
+                &:hover h5,
+                &:hover svg
+                {
+                    opacity: 0.6;
                 }
             }
 
@@ -229,10 +239,17 @@ section.vision
             }
             .title
             {
+                width: fit-content;
                 padding-bottom: 6px;
                 h3
                 {
                     color: $secondaryBlackclr;
+                    
+                }
+                .border-bottom
+                {
+                    border-bottom: 2px solid #46C5D7;
+                    width: 35%;
                     
                 }
             }
@@ -253,6 +270,7 @@ section.vision
                     border-color: #46C5D7;
                     color: #46C5D7;
                     padding: 10px 20px;
+                    
 
                     &:hover 
                     {
@@ -568,13 +586,19 @@ section.catagories
             box-shadow: 0 0px 4px rgba($color: #000000, $alpha: 0.25);
             cursor: pointer;
             transition: 0.3s;
+            
+            .text
+            {
+                margin-top: 10px;
+            }
             &:hover
             {
                 box-shadow: 0 0px 10px rgba($color: #000000, $alpha: 0.25);
             }
-            .text
+            &:hover img,
+            &:hover .text p
             {
-                margin-top: 10px;
+                opacity: 0.7;
             }
         }
     }
@@ -611,7 +635,7 @@ section.career
                     width: 100%;
                     object-fit: contain;
                     object-position: left;
-                    transform: scaleX(-1) ;
+                    transform: scaleX(-1);
                     
                 }
             }
@@ -781,20 +805,25 @@ section.consultation
     grid-template-columns: 50% 50%;
     grid-gap: 20px;
     align-items: center;
+
+    .text-part
+    {
+        padding-right: 200px;
+    }
     .title
     {
         
-        
+        border-bottom: 1px solid $forthBlackClr;
         h3
         {
             color: $secondaryBlackclr;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
            
         }
     }
     .form
     {
-        padding-right: 200px;
+        
         > *
         {
             margin: 15px 0;

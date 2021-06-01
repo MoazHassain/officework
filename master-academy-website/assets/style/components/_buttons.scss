@@ -4,8 +4,13 @@ button
     border: none;
     border-radius: 4px;
     padding: 7px 16px ;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease;
     cursor: pointer;
+
+    h5,p 
+    {
+        transition: all 0.1s ease;
+    }
 }
 
 
@@ -37,8 +42,8 @@ button
 
     &:hover
     {
-        border: 2px solid $thridBlackClr;
-        background-color: $thridBlackClr;
+        border: 2px solid $secondaryBlackclr;
+        background-color: $secondaryBlackclr;
         color: $primaryWhiteClr;
     }
 }
@@ -52,6 +57,8 @@ button
     background-clip: content-box, border-box;
     // box-shadow: 2px 1000px 1px $secondaryBlackclr inset;
     box-shadow: $box-shadow;
+
+    
 
     &:hover
     {

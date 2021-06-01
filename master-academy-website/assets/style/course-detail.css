@@ -147,9 +147,14 @@ button {
   border: none;
   border-radius: 4px;
   padding: 7px 16px;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
+}
+
+button h5, button p {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .grad-bg-btn {
@@ -170,8 +175,8 @@ button {
 }
 
 .grad-border-btn:hover {
-  border: 2px solid #404040;
-  background-color: #404040;
+  border: 2px solid #262626;
+  background-color: #262626;
   color: #ffffff;
 }
 
@@ -284,6 +289,7 @@ input:-webkit-autofill:focus {
 .input-style-two:focus {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-color: #46C5D7;
 }
 
 .input-search-modal {
@@ -394,7 +400,7 @@ section.offer .cls-btn {
 
 section.offer .cls-btn button {
   border-radius: 50%;
-  padding: 6px;
+  padding: 5px;
   border: none;
   background: rgba(43, 43, 43, 0.25);
   display: -ms-grid;
@@ -403,6 +409,10 @@ section.offer .cls-btn button {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+}
+
+section.offer .cls-btn button:hover {
+  background-color: rgba(43, 43, 43, 0.5);
 }
 
 @media screen and (max-width: 1100px) and (min-width: 801px) {
@@ -545,6 +555,7 @@ header .search-bar input {
 header .search-bar input:hover, header .search-bar input:focus {
   -webkit-box-shadow: unset;
           box-shadow: unset;
+  border-color: #cacaca;
 }
 
 header .search-bar button {
@@ -556,7 +567,7 @@ header .search-bar button {
   background-color: #f3f3f3;
 }
 
-header .search-bar button:hover {
+header .search-bar:hover button {
   background-color: #cacaca;
 }
 
@@ -570,8 +581,16 @@ header .nav-menu > * {
   white-space: nowrap;
 }
 
+header .nav-menu > *:hover h5 {
+  opacity: 0.7;
+}
+
 header .nav-menu a[href='/sign-up'] {
   margin-right: 0;
+}
+
+header .nav-menu a[href='/sign-up'] h5 {
+  opacity: 1;
 }
 
 header .responsive-navbtn {
@@ -865,20 +884,21 @@ header .responsive-navbtn .btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 40px;
+  grid-gap: 30px;
 }
 
 .modal-header .upper-part .logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   grid-gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .modal-header .upper-part .logo .logo-img img {
@@ -955,7 +975,7 @@ header .responsive-navbtn .btn {
   display: grid;
   -ms-grid-columns: 65px auto;
       grid-template-columns: 65px auto;
-  grid-gap: 40px;
+  grid-gap: 30px;
       grid-template-areas: ". tabcontent";
 }
 
@@ -1082,8 +1102,13 @@ header .responsive-navbtn .btn {
           transform: translate(-50%, -50%);
 }
 
-.offer-modal .avail-part .cls-btn button {
+.offer-modal .avail-part .cls-btn button.rounded-btn {
   background-color: #cacaca;
+  padding: 5px !important;
+}
+
+.offer-modal .avail-part .cls-btn button.rounded-btn:hover {
+  background-color: #606060;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 760px) {
