@@ -1820,6 +1820,8 @@ section.hero .bg-img .grid-wrapper {
 section.hero .bg-img .grid-wrapper .text-part {
   -webkit-transform: translateY(-15%);
           transform: translateY(-15%);
+  -ms-grid-column-align: left;
+      justify-self: left;
 }
 
 section.hero .bg-img .grid-wrapper .text-part > * {
@@ -1844,7 +1846,7 @@ section.hero .bg-img .grid-wrapper .text-part .btn {
 
 section.hero .bg-img .grid-wrapper .text-part .btn button {
   margin-top: 10px;
-  padding: 15px 40px;
+  padding: 15px 65px;
 }
 
 section.hero .bg-img .grid-wrapper .img-part {
@@ -2701,7 +2703,7 @@ section.consultation .img-part img {
     width: clamp(30px, 6vw, 50px);
     height: clamp(30px, 6vw, 50px);
   }
-  section.consultation .text-part .form {
+  section.consultation .text-part {
     padding-right: clamp(80px, 15vw, 100px);
   }
 }
@@ -2715,6 +2717,8 @@ section.consultation .img-part img {
     text-align: center;
     -webkit-transform: unset;
             transform: unset;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2767,6 +2771,8 @@ section.consultation .img-part img {
         -ms-grid-row-align: center;
         align-self: center;
     text-align: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2875,7 +2881,7 @@ section.consultation .img-part img {
         grid-template-columns: 1fr;
     grid-gap: 0px;
   }
-  section.consultation .text-part .form {
+  section.consultation .text-part {
     padding-right: 0;
   }
   section.consultation .img-part {
@@ -2895,6 +2901,8 @@ section.consultation .img-part img {
         -ms-grid-row-align: center;
         align-self: center;
     text-align: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2918,6 +2926,9 @@ section.consultation .img-part img {
   section.vision .bg-img .text-part {
     text-align: center;
   }
+  section.vision .bg-img .text-part .title {
+    margin: 0 auto;
+  }
   section.vision .bg-img .video-part span.bg-border {
     width: clamp(250px, 50vw, 300px);
     height: clamp(200px, 40vw, 250px);
@@ -2939,6 +2950,8 @@ section.consultation .img-part img {
         -ms-grid-row-align: center;
         align-self: center;
     text-align: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2961,6 +2974,9 @@ section.consultation .img-part img {
   }
   section.vision .bg-img .text-part {
     text-align: center;
+  }
+  section.vision .bg-img .text-part .title {
+    margin: 0 auto;
   }
   section.vision .bg-img .video-part span.bg-border {
     width: clamp(200px, 50vw, 280px);
@@ -3013,7 +3029,7 @@ section.consultation .img-part img {
         grid-template-columns: 1fr;
     grid-gap: 0px;
   }
-  section.consultation .text-part .form {
+  section.consultation .text-part {
     padding-right: 0;
   }
   section.consultation .img-part {

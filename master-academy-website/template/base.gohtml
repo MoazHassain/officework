@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MASTER-ACADEMY</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -483,16 +483,16 @@
                 </div>
                 <div class="nav-menu">
                     <div class="nav-one">
-                        <a href="#"><p class="regular">Programming</p></a>
+                        <a href="#"><p class="regular">Golang</p></a>
                     </div>
                     <div class="nav-two">
                         <a href="#"><p class="regular">DevOps</p></a>
                     </div>
                     <div class="nav-three">
-                        <a href="#"><p class="regular">Cloud Computing</p></a>
+                        <a href="#"><p class="regular">Machine Learning</p></a>
                     </div>
                     <div class="nav-four">
-                        <a href="#"><p class="regular">Data Science</p></a>
+                        <a href="#"><p class="regular">Cloud Computing</p></a>
                     </div>
                 </div>
                 <div class="drop-down">
@@ -525,8 +525,8 @@
                 <div class="bg-img">
                     <div class="grid-wrapper">
                         <div class="text-part">
-                            <h1 class="black">Learn on Your Schedule</h1>
-                            <h5 class="medium">Build Skills With Experts Any Time, Anywhere.</h3>
+                            <h1 class="black">Get Skilled Get Hired</h1>
+                            <h5 class="medium">Quality comes first, Profit is it's logical sequence.</h3>
                             <a href="/sign-up">
                                 <div class="btn">
                                     <Button class="grad-bg-btn">
@@ -4481,16 +4481,16 @@
             </div>
             <div class="lower-part">
                 <div class="rights">
-                    <p class="small regular">Master-Academy © 2021 All Rights  Reserved. </p>
+                    <p class="small regular">© 2021 MASTER-ACADEMY, All Rights Reserved. </p>
                 </div>
-                <div class="terms-privacy">
+                <!-- <div class="terms-privacy">
                     <p class="small regular">Terms of Service  |  Privacy Policy</p>
-                </div>
+                </div> -->
                 <div class="logos">
-                    <a href="https://www.facebook.com/masteracadmy"><img src="./resources/svg/logos_facebook.svg" alt="" class="facebook"></a>
-                    <a href="https://www.youtube.com/c/masteracademy4"><img src="./resources/svg/logos_youtube-icon.svg" alt="" class="youtube"></a>
-                    <a href="https://wa.me/+8801768760886"><img src="./resources/svg/logos_whatsapp.svg" alt="" class="whatsapp"></a>
-                    <a href="https://www.linkedin.com/company/masteracadmy"><img src="./resources/svg/logo_linkedin.svg" alt="" class="googleplay"></a>
+                    <a target="_blank" href="https://www.facebook.com/masteracadmy"><img src="./resources/svg/logos_facebook.svg" alt="" class="facebook"></a>
+                    <a target="_blank" href="https://www.youtube.com/c/masteracademy4"><img src="./resources/svg/logos_youtube-icon.svg" alt="" class="youtube"></a>
+                    <a target="_blank" href="https://wa.me/+8801768760886"><img src="./resources/svg/logos_whatsapp.svg" alt="" class="whatsapp"></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/masteracadmy"><img src="./resources/svg/logo_linkedin.svg" alt="" class="googleplay"></a>
                 </div>
             </div>
         </footer>
@@ -4667,12 +4667,7 @@
 
     window.intlTelInput(input, {
         initialCountry: "bd",
-        geoIpLookup: function(callback) {
-            $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "us";
-            callback(countryCode);
-            });
-        },
+        
         utilsScript: "resources/plugins/intl-tel-input/build/js/utils.js",
     });
     

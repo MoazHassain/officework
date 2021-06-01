@@ -41,6 +41,7 @@ section.hero
             .text-part
             {
                 transform: translateY(-15%);
+                justify-self: left;
                 // padding-right: 50px;
                 > *
                 {
@@ -67,7 +68,7 @@ section.hero
                     button 
                     {
                         margin-top: 10px;
-                        padding: 15px 40px;
+                        padding: 15px 65px;
                         
                     }
                     // button.grad-border-btn
@@ -241,6 +242,7 @@ section.vision
             {
                 width: fit-content;
                 padding-bottom: 6px;
+                
                 h3
                 {
                     color: $secondaryBlackclr;
@@ -960,10 +962,11 @@ section.consultation
     {
         .text-part
         {
-            .form
-            {
-                padding-right: clamp(80px, 15vw, 100px);
-            }
+            padding-right: clamp(80px, 15vw, 100px);
+            // .form
+            // {
+                
+            // }
         }
     }
 }
@@ -981,7 +984,7 @@ section.consultation
                 {
                     text-align: center;
                     transform: unset;
-                    
+                    justify-self: center;
                 }
                 .img-part
                 {
@@ -1075,6 +1078,7 @@ section.consultation
                     transform: unset;
                     align-self: center;
                     text-align: center;
+                    justify-self: center;
                 }
                 .img-part
                 {
@@ -1254,10 +1258,11 @@ section.consultation
         grid-gap: 0px;
         .text-part
         {
-            .form
-            {
-                padding-right: 0;
-            }
+            padding-right: 0;
+            // .form
+            // {
+                
+            // }
         }
         .img-part
         {
@@ -1280,6 +1285,7 @@ section.consultation
                     transform: unset;
                     align-self: center;
                     text-align: center;
+                    justify-self: center;
                 }
                 .img-part
                 {
@@ -1320,6 +1326,11 @@ section.consultation
             .text-part
             {
                 text-align: center;
+
+                .title
+                {
+                    margin: 0 auto;
+                }
             }
             .video-part
             {
@@ -1362,6 +1373,7 @@ section.consultation
                     transform: unset;
                     align-self: center;
                     text-align: center;
+                    justify-self: center;
                 }
                 .img-part
                 {
@@ -1403,6 +1415,11 @@ section.consultation
             .text-part
             {
                 text-align: center;
+
+                .title
+                {
+                    margin: 0 auto;
+                }
             }
 
             .video-part
@@ -1499,10 +1516,11 @@ section.consultation
         grid-gap: 0px;
         .text-part
         {
-            .form
-            {
-                padding-right: 0;
-            }
+            padding-right: 0;
+            // .form
+            // {
+                
+            // }
         }
         .img-part
         {
