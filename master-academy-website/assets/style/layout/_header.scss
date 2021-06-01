@@ -29,13 +29,20 @@ header
         {
             margin: 0 5px;
 
+            
+            
+        }
+
+        .logo-img
+        {
+            margin-left: 0;
             img 
             {
                 width: 60px;
                 height: 60px;
             }
-            
         }
+
         .logo-text 
         {
             white-space: nowrap;
@@ -79,6 +86,7 @@ header
     .nav-menu
     {
         justify-self: end;
+        
 
         > *
         {
@@ -86,13 +94,17 @@ header
             white-space: nowrap;
         }
         
+        a[href='/sign-up']
+        {
+            margin-right: 0;
+        }
     }
     .responsive-navbtn
     {
         display: none;
         .btn 
         {
-            padding: 8px;
+            padding: 5px;
             border-radius: 50px;
             background: $thridBlackClr;
             display: flex;
@@ -160,7 +172,7 @@ header
 }
 @media screen and (max-width:1500px) and (min-width: 1101px)
 {
-    header 
+    header.header 
     {
         padding: 5px clamp(25px, 2.5vw, 40px);
         grid-template-columns: min-content auto min-content;
@@ -170,7 +182,7 @@ header
 @media screen and (max-width:1100px) and (min-width: 801px)
 {
     // padding: 5px clamp(40px, 6vw, 60px);
-    header
+    header.header
     {
         padding: 10px clamp(25px, 3.5vw, 40px);
 
@@ -207,7 +219,7 @@ header
 
 @media screen and (max-width:800px) and (min-width: 501px)
 {
-    header
+    header.header
     {
         padding: 10px clamp(25px, 3.5vw, 40px);
 
@@ -249,9 +261,9 @@ header
 
 @media screen and (max-width:500px) and (min-width: 270px)
 {
-    header
+    header.header
     {
-        padding: 10px clamp(25px, 3.5vw, 40px);
+        padding: 10px clamp(15px, 4vw, 25px);
 
         grid-template-columns: auto auto;
         grid-template-areas:  
@@ -294,9 +306,9 @@ header
 
 @media screen and (max-width:400px) and (min-width: 270px)
 {
-    header
+    header.header
     {
-        padding: 10px clamp(25px, 3.5vw, 40px);
+        padding: 10px clamp(15px, 4vw, 25px);
 
         grid-template-columns: auto auto;
         grid-template-areas:  
@@ -334,3 +346,7 @@ header
         }
     }
 }
+
+
+// dashboard header 
+

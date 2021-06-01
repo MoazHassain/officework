@@ -145,9 +145,9 @@ button {
   outline: none;
   border: none;
   border-radius: 4px;
-  padding: 7px 12px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  padding: 7px 16px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   cursor: pointer;
 }
 
@@ -159,7 +159,7 @@ button {
 
 .grad-bg-btn:hover {
   color: #ffffff;
-  background: #404040;
+  background: #262626;
 }
 
 .grad-border-btn {
@@ -510,7 +510,11 @@ header .logo > * {
   margin: 0 5px;
 }
 
-header .logo > * img {
+header .logo .logo-img {
+  margin-left: 0;
+}
+
+header .logo .logo-img img {
   width: 60px;
   height: 60px;
 }
@@ -565,12 +569,16 @@ header .nav-menu > * {
   white-space: nowrap;
 }
 
+header .nav-menu a[href='/sign-up'] {
+  margin-right: 0;
+}
+
 header .responsive-navbtn {
   display: none;
 }
 
 header .responsive-navbtn .btn {
-  padding: 8px;
+  padding: 5px;
   border-radius: 50px;
   background: #404040;
   display: -webkit-box;
@@ -638,7 +646,7 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 1500px) and (min-width: 1101px) {
-  header {
+  header.header {
     padding: 5px clamp(25px, 2.5vw, 40px);
     -ms-grid-columns: min-content auto min-content;
         grid-template-columns: -webkit-min-content auto -webkit-min-content;
@@ -647,30 +655,30 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 1100px) and (min-width: 801px) {
-  header {
+  header.header {
     padding: 10px clamp(25px, 3.5vw, 40px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 90% 10%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: nav;
@@ -678,33 +686,33 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 800px) and (min-width: 501px) {
-  header {
+  header.header {
     padding: 10px clamp(25px, 3.5vw, 40px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 90% 10%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     display: none;
   }
-  header .responsive-navbtn {
+  header.header .responsive-navbtn {
     display: block;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -718,33 +726,33 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 500px) and (min-width: 270px) {
-  header {
-    padding: 10px clamp(25px, 3.5vw, 40px);
+  header.header {
+    padding: 10px clamp(15px, 4vw, 25px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 85% 15%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     display: none;
   }
-  header .responsive-navbtn {
+  header.header .responsive-navbtn {
     display: block;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -761,33 +769,33 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 400px) and (min-width: 270px) {
-  header {
-    padding: 10px clamp(25px, 3.5vw, 40px);
+  header.header {
+    padding: 10px clamp(15px, 4vw, 25px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 85% 15%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     display: none;
   }
-  header .responsive-navbtn {
+  header.header .responsive-navbtn {
     display: block;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -1978,11 +1986,12 @@ section.vision .bg-img .text-part .text-content h5.regular {
 section.vision .bg-img .text-part .btn button {
   border-color: #46C5D7;
   color: #46C5D7;
+  padding: 10px 20px;
 }
 
 section.vision .bg-img .text-part .btn button:hover {
   background-color: #46C5D7;
-  color: #262626;
+  color: #ffffff;
 }
 
 section.vision .bg-img .video-part {
@@ -2384,6 +2393,10 @@ section.career .become-instructor .bg-img .detail h5 {
   letter-spacing: 0.03em;
 }
 
+section.career .become-instructor .bg-img .detail button {
+  padding: 10px 20px;
+}
+
 section.career .build-career {
   padding-top: 30px;
   color: #ffffff;
@@ -2398,6 +2411,19 @@ section.career .build-career > * {
 
 section.career .build-career p {
   line-height: 1.5em;
+}
+
+section.career .build-career button {
+  padding: 10px 20px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+section.career .build-career button:hover {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #000;
 }
 
 section.review {
@@ -2565,7 +2591,7 @@ section.consultation .form label {
   margin-bottom: 5px;
 }
 
-section.consultation .form input, section.consultation .form textarea {
+section.consultation .form input, section.consultation .form textarea, section.consultation .form button {
   width: 100%;
 }
 
@@ -2638,6 +2664,7 @@ section.consultation .img-part img {
         grid-template-columns: 100%;
   }
   section.hero .bg-img .grid-wrapper .text-part {
+    text-align: center;
     -webkit-transform: unset;
             transform: unset;
   }
@@ -2691,6 +2718,7 @@ section.consultation .img-part img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2800,7 +2828,7 @@ section.consultation .img-part img {
     grid-gap: 0px;
   }
   section.consultation .text-part .form {
-    padding-right: clamp(20px, 4vw, 80px);
+    padding-right: 0;
   }
   section.consultation .img-part {
     display: none;
@@ -2818,6 +2846,7 @@ section.consultation .img-part img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2838,6 +2867,9 @@ section.consultation .img-part img {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  section.vision .bg-img .text-part {
+    text-align: center;
+  }
   section.vision .bg-img .video-part span.bg-border {
     width: clamp(250px, 50vw, 300px);
     height: clamp(200px, 40vw, 250px);
@@ -2848,9 +2880,6 @@ section.consultation .img-part img {
 }
 
 @media screen and (max-width: 500px) and (min-width: 270px) {
-  section.offer {
-    display: none;
-  }
   section.hero .bg-img .grid-wrapper {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -2861,6 +2890,7 @@ section.consultation .img-part img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2880,6 +2910,9 @@ section.consultation .img-part img {
         grid-template-columns: 1fr;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  section.vision .bg-img .text-part {
+    text-align: center;
   }
   section.vision .bg-img .video-part span.bg-border {
     width: clamp(200px, 50vw, 280px);
@@ -2912,6 +2945,7 @@ section.consultation .img-part img {
     display: none;
   }
   section.career .become-instructor .bg-img .detail {
+    text-align: center;
     padding-right: clamp(0px, 2vw, 100px);
   }
   section.career .become-instructor .bg-img .detail > * {
@@ -2932,7 +2966,7 @@ section.consultation .img-part img {
     grid-gap: 0px;
   }
   section.consultation .text-part .form {
-    padding-right: clamp(20px, 4vw, 80px);
+    padding-right: 0;
   }
   section.consultation .img-part {
     display: none;
@@ -2943,6 +2977,9 @@ section.consultation .img-part img {
 }
 
 @media screen and (max-width: 400px) and (min-width: 270px) {
+  section.offer {
+    padding: 5px;
+  }
   section.hero .bg-img .grid-wrapper {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -2954,6 +2991,7 @@ section.consultation .img-part img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   section.hero .bg-img .grid-wrapper .img-part {
     width: 100%;
@@ -2976,6 +3014,9 @@ section.consultation .img-part img {
         grid-template-columns: 1fr;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  section.vision .bg-img .text-part {
+    text-align: center;
   }
   section.vision .bg-img .video-part span.bg-border {
     width: clamp(200px, 50vw, 280px);
@@ -3010,6 +3051,7 @@ section.consultation .img-part img {
     background-position: 40%;
   }
   section.career .become-instructor .bg-img .detail {
+    text-align: center;
     padding-right: clamp(0px, 2vw, 100px);
   }
   section.career .become-instructor .bg-img .detail > * {
@@ -3020,7 +3062,7 @@ section.consultation .img-part img {
     width: unset;
   }
   section.career .build-career > * {
-    margin: 0;
+    margin: 10px 0;
   }
   section.career .build-career > a {
     margin: 0;

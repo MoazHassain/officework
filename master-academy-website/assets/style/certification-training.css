@@ -145,9 +145,9 @@ button {
   outline: none;
   border: none;
   border-radius: 4px;
-  padding: 7px 12px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  padding: 7px 16px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   cursor: pointer;
 }
 
@@ -159,7 +159,7 @@ button {
 
 .grad-bg-btn:hover {
   color: #ffffff;
-  background: #404040;
+  background: #262626;
 }
 
 .grad-border-btn {
@@ -510,7 +510,11 @@ header .logo > * {
   margin: 0 5px;
 }
 
-header .logo > * img {
+header .logo .logo-img {
+  margin-left: 0;
+}
+
+header .logo .logo-img img {
   width: 60px;
   height: 60px;
 }
@@ -565,12 +569,16 @@ header .nav-menu > * {
   white-space: nowrap;
 }
 
+header .nav-menu a[href='/sign-up'] {
+  margin-right: 0;
+}
+
 header .responsive-navbtn {
   display: none;
 }
 
 header .responsive-navbtn .btn {
-  padding: 8px;
+  padding: 5px;
   border-radius: 50px;
   background: #404040;
   display: -webkit-box;
@@ -638,7 +646,7 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 1500px) and (min-width: 1101px) {
-  header {
+  header.header {
     padding: 5px clamp(25px, 2.5vw, 40px);
     -ms-grid-columns: min-content auto min-content;
         grid-template-columns: -webkit-min-content auto -webkit-min-content;
@@ -647,30 +655,30 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 1100px) and (min-width: 801px) {
-  header {
+  header.header {
     padding: 10px clamp(25px, 3.5vw, 40px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 90% 10%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: nav;
@@ -678,33 +686,33 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 800px) and (min-width: 501px) {
-  header {
+  header.header {
     padding: 10px clamp(25px, 3.5vw, 40px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 90% 10%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     display: none;
   }
-  header .responsive-navbtn {
+  header.header .responsive-navbtn {
     display: block;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -718,33 +726,33 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 500px) and (min-width: 270px) {
-  header {
-    padding: 10px clamp(25px, 3.5vw, 40px);
+  header.header {
+    padding: 10px clamp(15px, 4vw, 25px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 85% 15%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     display: none;
   }
-  header .responsive-navbtn {
+  header.header .responsive-navbtn {
     display: block;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -761,33 +769,33 @@ header .responsive-navbtn .btn {
 }
 
 @media screen and (max-width: 400px) and (min-width: 270px) {
-  header {
-    padding: 10px clamp(25px, 3.5vw, 40px);
+  header.header {
+    padding: 10px clamp(15px, 4vw, 25px);
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: "logo nav" "search search";
     grid-gap: 5px;
   }
-  header .logo {
+  header.header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: logo;
   }
-  header .logo img {
+  header.header .logo img {
     width: 50px;
     height: 50px;
   }
-  header .search-bar {
+  header.header .search-bar {
     margin-left: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: search;
         grid-template-columns: 85% 15%;
   }
-  header .nav-menu {
+  header.header .nav-menu {
     display: none;
   }
-  header .responsive-navbtn {
+  header.header .responsive-navbtn {
     display: block;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -1607,7 +1615,6 @@ header .nav-menu .nav-notification a .notification-number {
 header .nav-menu .nav-notification .dropdown-content {
   white-space: normal !important;
   height: 350px;
-  overflow-y: scroll;
   width: 400px !important;
 }
 
@@ -1623,22 +1630,27 @@ header .nav-menu .nav-notification .dropdown-content .notification-header {
   border-bottom: 1px solid #f3f3f3;
 }
 
-header .nav-menu .nav-notification .dropdown-content .notifications {
+header .nav-menu .nav-notification .dropdown-content .notifications-wrap {
+  overflow-y: scroll;
+}
+
+header .nav-menu .nav-notification .dropdown-content .notifications-wrap .notifications {
   padding: 5px 25px;
 }
 
-header .nav-menu .nav-notification .dropdown-content .notifications:hover {
+header .nav-menu .nav-notification .dropdown-content .notifications-wrap .notifications:hover {
   background-color: #f3f3f3;
 }
 
-header .nav-menu .nav-profile a {
+header .nav-menu .nav-profile a .user-name {
+  margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .nav-menu .nav-profile a .user-name {
-  margin-right: 20px;
+header .nav-menu .nav-profile a .user-name p {
+  margin-right: 10px;
 }
 
 header .nav-menu .nav-profile a .img {
@@ -1673,14 +1685,32 @@ header .nav-menu .dropdown {
   position: relative;
 }
 
+header .nav-menu .dropdown .tri::before, header .nav-menu .dropdown .tri::after {
+  content: "";
+  border-bottom: 11px solid #ffffff;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  position: absolute;
+  top: -11px;
+  right: 2px;
+}
+
+header .nav-menu .dropdown .tri::before {
+  content: "";
+  border-bottom: 12px solid #cacaca;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  top: -12px;
+  right: 1px;
+}
+
 header .nav-menu .dropdown .dropdown-content {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 0;
+  top: 50px;
+  right: 5px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #cacaca;
   white-space: nowrap;
   width: 145px;
   max-width: 500px;
@@ -1699,6 +1729,10 @@ header .nav-menu .dropdown .dropdown-content a p:hover {
 
 header .nav-menu .dropdown .show {
   display: block;
+}
+
+header .responsive-nav {
+  display: none;
 }
 
 .subheader {
