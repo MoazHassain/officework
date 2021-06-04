@@ -19,6 +19,7 @@
             white-space: nowrap;
             border-right: 1px solid $thirdWhiteClr;
             transition: 0.3s ease;
+            height: 100%;
 
             .nav-head
             {
@@ -44,6 +45,18 @@
                             transition: 0.3s;
                             border-radius: 50px;
                         }
+                        .bar-1
+                        {
+                            transform: rotate(-45deg) translateX(-5px) translateY(5px);
+                        }
+                        .bar-2
+                        {
+                            transform: scale(0);
+                        }
+                        .bar-3
+                        {
+                            transform: rotate(45deg) translateX(-5px) translateY(-5px);
+                        }
                         // &:hover .bar-1
                         // {
                         //     transform: rotate(-45deg) translateX(-6px) translateY(5px);
@@ -61,15 +74,15 @@
                     {
                         .bar-1
                         {
-                            transform: rotate(-45deg) translateX(-5px) translateY(5px);
+                            transform: unset;
                         }
                         .bar-2
                         {
-                            transform: scale(0);
+                            transform: scale(1);
                         }
                         .bar-3
                         {
-                            transform: rotate(45deg) translateX(-5px) translateY(-5px);
+                            transform: rotate(0) translateX(0) translateY(0);
                         }
                     }
                 }
@@ -132,7 +145,7 @@
                                 i.fas.fa-circle
                                 {
                                     font-size: 12px;
-                                    
+                                    color: $primarySolidClr;
                                 }
                                 .line 
                                 {
@@ -141,7 +154,7 @@
                                     left: 15px;
                                     width: 2px;
                                     height: 55px;
-                                    background-color: $secondaryBlackclr;
+                                    background-color: $primarySolidClr;
                                     z-index: -100;
                                 }
                                 .line.last
@@ -158,6 +171,7 @@
                                 }
                             }
                             &:hover p,
+                            &:hover i.fas.fa-circle,
                             &:hover i
                             {
                                 color: $secondarySolidClr;
@@ -320,5 +334,181 @@
             }
         }
         
+    }
+}
+
+
+@media screen and (max-width: 1500px) and (min-width: 1200px) 
+{
+
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+{
+
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+    .subheader
+    {
+        grid-template-columns: 1fr;
+
+        .col-2
+        {
+            display: none;
+        }
+
+    }
+    .container
+    {
+        .grid-content
+        {
+            .tabcontent-wrap
+            {
+                .tabcontent
+                {
+                    .content-title,
+                    .content-video
+                    {
+                        padding: 30px 10px;
+                    }
+                    .content-title
+                    {
+                        .title
+                        {
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        a:nth-child(1),
+                        a:nth-child(3)
+                        {
+                            display: none;
+                        }
+                        
+                        // .icons
+                        // {
+                        //     display: none;
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 280px)
+{
+    .subheader
+    {
+        grid-template-columns: 1fr;
+
+        .col-2
+        {
+            display: none;
+        }
+
+    }
+
+    .container
+    {
+        .grid-content
+        {
+
+            position: relative;
+            .side-nav
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 250px;
+                background-color: $primaryWhiteClr;
+                box-shadow: 2px 0 4px 1000px rgba($color: #000000, $alpha: 0.3) ;
+                
+                .nav-head
+                {
+                    padding: 10px;
+                }
+                .collapsible-wrap
+                {
+                    .collapsible
+                    {
+                        padding: 10px;
+                    }
+                    .collapsible-content
+                    {
+                        .lecture-title
+                        {
+                            margin-left: 7px;
+                            a 
+                            {
+                                .line
+                                {
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .library 
+                {
+                    padding: 10px;
+                }
+            }
+            .side-nav.shrink
+            {
+                width: 45px;
+                box-shadow: 0px 0 0px 1000px rgba($color: #000000, $alpha: 0.0) ;
+
+            }
+
+            .tabcontent-wrap
+            {
+                width: 95vw;
+                margin-left: 45px;
+                .tabcontent
+                {
+                    .content-title,
+                    .content-video
+                    {
+                        padding: 20px;
+                    }
+                    .content-title
+                    {
+                        width: 100%;
+                        grid-template-columns: auto;
+                        grid-gap: 10px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        .title
+                        {
+                            width: 100%;
+                            grid-template-columns: 1fr 1fr;
+                            overflow: hidden;
+                            *
+                            {
+                                margin: 0 5px;
+                                overflow: hidden;
+                            }
+
+                            
+                        }
+                        .icons
+                        {
+                            justify-self: start;
+                            > * 
+                            {
+                                margin: 0 10px !important;
+                            }
+                            a:nth-child(1),
+                            a:nth-child(3)
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

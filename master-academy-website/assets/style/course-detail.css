@@ -1432,6 +1432,10 @@ footer .upper-part .join-part table td {
   text-align: left;
 }
 
+footer .upper-part .join-part table td a {
+  color: #ffffff;
+}
+
 footer .upper-part .pages-part {
   display: -ms-grid;
   display: grid;
@@ -1464,8 +1468,8 @@ footer .lower-part {
   padding-bottom: 20px !important;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1518,33 +1522,22 @@ footer .lower-part .logos img {
         justify-self: center;
   }
   footer .lower-part {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "rights rights" "policy logo";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-gap: 10px;
   }
   footer .lower-part .rights {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: rights;
     -ms-grid-column-align: center;
         justify-self: center;
     text-align: center;
   }
   footer .lower-part .terms-privacy {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: policy;
     -ms-grid-column-align: start;
         justify-self: start;
   }
   footer .lower-part .logos {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: logo;
-    -ms-grid-column-align: end;
-        justify-self: end;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
@@ -1571,6 +1564,10 @@ footer .lower-part .logos img {
   footer .lower-part .logos {
     display: none;
   }
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 .container .wrap-course-title {
@@ -1919,8 +1916,8 @@ footer .lower-part .logos img {
   background-color: #ffffff;
   position: -webkit-sticky;
   position: sticky;
-  top: 75px;
-  z-index: 990;
+  top: 0px;
+  z-index: 999;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }

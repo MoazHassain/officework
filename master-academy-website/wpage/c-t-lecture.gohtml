@@ -1,0 +1,112 @@
+{{block "link-style" .}}
+<link rel="stylesheet" href="resources/style/certification-training.css">
+{{end}}
+
+{{block "tablink" .}}
+<a href="/certification-training">
+    <h5 class="medium tablink" data-tab="get-start"><i class="fas fa-power-off"></i> Getting Started</h5>
+</a>
+<a href="/pre-requisites">
+    <h5 class="medium tablink" data-tab="pre-requisites"><i class="fas fa-bars"></i> Pre-requisites</h5>
+</a>
+<a href="/lecture">
+    <h5 class="medium tablink active" data-tab="tab-video"><i class="far fa-play-circle"></i> Video Lecture</h5>
+</a>
+<a href="/course-content">
+    <h5 class="medium tablink" data-tab="course-content"><i class="far fa-list-alt"></i> Course Content</h5>
+</a>
+<a href="/class-record">
+    <h5 class="medium tablink" data-tab="class-record"><i class="fas fa-video"></i> Class Recording</h5>
+</a>
+<a href="/personal-library">
+    <h5 class="medium tablink" data-tab="personal-library"><i class="fas fa-book"></i> Personal Library</h5>
+</a>
+<a href="/my-lab">
+    <h5 class="medium tablink" data-tab="my-lab"><i class="fas fa-desktop"></i> My Lab</h5>
+</a>
+
+<div class="responsive-tablink">
+    <div class="swiper-container tab-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="/certification-training">
+                    <h5 class="medium tablink" data-tab="get-start"><i class="fas fa-power-off"></i> Getting Started</h5>
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/pre-requisites">
+                    <h5 class="medium tablink" data-tab="pre-requisites"><i class="fas fa-bars"></i> Pre-requisites</h5>
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/lecture">
+                    <h5 class="medium tablink active" data-tab="tab-video"><i class="far fa-play-circle"></i> Video Lecture</h5>
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/course-content">
+                    <h5 class="medium tablink" data-tab="course-content"><i class="far fa-list-alt"></i> Course Content</h5>
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/class-record">
+                    <h5 class="medium tablink" data-tab="class-record"><i class="fas fa-video"></i> Class Recording</h5>
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/personal-library">
+                    <h5 class="medium tablink" data-tab="personal-library"><i class="fas fa-book"></i> Personal Library</h5>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="/my-lab">
+                    <h5 class="medium tablink" data-tab="my-lab"><i class="fas fa-desktop"></i> My Lab</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+{{block "tabcontent" .}}
+<div class="tabcontent active" id="tab-video">
+    <div class="tab-title">
+        <h4 class="medium"><i class="far fa-play-circle"></i> Video Lectures</h4>
+    </div>
+    <div class="block-text">
+        <p class="regular" >
+            This module contains class recordings from previous DevOps batches. You can utilize these recordings to better prepare for your Live Instructor-Led Online Class.
+        </p>
+    </div>
+    <a href="/video-lecture">
+        <div class="video-file">
+            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
+        </div>
+    </a>
+    <a href="/video-lecture">
+        <div class="video-file">
+            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
+        </div>
+    </a>
+    <a href="/video-lecture">
+        <div class="video-file">
+            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
+        </div>
+    </a>
+    <a href="/video-lecture">
+        <div class="video-file">
+            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
+        </div>
+    </a>
+    <a href="/video-lecture">
+        <div class="video-file">
+            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
+        </div>
+    </a>
+
+</div>
+{{end}}

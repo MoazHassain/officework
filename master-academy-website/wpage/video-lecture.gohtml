@@ -1,237 +1,271 @@
-{{block "link-style" .}}
-<link rel="stylesheet" href="resources/style/video-lecture.css">
-{{end}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/plugins/intl-tel-input/build/css/intlTelInput.css">
+    {{block "link-style" .}}
+    <link rel="stylesheet" href="resources/style/video-lecture.css">
+    {{end}}
 
-{{block "header" .}}
-<div></div>
-{{end}}
+</head>
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a,
+    span 
+    {
+        
+        font-family: "hind madurai", sans-serif;
+        
+    }
+    .container .light 
+    {
+        font-weight: 300;
+    }
+    .container .small
+    {
+        font-size: 14px;
+    }
+    .container p
+    {
+        font-size: 15px;
+    }
+    .container h5
+    {
+        font-size: 18px;
+    }
+</style>
 
-{{block "subheader" .}}
-    <section class="subheader">
-        <div class="col-1">
-            <div class="page-link">
-               
-                <div class="goto">
-                    <a href=""><p class="regular" >My Courses <i class="fas fa-chevron-right"></i></p></a>
-                    
-                </div>
-                <div class="goto">
-                    <a href="/"><p class="bold">DevOps Certification Training</p></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-2" style="justify-self: end;">
-            <div class="forum">
-                <a href="">
-                    <img src="/resources/svg/forum.svg" alt="">
-                    <p class="regular">Forum</p>
-                </a>
-            </div>
-            <div class="support">
-                <a href="">
-                    <img src="/resources/svg/support.svg" alt="">
-                    <p class="regular">Support</p>
-                </a>
-            </div>
-        </div>
-    </section>
-{{end}}
+<body>
+    {{block "header" .}}
+    <div></div>
+    {{end}}
 
-{{block "container" .}}
-<div class="container">
-    <div class="grid-content">
-        <div class="side-nav">
-            <div class="nav-head">
-                <div class="wrap">
-                    <a href="javascript:void(0)" class="nav-btn" onclick="openNav()">
-                        <div class="bar-1"></div>
-                        <div class="bar-2"></div>
-                        <div class="bar-3"></div>
-                    </a>
-                    <div class="title hidden-part">
-                        <h5 class="medium">DevOps Certification Training</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="collapsible-wrap">
-                <div class="collapsible hidden-part">
-                    <h5 class="regular "><i class="far fa-play-circle"></i> Video Lecture <i class="fas fa-angle-down"></i></h5>
-                </div>
-                <div class="collapsible-content">
-                    <ul>
-                        <li class="lecture-title tablink " data-tab="video-1" >
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part" ><i class="far fa-play-circle"></i> 1. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
-                        <li class="lecture-title tablink">
-                            <a href="">
-                                <span class="line last"></span>
-                                <i class="fas fa-circle"></i>
-                                <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
-                                
-                            </a>
-                        </li>
+    {{block "subheader" .}}
+        <section class="subheader">
+            <div class="col-1">
+                <div class="page-link">
+                
+                    <div class="goto">
+                        <a href=""><p class="regular" >My Courses <i class="fas fa-chevron-right"></i></p></a>
                         
-                    </ul>
-                    
-                    
+                    </div>
+                    <div class="goto">
+                        <a href="/"><p class="bold">DevOps Certification Training</p></a>
+                    </div>
                 </div>
             </div>
-            <a href="javascript:void(0)">
-                <div class="tablink library" data-tab="library">
-                    <i class="fas fa-book"></i>
-                    <h5 class="regular hidden-part">Personal Library</h5>
+            <div class="col-2" style="justify-self: end;">
+                <div class="forum">
+                    <a href="">
+                        <img src="/resources/svg/forum.svg" alt="">
+                        <p class="regular">Forum</p>
+                    </a>
                 </div>
-            </a>
-            
-        </div>
-        <div class="tabcontent-wrap">
-            <div class="tabcontent " id="video-1">
-                <div class="content-title">
-                    <div class="title">
-                        <h5 class="regular self-pace">Self-paced Videos <i class="fas fa-angle-right"></i></h5>
-                        <h5 class="regular">1. Overview of DevOps</h5>
-                    </div>
-                    <div class="icons">
-                        <a href="">
-                            <div class="forum-icon">
-                                <img src="/resources/svg/forum-black.svg" alt="">
-                            </div>
+                <div class="support">
+                    <a href="">
+                        <img src="/resources/svg/support.svg" alt="">
+                        <p class="regular">Support</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    {{end}}
+
+
+    {{block "container" .}}
+    <div class="container">
+        <div class="grid-content">
+            <div class="side-nav">
+                <div class="nav-head">
+                    <div class="wrap">
+                        <a href="javascript:void(0)" class="nav-btn" onclick="openNav()">
+                            <div class="bar-1"></div>
+                            <div class="bar-2"></div>
+                            <div class="bar-3"></div>
                         </a>
-                        <a href="">
-                            <div class="support-icon">
-                                <img src="/resources/svg/support-black.svg" alt="">
+                        <div class="title hidden-part">
+                            <h5 class="medium">DevOps Certification Training</h5>
+                        </div>
+                    </div>
+                </div>
+                {{block "video-link" .}}
+                <div class="collapsible-wrap">
+                    <div class="collapsible hidden-part">
+                        <h5 class="regular "><i class="far fa-play-circle"></i> Video Lecture <i class="fas fa-angle-down"></i></h5>
+                    </div>
+                    <div class="collapsible-content">
+                        <ul>
+                            
+                            <li class="lecture-title tablink " data-tab="video-1" >
+                                <a href="/video-lecture">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part" ><i class="far fa-play-circle"></i> 1. Overview of DevOps</p>
                                     
-                            </div>
-                        </a>
-                        <a href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="">
-                            <i class="far fa-clipboard"></i>
-                        </a>
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="/lecture-02">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+                            <li class="lecture-title tablink">
+                                <a href="">
+                                    <span class="line last"></span>
+                                    <i class="fas fa-circle"></i>
+                                    <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
+                                    
+                                </a>
+                            </li>
+
+                            
+                        </ul>
+                        
+                        
                     </div>
                 </div>
-    
-                <div class="content-video">
-                    <div class="video">
-                        <!-- <video src=""></video> -->
-                        <img src="/resources/img/video.png" alt="">
+                <a href="/lecture-library">
+                    <div class="tablink library" data-tab="library">
+                        <i class="fas fa-book"></i>
+                        <h5 class="regular hidden-part">Personal Library</h5>
                     </div>
-                    <div class="raise-query" >
-                        <p class="small medium"><i class="far fa-comment-alt"></i> Have a Question? Raise a Query</p>
-                    </div>
-                </div>
-    
+                </a>
+                {{end}}
                 
             </div>
+            <div class="tabcontent-wrap">
+                {{block "video" .}}
+                <div class="tabcontent " id="video-1">
+                    <div class="content-title">
+                        <div class="title">
+                            <h5 class="regular self-pace">Self-paced Videos <i class="fas fa-angle-right"></i></h5>
+                            <h5 class="regular">1. Overview of DevOps</h5>
+                        </div>
+                        <div class="icons">
+                            <a href="">
+                                <div class="forum-icon">
+                                    <img src="/resources/svg/forum-black.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="support-icon">
+                                    <img src="/resources/svg/support-black.svg" alt="">
+                                        
+                                </div>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="">
+                                <i class="far fa-clipboard"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="content-video">
+                        <div class="video">
+                            <!-- <video src=""></video> -->
+                            <img src="/resources/img/video.png" alt="">
+                        </div>
+                        <div class="raise-query" >
+                            <p class="small medium"><i class="far fa-comment-alt"></i> Have a Question? Raise a Query</p>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+                {{end}}
 
-            <div class="tabcontent" id="library">
-                <div class="content-title">
-                    <h5 class="medium">Personal Library</h5>
-                    <div class="library">
-                        <i class="fas fa-folder-plus"></i>
-                        <i class="fas fa-link"></i>
-                        <i class="fas fa-upload"></i>
-                    </div>
-                </div>
-                <div class="give-info">
-                    <div class="user-name">
-                        <h4 class="medium">Hello Mostain</h4>
-                    </div>
-                    <div class="block-text">
-                        <p class="small regular">This space is reserved for your study material. You can access to Edureka’s LMS and the files that you have upload for your reference.</p>
-                    </div>
-                </div>
-                <div class="img">
-                    <img src="/resources/img/networking.jpg" alt="">
-                </div>
+                
             </div>
         </div>
     </div>
-</div>
 
-{{end}}
+    {{end}}
 
-{{block "footer" .}}
-<div></div>
-{{end}}
+    {{block "footer" .}}
+    <div></div>
+    {{end}}
+</body>
 
 {{block "script" .}}
 
@@ -261,3 +295,4 @@
     
 </script>
 {{end}}
+</html>

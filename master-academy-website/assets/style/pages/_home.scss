@@ -201,8 +201,9 @@ section.hero
                     box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.40);
                 }
                 
-                &:hover h5,
-                &:hover svg
+                &:hover .title,
+                &:hover svg,
+                &:hover .text-content
                 {
                     opacity: 0.6;
                 }

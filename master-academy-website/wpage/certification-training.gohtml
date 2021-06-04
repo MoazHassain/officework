@@ -1,1136 +1,610 @@
-{{block "link-style" .}}
-<link rel="stylesheet" href="resources/style/certification-training.css">
-{{end}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/plugins/intl-tel-input/build/css/intlTelInput.css">
+    {{block "link-style" .}}
+    <link rel="stylesheet" href="resources/style/certification-training.css">
+    {{end}}
 
-{{block "subheader" .}}
-    <section class="subheader">
-        <div class="col-1">
-            <div class="page-link">
-                <div class="goto-home">
-                    <a href=""><p class="regular">Home <i class="fas fa-chevron-right"></i></p></a>
-                    
-                </div>
-    
-                <div class="goto-course-catalog">
-                    <a href=""><p class="regular">My Courses <i class="fas fa-chevron-right"></i></p></a>
-                    
-                </div>
-                <div class="goto-mycourse">
-                    <a href="/"><p class="bold">DevOps Certification Training</p></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-2" style="justify-self: end;">
-            <div class="forum">
-                <a href="">
-                    <img src="/resources/svg/forum.svg" alt="">
-                    <p class="regular">Forum</p>
-                </a>
-            </div>
-            <div class="support">
-                <a href="">
-                    <img src="/resources/svg/support.svg" alt="">
-                    <p class="regular">Support</p>
-                </a>
-            </div>
-        </div>
-    </section>
-{{end}}
+</head>
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a,
+    span 
+    {
+        
+        font-family: "hind madurai", sans-serif;
+        
+    }
+    .container .light 
+    {
+        font-weight: 300;
+    }
+    .container .small
+    {
+        font-size: 14px;
+    }
+    .container p
+    {
+        font-size: 15px;
+    }
+    .container h5
+    {
+        font-size: 18px;
+    }
+</style>
 
-{{block "container" .}}
-<div class="container">
-    <div class="course-title">
-        <div class="title">
-            <img src="/resources/img/devops.png" alt="">
-            <h4 class="bold">DevOps Certification Training</h4>
-        </div>
-        <div class="progression">
-            <div class="progress">
-                <div class="progress-bar">
-                    <div class="full-bar"></div>
-                    <div class="complete-bar"></div>
+<body>
+    {{block "header" .}}
+        <header class="dash-header">
+            <div class="dash-responsive-nav">
+                <div class="dash-responsive-navbtn">
+                    <div class="btn">
+                        <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50033 5C2.27931 5 2.06735 5.0878 1.91107 5.24408C1.75479 5.40036 1.66699 5.61232 1.66699 5.83333C1.66699 6.05435 1.75479 6.26631 1.91107 6.42259C2.06735 6.57887 2.27931 6.66667 2.50033 6.66667H22.5003C22.7213 6.66667 22.9333 6.57887 23.0896 6.42259C23.2459 6.26631 23.3337 6.05435 23.3337 5.83333C23.3337 5.61232 23.2459 5.40036 23.0896 5.24408C22.9333 5.0878 22.7213 5 22.5003 5H2.50033ZM1.66699 12.5C1.66699 12.279 1.75479 12.067 1.91107 11.9107C2.06735 11.7545 2.27931 11.6667 2.50033 11.6667H22.5003C22.7213 11.6667 22.9333 11.7545 23.0896 11.9107C23.2459 12.067 23.3337 12.279 23.3337 12.5C23.3337 12.721 23.2459 12.933 23.0896 13.0893C22.9333 13.2455 22.7213 13.3333 22.5003 13.3333H2.50033C2.27931 13.3333 2.06735 13.2455 1.91107 13.0893C1.75479 12.933 1.66699 12.721 1.66699 12.5ZM1.66699 19.1667C1.66699 18.9457 1.75479 18.7337 1.91107 18.5774C2.06735 18.4211 2.27931 18.3333 2.50033 18.3333H22.5003C22.7213 18.3333 22.9333 18.4211 23.0896 18.5774C23.2459 18.7337 23.3337 18.9457 23.3337 19.1667C23.3337 19.3877 23.2459 19.5996 23.0896 19.7559C22.9333 19.9122 22.7213 20 22.5003 20H2.50033C2.27931 20 2.06735 19.9122 1.91107 19.7559C1.75479 19.5996 1.66699 19.3877 1.66699 19.1667Z" fill="white"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="percentage">
-                    <p class="small regular">10%</p>
-                </div>
-            </div>
+                <div class="dash-responsive-content">
+                    <div class="dropdown-content">
+                        <div class="tri">
+                            <div class="profile">
+                                <a href="#"><p class="regular small">My Profile</p></a>
+                            </div>
+                            <div class="orders">
+                                <a href="#"><p class="regular small">My Orders</p></a>
+                            </div>
+                            <div class="activity">
+                                <a href="#"><p class="regular small">Activity Stream</p></a>
+                            </div>
+                            <div class="wallet">
+                                <a href="#"><p class="regular small">My Wallet</p></a>
+                            </div>
+                            <div class="wishlist">
+                                <a href="#"><p class="regular small">My Wishlist</p></a>
+                            </div>
+                        </div>
 
-            <div class="grade">
-                
-                <div class="hidden-content">
-                    <div class="text">
-                        <p class="small regular"><i class="fas fa-long-arrow-alt-down" style="color: rgb(196, 57, 57);"></i> You have not attempted the quiz</p>
-                    </div>
-                    <div class="text">
-                        <p class="small regular"><i class="fas fa-long-arrow-alt-up" style="color: #1BB899;"></i> Attempt Quiz to catch up</p>
-                    </div>
-                    <div class="grade-system">
-                        <div class="grading">
-                            <div class="grade-rank">
-                                <p class="small regular">A</p>
-                            </div>
-                            <div class="grade-number">
-                                <p class="small regular">90-100</p>
-                            </div>
-                        </div>
-                        <div class="grading">
-                            <div class="grade-rank">
-                                <p class="small regular">B</p>
-                            </div>
-                            <div class="grade-number">
-                                <p class="small regular">70-89</p>
-                            </div>
-                        </div>
-                        <div class="grading">
-                            <div class="grade-rank">
-                                <p class="small regular">C</p>
-                            </div>
-                            <div class="grade-number">
-                                <p class="small regular"> <i class="fas fa-chevron-left"></i> 70 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="visible-content">
-                    <div class="block-text">
-                        <p class="small regular">Your Current Grade</p>
-                        <p class="small bold">Missed actions in LMS</p>
-                    </div>
-                    <div class="grade-rank">
-                        <h2 class="bold">A</h2>
                     </div>
                 </div>
             </div>
-        </div>
+            <a href="/">
+                <div class="logo">
+                    <div class="logo-img">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="45" height="45" viewBox="0 0 400.000000 400.000000"
+                            preserveAspectRatio="xMidYMid meet">
 
-    </div>
-
-    <div class="grid-content">
-        <div class="column-left">
-            <div class="tab-head">
-                <div class="tab">
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink active" data-tab="get-start"><i class="fas fa-power-off"></i> Getting Started</h5>
-                    </a>
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink" data-tab="pre-requisites"><i class="fas fa-bars"></i> Pre-requisites</h5>
-                    </a>
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink" data-tab="tab-video"><i class="far fa-play-circle"></i> Video Lecture</h5>
-                    </a>
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink" data-tab="course-content"><i class="far fa-list-alt"></i> Course Content</h5>
-                    </a>
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink" data-tab="class-record"><i class="fas fa-video"></i> Class Recording</h5>
-                    </a>
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink" data-tab="personal-library"><i class="fas fa-book"></i> Personal Library</h5>
-                    </a>
-                    <a href="javascript:void(0)">
-                        <h5 class="medium tablink" data-tab="my-lab"><i class="fas fa-desktop"></i> My Lab</h5>
-                    </a>
-   
-                </div>
-            </div>
-            <div class="tabcontent-wrap">
-                <div class="tabcontent active" id="get-start">
-                    <div class="tab-title">
-                        <h4 class="medium"><i class="fas fa-power-off"></i> Getting Started</h4>
+                            <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)"
+                            fill="#262626" stroke="none">
+                            <path d="M1878 3984 c-130 -31 -109 -12 -975 -877 -872 -871 -856 -853 -888
+                            -988 -19 -81 -19 -157 0 -238 31 -130 44 -145 515 -616 l440 -440 0 242 c0
+                            136 -4 253 -10 268 -12 32 -62 54 -110 48 -57 -8 -62 5 -58 166 2 114 6 143
+                            20 157 28 29 163 35 733 32 494 -2 553 0 581 15 53 28 55 42 52 410 l-3 337
+                            -27 27 c-23 23 -37 28 -81 28 -29 1 -58 4 -65 9 -8 5 -12 48 -12 147 0 134 1
+                            141 24 163 34 35 113 39 740 35 l546 -4 -502 502 c-393 393 -515 509 -559 533
+                            -107 56 -242 73 -361 44z"/>
+                            <path d="M2605 2542 c-23 -11 -46 -31 -53 -46 -9 -20 -12 -159 -12 -556 l0
+                            -530 -25 -16 c-22 -14 -80 -16 -557 -13 -477 3 -536 1 -564 -13 -56 -30 -56
+                            -34 -55 -493 l2 -420 182 -182 c196 -197 242 -230 358 -258 122 -28 250 -12
+                            358 45 83 44 1667 1630 1705 1707 54 109 68 234 41 352 -26 108 -64 166 -205
+                            306 l-130 130 -503 3 c-472 2 -504 1 -542 -16z"/>
+                            </g>
+                        </svg>
                     </div>
-                    <div class="title">
-                        <h1 class="bold">Let's Begin to Learn!</h1>
-                    </div>
-                    <div class="welcome-user">
-                        <h4 class="medium">Welcome Mostain</h4>
-    
-                        <p class="regular">Before embarking on your learning journey with edureka, let us walk you through few important features of our LMS, which will guide you towards the optimum path of course completion.</p>
-                    </div>
-    
-                    <div class="block-text">
-                        <p class="medium"><i class="far fa-square"></i>Curriculum Tracker</p>
-                        <p class="small regular">This can be seen on My Classroom page against the course card, and is highlighted in the Course Content tab that you see in your LMS. All your important events - Assignments, Case Studies, Quiz and Project submission deadlines will be notified here.</p>
-                    </div>
-                    <div class="block-text">
-                        <p class="medium"><i class="far fa-square"></i>Grade</p>
-                        <p class="small regular">Your grade is calculated basis timely submissions of Assignments, Case Studies, Quizzes and Project. Make sure you do not miss out on any!</p>
-                    </div>
-                    <div class="block-text">
-                        <p class="medium"><i class="far fa-square"></i>Class Schedule</p>
-                        <p class="small regular">Keep a track of all the classes, along with your feedbacks!</p>
-                    </div>
-                    <div class="block-text">
-                        <p class="medium"><i class="far fa-square"></i>Connect to Learning Manager</p>
-                        <p class="small regular">Besides technical queries, if you need any assistance from our learning managers, then do remember, we are just a click away!</p>
+                    <div class="logo-text">
+                        <h3 class="black">MASTER-ACADEMY</h3>
                     </div>
                 </div>
-    
-                <div class="tabcontent" id="pre-requisites">
-                    <div class="tab-swiper">
-                        <div class="swiper-wrap">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink swiper-active" data-tab="java-install">
-                                            <i class="fas fa-stop-circle"></i>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="java-intro">
-                                            <div class="number"><p class="small regular">1</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="data-handle">
-                                            <div class="number"><p class="small regular">2</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="oop-java">
-                                            <div class="number"><p class="small regular">3</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="package">
-                                            <div class="number"><p class="small regular">4</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="collections">
-                                            <div class="number"><p class="small regular">5</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="install-guide">
-                                            <i class="fas fa-stop-circle"></i>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="python-intro">
-                                            <div class="number"><p class="small regular">6</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="sequences">
-                                            <div class="number"><p class="small regular">7</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="deep-dive">
-                                            <div class="number"><p class="small regular">8</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="s&h-requirement">
-                                            <i class="fas fa-stop-circle"></i>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-tablink" data-tab="linux-fundamental">
-                                            <div class="number"><p class="small regular">9</p></div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                
-                                <!-- <div class="swiper-pagination swiper-pagination6"></div> -->
-                                
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-tabcontent swiper-active" id="java-install">
-                        <div class="title">
-                            <h4 class="medium"><i class="fas fa-stop-circle"></i> Java Installation Guide</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this section you will find necessary step by step installation guide required to set up tools and environment required for course.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i>Java and Eclipse Installation on Other Windows Machines</p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i>Java and Eclipse Installation on Windows 10</p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i>Java and Eclipse Installation on Ubuntu</p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Ubuntu Machine.</p>
-                            </div>
-                        </div>
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i>Java and Eclipse Installation on Mac</p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Mac Machine.</p>
-                            </div>
-                        </div>
-    
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="java-intro">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">1</span> Introduction to Java</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn about the Architecture of Java, the advantages of Java, and how to write a code with various data types, conditions, and loops.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Introduction to Java</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Introduction to Java</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="data-handle">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">2</span> Data Handling and Functions</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module you will be introduced to DevOps environment.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Data Handling and Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="oop-java">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">3</span> Object Oriented Programming in Java</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn object-oriented programming through Java using Classes, Objects and various Java concepts like Abstract, Final etc.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Data Handling and Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="package">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">4</span> Packages and Multi Threading</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn about packages in Java and scope specifiers of Java. You will also learn exception handling and how multi threading works in Java.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Access Modifiers</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Packages</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="collections">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">5</span> Collections</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Wrapper Classes</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - java.io</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="install-guide">
-                        <div class="title">
-                            <h4 class="medium"><i class="fas fa-stop-circle"></i> Installation Guide</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this section you will find necessary step by step installation guide required to set up tools and environment required for course.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i> Insta Guide for Windows/Linex </p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="python-intro">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">6</span> Introduction to Python</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Introduction to Python</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="sequences">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">7</span> Sequences and File Operations</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Sequences and File Operations</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="deep-dive">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">8</span> Deep Dive – Functions, OOPs, Modules, Errors and Exceptions</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Deep Dive</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="s&h-requirement">
-                        <div class="title">
-                            <h4 class="medium"><i class="fas fa-stop-circle"></i> Software and Hardware Requirements for Linux Fundamentals</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="medium">Software Requirements </p>
-                            <p class="small regular">In this course, we will use Ubuntu. You can refer the presentation in the next Module for installation of Ubuntu. </p>
-                            <p class="medium">Hardware Requirements</p>
-                            <p class="small regular">The Hardware Requirements necessary for this course are Windows / Mac / Linux PC, Minimum 2GB RAM, and 20 GB HDD Storage.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i> Centos Installation Guide </p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="linux-fundamental">
-                        <div class="title">
-                            <h4 class="medium"><span class="bold">9</span> Linux Fundamentals</h4>
-                        </div>
-                        
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Linux Overview</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tabcontent" id="tab-video">
-                    <div class="tab-title">
-                        <h4 class="medium"><i class="far fa-play-circle"></i> Video Lectures</h4>
-                    </div>
-                    <div class="block-text">
-                        <p class="regular" >
-                            This module contains class recordings from previous DevOps batches. You can utilize these recordings to better prepare for your Live Instructor-Led Online Class.
-                        </p>
-                    </div>
-                    <a href="/video-lecture">
-                        <div class="video-file">
-                            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
-                        </div>
-                    </a>
-                    <a href="/video-lecture">
-                        <div class="video-file">
-                            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
-                        </div>
-                    </a>
-                    <a href="/video-lecture">
-                        <div class="video-file">
-                            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
-                        </div>
-                    </a>
-                    <a href="/video-lecture">
-                        <div class="video-file">
-                            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
-                        </div>
-                    </a>
-                    <a href="/video-lecture">
-                        <div class="video-file">
-                            <p class="medium"><i class="far fa-play-circle"></i> Overview of DevOps</p>
-                        </div>
-                    </a>
-    
-                </div>
-    
-                <div class="tabcontent" id="course-content">
-                    <div class="tab-swiper">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink swiper-active" data-tab="access-cloud">
-                                        <i class="fas fa-stop-circle"></i>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="install-aws">
-                                        <div class="number"><p class="small regular">1</p></div>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="overview-devops">
-                                        <div class="number"><p class="small regular">2</p></div>
-                                    </div>
-                                    
-                                </div>
-    
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="vc-git">
-                                        <div class="number"><p class="small regular">2</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="git-jenkins">
-                                        <div class="number"><p class="small regular">3</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="inte-jenkins">
-                                        <div class="number"><p class="small regular">4</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="test-selenium">
-                                        <div class="number"><p class="small regular">5</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="continuous-deploy-docker">
-                                        <i class="fas fa-stop-circle"></i>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="contain-docker">
-                                        <div class="number"><p class="small regular">6</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="continuous-deploy-puppet">
-                                        <div class="number"><p class="small regular">7</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="configure-ansible">
-                                        <div class="number"><p class="small regular">8</p></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink " data-tab="contain-kubernates">
-                                        <i class="fas fa-stop-circle"></i>
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-tablink" data-tab="DevOps-Cloud">
-                                        <div class="number"><p class="small regular">9</p></div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                            <!-- <div class="swiper-pagination swiper-pagination6"></div> -->
-                            
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-tabcontent swiper-active" id="access-cloud">
-                        <div class="title">
-                            <h4 class="regular"><i class="fas fa-stop-circle"></i> Guide to Access Cloud LAB</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this section you will find necessary step by step installation guide required to set up tools and environment required for course.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-folder"></i> Java and Eclipse Installation on Other Windows Machines</p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                        
-                        
-    
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="install-aws">
-                        <div class="title">
-                            <h4 class="regular"><i class="fas fa-stop-circle"></i> Installation Guide For AWS Setup</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">This unit contains installation guide for AWS Setups of DevOps Tools</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Introduction to Java</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Introduction to Java</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="overview-devops">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">1</span> Overview of DevOps</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module you will be introduced to DevOps environment.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Data Handling and Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="vc-git">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">2</span> Version Control with Git</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn object-oriented programming through Java using Classes, Objects and various Java concepts like Abstract, Final etc.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Data Handling and Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Functions</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="git-jenkins">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">3</span> Git, Jenkins & Maven Integration</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn about packages in Java and scope specifiers of Java. You will also learn exception handling and how multi threading works in Java.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Access Modifiers</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Packages</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="inte-jenkins">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">4</span> Continuous Integration using Jenkins</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Wrapper Classes</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - java.io</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="test-selenium">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">5</span> Continuous Testing with Selenium</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this section you will find necessary step by step installation guide required to set up tools and environment required for course.</p>
-                        </div>
-    
-                        <div class="file">
-                            <i class="far fa-folder"></i>
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium">Insta Guide for Windows/Linex </p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="continuous-deploy-docker">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">6</span> Continuous Deployment- Containerization with Docker</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Introduction to Python</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="contain-docker">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">7</span> Containerization with Docker</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Sequences and File Operations</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="continuous-deploy-puppet">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">8</span> Continuous Deployment- Configuration Management with Puppet</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="small regular">In this module, you will learn how to write code with Wrapper Classes, Inner Classes, and Applet Programs. You will learn how to use io, lang, and util packages of Java and all about Collections.</p>
-                        </div>
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Deep Dive</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="configure-ansible">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">9</span> Configuration Management with Ansible </h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="medium">Software Requirements </p>
-                            <p class="small regular">In this course, we will use Ubuntu. You can refer the presentation in the next Module for installation of Ubuntu. </p>
-                            <p class="medium">Hardware Requirements</p>
-                            <p class="small regular">The Hardware Requirements necessary for this course are Windows / Mac / Linux PC, Minimum 2GB RAM, and 20 GB HDD Storage.</p>
-                        </div>
-    
-                        <div class="file">
-                            <i class="far fa-folder"></i>
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium">Centos Installation Guide </p>
-                                
-                                <p class="small regular">This step wise guide will help you Install Java and Eclipse on your Windows 7, Windows 8 and Windows XP machines.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="contain-kubernates">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">10</span> Containerization using Kubernetes</h4>
-                        </div>
-                        
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Linux Overview</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="swiper-tabcontent" id="DevOps-Cloud">
-                        <div class="title">
-                            <h4 class="regular"><span class="bold">11</span> DevOps on Cloud</h4>
-                        </div>
-                        
-    
-                        <div class="file">
-                            
-                            <div class="block-text">
-                                <p class="view">Not Viewed</p>
-                                <p class="medium"><i class="far fa-play-circle"></i> Video - Linux Overview</p>
-                                
-                                <p class="small regular">This Video introduces you to java, its Applications and it's features.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tabcontent" id="class-record">
-                    <div class="tab-title">
-                        <h4 class="medium"><i class="fas fa-video"></i> Class Recordings</h4>
-                    </div>
-                    
-                    <div class="video-file">
-                        <p class="medium"><i class="far fa-play-circle"></i> Class 9 Recording</p>
-                    </div>
-                    <div class="video-file">
-                        <p class="medium"><i class="far fa-play-circle"></i> Class 9 Recording</p>
-                    </div>
-                    <div class="video-file">
-                        <p class="medium"><i class="far fa-play-circle"></i> Class 9 Recording</p>
-                    </div>
-                    <div class="video-file">
-                        <p class="medium"><i class="far fa-play-circle"></i> Class 9 Recording</p>
-                    </div>
-                    <div class="video-file">
-                        <p class="medium"><i class="far fa-play-circle"></i> Class 9 Recording</p>
-                    </div>
-                </div>
-    
-                <div class="tabcontent" id="personal-library">
-                    <div class="tab-title">
-                        <h4 class="medium">Personal Library</h4>
-                        <div class="library">
-                            <i class="fas fa-folder-plus"></i>
-                            <i class="fas fa-link"></i>
-                            <i class="fas fa-upload"></i>
-                        </div>
-                    </div>
-                    <div class="give-info">
-                        <div class="user-name">
-                            <h4 class="medium">Hello Mostain</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="regular">This space is reserved for your study material. You can access to Edureka’s LMS and the files that you have upload for your reference.</p>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="/resources/img/networking.jpg" alt="">
-                    </div>
-                </div>
-    
-                <div class="tabcontent" id="my-lab">
-                    <div class="tab-title">
-                        <h4 class="medium">My Lab</h4>
-                        
-                    </div>
-                    <div class="give-info">
-                        <div class="user-name">
-                            <h4 class="medium">Hello Mostain</h4>
-                        </div>
-                        <div class="block-text">
-                            <p class="regular">We have set up labs for you so that you can practice all the assignments, case studies and projects mentioned under course content in your LMS.</p>
-                        </div>
-                    </div>
-                    <div class="devops-lab">
-                        <div class="col-1">
-                            <div class="title">
-                                <p class="medium">Your DevOps Lab is ready for use!</p>
-                                <p class="small regular">Please go through <a href="#">lab manual</a> to know how to use the lab</p>
-                            </div>
-                            <div class="btn">
-                                <button class="solid-border-btn"><p class="small medium">Go to DevOps Lab</p></button>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="lab-access">
-                                <p class="small regular">Your Lab Access</p>
-                                <h5 class="bold days">29 Days</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="support-ticket">
-                        <p class="small regular">In case of any issue, please raise a <a href="">Support ticket.</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column-right">
-            <div class="how-to">
-                <img src="/resources/svg/play-circle-filled.svg" alt="">
-                <p class="small medium">How to Use Master-Academy's LMS</p>
-            </div>
-    
-            <div class="upcoming-class">
-                <div class="title">
-                    <p class="small regular">Upcoming Classes</p>
-                </div>
-                <div class="classes">
-                    <div class="class-time">
-                        <div class="date">
-                            <i class="far fa-calendar-check"></i>
-                            <p class="medium">10 June</p>
-                        </div>
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            <p class="medium">9:00 PM BDT</p>
-                        </div>
-    
-                    </div>
-                    <div class="join">
-                        <p class="bold">Join Now</p>
-                    </div>
-                </div>
-                <div class="classes">
-                    <div class="class-time">
-                        <div class="date">
-                            <i class="far fa-calendar-check"></i>
-                            <p class="medium">11 June</p>
-                        </div>
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            <p class="medium">9:00 PM BDT</p>
-                        </div>
-    
-                    </div>
-                    
-                </div>
-            </div>
-
-
-
-            <div class="preview-certificate">
-                <div class="block-text">
-                    <p class="small regular">
-                        You earn an industry trusted course certificate once you complete the course
-                    </p>
-    
+            </a>
+            <div class="search-bar">
+                <div class="input">
+                    <input class="input-style-two" type="search" name="head-search" id="head-search">
                 </div>
                 <div class="btn">
+                    <button class="grad-bg-btn">
+                        <svg width="17" height="17" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.9796 3.08615C11.3034 3.08494 12.5977 3.47637 13.699 4.21093C14.8002 4.94548 15.6588 5.99016 16.1663 7.21279C16.6737 8.43543 16.8071 9.78109 16.5495 11.0795C16.292 12.378 15.6552 13.5709 14.7196 14.5074C13.784 15.4438 12.5917 16.0818 11.2934 16.3405C9.99522 16.5992 8.64944 16.467 7.42634 15.9607C6.20324 15.4544 5.15778 14.5967 4.42222 13.4961C3.68666 12.3956 3.29405 11.1016 3.29405 9.77782C3.30207 8.00661 4.00883 6.31014 5.2607 5.05712C6.51258 3.8041 8.2084 3.09579 9.9796 3.08615ZM9.9796 1.83337C8.40834 1.83337 6.87236 2.29931 5.56591 3.17225C4.25945 4.0452 3.24119 5.28595 2.63989 6.73761C2.0386 8.18927 1.88127 9.78663 2.18781 11.3277C2.49435 12.8688 3.25098 14.2843 4.36203 15.3954C5.47308 16.5064 6.88865 17.2631 8.42972 17.5696C9.97079 17.8762 11.5682 17.7188 13.0198 17.1175C14.4715 16.5162 15.7122 15.498 16.5852 14.1915C17.4581 12.8851 17.924 11.3491 17.924 9.77782C17.924 7.67082 17.087 5.65012 15.5972 4.16025C14.1073 2.67038 12.0866 1.83337 9.9796 1.83337Z" fill="#606060"/>
+                            <path d="M21.3892 20.3439L16.8854 15.8094L16.0176 16.6711L20.5215 21.2056C20.578 21.2625 20.6453 21.3078 20.7194 21.3388C20.7934 21.3698 20.8729 21.3859 20.9532 21.3862C21.0335 21.3865 21.1131 21.3709 21.1874 21.3405C21.2616 21.31 21.3292 21.2652 21.3862 21.2086C21.4432 21.152 21.4884 21.0848 21.5194 21.0107C21.5504 20.9366 21.5665 20.8572 21.5668 20.7769C21.5671 20.6966 21.5516 20.617 21.5211 20.5427C21.4906 20.4684 21.4458 20.4009 21.3892 20.3439Z" fill="#606060"/>
+                        </svg>
+                        <!-- <div class="bg-fill"></div> -->
+                        
+                    </button>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-course">
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn"><p class="medium" >Course <i class="fas fa-chevron-down"></i></p></a>
+                        <div class="animated-border"></div>
+                        <div class="dropdown-content" style="z-index: 10;">
+                            <div class="tri">
+                                <div class="mycourse">
+                                    <a href="#"><p class="regular small">My Courses</p></a>
+                                </div>
+                                <div class="allcourse">
+                                    <a href="#"><p class="regular small">All Courses</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <p class=" medium">Preview Certificate</p>
+                </div>
+                
+                <div class="nav-Certificate">
+                    <a href="#"><p class="medium">Certificate</p></a>
+                    <div class="animated-border"></div>
+                </div>
+                <div class="nav-blog">
+                    <a href="/blog"><p class="medium">Blog</p></a>
+                    <div class="animated-border"></div>
+                </div>
+                <div class="nav-notification">
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn">
+                            <i class="fas fa-bell"></i>
+                            <div class="notification-number"><p class="small regular">1</p></div>
+                        </a>
+                        <div class="dropdown-content">
+                            <div class="tri">
+                                <div class="wrap-content">
+                                    <div class="notification-header">
+                                        <p class="medium">Notification</p>
+                                        <p class="small regular" style="justify-self: flex-end;">You have <span class="">1</span> new notification</p>
+                                    </div>
+                                    <div class="notifications-wrap">
+                                        <div class="notifications">
+                                            <p class="small regular notification-title">
+                                                Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                            </p>
+                                            <p class="small regular receive-time">5 hours ago</p>
+                                        </div>
+                                        <div class="notifications">
+                                            <p class="small regular notification-title">
+                                                Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                            </p>
+                                            <p class="small regular receive-time">5 hours ago</p>
+                                        </div>
+                                        <div class="notifications">
+                                            <p class="small regular notification-title">
+                                                Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                            </p>
+                                            <p class="small regular receive-time">5 hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
+                    
+                </div>
+                <div class="nav-profile">
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn">
+                            <div class="user-name"><p class="medium">Mostain </p>
+                                <div class="img">
+                                    <img src="resources/img/user-img.webp" alt="">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-content">
+                            <div class="tri">
+                                <div class="profile">
+                                    <a href="#"><p class="regular small">My Profile</p></a>
+                                </div>
+                                <div class="orders">
+                                    <a href="#"><p class="regular small">My Orders</p></a>
+                                </div>
+                                <div class="activity">
+                                    <a href="#"><p class="regular small">Activity Stream</p></a>
+                                </div>
+                                <div class="wallet">
+                                    <a href="#"><p class="regular small">My Wallet</p></a>
+                                </div>
+                                <div class="wishlist">
+                                    <a href="#"><p class="regular small">My Wishlist</p></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+        </header>
+
+    {{end}}
+
+    {{block "subheader" .}}
+        <section class="subheader">
+            <div class="wrap">
+                <div class="col-1">
+                    <div class="page-link">
+                        <div class="goto-home">
+                            <a href=""><p class="regular">Home <i class="fas fa-chevron-right"></i></p></a>
+                            
+                        </div>
+            
+                        <div class="goto-course-catalog">
+                            <a href=""><p class="regular">My Courses <i class="fas fa-chevron-right"></i></p></a>
+                            
+                        </div>
+                        <div class="goto-mycourse">
+                            <a href="/"><p class="bold">DevOps Certification Training</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" style="justify-self: end;">
+                    <div class="forum">
+                        <a href="">
+                            <img src="/resources/svg/forum.svg" alt="">
+                            <p class="regular">Forum</p>
+                        </a>
+                    </div>
+                    <div class="support">
+                        <a href="">
+                            <img src="/resources/svg/support.svg" alt="">
+                            <p class="regular">Support</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{end}}
+
+
+    {{block "container" .}}
+        <div class="container">
+            <div class="course-title-wrap">
+                <div class="course-title">
+                    <div class="title">
+                        <img src="/resources/img/devops.png" alt="">
+                        <h4 class="bold">DevOps Certification Training</h4>
+                    </div>
+                    <div class="progression">
+                        <div class="progress">
+                            <div class="progress-bar">
+                                <div class="full-bar"></div>
+                                <div class="complete-bar"></div>
+                            </div>
+                            <div class="percentage">
+                                <p class="small regular">10%</p>
+                            </div>
+                        </div>
+    
+                        <div class="grade">
+                            
+                            <div class="hidden-content">
+                                <div class="text">
+                                    <p class="small regular"><i class="fas fa-long-arrow-alt-down" style="color: rgb(196, 57, 57);"></i> You have not attempted the quiz</p>
+                                </div>
+                                <div class="text">
+                                    <p class="small regular"><i class="fas fa-long-arrow-alt-up" style="color: #1BB899;"></i> Attempt Quiz to catch up</p>
+                                </div>
+                                <div class="grade-system">
+                                    <div class="grading">
+                                        <div class="grade-rank">
+                                            <p class="small regular">A</p>
+                                        </div>
+                                        <div class="grade-number">
+                                            <p class="small regular">90-100</p>
+                                        </div>
+                                    </div>
+                                    <div class="grading">
+                                        <div class="grade-rank">
+                                            <p class="small regular">B</p>
+                                        </div>
+                                        <div class="grade-number">
+                                            <p class="small regular">70-89</p>
+                                        </div>
+                                    </div>
+                                    <div class="grading">
+                                        <div class="grade-rank">
+                                            <p class="small regular">C</p>
+                                        </div>
+                                        <div class="grade-number">
+                                            <p class="small regular"> <i class="fas fa-chevron-left"></i> 70 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visible-content">
+                                <div class="block-text">
+                                    <p class="small regular">Your Current Grade</p>
+                                    <p class="small bold">Missed actions in LMS</p>
+                                </div>
+                                <div class="grade-rank">
+                                    <h2 class="bold">A</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="grid-content">
+                <div class="column-left">
+                    <div class="tab-head">
+                        <div class="tab">
+                            {{block "tablink" .}}
+                            <a href="/certification-training">
+                                <h5 class="medium tablink active" data-tab="get-start"><i class="fas fa-power-off"></i> Getting Started</h5>
+                            </a>
+                            <a href="/pre-requisites">
+                                <h5 class="medium tablink" data-tab="pre-requisites"><i class="fas fa-bars"></i> Pre-requisites</h5>
+                            </a>
+                            <a href="/lecture">
+                                <h5 class="medium tablink" data-tab="tab-video"><i class="far fa-play-circle"></i> Video Lecture</h5>
+                            </a>
+                            <a href="/course-content">
+                                <h5 class="medium tablink" data-tab="course-content"><i class="far fa-list-alt"></i> Course Content</h5>
+                            </a>
+                            <a href="/class-record">
+                                <h5 class="medium tablink" data-tab="class-record"><i class="fas fa-video"></i> Class Recording</h5>
+                            </a>
+                            <a href="/personal-library">
+                                <h5 class="medium tablink" data-tab="personal-library"><i class="fas fa-book"></i> Personal Library</h5>
+                            </a>
+                            <a href="/my-lab">
+                                <h5 class="medium tablink" data-tab="my-lab"><i class="fas fa-desktop"></i> My Lab</h5>
+                            </a>
+
+                            <div class="responsive-tablink">
+                                <div class="swiper-container tab-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/certification-training">
+                                                <h5 class="medium tablink active" data-tab="get-start"><i class="fas fa-power-off"></i> Getting Started</h5>
+                                            </a>
+                                        </div>
+        
+                                        <div class="swiper-slide">
+                                            <a href="/pre-requisites">
+                                                <h5 class="medium tablink" data-tab="pre-requisites"><i class="fas fa-bars"></i> Pre-requisites</h5>
+                                            </a>
+                                        </div>
+        
+                                        <div class="swiper-slide">
+                                            <a href="/lecture">
+                                                <h5 class="medium tablink" data-tab="tab-video"><i class="far fa-play-circle"></i> Video Lecture</h5>
+                                            </a>
+                                        </div>
+        
+                                        <div class="swiper-slide">
+                                            <a href="/course-content">
+                                                <h5 class="medium tablink" data-tab="course-content"><i class="far fa-list-alt"></i> Course Content</h5>
+                                            </a>
+                                        </div>
+        
+                                        <div class="swiper-slide">
+                                            <a href="/class-record">
+                                                <h5 class="medium tablink" data-tab="class-record"><i class="fas fa-video"></i> Class Recording</h5>
+                                            </a>
+                                        </div>
+        
+                                        <div class="swiper-slide">
+                                            <a href="/personal-library">
+                                                <h5 class="medium tablink" data-tab="personal-library"><i class="fas fa-book"></i> Personal Library</h5>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/my-lab">
+                                                <h5 class="medium tablink" data-tab="my-lab"><i class="fas fa-desktop"></i> My Lab</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{end}}
+        
+                        </div>
+                    </div>
+                    
+                    <div class="tabcontent-wrap">
+                        {{block "tabcontent" .}}
+                        <div class="tabcontent active" id="get-start">
+                            <div class="tab-title">
+                                <h4 class="medium"><i class="fas fa-power-off"></i> Getting Started</h4>
+                            </div>
+                            <div class="title">
+                                <h1 class="bold">Let's Begin to Learn!</h1>
+                            </div>
+                            <div class="welcome-user">
+                                <h4 class="medium">Welcome Mostain</h4>
+            
+                                <p class="regular">Before embarking on your learning journey with edureka, let us walk you through few important features of our LMS, which will guide you towards the optimum path of course completion.</p>
+                            </div>
+            
+                            <div class="block-text">
+                                <p class="medium"><i class="far fa-square"></i>Curriculum Tracker</p>
+                                <p class="small regular">This can be seen on My Classroom page against the course card, and is highlighted in the Course Content tab that you see in your LMS. All your important events - Assignments, Case Studies, Quiz and Project submission deadlines will be notified here.</p>
+                            </div>
+                            <div class="block-text">
+                                <p class="medium"><i class="far fa-square"></i>Grade</p>
+                                <p class="small regular">Your grade is calculated basis timely submissions of Assignments, Case Studies, Quizzes and Project. Make sure you do not miss out on any!</p>
+                            </div>
+                            <div class="block-text">
+                                <p class="medium"><i class="far fa-square"></i>Class Schedule</p>
+                                <p class="small regular">Keep a track of all the classes, along with your feedbacks!</p>
+                            </div>
+                            <div class="block-text">
+                                <p class="medium"><i class="far fa-square"></i>Connect to Learning Manager</p>
+                                <p class="small regular">Besides technical queries, if you need any assistance from our learning managers, then do remember, we are just a click away!</p>
+                            </div>
+                        </div>
+                        {{end}}
+                        
+                        
+                    </div>
+                </div>
+                <div class="column-right">
+                    <div class="how-to">
+                        <img src="/resources/svg/play-circle-filled.svg" alt="">
+                        <p class="small medium">How to Use Master-Academy's LMS</p>
+                    </div>
+            
+                    <div class="upcoming-class">
+                        <div class="title">
+                            <p class="small regular">Upcoming Classes</p>
+                        </div>
+                        <div class="classes">
+                            <div class="class-time">
+                                <div class="date">
+                                    <i class="far fa-calendar-check"></i>
+                                    <p class="medium">10 June</p>
+                                </div>
+                                <div class="time">
+                                    <i class="far fa-clock"></i>
+                                    <p class="medium">9:00 PM BDT</p>
+                                </div>
+            
+                            </div>
+                            <div class="join">
+                                <p class="bold">Join Now</p>
+                            </div>
+                        </div>
+                        <div class="classes">
+                            <div class="class-time">
+                                <div class="date">
+                                    <i class="far fa-calendar-check"></i>
+                                    <p class="medium">11 June</p>
+                                </div>
+                                <div class="time">
+                                    <i class="far fa-clock"></i>
+                                    <p class="medium">9:00 PM BDT</p>
+                                </div>
+            
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+
+                    <div class="preview-certificate">
+                        <div class="block-text">
+                            <p class="small regular">
+                                You earn an industry trusted course certificate once you complete the course
+                            </p>
+            
+                        </div>
+                        <div class="btn">
+                            
+                            <p class=" medium">Preview Certificate</p>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-{{end}}
+    {{end}}
 
+    {{block "footer" .}}
+        <footer>
+            <div class="upper-part">
+                
+
+                <div class="pages-part">
+                    <div class="service">
+                        <div class="title">
+                            <p class="bold">Service</p>
+                        </div>
+                        <div class="pages">
+                            <p class="small medium">About</p>
+                            <p class="small medium">Leadership</p>
+                            <p class="small medium">Career</p>
+                            <p class="small medium">Catalog</p>
+                            <p class="small medium">Certificate</p>
+                            <p class="small medium">For Student</p>
+                            <p class="small medium">For Enterprise</p>
+                        </div>
+                    </div>
+                    <div class="community">
+                        <div class="title">
+                            <p class="bold">Community</p>
+                        </div>
+                        <div class="pages">
+                            <p class="small medium">Learner</p>
+                            <p class="small medium">Partner</p>
+                            <p class="small medium">Developer</p>
+                            <p class="small medium">Blog</p>
+                            <p class="small medium">Beta Tester</p>
+                            
+                        </div>
+                    </div>
+                    <div class="more">
+                        <div class="title">
+                            <p class="bold">More</p>
+                        </div>
+                        <div class="pages">
+                            <p class="small medium">Terms</p>
+                            <p class="small medium">Privacy</p>
+                            <p class="small medium">Help</p>
+                            <p class="small medium">Contact</p>
+                            
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="join-part">
+                    
+                    <div class="text-content">
+                        <p class="bold">Join us to become a Master</p>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td><p class="medium">Contacts</p></td>
+                            <td><p class="medium">:</p></td>
+                            <td><p class="regular">0006669911</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="medium">Address</p></td>
+                            <td><p class="medium">:</p></td>
+                            <td><p class="regular">MATEORS DOT COM</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="medium">Email</p></td>
+                            <td><p class="medium">:</p></td>
+                            <td><p class="regular">admin@gmail.com</p></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="lower-part">
+                <div class="rights">
+                    <p class="small regular">Master-Academy © 2021 All Rights  Reserved. </p>
+                </div>
+                
+                <div class="logos">
+                    <img src="./resources/svg/logos_facebook.svg" alt="" class="facebook">
+                    <img src="./resources/svg/logos_youtube-icon.svg" alt="" class="youtube">
+                    <img src="./resources/svg/logos_whatsapp.svg" alt="" class="whatsapp">
+                    <img src="./resources/svg/logos-ui_google.svg" alt="" class="googleplay">
+                </div>
+            </div>
+        </footer>
+    {{end}}
+</body>
 {{block "script" .}}
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
@@ -1205,6 +679,53 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+          270: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          450: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+          650: {
+            slidesPerView: 7,
+            spaceBetween: 30,
+          },
+        },
+    });
+
+    var swiper = new Swiper('.tab-swiper', {
+        slidesPerView: 3,
+        
+        slidesPerGroup: 1,
+        loop: false,
+        loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          270: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          450: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          650: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
     });
 </script>
 {{end}}
+</html>

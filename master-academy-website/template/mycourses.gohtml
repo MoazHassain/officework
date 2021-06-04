@@ -48,16 +48,16 @@
 </style>
 <body>
     {{block "header" .}}
-        <header>
-            <div class="responsive-nav">
-                <div class="responsive-navbtn">
+        <header class="dash-header">
+            <div class="dash-responsive-nav">
+                <div class="dash-responsive-navbtn">
                     <div class="btn">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50033 5C2.27931 5 2.06735 5.0878 1.91107 5.24408C1.75479 5.40036 1.66699 5.61232 1.66699 5.83333C1.66699 6.05435 1.75479 6.26631 1.91107 6.42259C2.06735 6.57887 2.27931 6.66667 2.50033 6.66667H22.5003C22.7213 6.66667 22.9333 6.57887 23.0896 6.42259C23.2459 6.26631 23.3337 6.05435 23.3337 5.83333C23.3337 5.61232 23.2459 5.40036 23.0896 5.24408C22.9333 5.0878 22.7213 5 22.5003 5H2.50033ZM1.66699 12.5C1.66699 12.279 1.75479 12.067 1.91107 11.9107C2.06735 11.7545 2.27931 11.6667 2.50033 11.6667H22.5003C22.7213 11.6667 22.9333 11.7545 23.0896 11.9107C23.2459 12.067 23.3337 12.279 23.3337 12.5C23.3337 12.721 23.2459 12.933 23.0896 13.0893C22.9333 13.2455 22.7213 13.3333 22.5003 13.3333H2.50033C2.27931 13.3333 2.06735 13.2455 1.91107 13.0893C1.75479 12.933 1.66699 12.721 1.66699 12.5ZM1.66699 19.1667C1.66699 18.9457 1.75479 18.7337 1.91107 18.5774C2.06735 18.4211 2.27931 18.3333 2.50033 18.3333H22.5003C22.7213 18.3333 22.9333 18.4211 23.0896 18.5774C23.2459 18.7337 23.3337 18.9457 23.3337 19.1667C23.3337 19.3877 23.2459 19.5996 23.0896 19.7559C22.9333 19.9122 22.7213 20 22.5003 20H2.50033C2.27931 20 2.06735 19.9122 1.91107 19.7559C1.75479 19.5996 1.66699 19.3877 1.66699 19.1667Z" fill="white"/>
                         </svg>
                     </div>
                 </div>
-                <div class="responsive-content">
+                <div class="dash-responsive-content">
                     <div class="dropdown-content">
                         <div class="tri">
                             <div class="profile">
@@ -83,7 +83,26 @@
             <a href="/">
                 <div class="logo">
                     <div class="logo-img">
-                        <img src="./resources/img/master-logo2.png" alt="">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="45" height="45" viewBox="0 0 400.000000 400.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)"
+                            fill="#262626" stroke="none">
+                            <path d="M1878 3984 c-130 -31 -109 -12 -975 -877 -872 -871 -856 -853 -888
+                            -988 -19 -81 -19 -157 0 -238 31 -130 44 -145 515 -616 l440 -440 0 242 c0
+                            136 -4 253 -10 268 -12 32 -62 54 -110 48 -57 -8 -62 5 -58 166 2 114 6 143
+                            20 157 28 29 163 35 733 32 494 -2 553 0 581 15 53 28 55 42 52 410 l-3 337
+                            -27 27 c-23 23 -37 28 -81 28 -29 1 -58 4 -65 9 -8 5 -12 48 -12 147 0 134 1
+                            141 24 163 34 35 113 39 740 35 l546 -4 -502 502 c-393 393 -515 509 -559 533
+                            -107 56 -242 73 -361 44z"/>
+                            <path d="M2605 2542 c-23 -11 -46 -31 -53 -46 -9 -20 -12 -159 -12 -556 l0
+                            -530 -25 -16 c-22 -14 -80 -16 -557 -13 -477 3 -536 1 -564 -13 -56 -30 -56
+                            -34 -55 -493 l2 -420 182 -182 c196 -197 242 -230 358 -258 122 -28 250 -12
+                            358 45 83 44 1667 1630 1705 1707 54 109 68 234 41 352 -26 108 -64 166 -205
+                            306 l-130 130 -503 3 c-472 2 -504 1 -542 -16z"/>
+                            </g>
+                        </svg>
                     </div>
                     <div class="logo-text">
                         <h3 class="black">MASTER-ACADEMY</h3>
@@ -123,15 +142,12 @@
                     </div>
                     
                 </div>
-                <!-- <div class="nav-Project">
-                    <a href="#"><p class="medium">Project</p></a>
-                    <div class="animated-border"></div>
-                </div> -->
+                
                 <div class="nav-Certificate">
                     <a href="#"><p class="medium">Certificate</p></a>
                     <div class="animated-border"></div>
                 </div>
-                <div class="nav-Blog">
+                <div class="nav-blog">
                     <a href="/blog"><p class="medium">Blog</p></a>
                     <div class="animated-border"></div>
                 </div>
@@ -233,7 +249,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2" style="justify-self: end;">
+            <div class="col-2" >
                 <div class="forum">
                     <a href="">
                         <img src="/resources/svg/forum.svg" alt="">
@@ -828,9 +844,7 @@
                 <div class="rights">
                     <p class="small regular">Master-Academy © 2021 All Rights  Reserved. </p>
                 </div>
-                <div class="terms-privacy">
-                    <p class="small regular">Terms of Service  |  Privacy Policy</p>
-                </div>
+                
                 <div class="logos">
                     <img src="./resources/svg/logos_facebook.svg" alt="" class="facebook">
                     <img src="./resources/svg/logos_youtube-icon.svg" alt="" class="youtube">
@@ -897,6 +911,20 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          270: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          450: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          800: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
         },
     });
 
