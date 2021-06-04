@@ -144,8 +144,10 @@
                                 }
                                 i.fas.fa-circle
                                 {
+
                                     font-size: 12px;
                                     color: $primarySolidClr;
+                                    z-index: 15;
                                 }
                                 .line 
                                 {
@@ -175,6 +177,15 @@
                             &:hover i
                             {
                                 color: $secondarySolidClr;
+                            }
+                            .active-video
+                            {
+                                .line, i, p, i.fas.fa-circle
+                                {
+                                    color: $secondarySolidClr !important;
+                                } 
+
+
                             }
                         }
                     
@@ -421,7 +432,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 250px;
+                width: 300px;
                 background-color: $primaryWhiteClr;
                 box-shadow: 2px 0 4px 1000px rgba($color: #000000, $alpha: 0.3) ;
                 

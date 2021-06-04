@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li class="lecture-title tablink">
-                <a href="/lecture-two">
+                <a href="/lecture-two" class="active-video">
                     <span class="line"></span>
                     <i class="fas fa-circle"></i>
                     <p class="regular hidden-part"> <i class="far fa-play-circle"></i> 2. Overview of DevOps</p>
@@ -110,25 +110,43 @@
 {{end}}
 
 {{block "video" .}}
-<div class="tabcontent" id="library">
+<div class="tabcontent " id="video-2">
     <div class="content-title">
-        <h5 class="medium">Personal Library</h5>
-        <div class="library">
-            <i class="fas fa-folder-plus"></i>
-            <i class="fas fa-link"></i>
-            <i class="fas fa-upload"></i>
+        <div class="title">
+            <h5 class="regular self-pace">Self-paced Videos <i class="fas fa-angle-right"></i></h5>
+            <h5 class="regular">1. Overview of DevOps</h5>
+        </div>
+        <div class="icons">
+            <a href="">
+                <div class="forum-icon">
+                    <img src="/resources/svg/forum-black.svg" alt="">
+                </div>
+            </a>
+            <a href="">
+                <div class="support-icon">
+                    <img src="/resources/svg/support-black.svg" alt="">
+                        
+                </div>
+            </a>
+            <a href="">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="">
+                <i class="far fa-clipboard"></i>
+            </a>
         </div>
     </div>
-    <div class="give-info">
-        <div class="user-name">
-            <h4 class="medium">Hello Mostain</h4>
+
+    <div class="content-video">
+        <div class="video">
+            <!-- <video src=""></video> -->
+            <img src="/resources/img/video.png" alt="">
         </div>
-        <div class="block-text">
-            <p class="small regular">This space is reserved for your study material. You can access to Edureka’s LMS and the files that you have upload for your reference.</p>
+        <div class="raise-query" >
+            <p class="small medium"><i class="far fa-comment-alt"></i> Have a Question? Raise a Query</p>
         </div>
     </div>
-    <div class="img">
-        <img src="/resources/img/networking.jpg" alt="">
-    </div>
+
+    
 </div>
 {{end}}

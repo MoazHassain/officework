@@ -1784,6 +1784,7 @@ footer .lower-part .logos img {
 .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a i.fas.fa-circle {
   font-size: 12px;
   color: #1BB899;
+  z-index: 15;
 }
 
 .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title a .line {
@@ -1815,6 +1816,10 @@ footer .lower-part .logos img {
 .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title:hover i.fas.fa-circle,
 .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title:hover i {
   color: #12856e;
+}
+
+.container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title .active-video .line, .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title .active-video i, .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title .active-video p, .container .grid-content .side-nav .collapsible-wrap .collapsible-content .lecture-title .active-video i.fas.fa-circle {
+  color: #12856e !important;
 }
 
 .container .grid-content .side-nav .library {
@@ -2006,7 +2011,7 @@ footer .lower-part .logos img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 300px;
     background-color: #ffffff;
     -webkit-box-shadow: 2px 0 4px 1000px rgba(0, 0, 0, 0.3);
             box-shadow: 2px 0 4px 1000px rgba(0, 0, 0, 0.3);

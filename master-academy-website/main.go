@@ -23,7 +23,7 @@ func main() {
 	http.HandleFunc("/personal-library", library)
 	http.HandleFunc("/my-lab", lab)
 	http.HandleFunc("/lecture-library", lectureLibrary)
-	http.HandleFunc("/lecture-02", lectureVideoes)
+	http.HandleFunc("/lecture-two", lectureVideoes)
 
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("./assets"))))
 	http.ListenAndServe(":8888", nil)
@@ -282,7 +282,7 @@ func lectureVideoes(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 
-	ptmp, err = ptmp.ParseFiles("wpage/lecture-2.gohtml")
+	ptmp, err = ptmp.ParseFiles("wpage/lectures.gohtml")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
