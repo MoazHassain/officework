@@ -48,61 +48,11 @@
 </style>
 <body>
     {{block "header" .}}
-        <header class="dash-header">
-            <div class="dash-responsive-nav">
-                <div class="dash-responsive-navbtn">
-                    <div class="btn">
-                        <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.50033 5C2.27931 5 2.06735 5.0878 1.91107 5.24408C1.75479 5.40036 1.66699 5.61232 1.66699 5.83333C1.66699 6.05435 1.75479 6.26631 1.91107 6.42259C2.06735 6.57887 2.27931 6.66667 2.50033 6.66667H22.5003C22.7213 6.66667 22.9333 6.57887 23.0896 6.42259C23.2459 6.26631 23.3337 6.05435 23.3337 5.83333C23.3337 5.61232 23.2459 5.40036 23.0896 5.24408C22.9333 5.0878 22.7213 5 22.5003 5H2.50033ZM1.66699 12.5C1.66699 12.279 1.75479 12.067 1.91107 11.9107C2.06735 11.7545 2.27931 11.6667 2.50033 11.6667H22.5003C22.7213 11.6667 22.9333 11.7545 23.0896 11.9107C23.2459 12.067 23.3337 12.279 23.3337 12.5C23.3337 12.721 23.2459 12.933 23.0896 13.0893C22.9333 13.2455 22.7213 13.3333 22.5003 13.3333H2.50033C2.27931 13.3333 2.06735 13.2455 1.91107 13.0893C1.75479 12.933 1.66699 12.721 1.66699 12.5ZM1.66699 19.1667C1.66699 18.9457 1.75479 18.7337 1.91107 18.5774C2.06735 18.4211 2.27931 18.3333 2.50033 18.3333H22.5003C22.7213 18.3333 22.9333 18.4211 23.0896 18.5774C23.2459 18.7337 23.3337 18.9457 23.3337 19.1667C23.3337 19.3877 23.2459 19.5996 23.0896 19.7559C22.9333 19.9122 22.7213 20 22.5003 20H2.50033C2.27931 20 2.06735 19.9122 1.91107 19.7559C1.75479 19.5996 1.66699 19.3877 1.66699 19.1667Z" fill="white"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="dash-responsive-content">
-                    <div class="dropdown-content">
-                        <div class="tri">
-                            <div class="profile">
-                                <a href="#"><p class="regular small">My Profile</p></a>
-                            </div>
-                            <div class="orders">
-                                <a href="#"><p class="regular small">My Orders</p></a>
-                            </div>
-                            <div class="activity">
-                                <a href="#"><p class="regular small">Activity Stream</p></a>
-                            </div>
-                            <div class="wallet">
-                                <a href="#"><p class="regular small">My Wallet</p></a>
-                            </div>
-                            <div class="wishlist">
-                                <a href="#"><p class="regular small">My Wishlist</p></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+        <header>
             <a href="/">
                 <div class="logo">
                     <div class="logo-img">
-                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                            width="45" height="45" viewBox="0 0 400.000000 400.000000"
-                            preserveAspectRatio="xMidYMid meet">
-
-                            <g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)"
-                            fill="#262626" stroke="none">
-                            <path d="M1878 3984 c-130 -31 -109 -12 -975 -877 -872 -871 -856 -853 -888
-                            -988 -19 -81 -19 -157 0 -238 31 -130 44 -145 515 -616 l440 -440 0 242 c0
-                            136 -4 253 -10 268 -12 32 -62 54 -110 48 -57 -8 -62 5 -58 166 2 114 6 143
-                            20 157 28 29 163 35 733 32 494 -2 553 0 581 15 53 28 55 42 52 410 l-3 337
-                            -27 27 c-23 23 -37 28 -81 28 -29 1 -58 4 -65 9 -8 5 -12 48 -12 147 0 134 1
-                            141 24 163 34 35 113 39 740 35 l546 -4 -502 502 c-393 393 -515 509 -559 533
-                            -107 56 -242 73 -361 44z"/>
-                            <path d="M2605 2542 c-23 -11 -46 -31 -53 -46 -9 -20 -12 -159 -12 -556 l0
-                            -530 -25 -16 c-22 -14 -80 -16 -557 -13 -477 3 -536 1 -564 -13 -56 -30 -56
-                            -34 -55 -493 l2 -420 182 -182 c196 -197 242 -230 358 -258 122 -28 250 -12
-                            358 45 83 44 1667 1630 1705 1707 54 109 68 234 41 352 -26 108 -64 166 -205
-                            306 l-130 130 -503 3 c-472 2 -504 1 -542 -16z"/>
-                            </g>
-                        </svg>
+                        <img src="./resources/img/master-logo2.png" alt="">
                     </div>
                     <div class="logo-text">
                         <h3 class="black">MASTER-ACADEMY</h3>
@@ -114,10 +64,10 @@
                     <input class="input-style-two" type="search" name="head-search" id="head-search">
                 </div>
                 <div class="btn">
-                    <button class="grad-bg-btn">
-                        <svg width="17" height="17" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.9796 3.08615C11.3034 3.08494 12.5977 3.47637 13.699 4.21093C14.8002 4.94548 15.6588 5.99016 16.1663 7.21279C16.6737 8.43543 16.8071 9.78109 16.5495 11.0795C16.292 12.378 15.6552 13.5709 14.7196 14.5074C13.784 15.4438 12.5917 16.0818 11.2934 16.3405C9.99522 16.5992 8.64944 16.467 7.42634 15.9607C6.20324 15.4544 5.15778 14.5967 4.42222 13.4961C3.68666 12.3956 3.29405 11.1016 3.29405 9.77782C3.30207 8.00661 4.00883 6.31014 5.2607 5.05712C6.51258 3.8041 8.2084 3.09579 9.9796 3.08615ZM9.9796 1.83337C8.40834 1.83337 6.87236 2.29931 5.56591 3.17225C4.25945 4.0452 3.24119 5.28595 2.63989 6.73761C2.0386 8.18927 1.88127 9.78663 2.18781 11.3277C2.49435 12.8688 3.25098 14.2843 4.36203 15.3954C5.47308 16.5064 6.88865 17.2631 8.42972 17.5696C9.97079 17.8762 11.5682 17.7188 13.0198 17.1175C14.4715 16.5162 15.7122 15.498 16.5852 14.1915C17.4581 12.8851 17.924 11.3491 17.924 9.77782C17.924 7.67082 17.087 5.65012 15.5972 4.16025C14.1073 2.67038 12.0866 1.83337 9.9796 1.83337Z" fill="#606060"/>
-                            <path d="M21.3892 20.3439L16.8854 15.8094L16.0176 16.6711L20.5215 21.2056C20.578 21.2625 20.6453 21.3078 20.7194 21.3388C20.7934 21.3698 20.8729 21.3859 20.9532 21.3862C21.0335 21.3865 21.1131 21.3709 21.1874 21.3405C21.2616 21.31 21.3292 21.2652 21.3862 21.2086C21.4432 21.152 21.4884 21.0848 21.5194 21.0107C21.5504 20.9366 21.5665 20.8572 21.5668 20.7769C21.5671 20.6966 21.5516 20.617 21.5211 20.5427C21.4906 20.4684 21.4458 20.4009 21.3892 20.3439Z" fill="#606060"/>
+                    <button class="solid-bg-btn">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.9796 3.08615C11.3034 3.08494 12.5977 3.47637 13.699 4.21093C14.8002 4.94548 15.6588 5.99016 16.1663 7.21279C16.6737 8.43543 16.8071 9.78109 16.5495 11.0795C16.292 12.378 15.6552 13.5709 14.7196 14.5074C13.784 15.4438 12.5917 16.0818 11.2934 16.3405C9.99522 16.5992 8.64944 16.467 7.42634 15.9607C6.20324 15.4544 5.15778 14.5967 4.42222 13.4961C3.68666 12.3956 3.29405 11.1016 3.29405 9.77782C3.30207 8.00661 4.00883 6.31014 5.2607 5.05712C6.51258 3.8041 8.2084 3.09579 9.9796 3.08615ZM9.9796 1.83337C8.40834 1.83337 6.87236 2.29931 5.56591 3.17225C4.25945 4.0452 3.24119 5.28595 2.63989 6.73761C2.0386 8.18927 1.88127 9.78663 2.18781 11.3277C2.49435 12.8688 3.25098 14.2843 4.36203 15.3954C5.47308 16.5064 6.88865 17.2631 8.42972 17.5696C9.97079 17.8762 11.5682 17.7188 13.0198 17.1175C14.4715 16.5162 15.7122 15.498 16.5852 14.1915C17.4581 12.8851 17.924 11.3491 17.924 9.77782C17.924 7.67082 17.087 5.65012 15.5972 4.16025C14.1073 2.67038 12.0866 1.83337 9.9796 1.83337Z" fill="white"/>
+                            <path d="M21.3892 20.3439L16.8854 15.8094L16.0176 16.6711L20.5215 21.2056C20.578 21.2625 20.6453 21.3078 20.7194 21.3388C20.7934 21.3698 20.8729 21.3859 20.9532 21.3862C21.0335 21.3865 21.1131 21.3709 21.1874 21.3405C21.2616 21.31 21.3292 21.2652 21.3862 21.2086C21.4432 21.152 21.4884 21.0848 21.5194 21.0107C21.5504 20.9366 21.5665 20.8572 21.5668 20.7769C21.5671 20.6966 21.5516 20.617 21.5211 20.5427C21.4906 20.4684 21.4458 20.4009 21.3892 20.3439Z" fill="white"/>
                         </svg>
                         <!-- <div class="bg-fill"></div> -->
                         
@@ -130,24 +80,25 @@
                         <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn"><p class="medium" >Course <i class="fas fa-chevron-down"></i></p></a>
                         <div class="animated-border"></div>
                         <div class="dropdown-content" style="z-index: 10;">
-                            <div class="tri">
-                                <div class="mycourse">
-                                    <a href="#"><p class="regular small">My Courses</p></a>
-                                </div>
-                                <div class="allcourse">
-                                    <a href="#"><p class="regular small">All Courses</p></a>
-                                </div>
+                            <div class="mycourse">
+                                <a href="#"><p class="regular small">My Courses</p></a>
+                            </div>
+                            <div class="allcourse">
+                                <a href="#"><p class="regular small">All Courses</p></a>
                             </div>
                         </div>
                     </div>
                     
                 </div>
-                
+                <!-- <div class="nav-Project">
+                    <a href="#"><p class="medium">Project</p></a>
+                    <div class="animated-border"></div>
+                </div> -->
                 <div class="nav-Certificate">
                     <a href="#"><p class="medium">Certificate</p></a>
                     <div class="animated-border"></div>
                 </div>
-                <div class="nav-blog">
+                <div class="nav-Blog">
                     <a href="/blog"><p class="medium">Blog</p></a>
                     <div class="animated-border"></div>
                 </div>
@@ -158,32 +109,28 @@
                             <div class="notification-number"><p class="small regular">1</p></div>
                         </a>
                         <div class="dropdown-content">
-                            <div class="tri">
-                                <div class="wrap-content">
-                                    <div class="notification-header">
-                                        <p class="medium">Notification</p>
-                                        <p class="small regular" style="justify-self: flex-end;">You have <span class="">1</span> new notification</p>
-                                    </div>
-                                    <div class="notifications-wrap">
-                                        <div class="notifications">
-                                            <p class="small regular notification-title">
-                                                Recorded session video of your class for course DevOps Certification Training is available for viewing.
-                                            </p>
-                                            <p class="small regular receive-time">5 hours ago</p>
-                                        </div>
-                                        <div class="notifications">
-                                            <p class="small regular notification-title">
-                                                Recorded session video of your class for course DevOps Certification Training is available for viewing.
-                                            </p>
-                                            <p class="small regular receive-time">5 hours ago</p>
-                                        </div>
-                                        <div class="notifications">
-                                            <p class="small regular notification-title">
-                                                Recorded session video of your class for course DevOps Certification Training is available for viewing.
-                                            </p>
-                                            <p class="small regular receive-time">5 hours ago</p>
-                                        </div>
-                                    </div>
+                            <div class="notification-header">
+                                <p class="medium">Notification</p>
+                                <p class="small regular" style="justify-self: flex-end;">You have <span class="">1</span> new notification</p>
+                            </div>
+                            <div class="notifications-wrap">
+                                <div class="notifications">
+                                    <p class="small regular notification-title">
+                                        Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                    </p>
+                                    <p class="small regular receive-time">5 hours ago</p>
+                                </div>
+                                <div class="notifications">
+                                    <p class="small regular notification-title">
+                                        Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                    </p>
+                                    <p class="small regular receive-time">5 hours ago</p>
+                                </div>
+                                <div class="notifications">
+                                    <p class="small regular notification-title">
+                                        Recorded session video of your class for course DevOps Certification Training is available for viewing.
+                                    </p>
+                                    <p class="small regular receive-time">5 hours ago</p>
                                 </div>
                             </div>
                         </div>
@@ -194,33 +141,27 @@
                 <div class="nav-profile">
                     <div class="dropdown">
                         <a href="javascript:void(0)" onclick="showNav(this)" class="dropbtn">
-                            <div class="user-name"><p class="medium">Mostain </p>
-                                <div class="img">
-                                    <img src="resources/img/user-img.webp" alt="">
-                                    <i class="fas fa-user-circle"></i>
-                                </div>
+                            <p class="medium user-name">Mostain</p>
+                            <div class="img">
+                                <img src="resources/img/user-img.webp" alt="">
+                                <i class="fas fa-user-circle"></i>
                             </div>
                         </a>
                         <div class="dropdown-content">
-                            <div class="tri">
-                                <div class="profile">
-                                    <a href="#"><p class="regular small">My Profile</p></a>
-                                </div>
-                                <div class="orders">
-                                    <a href="#"><p class="regular small">My Orders</p></a>
-                                </div>
-                                <div class="activity">
-                                    <a href="#"><p class="regular small">Activity Stream</p></a>
-                                </div>
-                                <div class="wallet">
-                                    <a href="#"><p class="regular small">My Wallet</p></a>
-                                </div>
-                                <div class="wishlist">
-                                    <a href="#"><p class="regular small">My Wishlist</p></a>
-                                </div>
-                                <div class="log-out">
-                                    <a href="#"><p class="regular small">Log Out</p></a>
-                                </div>
+                            <div class="profile">
+                                <a href="#"><p class="regular small">My Profile</p></a>
+                            </div>
+                            <div class="orders">
+                                <a href="#"><p class="regular small">My Orders</p></a>
+                            </div>
+                            <div class="activity">
+                                <a href="#"><p class="regular small">Activity Stream</p></a>
+                            </div>
+                            <div class="profile">
+                                <a href="#"><p class="regular small">My Wallet</p></a>
+                            </div>
+                            <div class="wishlist">
+                                <a href="#"><p class="regular small">My Wishlist</p></a>
                             </div>
 
                         </div>
@@ -228,8 +169,6 @@
                 </div>
                 
             </div>
-
-            
         </header>
 
     {{end}}
@@ -239,20 +178,20 @@
             <div class="col-1">
                 <div class="page-link">
                     <div class="goto-home">
-                        <a href="/"><p class="regular">Home <i class="fas fa-chevron-right"></i></p></a>
+                        <a href=""><p class="regular">Home <i class="fas fa-chevron-right"></i></p></a>
                         
                     </div>
         
                     <div class="goto-course-catalog">
-                        <a href="/course-catalog"><p class="regular">All Courses <i class="fas fa-chevron-right"></i></p></a>
+                        <a href=""><p class="regular">All Courses <i class="fas fa-chevron-right"></i></p></a>
                         
                     </div>
                     <div class="goto-mycourse">
-                        <a href="/mycourses"><p class="bold">My Courses</p></a>
+                        <a href="/"><p class="bold">My Courses</p></a>
                     </div>
                 </div>
             </div>
-            <div class="col-2" >
+            <div class="col-2" style="justify-self: end;">
                 <div class="forum">
                     <a href="">
                         <img src="/resources/svg/forum.svg" alt="">
@@ -847,7 +786,9 @@
                 <div class="rights">
                     <p class="small regular">Master-Academy © 2021 All Rights  Reserved. </p>
                 </div>
-                
+                <div class="terms-privacy">
+                    <p class="small regular">Terms of Service  |  Privacy Policy</p>
+                </div>
                 <div class="logos">
                     <img src="./resources/svg/logos_facebook.svg" alt="" class="facebook">
                     <img src="./resources/svg/logos_youtube-icon.svg" alt="" class="youtube">
@@ -914,20 +855,6 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          270: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-          450: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          800: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
         },
     });
 

@@ -30,7 +30,7 @@
 
 .modal-header
 {
-    @include secondarySectionPadding();
+    @include primarySectionPadding();
     padding-bottom: 0;
     background: $secondaryGradClr;
     color: $primaryWhiteClr;
@@ -38,27 +38,20 @@
     .upper-part
     {
         display: grid;
-        grid-template-columns: 65px 1.8fr 1fr;
-        grid-template-areas:  
-        "logo search cls"
-        ". tabs tabs";
-        
+        grid-template-columns: 1fr 1.8fr 1fr;
         // grid-template-columns: auto auto auto;
         align-items: center;
-        grid-gap: 30px;
+        grid-gap: 40px;
 
 
         .logo
         {
-            grid-area: logo;
-            display: grid;
-            justify-content: end;
+            display: flex;
             grid-gap: 10px;
-            align-content: center;
-            
+            align-items: center;
+
             .logo-img 
             {
-                
                 img 
                 {
                     width: 65px;
@@ -75,8 +68,6 @@
         }
         .search-field
         {
-
-            grid-area: search;
             position: relative;
             svg
             {
@@ -88,19 +79,19 @@
         }
         .cls-btn
         {
-            grid-area: cls;
             justify-self: end;
             
-            button 
-            {
-                background-color: transparent;
-                border: 2px solid $primaryWhiteClr;
-                padding: 5px;
-            }
         }
+    }
+    .lower-part
+    {
+        // @include primarySectionPadding();
+        padding: 20px 0 0 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
         .tab
         {
-            grid-area: tabs;
             display: flex;
 
             .tablink 
@@ -109,9 +100,9 @@
                 margin-right: 40px;
                 transition: 0.3s ease-in-out;
                 color: $thirdWhiteClr;
-                padding-bottom: 5px;
+                padding-bottom: 10px;
                 border-bottom: 3px solid transparent;
-                
+                transform: translateY(7px);
                 cursor: pointer;
 
                 &:hover
@@ -127,63 +118,44 @@
                 border-color: $primaryWhiteClr;
             }
         }
-    }
-    // .lower-part
-    // {
-    //     // @include primarySectionPadding();
-    //     padding: 20px 0 0 0;
-    //     display: grid;
-    //     grid-template-columns: auto auto;
-    //     align-items: center;
-        
-    //     .hamburger
-    //     {
-    //         padding-bottom: 10px;
-    //         justify-self: end;
-    //         align-self: start;
-    //     }
+        .hamburger
+        {
+            padding-bottom: 10px;
+            justify-self: end;
+            align-self: start;
+        }
 
         
-    // }
+    }
 
 
 }
 
 .search-modal
 {
-    .tabcontent-wrap
+    .tabcontent
     {
-        @include secondarySectionPadding();
-        display: grid;
-        grid-template-columns: 65px auto;
-        grid-gap: 30px;
-        grid-template-areas: ". tabcontent";
-        .tabcontent
-        {
-            grid-area: tabcontent;
-            background-color: $primaryWhiteClr;
-            // 
-            display: none;
+        @include primarySectionPadding();
+        display: none;
 
-            p
-            {
-                margin: 15px 0;
-                line-height: 1.2em;
-            }
-            .view-more
-            {
-                h5
-                {
-                    margin: 20px 0;
-                    
-                    color: $secondarySolidClr;
-                }
-            }
-        }
-        .tabcontent.active 
+        p
         {
-            display: block;
+            margin: 5px 0;
+            line-height: 1.2em;
         }
+        .view-more
+        {
+            h5
+            {
+                margin: 10px 0;
+                
+                color: $secondarySolidClr;
+            }
+        }
+    }
+    .tabcontent.active 
+    {
+        display: block;
     }
 }
 
@@ -278,18 +250,12 @@
             position: absolute;
             top: 30px;
             right: 10px;
-            
             transform: translate(-50%, -50%);
 
-            button.rounded-btn 
+            button 
             {
                 background-color: $thirdWhiteClr;
-                padding: 5px !important;
-
-                &:hover 
-                {
-                    background-color: $forthBlackClr;
-                }
+                
             }
         }
     }
@@ -304,7 +270,7 @@
         {
             .upper-part
             {
-                // grid-template-columns: repeat(3, auto);
+                grid-template-columns: repeat(3, auto);
                 .logo
                 {
                     .logo-text
@@ -312,7 +278,9 @@
                         display: none;
                     }
                 }
-            
+            }
+            .lower-part
+            {
                 .tab 
                 {
                     
@@ -374,7 +342,9 @@
                         display: none;
                     }
                 }
-            
+            }
+            .lower-part
+            {
                 .tab 
                 {
                     .tablink:nth-of-type(4),
@@ -431,7 +401,9 @@
                 {
                     display: none;
                 }
-            
+            }
+            .lower-part
+            {
                 .tab 
                 {
                     .tablink
@@ -450,16 +422,6 @@
                 // {
                 //     justify-self: center;
                 // }
-            }
-        }
-        .tabcontent-wrap
-        {
-            grid-template-columns: auto;
-            grid-template-areas: "tabcontent";
-
-            .tabcontent
-            {
-                padding: 0 0 0 40px;
             }
         }
     }

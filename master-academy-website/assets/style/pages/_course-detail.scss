@@ -1,11 +1,5 @@
-* 
-{
-    scroll-behavior: smooth;
-}
-
 .container
 {
-    
     .wrap-course-title 
     {
         background-color: #161616;
@@ -252,11 +246,9 @@
         background-color: $primaryWhiteClr;
         // box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
         position: sticky;
-        // top: 60px; 
-        top: 0px;  
-        z-index: 999;
+        top: 75px;   
+        z-index: 990;
         box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25);
-        
 
         .tab 
         {
@@ -291,7 +283,6 @@
         position: static;
         top: 140px;
         background-color: $primaryWhiteClr;
-        
     }
     #batch
     {

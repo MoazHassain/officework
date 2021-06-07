@@ -3,14 +3,9 @@ button
     outline: none;
     border: none;
     border-radius: 4px;
-    padding: 7px 16px ;
-    transition: all 0.2s ease;
+    padding: 5px 10px ;
+    transition: all .3s ease-in-out;
     cursor: pointer;
-
-    h5,p 
-    {
-        transition: all 0.1s ease;
-    }
 }
 
 
@@ -18,33 +13,18 @@ button
 .grad-bg-btn
 {
     color: $primaryWhiteClr;
-    background: $forthBlackClr;
-    border: 2px solid transparent;
-    // background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $hoverGradClr;
-    // background-size: 200% auto;
-    // background-origin: border-box;
-    // background-clip: content-box, border-box;
-    // box-shadow: 2px 1000px 1px transparent inset;
+    border: 3px solid transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $hoverGradClr;
+    background-size: 200% auto;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px transparent inset;
 
     &:hover
     {
         color: $primaryWhiteClr;
-        background: $secondaryBlackclr;
-        // box-shadow: none;
-        // background-position: right center;
-    }
-}
-.grad-border-btn
-{
-    color: $thridBlackClr;
-    background: transparent;
-    border: 2px solid $forthBlackClr;
-
-    &:hover
-    {
-        border: 2px solid $secondaryBlackclr;
-        background-color: $secondaryBlackclr;
-        color: $primaryWhiteClr;
+        box-shadow: none;
+        background-position: right center;
     }
 }
 
@@ -57,8 +37,6 @@ button
     background-clip: content-box, border-box;
     // box-shadow: 2px 1000px 1px $secondaryBlackclr inset;
     box-shadow: $box-shadow;
-
-    
 
     &:hover
     {

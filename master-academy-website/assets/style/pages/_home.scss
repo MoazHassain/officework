@@ -1,31 +1,13 @@
-// header
-// {
-//     background-color: $primaryWhiteClr;
-//     color: $primaryBlackClr;
-//     .logo 
-//     {
-//         .logo-text
-//         {
-
-//         }
-//     }
-// }
-* 
-{
-    transition: 0.3s ease-in-out;
-}
 section.hero
 {
     
     .bg-img
     {
         @include secondarySectionPadding();
-        width: 98.8vw;
-        // @include bgImg();
-        // height: 570px;
-        // width: 100%;
-        // background-image: url(/resources/img/hero-bgImg2.png);
-        // background-position: center;
+        @include bgImg();
+        height: 63.5em;
+        background-image: url(/resources/img/hero-bgImg2.png);
+        background-position: center;
         
 
         .grid-wrapper
@@ -34,27 +16,21 @@ section.hero
             grid-template-columns: 50% 50%;
             align-items: center;
             justify-items: center;
-            height: 63vh;
-            width: 100%;
+            height: 35em;
 
             
             .text-part
             {
-                transform: translateY(-15%);
-                justify-self: left;
-                // padding-right: 50px;
+                transform: translateY(-20%);
+                
                 > *
                 {
                     margin: 15px 0;
-                    color: $thridBlackClr;
                 }
                 h1
                 {
-                    
-                    font-size: clamp(45px, 6vw, 65px);
-                    letter-spacing: -0.03em;
-                    line-height: 1.2em;
-                    
+                    // letter-spacing: -0.03em;
+                    font-size: 45px;
                 }
                 h3
                 {
@@ -68,100 +44,33 @@ section.hero
                     button 
                     {
                         margin-top: 10px;
-                        padding: 15px 65px;
-                        
                     }
-                    // button.grad-border-btn
-                    // {
-                    //     @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
-                    // }
+                    button.grad-border-btn
+                    {
+                        @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
+                    }
                 }
             }
             .img-part
             {
-                align-self: center;
-                width: 100%;
+                align-self: start;
                  
-                .swiper-container.hero-swiper
+                .img
                 {
-                    width: 100%;
-                    
+                    // padding: 50px;
+                    transform: translateY(20%);
 
-                    .swiper-wrapper
+                    img 
                     {
-                        
-                        .swiper-slide 
-                        {
-                            padding: 50px;
-                            .img
-                            {
-                                // padding: 50px;
-                                // transform: translateY(30%);
-
-                                img 
-                                {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                        }
-                    }
-
-                    .swiper-button-next,
-                    .swiper-button-prev,
-                    .swiper-pagination
-                    {
-                        visibility: hidden;
-                        opacity: 0;
-                        transition: 0.3s ease;
-                        color: $forthBlackClr;
-                    }
-                    .swiper-pagination-bullet-active
-                    {
-                        background-color: $forthBlackClr;
-                    }
-
-                    &:hover .swiper-button-next,
-                    &:hover .swiper-button-prev,
-                    &:hover .swiper-pagination
-                    {
-                        visibility: visible;
-                        opacity: 1;
+                        width: 400px;
+                        height: 100%;
                     }
                 }
             }
         }
-        
-        // .partner
-        // {
-        //     text-align: center;
-        //     padding-top: 30px;
-
-        //     h1 
-        //     {
-        //         margin-top: 20px;
-        //         color: $primarySolidClr;
-        //     }
-        //     .company-logos
-        //     {
-        //         @include gridCenter();
-        //         grid-template-columns: auto auto auto auto;
-        //         padding-top: 10px;
-        //         img
-        //         {
-        //             width: 100px;
-        //             height: 100px;
-        //         }
-        //     }
-        // }
-    }
-}
-
-.cards-content
-{
-    .card-wrapper
+        .card-wrapper
         {
-            @include secondarySectionPadding();
+            
             display: grid;
             grid-template-columns: auto auto auto;
             grid-gap: 30px;
@@ -176,11 +85,10 @@ section.hero
                 padding: 20px 40px;
                 text-align: center;
                 border-radius: 12px;
-                border: 1px solid $thirdWhiteClr;
-                box-shadow: 0 0 2px 0 rgba($color: #000000, $alpha: 0.40);
-                transition: 0.3s ease-in-out;
-
-                
+                border: 1px solid;
+                border-width: 3px 1px 1px 1px;
+                // border-color: black;
+                // box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.25);
 
                 > *
                 {
@@ -190,128 +98,95 @@ section.hero
                 {
                     color: $thridBlackClr;
                 }
-                h5 
-                {
-                    color: $primarySolidClr;
-                }
-
-                &:hover
-                {
-                    border: 1px solid $primarySolidClr;
-                    box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.40);
-                }
-                
-                &:hover .title,
-                &:hover svg,
-                &:hover .text-content
-                {
-                    opacity: 0.6;
-                }
             }
 
-            
+            .card-one
+            {
+                border-color: #CC2B5E;
+
+                h5
+                {
+                    color: #CC2B5E;
+                }
+            }
+            .card-two
+            {
+                border-color: #F04F3E;
+
+                h5 
+                {
+                    color: #F04F3E;
+                }
+            }
+            .card-three
+            {
+                border-color: rgba($color: #f48200, $alpha: 0.8);
+
+                h5 
+                {
+                    color: rgba($color: #f48200, $alpha: 0.8);
+                }
+            }
         }
+        .partner
+        {
+            text-align: center;
+            padding-top: 30px;
+
+            h1 
+            {
+                margin-top: 20px;
+                color: $secondarySolidClr;
+            }
+            .company-logos
+            {
+                @include gridCenter();
+                grid-template-columns: auto auto auto auto;
+                padding-top: 10px;
+                img
+                {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
 }
 
 section.vision
 {
     .bg-img
     {
-        margin: 50px 0;
         @include secondarySectionPadding();
-        padding-top: 30px;
-        padding-bottom: 30px;
-        // @include bgImg();
-        // background: url(/resources/img/vision-bgImg.png);
-        // background-position: center;
-        background-color: #f8f8f8;
+        @include bgImg();
+        background: url(/resources/img/vision-bgImg.png);
+        background-position: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        align-items: center;
+        align-items: flex-start;
         grid-gap: 50px;
-        
 
         .text-part
         {
-            // padding: 65px 40px 65px 0;
+            padding: 65px 40px 65px 0;
 
             >*
             {
                 padding: 10px 0;
             }
-            .title
+            h3
             {
-                width: fit-content;
-                padding-bottom: 6px;
-                
-                h3
-                {
-                    color: $secondaryBlackclr;
-                    
-                }
-                .border-bottom
-                {
-                    border-bottom: 2px solid #46C5D7;
-                    width: 35%;
-                    
-                }
-            }
-            .text-content 
-            {
-                
-                h5.regular
-                {
-                    line-height: 1.6em;
-                    letter-spacing: 0.03em;
-                    color: $forthBlackClr;
-                }
-            }
-            .btn
-            {
-                button 
-                {
-                    border-color: #46C5D7;
-                    color: #46C5D7;
-                    padding: 10px 20px;
-                    
-
-                    &:hover 
-                    {
-                        background-color: #46C5D7;
-                        color: $primaryWhiteClr;
-                    }
-                }
+                color: $secondarySolidClr;
             }
             
         }
         .video-part
         {
-            position: relative;
-            // padding: 30px 20px;
-            span.bg-border
-            {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 338px;
-                height: 270px;
-                background-color: #46C5D7;
-                
-            }
+            padding: 50px 20px;
 
-            .video 
+            img 
             {
-                z-index: 9;
-                padding-top: 30px;
-                padding-right: 30px;
-                position: relative;
-                img 
-                {
-                    // height: 300px;
-                    width: 100%;
-                    
-                }
+                width: 100%;
             }
             
         }
@@ -326,7 +201,7 @@ section.explore-course
     {
         h3 
         {
-            color: $secondaryBlackclr;
+            color: $secondarySolidClr;
             margin-bottom: 20px;
         }
 
@@ -414,7 +289,7 @@ section.explore-course
                     }
                     .title
                     {
-                        color: $primarySolidClr;
+                        color: $secondarySolidClr;
                     }
                     .rating
                     {
@@ -573,7 +448,7 @@ section.catagories
     .title
     {
         margin: 0px 0 20px;
-        color: $secondaryBlackclr;
+        color: $secondarySolidClr;
     }
     .card-wrapper
     {
@@ -589,19 +464,13 @@ section.catagories
             box-shadow: 0 0px 4px rgba($color: #000000, $alpha: 0.25);
             cursor: pointer;
             transition: 0.3s;
-            
-            .text
-            {
-                margin-top: 10px;
-            }
             &:hover
             {
                 box-shadow: 0 0px 10px rgba($color: #000000, $alpha: 0.25);
             }
-            &:hover img,
-            &:hover .text p
+            .text
             {
-                opacity: 0.7;
+                margin-top: 10px;
             }
         }
     }
@@ -617,35 +486,20 @@ section.career
         
         .bg-img
         {
-            // height: 320px;
-            // background: url(/resources/img/instructor-bg.png);
-            @include secondarySectionPadding();
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background: $secondaryWhiteClr;
+            height: 320px;
+            background: url(/resources/img/instructor-bg.png);
+            @include bgImg();
+            background-position: bottom;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            
+            grid-template-columns: 50% 50%;
+            grid-template-areas:  
+            ". content";
             align-items: center;
-            .img-part
-            {
-                
-                height: 260px;
-                width: clamp(250px, 40vw, 450px);
-                img 
-                {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: contain;
-                    object-position: left;
-                    transform: scaleX(-1);
-                    
-                }
-            }
+
             .detail 
             {
-                padding-right: 150px;
-                // grid-area: content;
+                padding-right: 200px;
+                grid-area: content;
 
                 >*
                 {
@@ -653,18 +507,12 @@ section.career
                 }
                 h3
                 {
-                    color: $secondaryBlackclr;
+                    color: $secondarySolidClr;
                 }
-                h5
+                p
                 {
-                    // color: $thridBlackClr;
-                    line-height: 1.6em;
-                    letter-spacing: 0.03em;
+                    color: $thridBlackClr;
                     // font-family: gothamRegular;
-                }
-                button 
-                {
-                    padding: 10px 20px;
                 }
             }
         }
@@ -674,7 +522,7 @@ section.career
         padding-top: 30px;
         color: $primaryWhiteClr;
         text-align: center;
-        width: 70%;
+        width: 50%;
         margin: 0 auto;
 
         > *
@@ -685,20 +533,6 @@ section.career
         {
             line-height: 1.5em;
         }
-        button
-        {
-            padding: 10px 20px;
-            color: $primaryWhiteClr;
-            background: transparent;
-            border: 2px solid $primaryWhiteClr;
-        
-            &:hover
-            {
-                border: 2px solid $primaryWhiteClr;
-                background-color: $primaryWhiteClr;
-                color: $primaryBlackClr;
-            }
-        }
     }
 }
 
@@ -708,8 +542,7 @@ section.review
 
     .title
     {
-        color: $secondaryBlackclr;
-        padding-left: 25px;
+        color: $secondarySolidClr;
     }
 
     .swiper-container
@@ -808,25 +641,20 @@ section.consultation
     grid-template-columns: 50% 50%;
     grid-gap: 20px;
     align-items: center;
-
-    .text-part
-    {
-        padding-right: 200px;
-    }
     .title
     {
         
-        border-bottom: 1px solid $forthBlackClr;
+        
         h3
         {
-            color: $secondaryBlackclr;
-            margin-bottom: 10px;
+            color: $secondarySolidClr;
+            margin-bottom: 20px;
            
         }
     }
     .form
     {
-        
+        padding-right: 200px;
         > *
         {
             margin: 15px 0;
@@ -838,7 +666,7 @@ section.consultation
             display: block;
             margin-bottom: 5px;
         }
-        input,textarea,button 
+        input,textarea
         {
             width: 100%;
         }
@@ -857,38 +685,28 @@ section.consultation
 
 @media screen and (max-width:1100px) and (min-width: 801px)
 {
-    
-    .cards-content 
-    {
-        // display: none;
-        .card-wrapper
-        {
-            grid-gap: 20px;
-
-            .banner-card
-            {
-                margin: 0;
-                padding: clamp(10px, 1vw, 20px) clamp(15px, 2.5vw, 30px);
-            }
-        }
-    }
-    section.vision 
+    section.hero
     {
         .bg-img
         {
-            padding-top: 30px;
-            padding-bottom: 30px;
-
-            .video-part
+            .grid-wrapper
             {
-                span.bg-border
+                grid-template-columns: 55% 45%;
+            }
+
+            .card-wrapper
+            {
+                grid-gap: 20px;
+
+                > div
                 {
-                    width: clamp(270px, 15vw, 330px);
-                    height: clamp(180px, 13vw, 270px);
+                    margin: 0;
+                    padding: clamp(10px, 1vw, 20px) clamp(15px, 2.5vw, 30px);
                 }
             }
         }
     }
+
     section.catagories
     {
         .card-wrapper
@@ -903,14 +721,6 @@ section.consultation
         {
             .bg-img
             {
-                grid-template-columns: 50% 50%;
-                // .img-part
-                // {
-                //     img 
-                //     {
-                //         // transform: unset;
-                //     }
-                // }
                 .detail 
                 {
                     padding-right: clamp(100px, 15vw, 150px);
@@ -963,11 +773,10 @@ section.consultation
     {
         .text-part
         {
-            padding-right: clamp(80px, 15vw, 100px);
-            // .form
-            // {
-                
-            // }
+            .form
+            {
+                padding-right: clamp(80px, 15vw, 100px);
+            }
         }
     }
 }
@@ -979,40 +788,20 @@ section.consultation
         {
             .grid-wrapper
             {
-                grid-template-columns: 100%;
-
-                .text-part
-                {
-                    text-align: center;
-                    transform: unset;
-                    justify-self: center;
-                }
+                grid-template-columns: 70% 30%;
                 .img-part
                 {
-                    width: 100%;
-                    .swiper-container
+                    .img
                     {
-                        width: 100%;
+                        display: none;
                     }
                 }
-                
             }
 
             
         }
     }
-    .cards-content
-    {
-        
-        .card-wrapper
-        {
-            grid-template-columns: auto;
-            margin: 20px auto;
-            width: 60%;
-            
-        }
-    }
-    
+
 
     section.catagories
     {
@@ -1072,60 +861,32 @@ section.consultation
         {
             .grid-wrapper
             {
-                grid-template-columns: 100%;
-
-                .text-part
-                {
-                    transform: unset;
-                    align-self: center;
-                    text-align: center;
-                    justify-self: center;
-                }
+                grid-template-columns: 70% 30%;
                 .img-part
                 {
-                    width: 100%;
-                    padding: 0 clamp(40px, 9vw, 80px);
-
-                    .swiper-container
+                    .img
                     {
-                        width: 100%;
+                        display: none;
                     }
                 }
-                
             }
 
-            
-        }
-    }
-    .cards-content
-    {
-        
-        .card-wrapper
-        {
-            grid-template-columns: auto;
-            margin: 20px auto;
-            width: 65%;
-            
-        }
-    }
-    section.vision 
-    {
-        .bg-img
-        {
-            padding-top: 30px;
-            padding-bottom: 30px;
-
-            .video-part
+            .card-wrapper
             {
-                span.bg-border
+                grid-gap: clamp(10px, 1vw, 20px);
+
+                > div
                 {
-                    width: clamp(220px, 13vw, 330px);
-                    height: clamp(120px, 10vw, 270px);
+                    margin: 0;
+                    padding: clamp(10px, 1vw, 20px) ;
                 }
+                // .card-three
+                // {
+                //     display: none;
+                // }
             }
         }
     }
-    
 
     section.vision 
     {
@@ -1152,59 +913,6 @@ section.consultation
         }
     }
 
-    section.explore-course 
-    {
-        
-        .tab 
-        {
-            .tablink 
-            {
-                margin-right: 20px !important;
-            }
-            
-            .tablink[data-tab="design"],
-            .tablink[data-tab="data-science"]
-            {
-                display: none;
-            }
-            
-        }
-        .swiper-container
-        {
-            .card 
-            {
-                .description
-                {
-                    padding: 10px 15px !important;
-
-                    .card-detail
-                    {
-                        grid-template-columns: 1fr 1fr;
-                        grid-template-areas:  
-                        "date date"
-                        "hour view";
-                        grid-gap: 5px;
-
-                        .published
-                        {
-                            grid-area: date;
-                        }
-                        .time 
-                        {
-                            grid-area: hour;
-
-                        }
-                        .watched
-                        {
-                            grid-area: view;
-                        }
-                    }
-                }
-            }
-        }
-       
-    }
-
     section.catagories
     {
         .card-wrapper
@@ -1217,7 +925,6 @@ section.consultation
             }
         }
     }
-
 
     section.career
     {
@@ -1259,11 +966,10 @@ section.consultation
         grid-gap: 0px;
         .text-part
         {
-            padding-right: 0;
-            // .form
-            // {
-                
-            // }
+            .form
+            {
+                padding-right: clamp(20px, 4vw, 80px);
+            }
         }
         .img-part
         {
@@ -1277,81 +983,11 @@ section.consultation
     {
         .bg-img
         {
-            .grid-wrapper
+            .card-wrapper
             {
-                grid-template-columns: 100%;
-
-                .text-part
+                .card-three
                 {
-                    transform: unset;
-                    align-self: center;
-                    text-align: center;
-                    justify-self: center;
-                }
-                .img-part
-                {
-                    width: 100%;
-                    padding: 0 clamp(40px, 9vw, 80px);
-
-                    .swiper-container
-                    {
-                        width: 100%;
-                    }
-                }
-                
-            }
-
-            
-        }
-    }
-    .cards-content
-    {
-        
-        .card-wrapper
-        {
-            grid-template-columns: auto;
-            margin: 20px auto;
-            width: 70%;
-            
-        }
-    }
-
-    section.vision 
-    {
-        .bg-img
-        {
-            grid-template-columns: 1fr;
-            padding-top: 30px;
-            padding-bottom: 30px;
-
-            .text-part
-            {
-                text-align: center;
-
-                .title
-                {
-                    margin: 0 auto;
-                }
-            }
-            .video-part
-            {
-                span.bg-border
-                {
-                    width: clamp(250px, 50vw, 300px);
-                    height: clamp(200px, 40vw, 250px);
-                }
-            }
-        }
-    }
-    section.career
-    {
-        .become-instructor
-        {
-            .bg-img
-            {
-                .detail
-                {
-                    padding-right: 0;
+                    display: none;
                 }
             }
         }
@@ -1360,76 +996,75 @@ section.consultation
 
 @media screen and (max-width:500px) and (min-width: 270px)
 {
-    
     section.hero
     {
         .bg-img
         {
             .grid-wrapper
             {
-                grid-template-columns: 100%;
-
-                .text-part
-                {
-                    transform: unset;
-                    align-self: center;
-                    text-align: center;
-                    justify-self: center;
-                }
+                grid-template-columns: 70% 30%;
                 .img-part
                 {
-                    width: 100%;
-                    padding: 0;
-
-                    .swiper-container
+                    .img
                     {
-                        width: 100%;
+                        display: none;
                     }
                 }
-                
             }
 
-            
-        }
-    }
+            .card-wrapper
+            {
+                grid-gap: clamp(10px, 1vw, 20px);
 
-    .cards-content
-    {
-        
-        .card-wrapper
-        {
-            grid-template-columns: auto;
-            margin: 20px auto;
-            width: 80%;
-            
+                > div
+                {
+                    margin: 0;
+                    padding: clamp(10px, 1vw, 20px) ;
+                }
+                .card-three
+                {
+                    display: none;
+                }
+            }
+
+            .partner
+            {
+                .company-logos
+                {
+                    width: 100%;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 20px;
+                    img 
+                    {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
 
     section.vision 
     {
+        margin: 30px 0;
         .bg-img
         {
-            grid-template-columns: 1fr;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            background-position: 65%;
+            grid-gap: 20px;
+            align-items: center;
 
             .text-part
             {
-                text-align: center;
-
-                .title
+                padding: 0;
+                >* 
                 {
-                    margin: 0 auto;
+                    padding: 0;
+                    margin: 10px;
                 }
             }
-
             .video-part
             {
-                span.bg-border
-                {
-                    width: clamp(200px, 50vw, 280px);
-                    height: clamp(150px, 40vw, 220px);
-                }
+                padding: 0;
             }
         }
     }
@@ -1477,15 +1112,8 @@ section.consultation
             .bg-img
             {
                 background-position: 40%;
-                grid-template-columns: 1fr;
-
-                .img-part
-                {
-                    display: none;
-                }
                 .detail 
                 {
-                    text-align: center;
                     padding-right: clamp(0px, 2vw, 100px);
                     
                     > * 
@@ -1517,11 +1145,10 @@ section.consultation
         grid-gap: 0px;
         .text-part
         {
-            padding-right: 0;
-            // .form
-            // {
-                
-            // }
+            .form
+            {
+                padding-right: clamp(20px, 4vw, 80px);
+            }
         }
         .img-part
         {
@@ -1537,80 +1164,82 @@ section.consultation
 
 @media screen and (max-width:400px) and (min-width: 270px)
 {
-    section.offer 
-    {
-        padding: 5px;
-    }
     section.hero
     {
         .bg-img
         {
             .grid-wrapper
             {
-                grid-template-columns: 100%;
-                height: 68vh;
-
-                .text-part
-                {
-                    transform: unset;
-                    align-self: center;
-                    text-align: center;
-                }
+                grid-template-columns: 70% 30%;
                 .img-part
                 {
-                    width: 100%;
-                    padding: 0;
-
-                    .swiper-container
+                    .img
                     {
-                        width: 100%;
+                        display: none;
                     }
                 }
-                
+                .logo-text 
+                {
+                    font-weight: 500;
+                }
             }
 
-            
-        }
-    }
-
-    .cards-content
-    {
-        
-        .card-wrapper
-        {
-            grid-template-columns: auto;
-            margin: 20px auto;
-            width: 85%;
-            
-            .banner-card
+            .card-wrapper
             {
-                padding: 15px clamp(20px, 6vw, 25px);
+                grid-gap: clamp(10px, 1vw, 20px);
+
+                > div
+                {
+                    margin: 0;
+                    padding: clamp(10px, 1vw, 20px) ;
+                }
+                .card-three, .card-two
+                {
+                    display: none;
+                }
+            }
+
+            .partner
+            {
+                .company-logos
+                {
+                    width: 100%;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 20px;
+                    img 
+                    {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
     }
     section.vision 
     {
+        margin: 30px 0;
         .bg-img
         {
+            background-position: 65%;
             grid-template-columns: 1fr;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            grid-gap: 20px;
+            align-items: center;
 
             .text-part
             {
-                text-align: center;
+                padding: 0 clamp(15px, 3vw, 40px);
+                >* 
+                {
+                    padding: 0;
+                    margin: 10px;
+                }
             }
             .video-part
             {
-                span.bg-border
-                {
-                    width: clamp(200px, 50vw, 280px);
-                    height: clamp(150px, 40vw, 220px);
-                }
+                padding: 0 clamp(15px, 3vw, 40px);
             }
         }
     }
-
 
     section.explore-course 
     {
@@ -1627,22 +1256,10 @@ section.consultation
             {
                 display: none;
             }
-            
-        }
-        .swiper-container
-        {
-            .card 
-            {
-                .description
-                {
-                    padding: 10px 15px !important;
-
-                    .card-detail
-                    {
-                        grid-gap: 5px;
-                    }
-                }
-            }
+            // .responsive-hide
+            // {
+            //     display: none;
+            // }
         }
        
     }
@@ -1668,8 +1285,6 @@ section.consultation
                 background-position: 40%;
                 .detail 
                 {
-
-                    text-align: center;
                     padding-right: clamp(0px, 2vw, 100px);
                     
                     > * 
@@ -1682,34 +1297,16 @@ section.consultation
         }
         .build-career
         {
-            padding: 20px;
-            width: unset;
+            padding-top: 10px;
+            
 
             >*
             {
-                margin: 10px 0;
+                margin: 0;
             }
             > a
             {
                 margin: 0;
-            }
-        }
-    }
-    section.review 
-    {
-        .swiper-container
-        {
-            .swiper-slide
-            {
-                .card
-                {
-                    padding: 15px clamp(15px, 6vw,25px);
-                
-                    .user
-                    {
-                        grid-gap: 10px;
-                    }
-                }
             }
         }
     }

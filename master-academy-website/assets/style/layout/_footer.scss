@@ -47,11 +47,6 @@ footer
                 {
                     padding-right: 10px;
                     text-align: left;
-
-                    a 
-                    {
-                        color: $primaryWhiteClr;
-                    }
                 }
             }
         }
@@ -88,7 +83,7 @@ footer
         padding-top: 20px !important;
         padding-bottom: 20px !important;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
 
         p
@@ -128,24 +123,24 @@ footer
         }
         .lower-part
         {
-            grid-template-columns: 1fr;
-            
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:  
+            "rights rights"
+            "policy logo";
             grid-gap: 10px;
             .rights 
             {
-                
+                grid-area: rights;
                 justify-self: center;
                 text-align: center;
             }
             .terms-privacy
             {
-                
                 justify-self: start;
             }
             .logos
             {
-                
-                justify-self: center;
+                justify-self: end;
 
                 
             }

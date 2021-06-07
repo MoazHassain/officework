@@ -2,18 +2,17 @@ header
 {
     position: sticky;
     top: 0;
-    background: $primaryWhiteClr;
-    color: $primaryBlackClr;
+    background: $secondaryBlackclr;
+    color: $primaryWhiteClr;
     padding: 5px 50px;
     display: grid;
-    grid-template-columns: min-content auto min-content;
+    grid-template-columns: auto auto auto;
     grid-gap: 10px;
-    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.25);
     z-index: 999;
 
     a
     {
-        color: $primaryBlackClr;
+        color: $primaryWhiteClr;
     }
     > *
     {
@@ -29,20 +28,13 @@ header
         {
             margin: 0 5px;
 
-            
-            
-        }
-
-        .logo-img
-        {
-            margin-left: 0;
             img 
             {
                 width: 60px;
                 height: 60px;
             }
+            
         }
-
         .logo-text 
         {
             white-space: nowrap;
@@ -53,71 +45,41 @@ header
     .search-bar
     {
         display: grid;
-        grid-template-columns: 85% 15%;
-        align-items: center;
+        grid-template-columns: 80% 20%;
         margin-left: 15px;
         input 
         {
             width: 100%;
             border-radius: 4px 0 0 4px;
-            border-right: 1px solid transparent;
-            padding: 7px 15px;
-
-            &:hover, &:focus 
-            {
-                box-shadow: unset;
-                border-color: $thirdWhiteClr;
-            }
         }
         button 
         {
             width: 100%;
-            height: 35px;
-            padding: 7px;
+            height: 40.8px;
             border-radius: 0 4px 4px 0;
-            border: 1px solid $thirdWhiteClr;
-            background-color: $forthWhiteClr;
-
-            
-            
-        }
-        &:hover button 
-        {
-            background-color: $thirdWhiteClr;
+            border: none;
         }
     }
     .nav-menu
     {
         justify-self: end;
-        
 
         > *
         {
             margin: 0 10px;
-            white-space: nowrap;
-
-            &:hover h5
-            {
-                opacity: 0.7;
-            }
+            
         }
-        
-        a[href='/sign-up']
+        button
         {
-            margin-right: 0;
-
-            h5 
-            {
-                opacity: 1;
-            }
-        }
+            @include gradBorderBtn($primaryWhiteClr, 2px 1000px 1px $secondaryBlackclr inset)
+        }  
     }
     .responsive-navbtn
     {
         display: none;
         .btn 
         {
-            padding: 5px;
+            padding: 8px;
             border-radius: 50px;
             background: $thridBlackClr;
             display: flex;
@@ -174,7 +136,10 @@ header
         {
             width: 100%;
         }
-        
+        button.grad-border-btn
+        {
+            @include gradBorderBtn(#000000, 2px 1000px 1px $primaryWhiteClr inset)
+        }
     }
     
 }
@@ -183,19 +148,11 @@ header
 {
     width: 50vw;
 }
-@media screen and (max-width:1500px) and (min-width: 1101px)
-{
-    header.header 
-    {
-        padding: 5px clamp(25px, 2.5vw, 40px);
-        grid-template-columns: min-content auto min-content;
-        
-    }
-}
+
 @media screen and (max-width:1100px) and (min-width: 801px)
 {
     // padding: 5px clamp(40px, 6vw, 60px);
-    header.header
+    header
     {
         padding: 10px clamp(25px, 3.5vw, 40px);
 
@@ -232,7 +189,7 @@ header
 
 @media screen and (max-width:800px) and (min-width: 501px)
 {
-    header.header
+    header
     {
         padding: 10px clamp(25px, 3.5vw, 40px);
 
@@ -274,9 +231,9 @@ header
 
 @media screen and (max-width:500px) and (min-width: 270px)
 {
-    header.header
+    header
     {
-        padding: 10px clamp(15px, 4vw, 25px);
+        padding: 10px clamp(25px, 3.5vw, 40px);
 
         grid-template-columns: auto auto;
         grid-template-areas:  
@@ -319,9 +276,9 @@ header
 
 @media screen and (max-width:400px) and (min-width: 270px)
 {
-    header.header
+    header
     {
-        padding: 10px clamp(15px, 4vw, 25px);
+        padding: 10px clamp(25px, 3.5vw, 40px);
 
         grid-template-columns: auto auto;
         grid-template-areas:  
@@ -343,8 +300,6 @@ header
             margin-left: 0;
             grid-area: search;
             grid-template-columns: 85% 15%;
-            
-            
         }
         .nav-menu
         {
@@ -359,7 +314,3 @@ header
         }
     }
 }
-
-
-// dashboard header 
-

@@ -1,28 +1,20 @@
-@import "../layout/dashboard-header";
+header 
+{
+    @include dashboardheader();
+}
 .subheader 
 {
     @include dashboardsubhead();
-    // display: unset;
-    grid-template-columns: unset;
-    .wrap
-    {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 footer 
 {
     @include dashboardfooter();
-
 }
 
 .container
 {
-    .course-title-wrap 
-    {
-        border-bottom: 1px solid $thirdWhiteClr;
-    }
+    
     .course-title
     {
         @include secondarySectionPadding();
@@ -32,7 +24,7 @@ footer
         grid-template-columns: auto auto;
         align-items: center;
         background: $forthWhiteClr;
-        // border-bottom: 1px solid $thirdWhiteClr;
+        border-bottom: 1px solid $thirdWhiteClr;
         
         
 
@@ -214,11 +206,6 @@ footer
                     .tablink.active
                     {
                         background: $primaryWhiteClr;
-                    }
-
-                    .responsive-tablink
-                    {
-                        display: none;
                     }
                 }
             }
@@ -654,268 +641,4 @@ footer
 .swiper-tabcontent.active 
 {
     display: block;
-}
-
-
-@media screen and (max-width: 1500px) and (min-width: 1200px)
-{
-    .subheader
-    {
-        padding: 5px 0;
-       .wrap
-       {
-            width: 1180px;
-            
-            margin: 0 auto;
-       }
-    }
-    .container
-    {
-        background-color: $forthWhiteClr;
-        .course-title
-        {
-            background-color: transparent;
-            width: 1180px;
-            padding: 15px 0;
-            margin: 0 auto;
-        }
-        .grid-content
-        {
-            background-color: transparent;
-            width: 1180px;
-            padding: 0;
-            // .column-right
-            // {
-            //     .how-to
-            //     {
-            //         white-space: normal;
-            //     }
-            // }
-        }
-    }
-}
-
-@media screen and (max-width: 1199px) and (min-width: 992px) 
-{
-    .subheader
-    {
-        padding: 5px 0;
-       .wrap
-       {
-            width: 950px;
-            
-            margin: 0 auto;
-       }
-    }
-    .container
-    {
-        background-color: $forthWhiteClr;
-        .course-title
-        {
-            background-color: transparent;
-            width: 950px;
-            padding: 15px 0;
-            margin: 0 auto;
-        }
-        .grid-content
-        {
-            background-color: transparent;
-            width: 950px;
-            padding: 0;
-            grid-gap: 10px;
-            .column-left
-            {
-                grid-template-columns: 28% 72%;
-                > .tab-head
-                {
-                    .tab 
-                    {
-                        .tablink 
-                        {
-                            padding: 15px 10px 15px 15px;
-                        }
-                    }
-                }
-            }
-            .column-right
-            {
-                .how-to
-                {
-                    white-space: normal;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 991px) and (min-width: 768px)
-{
-    .container
-    {
-        .grid-content
-        {
-            grid-template-columns: 100%;
-
-            .column-left
-            {
-                grid-template-columns: 100%;
-                .tab-head
-                {
-                    margin-top: 40px;
-                    .tab
-                    {
-                        >a 
-                        {
-                            display: none;
-                        }
-                        .responsive-tablink
-                        {
-                            display: block;
-                        }
-                    }
-                }
-            }
-            .column-right
-            {
-                display: none;
-            }
-        }
-    }
-} 
-
-@media screen and (max-width: 767px) and (min-width: 280px) 
-{
-    .subheader
-    {
-        padding: 0;
-        .wrap
-        {
-            padding: 5px clamp(20px, 2vw, 60px) !important;
-            display: block;
-            .col-1 
-            {
-                display: none;
-    
-            }
-            .col-2 
-            {
-                
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-    
-                > * 
-                {
-                    padding: 5px;
-                }
-                .forum
-                {
-                    justify-self: start;
-                }
-                .support 
-                {
-                    justify-self: end;
-                }
-            }
-        }
-    }
-
-    .container
-    {
-        .course-title
-        {
-            .progression
-            {
-                .grade
-                {
-                    .hidden-content
-                    {
-                        right: 0px;
-                        width: 250px;
-                    }
-                    .visible-content
-                    {
-                        .block-text
-                        {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-        .grid-content
-        {
-            grid-template-columns: 100%;
-
-            .column-left
-            {
-                grid-template-columns: 100%;
-                .tab-head
-                {
-                    margin-top: 40px;
-                    .tab
-                    {
-                        >a 
-                        {
-                            display: none;
-                        }
-                        .responsive-tablink
-                        {
-                            display: block;
-                        }
-                    }
-                }
-                .tabcontent-wrap
-                {
-                    .tabcontent
-                    {
-                        > *
-                        {
-                            padding: 5px 20px;
-                        }
-                        .tab-title
-                        {
-                            padding: 20px;
-                        }
-                    }
-                    #tab-video, #class-record
-                    {
-                        > * 
-                        {
-                            padding: 20px;
-                        }
-                        .tab-title
-                        {
-                            padding: 20px;
-                        }
-                        .video-file
-                        {
-                            margin: 20px;
-                        }
-                    }
-                    #my-lab 
-                    {
-                        .give-info, .devops-lab, .support-ticket
-                        {
-                            margin: 0;
-                            padding: 5px 20px;
-                        }
-                        .devops-lab
-                        {
-                            grid-template-columns: 1fr;
-                            
-                            .col-2
-                            {
-                                justify-self: center;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            .column-right
-            {
-                display: none;
-            }
-        }
-    }
 }
