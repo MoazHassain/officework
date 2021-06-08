@@ -1,17 +1,20 @@
+
 .subheader 
 {
     @include dashboardsubhead();
     padding: 5px 30px;
+    
 }
 
 .container
 {
     .grid-content
     {
-        width: 100%;
+        width: 100vw;
         // display: grid;
         // grid-template-columns: auto auto; 
-        display: flex; 
+        display: grid;
+        grid-template-columns: min-content 1fr; 
         
         .side-nav
         {
@@ -19,7 +22,8 @@
             white-space: nowrap;
             border-right: 1px solid $thirdWhiteClr;
             transition: 0.3s ease;
-            height: 100%;
+            height: 100vh;
+            z-index: 999;
 
             .nav-head
             {
@@ -229,6 +233,7 @@
             width: 100%;
             .tabcontent
             {
+                width: 100%;
                 // display: none;
                 .content-title
                 {
@@ -279,9 +284,17 @@
                 }
                 .content-video
                 {
+                    width: 100%;
                     padding: 30px 50px;
                     .video 
                     {
+                        width: 100%;
+                        video 
+                        {
+                            width: 100%;
+                            height: 75vh;
+                            background-color: $secondaryBlackclr !important;
+                        }
                         
 
                         img 
@@ -349,15 +362,15 @@
 }
 
 
-@media screen and (max-width: 1500px) and (min-width: 1200px) 
-{
+// @media screen and (max-width: 1500px) and (min-width: 1200px) 
+// {
 
-}
+// }
 
-@media screen and (max-width: 1199px) and (min-width: 992px)
-{
+// @media screen and (max-width: 1199px) and (min-width: 992px)
+// {
 
-}
+// }
 
 @media screen and (max-width: 991px) and (min-width: 768px)
 {
@@ -407,11 +420,24 @@
         }
     }
 }
-
+@media screen and (max-width: 767px) and (min-width: 440px)
+{
+    .container 
+    {
+        .grid-content
+        {
+            .tabcontent-wrap
+            {
+                width: 100vw;
+            }
+        }
+    }
+}
 @media screen and (max-width: 767px) and (min-width: 280px)
 {
     .subheader
     {
+        width: 100vw;
         grid-template-columns: 1fr;
 
         .col-2
@@ -425,7 +451,7 @@
     {
         .grid-content
         {
-
+            // width: 100vw;
             position: relative;
             .side-nav
             {
@@ -475,10 +501,11 @@
 
             .tabcontent-wrap
             {
-                width: 95vw;
+                width: 88vw;
                 margin-left: 45px;
                 .tabcontent
                 {
+                    // width: 100%;
                     .content-title,
                     .content-video
                     {
@@ -487,7 +514,7 @@
                     .content-title
                     {
                         width: 100%;
-                        grid-template-columns: auto;
+                        grid-template-columns: auto auto;
                         grid-gap: 10px;
                         white-space: nowrap;
                         overflow: hidden;
@@ -506,7 +533,7 @@
                         }
                         .icons
                         {
-                            justify-self: start;
+                            justify-self: end;
                             > * 
                             {
                                 margin: 0 10px !important;
@@ -516,6 +543,51 @@
                             {
                                 display: none;
                             }
+                        }
+                    }
+                    .content-video
+                    {
+                        .video
+                        {
+                            video 
+                            {
+                                height: 50vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 440px)
+{
+    .container 
+    {
+        .grid-content
+        {
+            .tabcontent-wrap
+            {
+                width: 93vw;
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) and (min-width: 280px)
+{
+    .container
+    {
+        .grid-content
+        {
+            .tabcontent-wrap
+            {
+                .tabcontent
+                {
+                    .content-title
+                    {
+                        .icons
+                        {
+                            display: none;
                         }
                     }
                 }

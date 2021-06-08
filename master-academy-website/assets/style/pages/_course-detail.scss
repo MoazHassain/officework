@@ -199,10 +199,10 @@
                 {
                     width: 100%;
                 }
-                .grad-border-btn
-                {
-                    @include gradBorderBtn($primaryBlackClr, 2px 1000px 1px $primaryWhiteClr inset)
-                }
+                // .grad-border-btn
+                // {
+                //     // @include gradBorderBtn($primaryBlackClr, 2px 1000px 1px $primaryWhiteClr inset)
+                // }
                 .money-back
                 {
                     text-align: center;
@@ -437,11 +437,12 @@
             {
                 margin-right: 20px;
             }
-            button 
-            {
-                @include gradBorderBtn($primaryBlackClr, 2px 1000px $primaryWhiteClr inset)
+            // button 
+            // {
+            //     @include gradBorderBtn($primaryBlackClr, 2px 1000px $primaryWhiteClr inset)
                 
-            }
+            // }
+            
         }
         
     }
@@ -511,6 +512,19 @@
                     .btn 
                     {
                         margin-top: 20px;
+
+                        .grad-border-btn
+                        {
+                            color: $primaryWhiteClr;
+                            background-color: transparent;
+                            border-color: $primaryWhiteClr;
+                            &:hover
+                            {
+                                color: $primaryBlackClr;
+                                background-color: $primaryWhiteClr;
+                                border-color: $primaryWhiteClr;
+                            }
+                        }
                     }
                 }
             }
@@ -555,6 +569,11 @@
                 {
                     background-color: $primaryWhiteClr;
                     color: #00417C;
+
+                    &:hover
+                    {
+                        opacity: 0.8;
+                    }
                 }
             }
             .img-part
@@ -593,178 +612,242 @@
 
     }
 
-    #review
+    .instructor-wrap
     {
         @include secondarySectionPadding();
-       
-
-        .comment-review
+        margin: 40px 0;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        grid-template-areas:  
+        "ins .";
+        #instructor
         {
-            margin: 30px 0;
+            grid-area: ins;
+            
 
-            .title 
+            .title
             {
                 margin-bottom: 20px;
             }
-            .swiper-container
+            .instructor-info
             {
-                width: 100%;
-                height: 100%;
-                padding: 25px;
-
-                .card 
+                color: $secondaryBlackclr;
+                
+                
+                h5 
                 {
-                    padding: 30px 40px;
-                    border-radius: 6px;
-                    margin: 0px 0 30px 0;
-                    box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
-
-                    .user
+                    a 
                     {
-                        display: grid;
-                        grid-template-columns: 1fr 2.5fr;
-                        grid-template-rows: auto auto;
-                        grid-template-areas:  
-                        "img name"
-                        "img rating";
-                        align-items: center;
-
-                        img 
+                        width: fit-content;
+                        color: $secondaryBlackclr;
+                        &:hover 
                         {
-                            grid-area: img;
-                            height: 70px;
-                            width: 70px;
-                            object-fit: cover;
-                            border-radius: 50%;
-                        }
-                        .user-name
-                        {
-                            grid-area: name;
-                        }
-                        .rating
-                        {
-                            grid-area: rating;
-                            i
-                            {
-                                color: #FFB800;
-                            }
-                        }
-                    }
-                    .review-text
-                    {
-                        p 
-                        {
-                            font-size: 18px;
-                            font-style: italic;
-                            color: $thridBlackClr;
+                            color: $secondarySolidClr;
                         }
                     }
                 }
 
-                .swiper-button-next
+                .grid-content
+                {
+                    margin: 15px 0;
+                    display: flex;
+                    grid-gap: 20px;
+                    align-items: center;
+
+                    img 
                     {
-                        width: 48px;
-                        height: 48px;
                         border-radius: 50%;
-                        background: $primaryWhiteClr;
-                        transform: translate(20%, -35%);
-                        // background: chartreuse;
-                        &::after
-                        {
-                            display: none;
-                            
-                        }
-                        
+                        object-fit: cover;
                     }
-                    .swiper-button-prev
+                    p 
                     {
-                        width: 48px;
-                        height: 48px;
-                        border-radius: 50%;
-                        background: $primaryWhiteClr;
-                        transform: translate(-20%, -35%);
-
-                        &::after
+                        i 
                         {
-                            display: none;
-                        }
-                    }
-            }
-        }
-        .video-review 
-        {
-            .title 
-            {
-                margin-bottom: 20px;
-            }
-            .swiper-container
-            {
-                width: 100%;
-                height: 100%;
-                padding: 25px;
-
-                .card 
-                {
-                    
-                    border-radius: 6px;
-                    margin: 0px 0 30px 0;
-                    box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
-
-                    .video
-                    {
-                        img 
-                        {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    hr 
-                    {
-                        margin: 10px 40px;
-                    }
-                    .review-text
-                    {
-                        padding: 10px 40px 30px;
-                        p 
-                        {
-                            font-size: 18px;
-                            font-style: italic;
-                            color: $thridBlackClr;
+                            color: $ratingClr;
+                            width: 22px;
                         }
                     }
                 }
-
-                .swiper-button-next
-                {
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 50%;
-                    background: $primaryWhiteClr;
-                    transform: translate(20%, -35%);
-                    // background: chartreuse;
-                    &::after
-                    {
-                        display: none;
-                        
-                    }
-                    
-                }
-                .swiper-button-prev
-                {
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 50%;
-                    background: $primaryWhiteClr;
-                    transform: translate(-20%, -35%);
-
-                    &::after
-                    {
-                        display: none;
-                    }
-                }
+                
             }
         }
     }
+
+    .review-wrap
+    {
+        @include secondarySectionPadding();
+        margin: 40px 0;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        grid-template-areas:  
+        "rev .";
+
+        #review
+        {
+            .title
+            {
+                margin-bottom: 20px;
+            }
+            .rating-wrap
+            {
+                display: flex;
+                align-items: flex-end;
+                grid-gap: 60px;
+                margin-bottom: 40px;
+
+                i 
+                {
+                    color: #eeab00;
+                }
+                .average-rate
+                {
+                    color: #eeab00;
+                    text-align: center;
+                    margin: 10px 0;
+
+                    h1 
+                    {
+                        font-size: 66px;
+                        
+                    }
+                }
+                .given-rate
+                {
+                    p 
+                    {
+                        margin: 10px 0;
+
+                        span 
+                        {
+                            margin-left: 15px;
+                            color: $secondarySolidClr;
+                        }
+                    }
+                }
+            }
+            .partTwo 
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                .select-rating 
+                {
+                    justify-self: end;
+                    
+                    select 
+                    {
+                        font-size: 18px;
+                        padding: 8px 12px;
+                        border-radius: 4px;
+
+                    }
+                }
+            }
+
+            .partThree 
+            {
+                .comment 
+                {
+                    display: grid;
+                    grid-template-columns: min-content auto;
+                    grid-gap: 20px;
+                    padding: 20px 0;
+                    border-bottom: 1px solid $thirdWhiteClr;
+
+                    .img 
+                    {
+                        h2
+                        {
+                            width: 50px;
+                            height: 50px;
+                            padding: 10px;
+                            background-color: $primarySolidClr;
+                            border-radius: 50px;
+                        }
+                        img 
+                        {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .comment-detail
+                    {
+                        p.regular
+                        {
+                            margin: 10px 0;
+                        }
+
+                        .like 
+                        {
+                            i 
+                            {
+                                margin-right:30px;
+                                
+                                &:hover 
+                                {
+                                    color: $primarySolidClr;
+                                }
+                            }
+                            i.fa-thumbs-down
+                            {
+                                &:hover 
+                                {
+                                    color: rgb(206, 58, 0);
+                                }
+                            }
+                            a 
+                            {
+                                transition: all 0s ease;
+                                &:hover 
+                                {
+                                    text-decoration: underline;
+                                    color: rgb(206, 58, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+                .collapsible-wrap
+                {
+                    position: relative;
+                    .collapsible-more
+                    {
+                        margin: 20px auto 40px;
+                        width: fit-content;
+                        padding: 10px 15px;
+                        background-color: $primarySolidClr;
+                        color: $primaryWhiteClr;
+                        font-family: "hind-madurai", sans-serif;
+                        font-size: 20px;
+                        font-weight: 700;
+                        border-radius: 4px;
+                        // position: absolute;
+
+                        &:before 
+                        {
+                            content: "Show More";
+                        }
+                    }
+                    .active-more::before
+                    {
+                        content: "Show Less";
+                    }
+                    .hidden-content
+                    {
+                        max-height: 0;
+                        overflow: hidden;
+                        margin-bottom: 30px;
+                        // visibility: hidden;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+    }
+    
 
     #project 
     {

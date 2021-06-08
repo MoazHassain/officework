@@ -3,6 +3,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 a {
@@ -146,14 +148,14 @@ button {
   border: none;
   border-radius: 4px;
   padding: 7px 16px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
 button h5, button p {
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .grad-bg-btn {
@@ -1108,6 +1110,105 @@ header .responsive-navbtn .btn {
 
 .offer-modal .avail-part .cls-btn button.rounded-btn:hover {
   background-color: #606060;
+}
+
+.prview-modal-bg {
+  overflow-y: scroll;
+}
+
+.preview-modal {
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.preview-modal {
+  width: 45vw;
+  margin-top: 8em;
+  margin-bottom: 6em;
+  position: relative;
+}
+
+.preview-modal .preview-cls-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border-radius: 50px;
+}
+
+.preview-modal .preview-cls-btn svg {
+  margin: 10px;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.preview-modal .preview-cls-btn svg path {
+  stroke: #000;
+}
+
+.preview-modal .preview-cls-btn svg:hover {
+  background-color: #cacaca;
+}
+
+.preview-modal .modal-title {
+  padding: 30px 30px 10px;
+}
+
+.preview-modal .modal-title > * {
+  padding-bottom: 10px;
+}
+
+.preview-modal .preview-video {
+  padding: 0px 30px;
+  width: 100%;
+}
+
+.preview-modal .preview-video video {
+  width: 100%;
+}
+
+.preview-modal .sample-video {
+  padding: 20px 0 00px;
+}
+
+.preview-modal .sample-video .title {
+  padding: 0 30px;
+}
+
+.preview-modal .sample-video .video-list .sample {
+  padding: 10px 30px;
+  border-bottom: 1px solid #cacaca;
+}
+
+.preview-modal .sample-video .video-list .sample a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px auto min-content;
+      grid-template-columns: 80px auto -webkit-min-content;
+      grid-template-columns: 80px auto min-content;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preview-modal .sample-video .video-list .sample a .img {
+  width: 100%;
+  height: 100%;
+}
+
+.preview-modal .sample-video .video-list .sample a .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.preview-modal .sample-video .video-list .sample:hover {
+  background-color: #FAFAFA;
+}
+
+.preview-modal .sample-video .video-list .sample.active {
+  background-color: #f3f3f3;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 760px) {
